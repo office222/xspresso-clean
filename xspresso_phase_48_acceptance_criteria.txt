@@ -1,0 +1,19 @@
+Xspresso Phase 48 — Acceptance Criteria
+
+Phase 48 is complete when the following are true:
+
+- Campaign creation, editing, approval, and launch flows remain stable.
+- Monitoring, alerting, and ad regeneration continue to work consistently.
+- Billing, credits, and usage reporting remain clear and accurate.
+- Platform switching behavior remains predictable and user-friendly.
+- Library, templates, export/import, and duplicate workflows function properly.
+- Dashboard views continue to show useful campaign, alert, and usage summaries.
+- Recommendation logic continues to suggest useful next actions.
+- Cross-campaign learning and trend detection remain available and stable.
+- Multi-brand and multi-team coordination remains intact.
+- Guardrails, user control, and safety rules continue to be enforced.
+- Support/help text and empty states remain clear and helpful.
+- Final release polish is maintained across the app.
+
+Definition of done:
+The Phase 48 layer is complete when Xspresso continues to feel reliable, understandable, and easy to use across campaign creation, monitoring, billing, and optimization workflows.

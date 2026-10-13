@@ -1,0 +1,42 @@
+Xspresso Phase 13 — Acceptance Criteria
+
+Purpose:
+This phase is complete when the orchestration layer can coordinate the major modules of Xspresso in a reliable, user-friendly way.
+
+Acceptance Criteria:
+
+1. Final orchestration layer works
+- The system can coordinate campaign generation, monitoring, alerts, billing, credits, lead flow, and library actions.
+- The orchestration layer can pass data between modules without breaking the user flow.
+
+2. Cross-module intelligence works
+- Xspresso can use campaign, alert, credit, and lead data together to make better recommendations.
+- The system can suggest the next best action based on the current state of the campaign.
+
+3. Smarter recommendations work
+- Xspresso can recommend actions such as regenerate, tweak, pause, monitor, or upgrade based on usage and performance.
+- Recommendations are clear, simple, and aligned with saving time and credits.
+
+4. Scheduled summaries work
+- The system can generate scheduled summaries for campaigns, alerts, usage, and performance.
+- Summaries are short, readable, and actionable.
+
+5. Workflow coordination works
+- Campaigns, leads, credits, alerts, and billing can be coordinated cleanly.
+- Users can move from one action to the next without confusion.
+
+6. Safety guardrails work
+- Users remain in control.
+- The system does not overwrite important actions without confirmation.
+- All major actions have clear warnings and approvals.
+
+7. User experience stays simple
+- The system does not become harder to use as intelligence is added.
+- The interface remains fast, clear, and easy to follow.
+
+8. Product alignment is maintained
+- The phase must continue to support the core Xspresso promise:
+  done-for-you marketing, fast, with the user still in command.
+
+Definition of Done:
+Phase 13 is complete when Xspresso can coordinate its major systems intelligently, provide useful next-step recommendations, and keep the user experience clear, safe, and simple.

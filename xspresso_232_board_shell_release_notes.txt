@@ -1,0 +1,33 @@
+Xspresso Board Shell Release Notes
+
+Purpose:
+- Keep the board shell clean, premium, and easy to use.
+- Keep the cup left of the name logo.
+- Keep the header white and responsive.
+- Keep CTA buttons clear and action-focused.
+
+Included items:
+- White header bar with inline cup + name logo
+- Hero block with done-for-you marketing message
+- Short bullet block
+- Campaign dashboard shell
+- CTA button style and placement notes
+- Footer support links
+- Microcopy and helper text
+
+Rules:
+- Do not stack the cup above the name on smaller screens.
+- Do not let the logo overflow if the window shrinks.
+- Use orange as an accent, not a full-page background.
+- Keep copy short, clear, and premium.
+- Keep the user in command.
+
+Acceptance checks:
+- Logo stays inline at normal sizes.
+- Logo shrinks cleanly on smaller screens.
+- Header stays white.
+- Buttons stay readable.
+- Board shell looks polished, not crowded.
+
+Next recommended step:
+- Build the final reusable HTML shell for the board header and CTA area.

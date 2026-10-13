@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xspresso</title>
+  <link rel="stylesheet" href="xspresso_701_app.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <img src="images/Xspresso_cup.gif" alt="Xspresso" class="logo-cup" />
+        <img src="images/Xspresso_logo_txt.gif" alt="Xspresso" class="logo-wordmark" />
+      </div>
+      <nav class="nav">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#builder">Create Campaign</a>
+        <a href="#monitoring">Monitoring</a>
+        <a href="#billing">Billing</a>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <section class="hero card">
+        <p class="eyebrow">Done-for-you marketing</p>
+        <h1>Wake up your marketing.</h1>
+        <p class="lead">Build campaigns faster, monitor them smarter, and stay in command.</p>
+        <div class="actions">
+          <button class="btn primary" id="demoBtn">Try the Demo</button>
+          <button class="btn secondary" id="pricingBtn">See Pricing</button>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card" id="dashboard">
+          <h2>Dashboard</h2>
+          <div id="dashboardCards" class="cards"></div>
+        </article>
+
+        <article class="card" id="builder">
+          <h2>Campaign Builder</h2>
+          <div id="builderForm"></div>
+        </article>
+
+        <article class="card" id="monitoring">
+          <h2>Monitoring</h2>
+          <div id="monitoringPanel"></div>
+        </article>
+
+        <article class="card" id="billing">
+          <h2>Credits & Billing</h2>
+          <div id="billingPanel"></div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="xspresso_702_app.js"></script>
+</body>
+</html>

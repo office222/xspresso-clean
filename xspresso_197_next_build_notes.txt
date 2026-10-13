@@ -1,0 +1,19 @@
+Xspresso 197 — Next Build Notes
+
+Current focus:
+- Keep V1 centered on done-for-you marketing
+- Maintain the core promise: more responses, less software chaos, you stay in command
+- Preserve all-tools-included / credits-determine-usage pricing logic
+
+Recommended next areas:
+1. Finalize the monitoring threshold defaults
+2. Refine alert copy for underperforming ads
+3. Tighten the platform switch / monitoring modal logic
+4. Add more a la carte usage examples
+5. Create a lightweight onboarding help sequence
+6. Polish dashboard summary language
+
+Reminder:
+- Use unique numbered filenames going forward to avoid collisions
+- Keep all outputs aligned with the current build philosophy
+- Continue saving reusable copy into the library files

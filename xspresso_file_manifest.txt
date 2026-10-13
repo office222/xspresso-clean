@@ -1,0 +1,125 @@
+XSPRESSO FILE MANIFEST
+
+This file maps the current Xspresso project structure and the major working files created so far.
+
+ROOT
+- README.txt
+- xspresso_master_index.txt
+- xspresso_master_prompt.txt
+- xspresso_release_notes.txt
+- xspresso_build_checkpoint.txt
+- xspresso_repo_tree_and_file_map.txt
+- xspresso_file_manifest.txt
+
+PRODUCT / SPEC
+- xspresso_v1_features.txt
+- v2_features.txt
+- feature_priority_matrix.txt
+- roadmap_and_milestones.txt
+- core_principles.txt
+- implementation_order.txt
+- implementation_tasks.txt
+- architecture_overview.txt
+- integration_flow.txt
+- integration_and_sync_notes.txt
+- workflow_state_machine.txt
+- performance_metrics_and_kpis.txt
+- reporting_and_insights.txt
+- recommendation_and_actions.txt
+- safety_and_guardrails.txt
+- automation_rules.txt
+- platform_rules.js (concept file)
+- platform_support_matrix.txt
+- data_models.txt
+- database_schema.txt
+- api_endpoints.txt
+- api_contract.txt / xspresso_api_contract.txt
+- release_checklist.txt
+- testing_and_qc.txt
+- xspresso_quality_assurance.txt
+
+COPY
+- hero_copy.txt
+- founder_story.txt
+- pricing_copy.txt
+- alerts_copy.txt
+- faq_and_objections.txt
+- headline_bank.txt
+- bullets / bullet bank notes (embedded in copy work)
+- onboarding_questions.txt
+- onboarding_flow.txt
+- xspresso_content_blocks.txt
+- xspresso_launch_plan.txt
+- style_guidelines.txt
+- tooltips_and_inline_help.txt
+- empty_states_and_error_messages.txt
+
+UI / HTML
+- dashboard.html
+- switch_platform_modal.html
+- hero block HTML (latest revised hero)
+- pricing table HTML (embedded in lander work)
+- alerts / notification UI notes
+- ui_components.txt
+- component_library.txt
+- xspresso_screen_flow.txt
+- xspresso_user_journeys.txt
+- state / modal / card / settings notes
+
+LOGIC / ENGINE
+- campaign_generation.js
+- ad_monitoring.js
+- lead_followup.js
+- billing.js
+- credits_and_usage.txt
+- monitoring_rules.txt
+- template_system.txt
+- export_import_share.txt
+- alerts_notifications.js
+- build / regenerate / approve logic notes
+
+LIBRARY / SWIPE
+- swipe / marketing notes
+- story / bullet / headline ideas
+- founder page drafts
+- marketing manual takeaways
+
+ASSETS / BRAND
+- logo / cup header notes
+- image placement notes
+- upload / asset list
+
+CURRENT CORE POSITIONING
+- Xspresso is done-for-you marketing.
+- Users stay in command.
+- Xspresso does the heavy lifting.
+- All plans include every tool.
+- Credits determine fair usage.
+- Xspresso helps users create, launch, monitor, and improve campaigns faster.
+- Xspresso avoids copying and stays strategy-first and original.
+
+BUILD PRINCIPLES
+1. Done-for-you first.
+2. Keep the user in command.
+3. Every tool available to every plan.
+4. Credits control usage, not access.
+5. Warn early, recommend fixes, and offer regeneration.
+6. Save time, reduce software chaos, and improve results.
+7. Keep campaigns editable, reusable, and versioned.
+8. Support the full funnel: page, ad, lead capture, follow-up, monitoring.
+9. Keep the copy simple, clear, and customer-focused.
+10. Never copy other people’s work; only reuse the user’s own campaigns.
+
+NEXT RECOMMENDED FILES
+- social_upload_rules.txt
+- upload_platform_matrix.txt
+- lead_scoring_rules.txt
+- ad_regeneration_prompts.txt
+- pricing_a_la_carte_menu.txt
+- dashboard_copy_blocks.txt
+- support_faq_short.txt
+- launch_criteria.txt
+- user_roles_and_permissions.txt
+- repo_setup_notes.txt
+
+END OF MANIFEST

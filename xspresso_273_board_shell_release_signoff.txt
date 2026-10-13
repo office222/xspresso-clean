@@ -1,0 +1,21 @@
+Xspresso Board Shell Release Signoff
+
+Purpose:
+- Final release-ready checklist for the board shell
+- Confirms the logo/header, CTA, responsive behavior, and readability rules
+
+Acceptance checks:
+- White header background
+- Cup stays left of the name/logo
+- Logo shrinks cleanly on smaller screens
+- No wrap/stack overlap
+- Business card remains readable
+- CTA buttons remain visible and clear
+- Footer stays simple and premium
+- FrontPage-friendly table layout
+
+Signoff rule:
+- If all checks pass, the board shell is ready to reuse as a clean component across Xspresso pages.
+
+Reminder:
+- Keep filenames Xspresso-only and numbered sequentially to avoid collisions.

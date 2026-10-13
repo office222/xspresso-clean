@@ -1,0 +1,34 @@
+Xspresso Board Shell CTA Copy
+
+Primary CTA options:
+- Try the Demo
+- See Pricing
+- Get Started
+- Build My Campaign
+- Launch Now
+
+Secondary CTA options:
+- Save Draft
+- Review First
+- See How It Works
+- Learn More
+- View Features
+
+Best short support lines:
+- Done-for-you marketing, fast.
+- More responses. Less software chaos.
+- You stay in command. We do the work.
+- Wake up your marketing.
+- Start from a product photo, URL, or offer details.
+
+CTA placement notes:
+- Use one primary button and one secondary button in the hero.
+- Keep the primary CTA orange or high-contrast.
+- Keep secondary CTA neutral and lighter.
+- Avoid too many buttons in the same row.
+- Keep the CTA text short, active, and clear.
+
+Best product rule:
+- The CTA should always point to action, not explanation.
+- The user should know exactly what happens when they click.
+- Keep the board shell clean, simple, and premium.

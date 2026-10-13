@@ -1,0 +1,42 @@
+Xspresso Quote3 Board Shell Style Notes
+
+Purpose:
+Keep the front board shell clean, responsive, and easy to maintain in FrontPage-style HTML.
+
+Goals:
+- Keep the cup image left of the name logo at all widths.
+- Keep the header background white.
+- Allow the logo row to shrink gracefully on smaller screens.
+- Keep the card and shell visually consistent with the orange/charcoal/white Xspresso brand.
+- Avoid text overlap, wrapping, or stacked images in the header.
+
+Recommended style rules:
+- Use a two-cell table for the logo row.
+- Keep both images display:block.
+- Use max-width on the name logo so it can shrink.
+- Use white-space:nowrap on the logo cells where possible.
+- Keep the header background white, not dark.
+- Use orange only as an accent color.
+
+Suggested visual hierarchy:
+1. Header/logo row
+2. Main business card area
+3. Hero promise line
+4. Short benefit bullets
+5. Buttons / CTA
+
+Responsive behavior:
+- On large screens, show cup and name inline.
+- On medium screens, reduce logo width but keep layout horizontal.
+- On narrow screens, allow the name logo to shrink before stacking.
+- If stacking becomes necessary, keep the cup above the name only as a last resort.
+
+Copy tone:
+- Clean
+- Direct
+- Professional
+- Done-for-you
+- Confident but not loud
+
+Reminder:
+The board shell is a container for the message. The copy should stay clear and simple: done-for-you marketing, more responses, less software chaos, you stay in command, we do the work.

@@ -1,0 +1,24 @@
+Xspresso code batch 831-842
+
+Included files:
+- xspresso_831_state_store.js
+- xspresso_832_campaign_builder.js
+- xspresso_833_dashboard_renderer.js
+- xspresso_834_monitoring_engine.js
+- xspresso_835_lead_followup.js
+- xspresso_836_app_bootstrap.js
+- xspresso_837_utils.js
+- xspresso_838_campaign_api.js
+- xspresso_839_dashboard_cards.js
+- xspresso_840_monitoring_engine.js
+- xspresso_841_review_panel.js
+- xspresso_842_app.js
+
+This batch includes actual app logic for:
+- state handling
+- campaign brief and draft generation
+- dashboard summaries
+- monitoring and alerts
+- review / approve / regenerate flow
+- app bootstrap wiring
+- lead follow-up scaffolding

@@ -1,0 +1,23 @@
+Xspresso Board Shell — Final Remaining Tasks
+
+Purpose:
+Keep the board shell clean, premium, responsive, and easy to read.
+
+Open items:
+- Confirm the cup stays left of the name logo at all screen sizes.
+- Confirm the top header remains white.
+- Confirm the logo shrinks smoothly on smaller screens.
+- Prevent wrapping/stacking of the cup and text logo.
+- Keep the business card readable and uncluttered.
+- Keep CTA buttons clear, aligned, and easy to tap.
+- Keep footer/support copy short and simple.
+
+Acceptance checks:
+- The header should not turn dark.
+- The logo should never overlap or stack awkwardly.
+- The board shell should remain premium and minimal.
+- CTA hierarchy should be obvious.
+- The layout should stay FrontPage-friendly.
+
+Next recommended action:
+Review the live board shell, then make any final spacing, sizing, and copy tweaks needed before packaging the reusable component.

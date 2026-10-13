@@ -1,0 +1,98 @@
+Xspresso Content Blocks
+=======================
+
+Purpose
+-------
+This file defines the reusable copy blocks and page sections that Xspresso can use across the landing page, app, onboarding, dashboard, alerts, and help screens.
+
+Core Message
+------------
+- Xspresso is done-for-you marketing.
+- Xspresso gets responses, builds lists, follows up automatically, and lets the user stay in command.
+- Xspresso does the work so the user can enjoy the benefits.
+
+Primary Page Blocks
+-------------------
+1. Hero Block
+   - Short positioning line
+   - Main headline
+   - Short supporting line
+   - CTA buttons
+   - Optional trust note
+
+2. Bullet Block
+   - 6 reasons Xspresso works better than DIY
+   - 6 reasons most marketers fail
+   - 6 reasons Xspresso gets more clicks
+   - 6 reasons Xspresso saves time
+
+3. Founder Story Block
+   - Why Xspresso exists
+   - The struggle story
+   - The bridge to the product
+   - The time / lifestyle close
+
+4. Feature Block
+   - Product photo or URL input
+   - Research and matching products
+   - Campaign generation
+   - Platform adaptation
+   - Monitoring and alerts
+   - Follow-up and lead capture
+
+5. Pricing Block
+   - All tools included
+   - Credits determine fair usage
+   - Monitored ads included by plan
+   - Social upload platforms included by plan
+   - A la carte usage items
+
+6. Alert Block
+   - Underperforming ad warning
+   - Rising CPC warning
+   - Platform switch warning
+   - Credit usage warning
+   - Recommendation for next action
+
+7. Platform Switch Block
+   - Show list of ads on selected platform
+   - Let user choose: keep running, move to library, keep monitoring, or manage manually
+   - Show daily / weekly / monthly monitoring cost
+
+8. Dashboard Block
+   - Campaign cards
+   - Active / draft / alert states
+   - Credits remaining
+   - Recent alerts
+   - Quick actions
+
+Reusable Copy Snippets
+----------------------
+- Done-for-you marketing, fast.
+- More responses. Less software chaos.
+- You stay in command. We do the work.
+- Wake up your marketing.
+- Improve before spending more credits.
+- Let Xspresso regenerate this ad.
+- All plans include every tool. Credits simply determine fair usage.
+
+Recommended Section Order for a Landing Page
+-------------------------------------------
+1. Hero
+2. Bullet block
+3. Imagine this / how it works
+4. Feature block
+5. Founder story
+6. Pricing
+7. FAQ / objections
+8. CTA
+
+Notes
+-----
+- Keep the copy short and clear.
+- Use orange as an accent, not a full background.
+- Make bullets scannable.
+- Keep the user in command.
+- Avoid feature bait-and-switch.
+- Avoid saying free advertising.
+- Use original, inspired-by messaging, never copy.

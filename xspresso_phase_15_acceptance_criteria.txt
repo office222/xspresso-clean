@@ -1,0 +1,20 @@
+Xspresso Phase 15 Acceptance Criteria
+
+This phase is complete when:
+- Deeper autonomous optimization works reliably.
+- Multi-brand coordination works across multiple campaigns.
+- Cross-campaign learning improves recommendations.
+- Recommendation loops produce useful next actions.
+- Forecasting and trend analysis are visible and understandable.
+- Advanced workflow orchestration connects major product areas.
+- Team and agency controls behave correctly.
+- Shared templates and marketplace ideas can be managed cleanly.
+- Integrations and automation hooks work as expected.
+- Safety and user-control guardrails remain intact.
+- Users can still approve, tweak, and stay in command.
+- The product remains original, helpful, and easy to use.
+
+Definition of done:
+- The phase adds real value without making the product confusing.
+- All new features support the core promise of Xspresso.
+- The user still feels in control while Xspresso does the work.

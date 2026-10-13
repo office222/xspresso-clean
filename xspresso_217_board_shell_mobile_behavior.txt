@@ -1,0 +1,41 @@
+Xspresso Board Shell Mobile Behavior Notes
+
+Purpose:
+Define how the top board shell should behave on smaller screens so the cup logo and name remain readable, inline when possible, and gracefully scaled when space gets tight.
+
+Goals:
+- Keep the cup image left of the name/logo text.
+- Prevent the cup from stacking on top of the name when the viewport shrinks.
+- Keep the header clean and white.
+- Make the board shell feel premium and easy to scan.
+- Stay FrontPage-friendly and simple to maintain.
+
+Recommended behavior:
+1. Use a two-cell inline table for the logo area.
+2. Apply white-space:nowrap to the logo cells.
+3. Use display:block on both images to avoid inline gaps.
+4. Set the cup image to a fixed display width with auto height.
+5. Allow the text logo to use max-width:100% and height:auto.
+6. If the screen gets too narrow, allow the whole logo block to scale down rather than wrap.
+7. Keep the top bar background white.
+8. Avoid dark header backgrounds behind the logo because they make the images look harsh and can reveal pixelation.
+
+Suggested mobile-friendly rules:
+- Cup image should remain to the left of the name.
+- Name image should shrink before wrapping.
+- If necessary, reduce the displayed width of the cup image on smaller screens.
+- Keep the layout centered or left aligned, depending on the overall shell design.
+- Do not let the logo block overlap surrounding content.
+
+Implementation reminders:
+- Test at desktop width.
+- Test at tablet width.
+- Test at narrow mobile widths.
+- Confirm the logo never flips to a stacked layout unless intentionally designed.
+- Keep all related header styles in one place.
+
+Best practice:
+If the text logo is too wide for very small screens, create a smaller source image rather than forcing the HTML to fight the layout.
+
+Friendly UI note:
+The logo area should feel solid, simple, and readable at every size.

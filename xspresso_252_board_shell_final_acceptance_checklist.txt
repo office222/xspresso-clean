@@ -1,0 +1,27 @@
+Xspresso Board Shell Final Acceptance Checklist
+
+Purpose:
+This file captures the final checks for the board shell / business card area so the header, logo, layout, CTA, and responsive behavior stay clean and consistent.
+
+Checklist:
+- Keep the cup logo left of the name/logo text.
+- Keep the top header background white.
+- Prevent the logo from wrapping or stacking on smaller screens.
+- Let the logo scale down cleanly as the page shrinks.
+- Keep the business card area readable and balanced.
+- Keep CTA buttons clear, simple, and easy to tap.
+- Keep the footer simple and premium.
+- Maintain Xspresso-only filenames for all future files.
+- Avoid duplicate filenames.
+- Preserve FrontPage-friendly HTML structure.
+
+Acceptance Criteria:
+- Logo remains inline at desktop size.
+- Logo scales down without overlapping other elements.
+- Text stays readable on mobile.
+- Buttons remain visible and distinct.
+- No dark header background behind the logo.
+- No unnecessary clutter in the board shell section.
+
+Next Step:
+If this checklist passes, move on to the next board shell refinement or the next Xspresso project module.

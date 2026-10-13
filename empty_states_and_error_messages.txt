@@ -1,0 +1,156 @@
+Xspresso V1 — Empty States and Error Messages
+
+Purpose:
+Keep the product helpful when users have no data yet or something goes wrong.
+
+Core rule:
+Always explain what happened and give the user a next step.
+
+--------------------------------------------------
+EMPTY STATES
+--------------------------------------------------
+
+1) No campaigns yet
+Message:
+You don’t have any campaigns yet.
+
+Helpful line:
+Start by adding a product photo, URL, or a few details about your offer.
+
+Action:
+Create Campaign
+
+2) No ads yet
+Message:
+You don’t have any ads yet.
+
+Helpful line:
+Xspresso can build your first ad set when you add your offer details.
+
+Action:
+Build Ads
+
+3) No alerts yet
+Message:
+No alerts right now.
+
+Helpful line:
+Xspresso is keeping an eye on your campaigns.
+
+Action:
+View Dashboard
+
+4) No leads yet
+Message:
+No leads captured yet.
+
+Helpful line:
+Once your campaign is live, leads will appear here.
+
+Action:
+View Campaigns
+
+5) No credits left
+Message:
+You are out of credits for this cycle.
+
+Helpful line:
+Add credits or upgrade your plan to keep working.
+
+Action:
+Add Credits / Upgrade Plan
+
+--------------------------------------------------
+ERROR MESSAGES
+--------------------------------------------------
+
+1) Missing offer details
+Message:
+Xspresso needs a little more information to build your campaign.
+
+Helpful line:
+Add a product name, URL, image, or short description.
+
+Action:
+Continue Setup
+
+2) Invalid URL
+Message:
+That URL doesn’t look right.
+
+Helpful line:
+Check the link and try again.
+
+Action:
+Fix URL
+
+3) Platform connection failed
+Message:
+Xspresso could not connect to that platform.
+
+Helpful line:
+Please check your account permissions and try again.
+
+Action:
+Reconnect Platform
+
+4) Monitoring paused
+Message:
+Monitoring is paused for this platform.
+
+Helpful line:
+Resume monitoring to keep tracking your ads.
+
+Action:
+Resume Monitoring
+
+5) Regeneration failed
+Message:
+Xspresso could not regenerate this section right now.
+
+Helpful line:
+Try again or edit the section manually.
+
+Action:
+Try Again
+
+6) Launch blocked
+Message:
+This campaign is not ready to launch.
+
+Helpful line:
+Please review the missing items and fix them first.
+
+Action:
+Review Missing Items
+
+--------------------------------------------------
+FALLBACK COPY
+--------------------------------------------------
+
+If something unexpected happens:
+Message:
+Something went wrong.
+
+Helpful line:
+Please try again. If the problem continues, check your settings or contact support.
+
+Action:
+Try Again
+
+--------------------------------------------------
+STYLE GUIDELINES
+--------------------------------------------------
+
+- Keep error messages short.
+- Tell the user what happened.
+- Tell the user what to do next.
+- Keep the tone calm and helpful.
+- Avoid technical jargon unless needed.
+- Make every error feel recoverable.
+
+--------------------------------------------------
+ONE-LINE SUMMARY
+--------------------------------------------------
+
+Xspresso should always show a clear next step when the user hits an empty state or error.

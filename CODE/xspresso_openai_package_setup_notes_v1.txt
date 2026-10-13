@@ -1,0 +1,12 @@
+XSPRESSO DOWNLOAD NAME COLLISION FIX / SETUP
+
+This batch provides uniquely named versions of the three earlier package.json files:
+- xspresso_package_manifest_core_v1.json
+- xspresso_package_manifest_web_v1.json
+- xspresso_package_manifest_openai_v1.json
+
+Do not combine the three manifests as separate project manifests. For the current app, use the OpenAI manifest only. When assembling the runnable project directory, copy its contents to the single filename package.json and discard the older generic package.json downloads. This avoids overwrites while keeping npm's required manifest name in the final project folder.
+
+The current manifest runs xspresso_web_runtime_openai_v1.js with `npm start`; `npm test` runs Node's built-in test runner. The end-to-end test uses a fake fetch implementation and does not call OpenAI or spend credits. The preflight command is `node xspresso_environment_preflight_v1.js`.
+
+All filenames in this batch are unique. Tests and server were not executed while generating these files.

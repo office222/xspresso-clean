@@ -1,0 +1,38 @@
+// xspresso_630_campaign_builder_v4.js
+
+export function buildCampaignBrief(input = {}) {
+  return {
+    productName: input.productName || 'Untitled Offer',
+    productUrl: input.productUrl || '',
+    productImage: input.productImage || '',
+    offerDescription: input.offerDescription || 'A product or offer needing a campaign',
+    audience: input.audience || 'general audience',
+    goal: input.goal || 'sales',
+    tone: input.tone || 'simple',
+    platform: input.platform || 'general',
+    templateType: input.templateType || 'basic',
+    notes: input.notes || '',
+  };
+}
+
+export function applySmartDefaults(brief = {}) {
+  return {
+    ...brief,
+    callToAction: brief.goal === 'sales' ? 'Buy Now' : 'Learn More',
+    headlineStyle: brief.goal === 'leads' ? 'curiosity' : 'benefit',
+    followUpEnabled: true,
+    monitoringEnabled: true,
+  };
+}
+
+export function validateBrief(brief = {}) {
+  const missing = [];
+  if (!brief.productName) missing.push('productName');
+  if (!brief.offerDescription) missing.push('offerDescription');
+  if (!brief.audience) missing.push('audience');
+
+  return {
+    valid: missing.length === 0,
+    missing,
+  };
+}

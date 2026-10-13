@@ -1,0 +1,13 @@
+Xspresso Board Shell - Next Focus
+
+- Keep the cup left of the name logo
+- White header background
+- Shrink cleanly on smaller screens
+- Prevent wrapping / stacking
+- Keep the business card readable
+- Keep CTA buttons clear and visible
+- Maintain a premium, simple look
+- Keep the board shell FrontPage-friendly
+
+Next recommended step:
+Build the reusable HTML for the board shell header and business card component as one clean block.

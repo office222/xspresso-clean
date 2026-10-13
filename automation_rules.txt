@@ -1,0 +1,61 @@
+Xspresso V1 — Automation Rules
+
+Purpose:
+Define how Xspresso automates actions while keeping the user in command.
+
+Core principles:
+- Done-for-you first.
+- The user stays in command.
+- Xspresso recommends, warns, and assists.
+- The user approves important changes.
+- Never copy other people's campaigns.
+- Always favor original, strategy-inspired output.
+
+Automation triggers:
+1. New campaign draft created
+   - Generate headlines, hooks, ads, landing page copy, cart copy, lead magnet copy, and follow-up emails.
+
+2. Campaign launched
+   - Start monitoring CPC, CTR, conversions, ad status, and basic performance trends.
+
+3. Ad underperforms
+   - Show an alert.
+   - Recommend a new title, hook, angle, CTA, or creative.
+   - Offer one-click regeneration.
+
+4. Platform switch requested
+   - Show a strong warning.
+   - Stop monitoring on the old platform unless the user selects a monitoring option.
+   - Offer daily, weekly, or monthly monitoring credits.
+   - Offer move-to-library or keep-running options.
+
+5. Credits running low
+   - Show a warning.
+   - Suggest the next best action.
+   - Recommend an upgrade only if it will likely save money.
+
+6. New lead captured
+   - Add the lead to the list.
+   - Tag the lead.
+   - Start the follow-up sequence.
+   - Adjust lead score over time.
+
+7. User edits a campaign
+   - Save a version.
+   - Keep an undo point.
+   - Let the user approve or regenerate sections independently.
+
+Automation style:
+- Short, clear, helpful.
+- Suggest next steps, not vague advice.
+- Keep the user informed before major changes.
+- Prefer useful defaults.
+- Avoid over-automation that removes control.
+
+Default messages:
+- "Xspresso is watching."
+- "This ad is underperforming."
+- "Improve before spending more credits."
+- "Regenerate this ad with a new title, hook, or angle."
+- "You stay in command. We do the work."
+

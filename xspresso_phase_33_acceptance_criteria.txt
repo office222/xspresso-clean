@@ -1,0 +1,16 @@
+Xspresso Phase 33 — Acceptance Criteria
+
+This phase is accepted when the following are true:
+
+- Deeper orchestration across campaigns, leads, alerts, billing, templates, and reports is working.
+- Smarter cross-campaign learning and trend detection are working.
+- Stronger recommendation loops are working.
+- Broader forecasting and performance analysis are working.
+- Multi-brand and multi-team intelligence is working.
+- Shared assets and template marketplace refinement is working.
+- Improved workflow coordination is working.
+- Tighter guardrails and user control are working.
+- Clearer credit intelligence and usage guidance are working.
+- Dashboard, monitoring, and alerts continue to feel polished and consistent.
+- The user can understand what Xspresso is doing and what to do next.
+- The product still stays aligned with the core promise: done-for-you marketing, fast, with the user in command.

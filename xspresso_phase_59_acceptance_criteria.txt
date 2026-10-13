@@ -1,0 +1,46 @@
+Xspresso Phase 59 — Acceptance Criteria
+
+1) Campaign creation and launch
+- Users can create a campaign from an offer, URL, or product image.
+- Users can review, edit, regenerate, and approve campaign outputs.
+- A campaign can be launched only when required fields are present.
+- The launch flow clearly shows what is ready and what is missing.
+
+2) Monitoring and alerts
+- Active campaigns can be monitored for status, CPC, CTR, and conversions.
+- Underperforming ads trigger clear alerts.
+- Every alert suggests a next action.
+- Users can regenerate underperforming ads before spending more credits.
+
+3) Billing and credits
+- Credits are visible in the dashboard.
+- Credit usage is logged and explainable.
+- Users can see what used credits and why.
+- Credits remain the usage currency across plans and a la carte actions.
+
+4) Template, library, and reuse
+- Users can save their own campaigns to the library.
+- Users can duplicate their own work.
+- Users can restore templates and prior versions.
+- Reuse should be simple and safe.
+
+5) Dashboard clarity
+- The dashboard shows active campaigns, drafts, alerts, credits remaining, and monitored ads.
+- Each campaign card has status, performance, and quick actions.
+- The dashboard always suggests the next best action.
+
+6) Onboarding and help
+- Onboarding guides the user through campaign input, goal selection, and tone.
+- Help text and tooltips are concise and useful.
+- Empty states and errors point the user to the next step.
+
+7) Platform switching
+- Switching platforms shows a clear warning.
+- Users can keep ads running, move them to the library, or keep monitoring for a usage cost.
+- The platform switch flow requires explicit confirmation.
+
+8) Final handoff readiness
+- The system is stable enough for release packaging.
+- All core V1 workflows are usable end-to-end.
+- Guardrails prevent confusing or unsafe actions.
+- The product is ready for final QA and handoff.

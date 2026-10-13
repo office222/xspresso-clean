@@ -1,0 +1,21 @@
+Xspresso Phase 19 Acceptance Criteria
+
+This file defines when Phase 19 is considered complete.
+
+Acceptance Criteria:
+- Campaigns can be orchestrated across campaigns, leads, alerts, billing, templates, and reports.
+- Cross-campaign learning improves recommendations.
+- Recommendation loops provide useful next actions.
+- Forecasting and trend analysis are visible and understandable.
+- Shared assets and template intelligence work reliably.
+- Team and agency controls are enforced correctly.
+- Marketplace / reusable component ideas can be supported.
+- Guardrails and user control remain intact.
+- The system stays simple enough for users to understand.
+- The phase can be considered complete when these capabilities are stable and usable together.
+
+Definition of Done:
+- Users can create, monitor, optimize, and manage assets with minimal friction.
+- The system can surface useful recommendations without confusing the user.
+- Guardrails prevent unsafe or unsupported actions.
+- All major workflows related to Phase 19 operate consistently.

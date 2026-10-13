@@ -1,0 +1,27 @@
+Xspresso Board Shell Support Links
+
+Purpose:
+Provide quick, simple support and help links in the board shell footer so users can get help without leaving the main workspace.
+
+Suggested links:
+- Help Center
+- FAQ
+- Billing Help
+- Monitoring Help
+- Platform Switch Help
+- Contact Support
+
+Suggested footer copy:
+- Need help? Visit the Help Center.
+- Questions about billing or credits? Check Billing Help.
+- Want to understand monitoring or platform switches? See the help articles.
+- Keep moving fast. Get help when you need it.
+
+Design notes:
+- Keep the links small and unobtrusive.
+- Use the same Xspresso accent color for link hover states.
+- Keep the footer clean and premium.
+- Avoid cluttering the board shell.
+
+Best product rule:
+Support links should be easy to find, but never distract from the main board shell actions.

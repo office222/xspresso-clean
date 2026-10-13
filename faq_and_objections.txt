@@ -1,0 +1,52 @@
+Xspresso FAQ and Objections
+
+1) What is Xspresso?
+Xspresso is a done-for-you marketing system that helps users create campaigns faster, build lists, follow up automatically, and stay in command.
+
+2) Is Xspresso just more software?
+No. Xspresso is designed to reduce software chaos by putting the key marketing tools in one place.
+
+3) Do all plans include every tool?
+Yes. All plans include every tool. Credits simply determine fair usage.
+
+4) What are credits for?
+Credits are used for actions like generating landing pages, creating ad variations, uploading to platforms, monitoring ads, and other usage-based actions.
+
+5) Can users keep monitoring ads after switching platforms?
+Yes. Xspresso can warn the user when switching platforms will stop tracking, and the user can choose to continue monitoring for a usage cost.
+
+6) What happens when an ad is underperforming?
+Xspresso should warn the user, recommend an improvement, and offer to regenerate the ad with a new title, hook, angle, or CTA.
+
+7) Can users edit the output?
+Yes. The user stays in command. They can approve, tweak, regenerate, or save work as a template.
+
+8) Does Xspresso copy other people’s work?
+No. Xspresso should analyze strategy and generate original inspired-by campaigns, never copies.
+
+9) Can users reuse their own campaigns?
+Yes. Users can save, duplicate, export, import, and restore their own work.
+
+10) What if a user’s platform is not listed?
+Xspresso should show the supported list and allow the user to request a platform. No promises.
+
+11) Does Xspresso work with low budgets?
+Yes. It is built for people who do not want to waste money and need a smarter, more affordable way to market.
+
+12) Is Xspresso hands-free?
+It is done-for-you, but the user remains in control. Xspresso does the heavy lifting and the user approves what they like.
+
+13) What if the campaign is missing information?
+Xspresso should still create a draft using smart defaults and allow the user to fill in details later.
+
+14) Can Xspresso help with lead follow-up?
+Yes. Xspresso can capture leads and move them into follow-up sequences automatically.
+
+15) Does Xspresso include monitoring and alerts?
+Yes. Xspresso should watch ads, CPC, and stats, then alert the user when something looks off.
+
+16) What is the main promise?
+Done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.
+
+Suggested support line:
+We do the work. You enjoy the benefits.

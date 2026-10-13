@@ -1,0 +1,88 @@
+/* xspresso_829_app_shell.css */
+:root {
+  --bg: #ffffff;
+  --panel: #f7f7f7;
+  --ink: #111111;
+  --muted: #666666;
+  --brand: #ff7a18;
+  --brand-dark: #c95f10;
+  --line: #e5e5e5;
+  --success: #1f8b4c;
+  --warning: #b36b00;
+  --danger: #c53131;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.topbar {
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+  padding: 16px 24px;
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: var(--ink);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.nav a.active,
+.nav a:hover {
+  background: #fff1e5;
+  color: var(--brand-dark);
+}
+
+.page {
+  padding: 24px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--brand);
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn.secondary {
+  background: #ffffff;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.small { color: var(--muted); font-size: 0.92rem; }
+.badge { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 0.8rem; }
+.badge.green { background: #e6f6ec; color: var(--success); }
+.badge.orange { background: #fff2df; color: var(--warning); }
+.badge.red { background: #fde8e8; color: var(--danger); }
+.badge.gray { background: #f0f0f0; color: #444; }

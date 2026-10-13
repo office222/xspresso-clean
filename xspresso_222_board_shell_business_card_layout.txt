@@ -1,0 +1,44 @@
+Xspresso Board Shell Business Card Layout
+
+Purpose:
+- Keep the brand header clean, simple, and responsive.
+- Keep the cup icon left of the name.
+- Prevent wrapping or stacking when the page shrinks.
+
+Layout rules:
+- Use a two-cell inline table for the logo area.
+- Put the cup image in the first cell.
+- Put the name/logo text image in the second cell.
+- Keep both images on the same line.
+- Use a white background behind the header.
+- Use display:block on both images.
+- Use max-width and height:auto so the images shrink cleanly.
+
+Responsive behavior:
+- On smaller screens, the cup must remain left of the name.
+- The name should shrink proportionally.
+- The header must not force the cup above the name.
+- Avoid hard-coded widths that break inline alignment.
+
+Suggested structure:
+- White top bar
+- Left: cup image
+- Right: name/logo text image
+- Optional right-side spacer cell
+
+Acceptance checks:
+- Cup stays left of name on desktop.
+- Cup stays left of name on tablet.
+- Cup stays left of name on mobile.
+- Header background remains white.
+- No stacking unless screen width is extremely narrow.
+
+Copy guidance:
+- Keep the header clean.
+- Do not add extra hero text to the header.
+- Let the business card component carry the message.
+
+Implementation reminder:
+- FrontPage-friendly table layout is preferred.
+- Keep the markup simple.
+- Avoid nested blocks that force wrapping.

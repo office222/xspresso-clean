@@ -1,0 +1,52 @@
+Xspresso Release Notes
+
+Version: V1 Build Notes
+Date: 2026-10-07
+
+Core Positioning
+- Xspresso is done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.
+- We do the work. You enjoy the benefits.
+- All plans include every tool. Credits simply determine fair usage.
+
+What V1 Includes
+- Campaign creation from product photo, URL, or offer details
+- AI-generated ads, headlines, hooks, landing page copy, cart copy, lead magnet copy, and follow-up emails
+- Platform-specific ad adaptation
+- Lead capture and autoresponder follow-up
+- Ad monitoring and alerts
+- Underperforming ad regeneration suggestions
+- Platform switching warnings and per-ad monitoring choices
+- Campaign library, duplication, import/export, templates, and version history
+- Dashboard, alerts, activity history, and usage logs
+- Billing, subscriptions, credits, and a la carte usage rules
+
+Guiding Rules
+- Done-for-you first
+- User stays in command
+- Fast and simple
+- More responses, less software chaos
+- Original, never copy
+- Monitor and improve
+- Save time and money
+- Built for people who need to start smart without wasting money
+
+Planned V2 Additions
+- Sales letters
+- VSL scripts
+- Advanced long-form funnels
+- Video production support
+- Deeper automation and stronger content production
+
+Build Status Notes
+- Hero copy has been cleaned up
+- Logo/header layout has been fixed so the logo stays inline and shrinks better
+- Pricing and credits model emphasize fair usage, not feature bait-and-switch
+- Monitoring and alerts should recommend action before more credits are spent on underperforming ads
+- Campaign templates, duplication, and version history are part of the reusable workflow
+
+Next Suggested Files
+- xspresso_user_journeys.txt
+- xspresso_ui_map.txt
+- xspresso_error_states.txt
+- xspresso_support_copy.txt
+- xspresso_v1_checklist.txt

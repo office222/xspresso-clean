@@ -1,0 +1,58 @@
+Xspresso V1 — Template System
+
+Purpose:
+Allow users to start faster by choosing a ready-made template, then customize it for their own offer.
+
+Core idea:
+- Start from a template
+- Save your own winning campaigns as templates
+- Reuse your own work later
+- Keep the original intact
+- Never copy other people’s work
+
+Recommended template types:
+- launch
+- lead-magnet
+- follow-up
+- ad-campaign
+- landing-page
+- social-upload
+- sales-funnel
+
+Template object:
+- id
+- name
+- category
+- description
+- createdAt
+- updatedAt
+- data
+
+Recommended starter templates:
+- Product Launch
+- Lead Magnet
+- Follow-Up Sequence
+- Ad Campaign
+- Landing Page
+- Social Upload Pack
+- Sales Funnel
+
+Key functions:
+- buildPreset(type)
+- saveAsTemplate(campaign, templateName)
+- createCampaignFromTemplate(template, overrides)
+- addTemplateToLibrary(library, template)
+- removeTemplateFromLibrary(library, templateId)
+
+Friendly UI copy:
+- Start from a template
+- Use a preset
+- Save as template
+- Reuse your best setup
+- Build faster from proven structure
+
+Best product rule:
+Users should be able to start from a template, save their own work as a template, and reuse it later.
+
+Best summary line:
+Xspresso lets users start from ready-made templates and save their own winning setups as presets for later reuse.

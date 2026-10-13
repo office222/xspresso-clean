@@ -1,0 +1,32 @@
+Files to extract from the existing bundles into the Xspresso project root
+
+ADDENDUM 2
+xspresso_notification_preferences_service_v1.js
+xspresso_notification_api_v1.js
+xspresso_notification_panel_v1.js
+xspresso_notification_runtime_v1.js
+xspresso_notification_preferences_service_v1.test.js
+
+ADDENDUM 3
+xspresso_notification_email_service_v1.js
+xspresso_notification_email_api_v1.js
+xspresso_notification_email_panel_v1.js
+xspresso_notification_email_runtime_v1.js
+xspresso_notification_email_service_v1.test.js
+
+ADDENDUM 4
+xspresso_v1_launch.js
+xspresso_v1_preflight.js
+xspresso_v1_preflight.test.js
+xspresso_v1_smoke.test.js
+xspresso_v1_package_manifest.json
+
+ADDENDUM 5
+xspresso_v1_campaign_workflow.e2e.test.js
+
+ADDENDUM 6
+xspresso_backup_service_v1.js
+xspresso_backup_cli_v1.js
+xspresso_backup_service_v1.test.js
+
+Use one package.json, made from xspresso_v1_package_manifest.json. Remove older duplicate package.json files, and use xspresso_v1_launch.js as the single start entry.

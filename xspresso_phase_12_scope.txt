@@ -1,0 +1,29 @@
+Xspresso Phase 12 — Scope
+
+This phase is focused on final polish, hardening, and operational readiness after the core AI optimization system is in place.
+
+Includes:
+- final UX polish across the app
+- performance hardening and stability work
+- deeper error handling and recovery flows
+- stronger onboarding and help content
+- improved dashboard clarity and summaries
+- better audit trails and activity visibility
+- more polished billing/credits presentation
+- support tooling and troubleshooting aids
+- final platform compatibility checks
+- release candidate preparation
+
+Success criteria:
+- app feels stable and reliable in daily use
+- users can complete the full workflow with minimal confusion
+- alerts, monitoring, and billing behave consistently
+- support and help content reduce friction
+- the product is ready for broader public launch
+
+Guardrails:
+- keep the product aligned with done-for-you marketing
+- preserve user control and approval
+- keep all tools available to all plans
+- preserve the credits-based fair usage model
+- avoid unnecessary feature creep

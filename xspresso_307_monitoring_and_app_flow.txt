@@ -1,0 +1,264 @@
+Xspresso — Monitoring and App Flow
+
+1) App Shell and Navigation
+- Top bar
+- Left navigation
+- Main content area
+- Right help/status panel
+- Thin footer/status strip
+
+Core navigation items:
+- Dashboard
+- Create Campaign
+- Monitoring
+- Leads
+- Library
+- Templates
+- Credits
+- Billing
+- Settings
+- Help
+
+Navigation rule:
+- Always show what is happening now
+- Always show what needs attention
+- Always show what to do next
+
+2) Campaign Builder Screen
+Purpose:
+Turn an offer into a campaign draft.
+
+Steps:
+1. Offer
+2. Goal
+3. Tone
+4. Platform
+
+Offer inputs:
+- Product name
+- Product photo
+- URL
+- Short description
+- Price
+- Audience
+
+Goal options:
+- Get clicks
+- Get leads
+- Get sales
+- Build a list
+- Follow up automatically
+- Improve an existing campaign
+
+Tone options:
+- Simple
+- Friendly
+- Bold
+- Premium
+- Direct
+- Persuasive
+
+Platform options:
+- Facebook
+- Instagram
+- TikTok
+- YouTube
+- Google
+- Other
+
+Primary action:
+- Generate Draft
+
+Helpful copy:
+- Tell Xspresso what you’re selling.
+- The more you tell Xspresso, the better it can help.
+- If you don’t know what to say, Xspresso can still build a draft.
+
+3) Campaign Review / Approve / Regenerate Screen
+Purpose:
+Let the user review the draft, approve good sections, and regenerate weak ones.
+
+Sections to review:
+- Headline
+- Subheadline
+- Hooks
+- Ad copy
+- Landing page copy
+- Cart copy
+- Lead magnet copy
+- Follow-up emails
+- Platform versions
+
+Actions per section:
+- Approve
+- Edit
+- Regenerate
+- Simplify
+- Strengthen
+
+Helpful copy:
+- Approve what you like.
+- Tweak what you want.
+- Regenerate what doesn’t fit.
+- You stay in command.
+- Xspresso does the heavy lifting.
+
+4) Launch / Readiness Check Screen
+Purpose:
+Confirm the campaign is ready to go live.
+
+Readiness checks:
+- Headline exists
+- Ad copy exists
+- Landing page exists
+- Cart or lead capture exists
+- Follow-up is enabled
+- Platform version is selected
+- Credits are available
+
+Readiness states:
+- Ready to Launch
+- Needs Review
+- Missing Items
+- Not Enough Credits
+
+Helpful copy:
+- You’re almost ready.
+- Fix the missing items and launch when ready.
+- You can’t launch blind.
+- Xspresso will show what still needs attention.
+
+Actions:
+- Launch Now
+- Save Draft
+- Fix Missing Items
+- Back to Review
+
+5) Monitoring Dashboard Screen
+Purpose:
+Show performance, alerts, and the next best action.
+
+Dashboard should show:
+- Active campaigns
+- Drafts
+- Alerts
+- Credits remaining
+- Monitored ads
+- Recent activity
+
+Campaign card should show:
+- Campaign name
+- Status
+- Platform
+- CPC
+- CTR
+- Conversions
+- Monitoring status
+- Alert count
+
+Status labels:
+- Live
+- Draft
+- Needs Attention
+- Underperforming
+- Paused
+
+Helpful copy:
+- Xspresso is keeping watch.
+- This campaign may need a tweak.
+- This campaign is underperforming.
+- Credits remaining.
+- Recent alerts.
+
+6) Alert and Notification Rules
+Alert triggers:
+- CPC rises too high
+- CTR drops too low
+- An ad has clicks but no conversions
+- A campaign is underperforming
+- Tracking stops on a platform
+- Credits are running low
+
+Alert behavior:
+- Explain the issue clearly
+- Suggest the next best action
+- Offer a fix instead of just a warning
+
+Examples:
+- This ad is underperforming.
+- Improve it before spending more credits.
+- Xspresso recommends regenerating this ad.
+- CPC is rising.
+- This campaign may need a tweak.
+
+7) Underperforming Ad Improvement Flow
+If an ad is not performing well, Xspresso should help the user fix it before spending more credits.
+
+Suggested actions:
+- Regenerate this ad
+- Rewrite the title
+- Test a new hook
+- Try a different angle
+- Change the CTA
+- Update the creative
+- Pause monitoring
+
+Core rule:
+- Do not keep spending credits on something that is not working.
+- Improve first, then continue monitoring.
+
+Helpful copy:
+- This ad is underperforming.
+- Improve it before spending more credits.
+- Xspresso can regenerate this ad.
+- Try a new title, hook, or angle.
+
+8) Credits and Billing Visibility
+The app should always show the user what they have and what they are using.
+
+Display:
+- Current plan
+- Credits included
+- Credits used
+- Credits remaining
+- Renewal date
+- Upgrade suggestion if usage is high
+
+Helpful copy:
+- All plans include every tool.
+- Credits simply determine fair usage.
+- Need more? Add credits anytime.
+- Based on your usage, upgrading may save you money.
+
+9) Lead Capture and Follow-Up
+Each campaign can include:
+- Opt-in form
+- Thank-you message
+- Welcome email
+- Reminder email
+- Follow-up sequence
+- Special offer email
+
+Lead behavior:
+- Capture the lead
+- Tag the source campaign
+- Score engagement
+- Route the lead to the right follow-up path
+
+Helpful copy:
+- Turn traffic into leads.
+- Keep the conversation going automatically.
+- Xspresso helps you follow up without starting from scratch every time.
+
+10) Best App Rule
+The app should always feel:
+- Simple
+- Clear
+- Calm
+- Premium
+- Done-for-you
+- In command
+
+Core promise:
+Xspresso is done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.
+We do the work. You enjoy the benefits.

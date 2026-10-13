@@ -1,0 +1,42 @@
+Xspresso Board Shell Launch and CTA Notes
+
+Purpose:
+This file captures the final board shell message and call-to-action guidance for the Xspresso business card and header area.
+
+Core message:
+- Xspresso is done-for-you marketing.
+- Xspresso gets responses.
+- Xspresso helps users stay in command.
+- We do the work.
+- You enjoy the benefits.
+
+Recommended CTA buttons:
+- Try the Demo
+- See Pricing
+- Start Now
+- View Features
+
+CTA rules:
+- Keep CTAs short and action-focused.
+- Use only two primary buttons in the hero area.
+- Make the strongest CTA visually dominant.
+- Keep the copy consistent with the done-for-you promise.
+- Avoid cluttering the board shell with too many buttons.
+
+Short support lines:
+- Wake up your marketing.
+- More responses. Less software chaos.
+- You stay in command. We do the work.
+
+Layout reminders:
+- Keep the cup left of the name.
+- Keep the background white behind the logo.
+- Let the logo shrink cleanly on smaller screens.
+- Avoid stacking the logo image under the text image.
+- Keep the board shell clean and premium.
+
+Acceptance checks:
+- Logo stays inline on resize.
+- CTA buttons remain readable and spaced apart.
+- Main message is visible without scrolling too far.
+- The board shell feels clean, simple, and confident.

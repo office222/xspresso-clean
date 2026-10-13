@@ -1,0 +1,62 @@
+Xspresso Current Build Status
+
+This file captures the current state of the Xspresso project after the first major build pass.
+
+Core Positioning
+- Done-for-you marketing, fast.
+- Xspresso is not about more software.
+- It helps users get more responses, build a list, and follow up automatically.
+- The user stays in command while Xspresso does the heavy lifting.
+- We do the work. You enjoy the benefits.
+
+V1 Focus
+- Campaign creation from a product photo, URL, or offer details
+- AI-generated ads, headlines, hooks, landing pages, carts, lead magnets, and follow-up
+- Platform adaptation for social uploads
+- Ad monitoring and alerts
+- Lead capture and follow-up automation
+- Credits and fair-usage billing
+- Dashboard, alerts, and activity history
+- Library, templates, export/import, and reuse of the user’s own work
+
+Platform and Monitoring Rules
+- All plans include every tool.
+- Credits determine fair usage.
+- Monitoring charges can be daily, weekly, or monthly.
+- Switching platforms must show a strong warning.
+- Users can keep specific ads running, move them to their library, or keep monitoring them for credits.
+- Underperforming ads should prompt regeneration before more credits are spent.
+
+Campaign Flow
+1. User adds offer details.
+2. Xspresso builds a campaign brief.
+3. Xspresso generates copy and assets.
+4. User reviews, edits, approves, or regenerates.
+5. User launches.
+6. Xspresso monitors and alerts.
+7. User improves or regenerates as needed.
+
+V2 Ideas
+- Sales letters
+- VSLs
+- Video production
+- Deeper optimization
+- Advanced cloning of the user’s own campaigns
+
+Best Current Messaging
+- Wake up your marketing.
+- More responses. Less software chaos.
+- You stay in command. We do the work.
+- Xspresso gives you more for less, so you can get your time back.
+- Don’t buy another job. Start building a lifestyle.
+
+Open Items
+- Finalize the V1 minimum viable feature set
+- Lock credit pricing and a la carte usage
+- Refine dashboard and alert copy
+- Decide the first supported platforms
+- Add more detailed acceptance criteria for launch
+- Keep the landing page aligned with the same message
+
+Recommended Next File
+- xspresso_197_v1_open_issues.txt

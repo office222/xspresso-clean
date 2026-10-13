@@ -1,0 +1,85 @@
+Xspresso File Registry
+
+Purpose: a clean registry of the major files created so far, grouped by function, to help avoid duplicate names and keep the project organized.
+
+MASTER / ROADMAP
+- README.txt
+- xspresso_master_index.txt
+- xspresso_189_project_snapshot.txt
+- xspresso_196_current_build_status.txt
+- xspresso_197_next_build_notes.txt
+- xspresso_189_project_snapshot.txt
+- roadmap_and_open_items.txt
+- next_steps.txt
+- implementation_todo.txt
+- architecture_overview.txt
+
+V1 PRODUCT / CORE BUILD
+- xspresso_v1_features.txt
+- credits_and_usage.txt
+- campaign_generation.js
+- ad_monitoring.js
+- lead_followup.js
+- billing.js
+- alerts_notifications.js
+- platform_rules.js
+- monitoring_rules.txt
+- release_checklist.txt
+- data_models.txt
+- database_schema.txt
+- v1_api_spec.txt
+- api_endpoints.txt
+- environment_and_config.txt
+- campaign_state_machine.txt
+- reporting_and_metrics.txt
+- support_and_help_center.txt
+- xspresso_faq.txt
+- xspresso_user_journey.txt
+- implementation_todo.txt
+- v1_api_spec.txt
+
+UI / HTML / FRONTEND
+- xspresso_lander_fixed.htm
+- dashboard.html
+- switch_platform_modal.html
+- hero_copy.txt
+- alerts_copy.txt
+- pricing_copy.txt
+- ui_components.txt
+- ui_shell_notes.txt
+- frontend_shell_plan.txt
+- component_map.txt
+
+COPY / MESSAGING
+- founder_story.txt
+- xspresso_message_map.txt
+- xspresso_202_prompt_library.txt
+- bullet_bank.txt
+- xspresso_203_file_registry.txt
+
+LIBRARY / TEMPLATE / EXPORT
+- template_system.txt
+- export_import_share.txt
+- xspresso_198_campaign_creation_steps.txt
+- xspresso_199_admin_console_flow.txt
+- xspresso_200_release_packaging_notes.txt
+- xspresso_201_automation_rules_and_triggers.txt
+- xspresso_192_integration_notes.txt
+- integrations.txt
+- platform_support_matrix.txt
+
+QUALITY / TEST / OPERATIONS
+- qa_test_plan.txt
+- security_and_permissions.txt
+- release_notes_and_changelog.txt
+- credits_ledger.txt
+- deployment_and_repo_plan.txt
+
+V2 / FUTURE
+- v2_feature_candidates.txt
+- roadmap_and_open_items.txt
+
+Notes:
+- Prefer numbered filenames going forward to avoid 'already exists' collisions.
+- Keep new files in the xspresso_###_*.txt pattern when possible.
+- Use the existing project map files as the source of truth for scope and build order.

@@ -1,0 +1,24 @@
+Xspresso code batch 700-704
+
+Included files:
+- xspresso_700_index.html
+- xspresso_701_app.css
+- xspresso_702_app.js
+- xspresso_703_campaign_builder.js
+- xspresso_704_monitoring_engine.js
+
+Notes:
+- White header with cup + wordmark inline
+- Simple dashboard layout
+- Campaign builder form
+- Monitoring engine and alert rules
+- Billing / credits visibility
+- Responsive card-based app shell
+
+Next batch ideas:
+- review / approve / regenerate panel
+- lead follow-up timeline
+- template library
+- settings panel
+- help center
+- platform switch modal

@@ -1,0 +1,60 @@
+Xspresso — Board Shell Style and Layout Notes
+
+Purpose:
+This file defines the style and layout rules for the Xspresso front board shell and the business card component that appears inside it.
+
+Key goals:
+- Keep the header clean and white.
+- Keep the cup icon left of the Xspresso name/logo.
+- Allow the logo row to shrink gracefully on smaller screens.
+- Keep all important content readable and inline.
+- Make the component feel premium, simple, and easy to scan.
+
+Header rules:
+- Use a white background behind the logo area.
+- Do not place the cup image on top of the name.
+- Keep the cup and text logo in the same inline row.
+- Use responsive image sizing so the header can scale down.
+- Avoid dark header bars that make the graphics look pixelated or cluttered.
+
+Business card component rules:
+- The business card should act like a compact summary block.
+- Include the core promise near the top.
+- Include a short benefit line.
+- Include demo and pricing buttons.
+- Keep spacing generous and clean.
+- Avoid too much copy inside the card.
+
+Copy style:
+- Done-for-you.
+- Fast.
+- Simple.
+- More responses.
+- Less software chaos.
+- You stay in command.
+- We do the work.
+
+Responsive behavior:
+- The header must shrink without breaking line order.
+- The cup should remain left of the name logo.
+- The business card should stack cleanly on narrow screens.
+- Buttons should remain easy to tap.
+- Text should remain readable without forcing horizontal scrolling.
+
+Implementation reminders:
+- Use inline tables for the header where needed.
+- Use max-width and height:auto on images.
+- Keep the top bar background white.
+- Keep orange as an accent color, not a full-page background.
+- Avoid repeated hero copy inside the board shell.
+
+Accepted visual direction:
+- White background.
+- Charcoal / black text.
+- Orange accent for emphasis.
+- Clean spacing.
+- Minimal clutter.
+- Premium, calm, and easy to use.
+
+Notes:
+This file is intended to support the front board shell design and keep the logo/header from wrapping awkwardly when the page is resized.

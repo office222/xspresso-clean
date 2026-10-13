@@ -1,0 +1,22 @@
+Xspresso batch 675-679 release notes
+
+Included files:
+- xspresso_675_app_state_store.js
+- xspresso_676_campaign_actions.js
+- xspresso_677_monitoring_widgets.js
+- xspresso_678_help_center.js
+- xspresso_679_template_library.js
+
+What this batch adds:
+- central app state store
+- campaign creation and lifecycle actions
+- ad health and monitoring evaluation
+- help center search and article lookup
+- template save / restore / duplicate helpers
+
+Next likely batch:
+- billing and credits helpers
+- platform switch modal
+- dashboard cards / summaries
+- notifications center
+- app shell routing

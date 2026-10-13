@@ -1,0 +1,117 @@
+Xspresso Phase 1 Acceptance Criteria
+
+Purpose
+This file defines what must be true for Xspresso Phase 1 to be considered complete and ready for internal use.
+
+Core Principle
+Xspresso Phase 1 should feel like a done-for-you marketing system that is fast, simple, original, and user-controlled.
+
+1. Campaign Builder Acceptance Criteria
+- User can enter a product photo, URL, or brief offer description.
+- User can select a goal such as sales, leads, or list building.
+- User can choose a tone such as simple, bold, friendly, or premium.
+- System can create a usable campaign brief from minimal input.
+- System can still build a draft even when the user gives partial information.
+
+2. Generation Acceptance Criteria
+- Xspresso can generate at least a first draft of:
+  - headlines
+  - hooks
+  - ad copy
+  - landing page copy
+  - cart or lead capture copy
+  - follow-up emails
+- Output must be original and strategy-inspired, not copied.
+- User must be able to review the draft before launch.
+
+3. Review and Approve Acceptance Criteria
+- User can edit any section of the campaign.
+- User can approve sections individually.
+- User can regenerate a single section without rebuilding the full campaign.
+- User can regenerate the entire campaign if needed.
+- Approved sections must remain marked as approved.
+
+4. Launch Acceptance Criteria
+- Campaign cannot launch unless required sections exist.
+- User sees a clear readiness check before launch.
+- User can choose to save, export, schedule, or launch.
+- Launch state must be visible after launch.
+
+5. Monitoring Acceptance Criteria
+- Xspresso can monitor active campaigns and ads.
+- Xspresso can surface underperforming ads.
+- Xspresso can warn when CPC rises or performance drops.
+- Xspresso can recommend a next action.
+- Xspresso can offer regeneration before more credits are spent.
+
+6. Platform Switching Acceptance Criteria
+- User receives a clear warning when switching platforms.
+- User can choose which ads to keep running, move to library, or keep monitoring.
+- Monitoring costs must be visible and understandable.
+- The user must confirm before changes are applied.
+
+7. Credits and Usage Acceptance Criteria
+- All plans include every tool.
+- Credits determine fair usage.
+- Users can see credits used, remaining, and tied to monitoring.
+- Users can buy or spend credits a la carte.
+- System should suggest an upgrade when the next tier would save money.
+
+8. Lead Capture and Follow-Up Acceptance Criteria
+- Xspresso can capture leads from a campaign.
+- Xspresso can tag leads.
+- Xspresso can score leads.
+- Xspresso can route leads into follow-up sequences.
+- Xspresso can create campaign-level autoresponder flows.
+
+9. Library and Reuse Acceptance Criteria
+- Users can save their own campaigns to a library.
+- Users can duplicate their own work.
+- Users can export and import their own campaigns.
+- Users can restore previous versions.
+- Users cannot copy other people's work.
+
+10. Dashboard Acceptance Criteria
+- Dashboard shows active campaigns.
+- Dashboard shows alerts.
+- Dashboard shows credits remaining.
+- Dashboard shows monitored ads.
+- Dashboard shows what needs attention and what to do next.
+
+11. Billing Acceptance Criteria
+- User can see plan status.
+- User can see renewal date.
+- User can see usage relative to plan.
+- User can pause, cancel, or reactivate.
+- Billing must stay simple and fair.
+
+12. Copy and Messaging Acceptance Criteria
+- Core language should emphasize:
+  - done-for-you
+  - more responses
+  - less software chaos
+  - you stay in command
+  - we do the work
+- Copy should feel clear, human, and direct.
+
+13. Quality Acceptance Criteria
+- The product should be understandable without a long tutorial.
+- The user should always know the next best action.
+- Each alert should suggest a fix.
+- Each workflow should reduce confusion and save time.
+- Xspresso should never feel like feature clutter.
+
+Definition of Done for Phase 1
+Phase 1 is done when a user can:
+- create a campaign
+- review and edit it
+- launch it
+- monitor it
+- react to alerts
+- manage credits
+- switch platforms safely
+- capture leads
+- follow up automatically
+- reuse and restore their own work
+
+If all of the above work, Xspresso Phase 1 is ready for real-world use.

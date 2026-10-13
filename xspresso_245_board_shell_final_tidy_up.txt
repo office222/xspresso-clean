@@ -1,0 +1,22 @@
+Xspresso Board Shell Final Tidy-Up Notes
+
+Purpose:
+Keep the front board shell clean, premium, readable, and easy to maintain.
+
+Checklist:
+- Keep the cup left of the name logo.
+- Keep the header background white.
+- Prevent the logo from stacking on smaller screens.
+- Make sure the business card stays readable on desktop and mobile.
+- Keep the CTA buttons clear, simple, and visible.
+- Use orange as an accent, not a full-page background.
+- Avoid repeating the same headline or support line too many times.
+- Keep spacing consistent between sections.
+- Keep footer/support text short and clean.
+
+Acceptance checks:
+- Logo stays inline.
+- Header shrinks cleanly.
+- Hero reads fast.
+- Board shell feels premium.
+- Main message remains clear: done-for-you marketing, fast, you stay in command.

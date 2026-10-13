@@ -1,0 +1,60 @@
+Xspresso Integration Flow
+
+Purpose:
+This file defines how the major parts of Xspresso connect together from first login to launch and ongoing monitoring.
+
+1. User signs in
+- Load dashboard summary
+- Show credits remaining
+- Show active campaigns, drafts, and alerts
+
+2. User creates a campaign
+- Enter product name, URL, image, offer details, audience, goal, tone, and platform
+- Xspresso builds a brief from the input
+
+3. Xspresso generates the campaign
+- Create headlines, hooks, ads, landing page copy, cart copy, lead magnet copy, and follow-up emails
+- Create platform-specific versions
+- Save output as a draft
+
+4. User reviews and edits
+- Approve sections
+- Edit sections
+- Regenerate sections
+- Save versions
+- Duplicate or export if needed
+
+5. User launches
+- Check readiness
+- Confirm required assets exist
+- Launch campaign to selected platform(s)
+
+6. Monitoring begins
+- Watch ads, CPC, CTR, conversions, and other stats
+- Show alerts when something looks off
+- Flag underperforming ads early
+
+7. Optimization loop
+- If an ad is underperforming, recommend a new title, hook, angle, CTA, or creative
+- Offer regeneration before more credits are spent
+
+8. Lead capture and follow-up
+- Capture leads from opt-in forms or response flows
+- Score and tag leads
+- Add them to the proper follow-up sequence
+
+9. Platform switching
+- If the user switches platforms, warn clearly
+- Offer keep-running, move-to-library, or continued monitoring options
+- Apply usage-based credits as needed
+
+10. Billing and usage
+- Track credits used for actions and monitoring
+- Show usage history
+- Suggest upgrades if the next tier saves money
+
+Core rule:
+All tools are available on every plan. Credits simply determine fair usage.
+
+Best summary:
+Input -> Draft -> Review -> Launch -> Monitor -> Improve -> Follow Up

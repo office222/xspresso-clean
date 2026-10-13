@@ -1,0 +1,25 @@
+Xspresso Batch Release Notes
+
+Files in this batch:
+- xspresso_477_campaign_publish_flow.js
+- xspresso_478_monitoring_rules_v3.js
+- xspresso_479_credits_ledger_v2.js
+- xspresso_480_permissions_roles.js
+- xspresso_481_library_manager.js
+- xspresso_482_template_renderer.js
+
+What this batch adds:
+- publish/readiness checks
+- monitoring health evaluation
+- credits ledger tracking
+- roles and permission rules
+- library save/restore/duplicate helpers
+- template and preset rendering
+
+Next suggested batch:
+- dashboard cards
+- alerts notifications
+- launch readiness panel
+- app shell styles
+- navigation menu
+- help center search

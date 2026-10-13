@@ -1,0 +1,23 @@
+Xspresso Phase 40 — Acceptance Criteria
+
+This file defines the acceptance criteria for Phase 40 of Xspresso.
+
+The Phase 40 work is complete when:
+
+- Campaigns can be orchestrated across campaigns, leads, alerts, billing, templates, and reports.
+- Cross-campaign learning and trend detection are functioning.
+- Recommendation loops are producing useful next-step suggestions.
+- Forecasting and performance analysis are available and readable.
+- Multi-brand and multi-team intelligence is operating properly.
+- Shared asset and template marketplace refinement is in place.
+- Workflow coordination is working across the key modules.
+- Guardrails and user control are preserved.
+- Credit intelligence and usage guidance are clear.
+- Dashboard, monitoring, alerts, and launch-flow polish are complete.
+
+Definition of done:
+- The system behaves consistently.
+- The user can understand what Xspresso is doing.
+- The user can act on recommendations.
+- The user remains in command.
+- The experience stays aligned with the Xspresso core promise: done-for-you marketing, fast, with less software chaos.

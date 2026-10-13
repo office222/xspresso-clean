@@ -1,0 +1,18 @@
+Xspresso human-review workflow — integration notes
+
+Files in this batch
+- xspresso_campaign_review_service_v1.js
+- xspresso_campaign_review_handler_v1.js
+- xspresso_app_composition_v2.js
+- xspresso_campaign_review_service_v1.test.js
+- xspresso_campaign_review_handler_v1.test.js
+- xspresso_app_composition_v2.test.js
+
+Integration
+1. Create CampaignReviewService with the existing JSON store.
+2. Compose the API with composeXspressoApiV2({ baseApi, auth, reviewService, ...existingServices }).
+3. The routes are GET/PUT /api/campaigns/:id/draft and POST /api/campaigns/:id/approve.
+4. PUT requires { expectedVersion, draft }; approval requires { expectedVersion }.
+5. Approval records the reviewed copy but deliberately does not publish ads or spend budget. A subsequent publishing integration should consume assets.approvedDraft only.
+
+Tests use Node's built-in test runner. They have not been executed in this environment.

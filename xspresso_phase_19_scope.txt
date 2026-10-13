@@ -1,0 +1,15 @@
+Xspresso Phase 19 — Scope
+
+This phase covers:
+- deeper orchestration across campaigns, leads, alerts, billing, templates, and reports
+- smarter cross-campaign learning
+- more advanced recommendation loops
+- broader forecasting and trend analysis
+- shared assets and template intelligence
+- stronger team and agency controls
+- marketplace / reusable component ideas
+- tighter guardrails and user control
+- success criteria for the next major stage
+
+Core principle:
+Xspresso should keep expanding its intelligence and coordination while staying simple, fast, and user-controlled.

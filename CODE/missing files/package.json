@@ -1,0 +1,12 @@
+{
+  "name": "xspresso-api-starter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Dependency-free Node.js API starter for the Xspresso MVP",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node xspresso_server.js",
+    "dev": "node --watch xspresso_server.js"
+  }
+}

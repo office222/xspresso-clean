@@ -1,0 +1,71 @@
+Xspresso Phase 1 Task Breakdown
+
+1) Campaign Builder
+- Input product photo, URL, or brief details
+- Capture product name, audience, goal, and tone
+- Generate a campaign brief
+- Build draft assets: headlines, hooks, ads, landing page, cart, lead magnet, follow-up emails
+- Provide editable sections
+- Allow regenerate section / regenerate all
+
+2) Review and Approve Flow
+- Show draft in a readable layout
+- Let user edit any section
+- Let user approve individual sections
+- Show which sections are still pending
+- Allow save draft and launch later
+
+3) Launch Flow
+- Validate required campaign fields
+- Check landing page, ad copy, platform versions, and credits
+- Show missing items before launch
+- Launch campaign when ready
+- Mark campaign live and enable monitoring
+
+4) Monitoring Flow
+- Track ad status, CPC, CTR, and conversions
+- Show warning when performance declines
+- Suggest next action when something is off
+- Offer one-click regeneration for underperforming ads
+- Keep monitoring visible in dashboard
+
+5) Platform Switching
+- Warn user when switching away from a platform
+- Show ads on the platform and their monitoring choices
+- Let user keep ads running, move them to library, or continue monitoring for credits
+- Support daily, weekly, and monthly tracking costs
+- Show clear confirm/cancel steps
+
+6) Credits and Usage
+- Every plan includes every tool
+- Credits determine usage, not access to features
+- Track credits used by action and monitoring
+- Display remaining credits in dashboard
+- Suggest plan upgrade when usage trends indicate it would save money
+
+7) Lead Capture and Follow-Up
+- Capture leads from campaigns
+- Tag and score leads
+- Move leads into follow-up sequences automatically
+- Support welcome, reminder, benefit, and offer emails
+- Allow campaign-level autoresponder setup
+
+8) Library and Reuse
+- Save campaigns to library
+- Duplicate own campaigns and templates
+- Restore previous versions
+- Export/import campaigns
+- Reuse winning structures without starting from scratch
+
+9) Dashboard and Alerts
+- Show active campaigns, drafts, alerts, and credits remaining
+- Display recent alerts and campaign performance summaries
+- Use color-coded statuses: green, yellow, red
+- Always give the user a next action
+
+10) V1 Success Criteria
+- User can go from brief to draft quickly
+- User can edit, approve, and launch without confusion
+- Xspresso can monitor performance and suggest improvements
+- Credits and usage remain clear and fair
+- The experience feels done-for-you but still under user control

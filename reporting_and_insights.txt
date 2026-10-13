@@ -1,0 +1,74 @@
+Xspresso Reporting and Insights
+
+Purpose:
+Give users a clear, simple view of what is working, what is not, and what to do next.
+
+Core goals:
+- Show campaign performance at a glance
+- Highlight underperforming ads early
+- Recommend the next best action
+- Keep the user in command while Xspresso does the heavy lifting
+
+Key report sections:
+1. Campaign summary
+- Campaign name
+- Status
+- Platform
+- CPC
+- CTR
+- Conversions
+- Credits used
+- Credits remaining
+
+2. Ad performance summary
+- Ad name
+- Ad status
+- Spend / credits used
+- Clicks
+- CTR
+- CPC
+- Conversions
+- Recommendation
+
+3. Monitoring summary
+- Ads being watched
+- Ads needing attention
+- Ads underperforming
+- Alerts resolved
+- Alerts still open
+
+4. Lead and follow-up summary
+- New leads
+- Warm leads
+- Hot leads
+- Emails sent
+- Replies received
+- Follow-up performance
+
+5. Credit usage summary
+- Credits included
+- Credits used
+- Credits remaining
+- A la carte usage
+- Monitoring usage
+- Suggested upgrade if usage is high
+
+Insights rules:
+- If performance is good, say so clearly.
+- If performance is weak, recommend a specific fix.
+- If credits are being used with little return, warn the user.
+- If the next tier saves money, say that plainly.
+- If an ad is underperforming, suggest regenerate, retitle, rehook, or change angle.
+
+Example insight messages:
+- This campaign is performing well. Keep monitoring.
+- This ad is underperforming. Regenerate it before spending more credits.
+- CPC is rising. Try a new title or hook.
+- You are nearing your credit limit. Review usage or upgrade.
+- Based on your current usage, the next tier may save you money.
+
+Friendly summary line:
+Xspresso should help users see what is working, what is wasting credits, and what to do next.
+
+Priority:
+High. This supports trust, visibility, and better decisions.

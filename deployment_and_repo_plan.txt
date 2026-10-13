@@ -1,0 +1,78 @@
+Xspresso Deployment and Repo Plan
+
+Purpose:
+This file outlines how the Xspresso project can be organized for development, version control, and future deployment.
+
+Recommended Repository Structure:
+
+xspresso/
+  README.md
+  /product
+    v1_features.txt
+    v2_features.txt
+    credits_and_usage.txt
+    monitoring_rules.txt
+    platform_switch_rules.txt
+    release_checklist.txt
+  /copy
+    hero_copy.txt
+    bullets.txt
+    founder_story.txt
+    pricing_copy.txt
+    alerts_copy.txt
+    onboarding_flow.txt
+  /ui
+    hero_block.html
+    pricing_table.html
+    dashboard.html
+    alert_modal.html
+    switch_platform_modal.html
+    ui_components.txt
+  /logic
+    campaign_generation.js
+    ad_monitoring.js
+    lead_followup.js
+    credits_engine.js
+    billing.js
+    alerts_notifications.js
+    platform_rules.js
+  /library
+    swipe_notes.txt
+    headline_bank.txt
+    bullet_bank.txt
+    story_bank.txt
+    export_import_share.txt
+    template_system.txt
+  /assets
+    logo_notes.txt
+    image_list.txt
+    upload_list.txt
+    design_notes.txt
+
+Suggested Branching Strategy:
+- main: stable release branch
+- develop: current working build
+- feature/*: temporary feature branches
+
+Suggested Versioning:
+- v0.x = early internal prototypes
+- v1.0 = first public launchable version
+- v2.0 = advanced copy, cloning, and video production features
+
+Suggested Build Order:
+1. Lock V1 scope
+2. Finalize credits and monitoring rules
+3. Finish onboarding and campaign generation flow
+4. Finish dashboard and alert flow
+5. Connect billing and usage tracking
+6. Prepare release checklist
+7. Final QA pass
+8. Launch
+
+Suggested Sync Targets:
+- GitHub for source control and branch history
+- Google Drive for shared docs and copy references
+- Local working folder for active editing
+
+Guiding Principle:
+Keep the product simple enough to ship, but structured enough to grow.

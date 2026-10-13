@@ -1,0 +1,88 @@
+Xspresso QA Test Plan
+
+Purpose:
+Verify that Xspresso V1 behaves as intended across campaign creation, monitoring, credits, billing, platform switching, lead follow-up, and dashboard workflows.
+
+1) Core campaign creation tests
+- Create a campaign from a URL.
+- Create a campaign from a product photo.
+- Create a campaign from manual offer details.
+- Generate headlines, hooks, ad copy, landing page copy, and follow-up copy.
+- Confirm draft can be edited section by section.
+
+2) Platform adaptation tests
+- Verify output is adjusted for supported platforms.
+- Confirm formatting differences are applied where needed.
+- Confirm unsupported platform requests trigger a helpful notice.
+
+3) Monitoring tests
+- Confirm live campaigns appear on dashboard.
+- Confirm CPC, CTR, and conversion values are displayed.
+- Verify underperforming ads trigger warnings.
+- Verify underperforming ads recommend regeneration.
+- Confirm monitoring alerts do not overwhelm the user.
+
+4) Platform switch tests
+- Switch from one platform to another.
+- Confirm warning modal appears.
+- Confirm user can keep running ads themselves.
+- Confirm user can move ads to library.
+- Confirm user can continue monitoring for credits.
+- Confirm selected ads are handled correctly.
+
+5) Credits and usage tests
+- Confirm each plan includes all tools.
+- Confirm usage consumes credits correctly.
+- Confirm a la carte actions deduct the correct amount.
+- Confirm low-credit warnings appear.
+- Confirm upgrade suggestion appears when usage is high.
+
+6) Lead capture and follow-up tests
+- Confirm leads are captured from opt-ins.
+- Confirm leads are tagged by campaign.
+- Confirm lead scores update based on actions.
+- Confirm follow-up sequences are attached to campaigns.
+- Confirm autoresponder messages can be generated.
+
+7) Library and reuse tests
+- Confirm users can save campaigns to library.
+- Confirm users can duplicate their own campaigns.
+- Confirm export and import work correctly.
+- Confirm version history restore works.
+- Confirm templates can be reused and edited.
+
+8) Billing and subscription tests
+- Confirm subscriptions are created correctly.
+- Confirm renewal dates calculate correctly.
+- Confirm pause, cancel, and reactivate work.
+- Confirm billing status displays clearly.
+
+9) Dashboard and alerts tests
+- Confirm dashboard summary counts are accurate.
+- Confirm alerts feed is populated.
+- Confirm alerts can be dismissed and resolved.
+- Confirm dashboard cards show useful action buttons.
+
+10) Security and permissions tests
+- Confirm users can only manage their own campaigns.
+- Confirm sensitive actions require confirmation.
+- Confirm audit logs record major actions.
+- Confirm data access respects permissions.
+
+11) Acceptance criteria
+- No feature bait-and-switch.
+- All plans include every tool.
+- Credits determine fair usage.
+- Underperforming ads always suggest an improvement.
+- Platform switching always warns clearly.
+- Users can edit, approve, regenerate, and launch without starting over.
+
+12) Release checklist
+- Hero copy approved.
+- Feature copy approved.
+- Monitoring flow approved.
+- Credits model approved.
+- Billing model approved.
+- Dashboard flow approved.
+- Founder story approved.
+- QA pass completed.

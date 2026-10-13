@@ -1,0 +1,49 @@
+Xspresso Phase 41 — Task Breakdown
+
+This file breaks Phase 41 into practical build tasks.
+
+1) Orchestration and workflow polish
+- Refine how campaigns, leads, alerts, billing, templates, and reports work together.
+- Make the handoffs between modules cleaner and more reliable.
+
+2) Cross-campaign learning and trend detection
+- Improve how Xspresso notices patterns across campaigns.
+- Surface useful trends the user can act on.
+
+3) Recommendation loops
+- Tighten the recommendation engine.
+- Keep suggestions short, useful, and tied to next actions.
+
+4) Forecasting and performance analysis
+- Improve forecast summaries.
+- Make trend analysis easier to read at a glance.
+
+5) Multi-brand and multi-team intelligence
+- Support more polished coordination across brands and teams.
+- Keep permissions and visibility clear.
+
+6) Shared asset and template marketplace refinement
+- Improve how shared assets and templates are organized.
+- Make marketplace/template reuse easier to browse and use.
+
+7) Workflow coordination
+- Improve handoffs between builder, monitor, alerts, and billing.
+- Keep the user path simple and predictable.
+
+8) Guardrails and user control
+- Keep the user in command.
+- Make warnings, approvals, and overrides clear.
+
+9) Credit intelligence and usage guidance
+- Improve the clarity of credit usage.
+- Suggest better plan/usage choices when helpful.
+
+10) Dashboard, monitoring, alerts, and launch-flow polish
+- Tighten the main dashboard.
+- Make monitoring alerts more useful.
+- Improve launch-related prompts and confirmations.
+
+Success criteria:
+- The system feels more coordinated.
+- The user sees better suggestions and clearer status.
+- The product remains simple, controlled, and easy to use.

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xspresso</title>
+  <link rel="stylesheet" href="xspresso_555_app_shell.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <img src="images/Xspresso_cup.gif" alt="Xspresso" class="brand-cup" />
+        <img src="images/Xspresso_logo_txt.gif" alt="Xspresso" class="brand-wordmark" />
+      </div>
+      <div class="topbar-actions">
+        <button class="btn btn-secondary" id="btn-help">Help</button>
+        <button class="btn btn-primary" id="btn-create">Create Campaign</button>
+      </div>
+    </header>
+
+    <div class="app-body">
+      <nav class="sidebar" aria-label="Primary">
+        <a href="#dashboard" data-route="dashboard">Dashboard</a>
+        <a href="#builder" data-route="builder">Create Campaign</a>
+        <a href="#monitoring" data-route="monitoring">Monitoring</a>
+        <a href="#leads" data-route="leads">Leads</a>
+        <a href="#library" data-route="library">Library</a>
+        <a href="#templates" data-route="templates">Templates</a>
+        <a href="#credits" data-route="credits">Credits</a>
+        <a href="#billing" data-route="billing">Billing</a>
+        <a href="#settings" data-route="settings">Settings</a>
+      </nav>
+
+      <main id="app-main" class="content" role="main">
+        <section class="hero-card">
+          <p class="eyebrow">Done-for-you marketing</p>
+          <h1>Wake up your marketing.</h1>
+          <p class="lead">Build campaigns, monitor performance, and follow up automatically while you stay in command.</p>
+          <div class="cta-row">
+            <button class="btn btn-primary" id="hero-demo">Try the Demo</button>
+            <button class="btn btn-secondary" id="hero-pricing">See Pricing</button>
+          </div>
+        </section>
+
+        <section id="dashboard-mount" class="dashboard-grid"></section>
+        <section id="alerts-mount" class="alerts-panel"></section>
+      </main>
+    </div>
+  </div>
+
+  <script src="xspresso_644_app_router.js" type="module"></script>
+</body>
+</html>

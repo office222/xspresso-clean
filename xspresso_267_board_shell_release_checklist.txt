@@ -1,0 +1,21 @@
+Xspresso Board Shell Release Checklist
+
+Purpose:
+A clean, premium, responsive board shell that keeps the cup left of the name/logo, stays white behind the header, and scales without stacking awkwardly.
+
+Checklist:
+- White top bar in the header area
+- Cup stays left of the name/logo
+- Logo shrinks cleanly on smaller screens
+- No overlap, stacking, or wrap issues
+- Business card remains readable
+- CTA buttons remain clear and visible
+- Footer stays simple and lightweight
+- Layout remains FrontPage-friendly
+- Copy stays aligned with the Xspresso promise
+
+Core promise to reflect:
+Done-for-you marketing. You stay in command. We do the work.
+
+Acceptance check:
+If the board shell looks clean, remains readable on smaller screens, and the brand remains consistent, it is ready for release.

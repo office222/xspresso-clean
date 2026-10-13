@@ -1,0 +1,13 @@
+XSPRESSO APPROVED CAMPAIGN KIT
+
+Files in this batch are unique and are generated source attachments.
+
+Runtime entry point:
+  node xspresso_campaign_kit_runtime_v1.js
+
+The export route is:
+  GET /api/campaigns/:campaignId/export/approved
+
+It requires a signed-in user and approval of the current draft version. The JSON kit contains approved copy, approval metadata, and tenant-scoped asset download paths. It does not create, publish, activate, or spend on ads.
+
+Keep all project files in the same application folder so the relative imports resolve. Run tests with `npm test` after assembling the project; they have not been executed here.

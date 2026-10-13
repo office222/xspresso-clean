@@ -1,0 +1,58 @@
+Xspresso Component Map
+
+Purpose:
+A simple reference for the main pieces of Xspresso V1 so the build stays organized.
+
+Core areas:
+1. Campaign Builder
+- Add product photo, URL, description, audience, goal, and tone.
+- Generate headlines, hooks, ads, landing page copy, cart copy, lead magnet copy, and follow-up emails.
+
+2. Review and Edit
+- Approve sections individually.
+- Edit one section without rebuilding the rest.
+- Regenerate one section or the whole campaign.
+
+3. Launch Flow
+- Check readiness before launch.
+- Show what is missing.
+- Confirm go-live.
+
+4. Monitoring Dashboard
+- Show active campaigns, monitored ads, credits, and alerts.
+- Warn when CPC rises or performance drops.
+- Recommend the next best action.
+
+5. Platform Switching
+- Warn the user when switching platforms.
+- Offer keep running, move to library, or keep monitoring for a usage cost.
+- Support per-ad or bulk choices.
+
+6. Credits and Usage
+- All plans include every tool.
+- Credits determine fair usage.
+- Usage can be tracked by action, monitoring, uploads, or extra items.
+
+7. Lead Capture and Follow-Up
+- Capture leads.
+- Score leads.
+- Route leads to the right follow-up sequence.
+- Keep the conversation going automatically.
+
+8. Library and Reuse
+- Save campaigns.
+- Duplicate user-owned work.
+- Export and import templates.
+- Reuse winning campaigns without starting from scratch.
+
+9. Alerts and Notifications
+- Notify users when ads underperform.
+- Recommend regeneration before more credits are spent.
+- Keep messages short, useful, and clear.
+
+10. Settings and Controls
+- Let the user choose tone, thresholds, defaults, and platform behavior.
+- Keep the user in command.
+
+Core product promise:
+Xspresso is done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.

@@ -1,0 +1,97 @@
+Xspresso V1 — Export / Import / Share Campaigns
+
+Purpose:
+Let users move campaigns around, back them up, reuse them, and start faster without rebuilding from scratch.
+
+Core rule:
+Users can export, import, duplicate, and share their own campaigns, but only their own work.
+
+1) Export campaign
+- Export a campaign to a portable file format.
+- Useful for backups, sharing with teammates, or archiving old work.
+
+Example:
+function exportCampaign(campaign) {
+  return JSON.stringify(campaign, null, 2);
+}
+
+2) Import campaign
+- Import a saved campaign file back into Xspresso.
+- Should validate the file before loading it.
+
+Example:
+function importCampaign(jsonString) {
+  try {
+    return JSON.parse(jsonString);
+  } catch (error) {
+    return {
+      success: false,
+      message: "Invalid campaign file."
+    };
+  }
+}
+
+3) Share as template
+- Turn a user campaign into a reusable template.
+- Keep the original campaign intact.
+- Let users start new campaigns from proven work.
+
+Example:
+function createCampaignTemplate(campaign) {
+  return {
+    templateId: `tpl_${campaign.id}`,
+    name: `${campaign.name || "Untitled"} Template`,
+    source: "user_campaign",
+    data: {
+      ...campaign,
+      id: undefined
+    }
+  };
+}
+
+4) Restore from template
+- Create a fresh campaign from a saved template.
+- Allow overrides for name, offer, audience, or platform.
+
+Example:
+function restoreFromTemplate(template, overrides = {}) {
+  return {
+    ...template.data,
+    ...overrides,
+    id: `cmp_${Date.now()}`,
+    name: overrides.name || template.name.replace(" Template", ""),
+    status: "draft"
+  };
+}
+
+5) Duplicate for local use
+- Make a copy of the user’s own campaign for testing or relaunch.
+- Keep the original untouched.
+
+Example:
+function duplicateForLocalUse(campaign) {
+  return {
+    ...campaign,
+    id: `cmp_${Date.now()}`,
+    name: `${campaign.name || "Untitled"} Copy`,
+    status: "draft"
+  };
+}
+
+6) UI copy suggestions
+- Export campaign
+- Import campaign
+- Save as template
+- Duplicate this campaign
+- Reuse your own winning setup
+- Start from proven work
+- Back up your work
+- Restore anytime
+
+7) Best product rule
+- Xspresso should help users save their best work, reuse it, and move faster without starting over.
+- Keep all export/import flows focused on the user’s own work.
+- Keep the experience simple and safe.
+
+8) Summary
+Xspresso lets users export, import, and reuse their own campaigns so they can move faster without rebuilding everything from scratch.

@@ -1,0 +1,42 @@
+Xspresso Phase 42 — Task Breakdown
+
+1) Deeper orchestration
+- Campaigns, leads, alerts, billing, templates, and reports should work together as one system.
+- The app should keep sending the right data to the right module without manual cleanup.
+
+2) Smarter cross-campaign learning
+- Reuse what is working across multiple campaigns.
+- Detect patterns in headlines, hooks, offers, platforms, and follow-up sequences.
+
+3) Recommendation loops
+- Suggest the next best action when a campaign or ad is weak.
+- Recommend regenerate, tweak, pause, continue monitoring, or move to library.
+
+4) Forecasting and performance analysis
+- Show trend direction, not just raw stats.
+- Help users understand what is improving, what is slipping, and what should be adjusted.
+
+5) Multi-brand and multi-team intelligence
+- Keep workspace behavior clean for teams and agencies.
+- Make it easy to separate brands while still benefiting from shared learning.
+
+6) Shared asset and template refinement
+- Improve the template library and reusable assets.
+- Let users save, reuse, and organize their own winning work.
+
+7) Workflow coordination
+- Keep launch, monitoring, alerts, follow-up, and billing in sync.
+- Reduce friction between modules.
+
+8) Guardrails and user control
+- Keep the user in charge.
+- Make sure every recommendation can be approved, edited, ignored, or regenerated.
+
+9) Credit intelligence and usage guidance
+- Show where credits are being used.
+- Warn the user before waste builds up.
+- Suggest better usage or a better plan when it will save money.
+
+10) Dashboard, monitoring, alerts, and launch-flow polish
+- Tighten the user experience.
+- Keep the system easy to read, easy to act on, and easy to trust.

@@ -1,0 +1,19 @@
+Xspresso Phase 29 — Scope
+
+This phase covers the next refinement layer for Xspresso.
+
+Includes:
+- deeper orchestration and optimization
+- stronger cross-campaign learning
+- smarter recommendation loops
+- broader forecasting and trend analysis
+- multi-brand and multi-team intelligence
+- shared asset and template marketplace refinement
+- tighter guardrails and user control
+- improved credit intelligence and usage guidance
+
+Success criteria:
+- Xspresso continues to reduce manual work
+- recommendations remain actionable and easy to understand
+- campaigns, leads, billing, and alerts stay coordinated
+- the user stays in command while Xspresso does more of the heavy lifting

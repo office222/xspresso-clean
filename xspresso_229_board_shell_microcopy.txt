@@ -1,0 +1,39 @@
+Xspresso Board Shell Microcopy
+
+Core line:
+- Xspresso isn’t about more software. It’s about done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.
+
+Support lines:
+- We do the work. You enjoy the benefits.
+- More responses. Less software chaos.
+- Wake up your marketing.
+- You stay in command. We do the work.
+
+CTA labels:
+- Try the Demo
+- See Pricing
+- Review the Draft
+- Approve and Launch
+- Save for Later
+- Export Campaign
+- Duplicate Campaign
+
+Helper text:
+- Approve what you like.
+- Tweak what you want.
+- Regenerate anything that doesn’t feel right.
+- Xspresso does the heavy lifting.
+- The more you tell Xspresso, the better it can help.
+
+Button states:
+- Primary: orange background, white text
+- Secondary: white background, orange border, orange text
+- Hover: darker orange on primary, light cream on secondary
+- Disabled: light gray background, muted text
+
+Short alerts:
+- This ad is underperforming.
+- Improve it before spending more credits.
+- Xspresso can regenerate this ad.
+- CPC is rising.
+- Tracking paused on [Platform Name].

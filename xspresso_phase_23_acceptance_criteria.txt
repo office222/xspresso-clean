@@ -1,0 +1,38 @@
+Xspresso Phase 23 — Acceptance Criteria
+
+1) Deeper autonomous orchestration
+- The system can coordinate more of the campaign workflow with less manual handling.
+- Cross-module actions should trigger cleanly and predictably.
+
+2) Smarter cross-campaign learning
+- Insights from one campaign can improve recommendations in another.
+- The system should detect repeating patterns and suggest better options.
+
+3) Stronger recommendation loops
+- Xspresso should produce useful next-step suggestions.
+- Recommendations should be clear, actionable, and easy to approve.
+
+4) Broader forecasting and trend analysis
+- The system should surface trends over time.
+- Forecasts should help the user understand likely performance shifts.
+
+5) More refined multi-brand / multi-team intelligence
+- Multiple brands or teams should be handled with clearer separation.
+- Shared resources should not conflict.
+
+6) Improved workflow coordination
+- Campaigns, leads, alerts, billing, templates, and reports should stay in sync.
+- Important actions should be visible in activity history.
+
+7) Tighter guardrails and user control
+- The user remains in command.
+- Automation should warn before risky or costly actions.
+- The system should always provide a way to review, edit, or stop.
+
+8) Better credit intelligence and usage guidance
+- The system should show where credits are being used.
+- It should warn when usage is high and suggest a cheaper path if appropriate.
+- Upgrade suggestions should only appear when they can genuinely help.
+
+Definition of done
+- Phase 23 is complete when the orchestration, learning, recommendation, and usage systems work together cleanly and the user can understand what Xspresso did, why it did it, and what to do next.

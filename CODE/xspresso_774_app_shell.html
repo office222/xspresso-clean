@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xspresso App Shell</title>
+  <link rel="stylesheet" href="xspresso_775_app_styles.css" />
+</head>
+<body>
+  <div class="app-shell" id="appShell">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">☕</span>
+        <span class="brand-name">Xspresso</span>
+      </div>
+      <nav class="topnav">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#builder">Create Campaign</a>
+        <a href="#monitoring">Monitoring</a>
+        <a href="#billing">Billing</a>
+      </nav>
+      <button class="btn btn-primary" id="demoBtn">Try the Demo</button>
+    </header>
+
+    <main class="main-grid">
+      <aside class="sidebar" id="sidebar"></aside>
+      <section class="content" id="content"></section>
+      <aside class="help-panel" id="helpPanel"></aside>
+    </main>
+
+    <footer class="footer">
+      <span>Done-for-you marketing.</span>
+      <span>You stay in command. We do the work.</span>
+    </footer>
+  </div>
+  <script src="xspresso_776_app_state.js"></script>
+  <script src="xspresso_777_campaign_flow.js"></script>
+  <script src="xspresso_778_monitoring_and_alerts.js"></script>
+  <script src="xspresso_779_dashboard_renderer.js"></script>
+</body>
+</html>

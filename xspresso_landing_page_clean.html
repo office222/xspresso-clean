@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xspresso - Wake Up Your Marketing</title>
+  <style>
+    :root {
+      --bg: #f4f4f4;
+      --card: #ffffff;
+      --text: #1d1d1f;
+      --muted: #5f6368;
+      --orange: #ff7a18;
+      --orange2: #ffb347;
+      --dark: #111111;
+      --border: #e4e4e4;
+      --soft: #fafafa;
+      --accent: #c65a1e;
+      --shadow: 0 12px 30px rgba(0,0,0,0.06);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .wrap { width: 100%; }
+    .container { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+    .brand img { height: 60px; width: auto; }
+    .brand-text { min-width: 0; }
+    .brand-text .title { font-size: 28px; font-weight: 800; color: var(--dark); line-height: 1; }
+    .brand-text .tagline { font-size: 13px; color: var(--muted); margin-top: 4px; }
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .nav-links a:hover { color: var(--dark); }
+
+    .hero {
+      background: linear-gradient(135deg, var(--orange) 0%, var(--orange2) 100%);
+      color: #fff;
+      padding: 56px 0 44px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: 12px;
+      font-weight: 700;
+      opacity: .95;
+      margin-bottom: 12px;
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.02;
+    }
+    .hero p {
+      margin: 16px 0 0;
+      font-size: 18px;
+      max-width: 58ch;
+    }
+    .hero-bullets {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 22px;
+    }
+    .hero-bullets div {
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-size: 14px;
+    }
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 2px solid transparent;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
+    .btn-dark { background: var(--dark); color: #fff; }
+    .btn-light { background: #fff; color: var(--dark); border-color: rgba(255,255,255,.35); }
+    .hero-card {
+      background: rgba(255,255,255,.18);
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+    .hero-card .mini {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      opacity: .9;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .hero-card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .hero-card li { margin: 10px 0; }
+
+    .strip {
+      background: var(--dark);
+      color: #fff;
+      padding: 10px 0;
+      overflow: hidden;
+      border-bottom: 1px solid #222;
+    }
+    .strip-inner {
+      display: flex;
+      gap: 40px;
+      white-space: nowrap;
+      font-size: 14px;
+      opacity: .95;
+      animation: slide 20s linear infinite;
+    }
+    @keyframes slide {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .section { padding: 56px 0; }
+    .section h2 {
+      margin: 0;
+      font-size: clamp(28px, 3vw, 38px);
+      line-height: 1.1;
+      color: var(--dark);
+    }
+    .section .lead {
+      margin: 12px 0 0;
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 72ch;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 26px;
+    }
+    .feature-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .feature-card .imgwrap {
+      aspect-ratio: 16 / 10;
+      background: #fff;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+    .feature-card .imgwrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .feature-card .content { padding: 18px; }
+    .chip {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #fff4eb;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 10px;
+    }
+    .feature-card h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      line-height: 1.2;
+      color: var(--dark);
+    }
+    .feature-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: start;
+      margin-top: 26px;
+    }
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+    }
+
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 26px;
+    }
+    .plan {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .plan .head {
+      background: #111;
+      color: #fff;
+      padding: 18px;
+    }
+    .plan .head h3 { margin: 0; font-size: 20px; }
+    .plan .head .price { margin-top: 8px; font-size: 30px; font-weight: 800; color: #ffb347; }
+    .plan .body { padding: 18px; color: var(--muted); }
+    .plan .body ul { margin: 0; padding-left: 18px; }
+    .plan .body li { margin: 8px 0; }
+    .plan.featured { border-color: #ffb347; transform: translateY(-4px); }
+
+    .footer {
+      background: #111;
+      color: #fff;
+      padding: 26px 0;
+      font-size: 14px;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .muted { color: var(--muted); }
+
+    @media (max-width: 980px) {
+      .hero-grid, .split, .feature-grid, .pricing { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 720px) {
+      .hero-grid, .split, .feature-grid, .pricing { grid-template-columns: 1fr; }
+      .hero { padding: 42px 0 34px; }
+      .nav { justify-content: center; }
+      .brand { justify-content: center; flex-wrap: wrap; }
+      .brand-text { text-align: center; }
+      .hero-bullets { grid-template-columns: 1fr; }
+      .cta-row { justify-content: center; }
+      .section { padding: 44px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="container">
+        <div class="nav">
+          <div class="brand">
+            <img src="images/Xspresso_cup.gif" alt="Xspresso cup logo" />
+            <div class="brand-text">
+              <div class="title">Xspresso</div>
+              <div class="tagline">Wake up your marketing.</div>
+            </div>
+          </div>
+          <nav class="nav-links" aria-label="Primary">
+            <a href="#features">Features</a>
+            <a href="#imagine">Imagine This</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Done for you marketing</div>
+            <h1>Done-for-you marketing that gets responses.</h1>
+            <p>
+              More responses. Less software chaos. Xspresso turns a product photo,
+              a web page, or a simple offer into landing pages, ads, headlines, follow-up,
+              and campaign ideas — fast.
+            </p>
+            <div class="hero-bullets">
+              <div>Creates ads, landing pages, carts, and campaign angles.</div>
+              <div>Adapts content for each platform automatically.</div>
+              <div>Tracks ads, CPC, and performance signals.</div>
+              <div>Warns you when something needs attention.</div>
+            </div>
+            <div class="cta-row">
+              <a class="btn btn-light" href="#features">Try the Demo</a>
+              <a class="btn btn-dark" href="#pricing">See Pricing</a>
+            </div>
+          </div>
+
+          <aside class="hero-card">
+            <div class="mini">What Xspresso does</div>
+            <ul>
+              <li>Generates copy and campaign angles.</li>
+              <li>Builds landing pages with shopping carts.</li>
+              <li>Creates platform-ready ad variations.</li>
+              <li>Helps with follow-up and lead capture.</li>
+              <li>Stores campaigns for reuse later.</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip" aria-hidden="true">
+      <div class="container">
+        <div class="strip-inner">
+          <span>More responses.</span>
+          <span>Less guessing.</span>
+          <span>Faster landing pages.</span>
+          <span>Smarter ads.</span>
+          <span>Built for marketers who want results.</span>
+          <span>More responses.</span>
+          <span>Less guessing.</span>
+          <span>Faster landing pages.</span>
+          <span>Smarter ads.</span>
+          <span>Built for marketers who want results.</span>
+        </div>
+      </div>
+    </div>
+
+    <section id="imagine" class="section">
+      <div class="container">
+        <h2>Imagine this</h2>
+        <p class="lead">Turn one product into a full campaign across many social platforms.</p>
+
+        <div class="split">
+          <div class="panel">
+            <img src="images/d01208db-dfa4-4886-87bf-b2387a586819.png" alt="Xspresso example graphic" />
+          </div>
+          <div class="panel">
+            <h3 style="margin-top:0;">From a single idea to a full campaign</h3>
+            <p class="muted">
+              Add a picture, a web page, or any product details. Xspresso can help you
+              compare offers, create copy, generate landing page sections, and shape the message
+              so you can move from idea to launch faster.
+            </p>
+            <p class="muted">
+              Instead of staring at a blank screen, you start with a smarter first draft and
+              iterate from there.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-dark" href="#features">See Features</a>
+              <a class="btn btn-light" href="#pricing">Plan Options</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section" style="padding-top:0;">
+      <div class="container">
+        <h2>Customer features</h2>
+        <p class="lead">These are the things you will actually care about.</p>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="imgwrap"><img src="images/features/feature-01.jpg" alt="Landing page creation" /></div>
+            <div class="content">
+              <div class="chip">Feature 01</div>
+              <h3>Landing page creation with shopping cart for each campaign</h3>
+              <p>Build a dedicated landing page for every product or offer with a cart built in.</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="imgwrap"><img src="images/features/feature-09.jpg" alt="Use your own PayPal or Stripe account" /></div>
+            <div class="content">
+              <div class="chip">Feature 02</div>
+              <h3>Use your own PayPal or Stripe account</h3>
+              <p>Connect your own payment account so money goes directly to you.</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="imgwrap"><img src="images/features/feature-07.jpg" alt="AI-created ads" /></div>
+            <div class="content">
+              <div class="chip">Feature 03</div>
+              <h3>AI-created ads</h3>
+              <p>Generate ad copy, headlines, angles, and custom graphics faster than starting from scratch.</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="imgwrap"><img src="images/features/feature-14.jpg" alt="Direct upload to social media" /></div>
+            <div class="content">
+              <div class="chip">Feature 04</div>
+              <h3>Direct upload to social media</h3>
+              <p>Send content to the right platforms faster and reduce copy-and-paste mistakes.</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="imgwrap"><img src="images/features/feature-04.jpg" alt="Demo mode with sample data" /></div>
+            <div class="content">
+              <div class="chip">Feature 05</div>
+              <h3>Demo mode with sample data</h3>
+              <p>See exactly how Xspresso works before you commit to a full account.</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="imgwrap"><img src="images/features/feature-06.jpg" alt="Split testing" /></div>
+            <div class="content">
+              <div class="chip">Feature 06</div>
+              <h3>Split testing for headlines, offers, and pages</h3>
+              <p>Compare versions of your marketing and keep improving what works best.</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="imgwrap"><img src="images/features/feature-08.jpg" alt="Brand templates and presets" /></div>
+            <div class="content">
+              <div class="chip">Feature 07</div>
+              <h3>Brand templates and presets</h3>
+              <p>Start from ready-made templates and launch campaigns faster with consistency.</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="imgwrap"><img src="images/features/feature-36.jpg" alt="Lead capture and follow-up" /></div>
+            <div class="content">
+              <div class="chip">Feature 08</div>
+              <h3>Lead capture and follow-up</h3>
+              <p>Collect leads and keep the conversation going with campaign-level automation.</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="imgwrap"><img src="images/features/feature-41.jpg" alt="Analytics and performance tracking" /></div>
+            <div class="content">
+              <div class="chip">Feature 09</div>
+              <h3>Analytics and performance tracking</h3>
+              <p>See what is working and what needs attention instead of guessing.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>More tools that keep the workflow moving</h2>
+        <p class="lead">Reuse what works, improve your campaigns, and keep marketing from stalling.</p>
+        <div class="split">
+          <div class="panel">
+            <h3 style="margin-top:0;">Builds the sales funnel</h3>
+            <p class="muted">Persuasive sales copy, headlines, benefit bullets, product mockups, and secure checkout pages.</p>
+            <h3>Save, reuse, and duplicate campaigns</h3>
+            <p class="muted">Store your best campaigns in a library and bring them back later.</p>
+          </div>
+          <div class="panel">
+            <h3 style="margin-top:0;">Email writing / reply assistance</h3>
+            <p class="muted">Draft follow-up emails, customer replies, and campaign messages quickly.</p>
+            <h3>Testimonial aggregator</h3>
+            <p class="muted">Collect real feedback and testimonials for your sales pages.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section" style="padding-top:0;">
+      <div class="container">
+        <h2>Pricing tiers</h2>
+        <p class="lead">Simple plans based on how many landing pages you want to create.</p>
+
+        <div class="pricing">
+          <article class="plan">
+            <div class="head">
+              <h3>Starter</h3>
+              <div class="price">$29/mo</div>
+            </div>
+            <div class="body">
+              <ul>
+                <li>3 landing pages</li>
+                <li>Best for testing ideas</li>
+                <li>Great for first-time users</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="plan featured">
+            <div class="head">
+              <h3>Pro</h3>
+              <div class="price">$49/mo</div>
+            </div>
+            <div class="body">
+              <ul>
+                <li>10 landing pages</li>
+                <li>Built for active marketers</li>
+                <li>More room for testing</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="plan">
+            <div class="head">
+              <h3>Business</h3>
+              <div class="price">$99/mo</div>
+            </div>
+            <div class="body">
+              <ul>
+                <li>25 landing pages</li>
+                <li>For serious builders and growing teams</li>
+                <li>Better for ongoing campaigns</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="plan">
+            <div class="head">
+              <h3>Agency / Unlimited</h3>
+              <div class="price">$329/mo</div>
+            </div>
+            <div class="body">
+              <ul>
+                <li>Unlimited landing pages</li>
+                <li>Best for high-volume use</li>
+                <li>Ideal for agencies or power users</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="panel">
+          <h2 style="margin-top:0;">Wake up your marketing.</h2>
+          <p class="lead" style="margin-bottom:0;">
+            You stay in command. Xspresso does the heavy lifting.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div>© Xspresso</div>
+          <div class="muted" style="color:#cfcfcf;">Done-for-you marketing for very fast results.</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

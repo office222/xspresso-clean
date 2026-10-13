@@ -1,0 +1,30 @@
+Xspresso Board Shell Final Handoff Notes
+
+Purpose:
+- Keep the cup left of the name logo.
+- Use a white background behind the header.
+- Keep the logo inline and shrinking cleanly on smaller screens.
+- Prevent wrapping/stacking when the page narrows.
+- Keep the business card readable and premium.
+- Keep CTA buttons clear and easy to find.
+
+Key rules:
+- White header background.
+- Cup and text logo must stay side by side.
+- Logo should scale down instead of stacking.
+- Business card copy should stay short and readable.
+- CTA buttons should remain visible and action-focused.
+- Keep the board shell clean, simple, and premium.
+
+Copy reminder:
+- Done-for-you marketing.
+- You stay in command.
+- We do the work.
+
+Acceptance checks:
+- Header looks clean at full width.
+- Header still works on narrow widths.
+- No logo overlap.
+- No text wrapping into the wrong line.
+- CTA buttons remain visible.
+- Board shell feels polished and ready for final assembly.

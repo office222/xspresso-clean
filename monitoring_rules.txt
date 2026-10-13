@@ -1,0 +1,62 @@
+Xspresso V1 — Monitoring Rules
+
+Core rule:
+- All plans include every tool.
+- Credits determine fair usage.
+- Monitoring uses credits only when it is active.
+
+Ad monitoring behavior:
+- Watch ad status, CPC, CTR, clicks, conversions, and basic trend changes.
+- If a campaign is healthy, keep monitoring quietly.
+- If a campaign is slipping, alert the user early.
+- If an ad is underperforming, recommend improvement before more credits are spent.
+
+Underperforming ad rule:
+- If an ad has clicks but no conversions, mark it as underperforming.
+- If CPC rises above the warning threshold, mark it as warning.
+- If CTR drops below the warning threshold, mark it as warning.
+- If performance is poor for multiple checks, recommend regenerating the ad.
+
+Recommended alert language:
+- This ad is underperforming.
+- Improve it before spending more credits monitoring an ad that is not performing.
+- Xspresso can regenerate this ad with a new title, hook, or angle.
+- CPC is rising. This ad may need a tweak.
+- This campaign may need a refresh.
+
+Suggested next actions:
+- Regenerate this ad
+- Rewrite the title
+- Test a new hook
+- Try a different angle
+- Change the CTA
+- Update the creative
+- Pause monitoring
+
+Platform switch rule:
+- If a user switches off a platform, monitoring on that platform stops unless they choose a monitoring option.
+- Show the ads on that platform and let the user decide:
+  - keep running
+  - move to library
+  - keep monitoring
+  - handle manually
+- Monitoring can continue for a daily, weekly, or monthly credit cost.
+
+Daily / weekly / monthly guidance:
+- Daily is best for active monitoring.
+- Weekly is best for lighter watch mode.
+- Monthly is best for ongoing long-term tracking.
+
+Credit protection rule:
+- Do not keep charging credits to monitor ads that are clearly not improving.
+- Tell the user when regeneration is the better choice.
+- Protect the user from wasting credits.
+
+Friendly product copy:
+- Xspresso watches your campaigns and warns you when something looks off.
+- Improve before spending more credits.
+- Xspresso helps you decide what to do next.
+- You stay in command. Xspresso does the heavy lifting.
+
+Best summary:
+- Xspresso should monitor performance, warn early, and recommend the next best action before more credits are spent.

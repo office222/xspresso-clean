@@ -1,0 +1,35 @@
+Xspresso Alerts Copy
+
+1) Underperforming Ad
+This ad is underperforming.
+Improve it before spending more credits monitoring an ad that is not performing.
+Xspresso can regenerate this ad with a new title, hook, or angle.
+
+2) CPC Rising
+CPC is rising.
+This ad may need a tweak before you spend more credits.
+Try a new headline or a different angle.
+
+3) Platform Switch Warning
+Warning: switching off [Platform Name] will stop Xspresso from tracking your ads there.
+Choose which ads you want Xspresso to keep tracking, or choose the option that fits your ads best.
+
+4) Keep Monitoring
+Keep monitoring this ad for a usage cost.
+Choose daily, weekly, or monthly tracking.
+
+5) Move to Library
+Delete ads from [Platform Name] and move them to your Xspresso library.
+
+6) Launch Ready
+You are ready to launch.
+Xspresso has built the campaign. Review one last time, then go live.
+
+7) Credits Low
+You have limited credits remaining this cycle.
+Consider adding credits or upgrading if your usage is growing.
+
+8) Reminder Tone
+Approve what you like.
+Tweak what you want.
+You stay in command. Xspresso does the heavy lifting.

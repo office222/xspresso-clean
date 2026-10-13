@@ -1,0 +1,24 @@
+Xspresso Batch Release Notes
+============================
+
+Batch files included:
+- xspresso_731_app_state_store.js
+- xspresso_732_campaign_api.js
+- xspresso_733_review_actions.js
+- xspresso_734_monitoring_dashboard.js
+- xspresso_735_notifications_center.js
+
+What this batch adds:
+- central app state store
+- campaign brief and creation helpers
+- review / approve / regenerate helpers
+- monitoring dashboard helpers
+- notification helpers
+
+Suggested next batch:
+- billing and credits panel
+- template library
+- platform switch modal
+- lead follow-up screen
+- app shell components
+- help center data

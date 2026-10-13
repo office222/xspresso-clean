@@ -1,0 +1,23 @@
+Xspresso Phase 60 — Scope
+
+This phase covers the final stabilization and long-term polish layer for Xspresso.
+
+Scope:
+- final orchestration refinement across campaigns, leads, alerts, billing, templates, reports, and credits
+- cross-campaign learning improvements
+- smarter recommendation tuning
+- broader forecasting and performance analysis
+- multi-brand and multi-team workflow refinement
+- template and asset marketplace cleanup
+- dashboard clarity and usability polish
+- monitoring and alert reliability improvements
+- onboarding, help text, and tooltip cleanup
+- release hardening, support packaging, and handoff readiness
+
+Success criteria:
+- the core V1 workflow is stable and clear
+- monitoring and alerts are easy to understand
+- billing and credit usage are transparent
+- templates, library, and reuse flow smoothly
+- dashboard and reporting feel usable and predictable
+- the product is ready for sustained real-world use

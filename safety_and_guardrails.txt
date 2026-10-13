@@ -1,0 +1,36 @@
+Xspresso Safety and Guardrails
+
+Purpose:
+Keep Xspresso helpful, original, user-controlled, and safe to use.
+
+Core rules:
+- Never copy another person's work.
+- Use inspiration and strategy only.
+- Let users approve, tweak, or reject outputs.
+- Keep users in control of all launches and changes.
+- Show clear warnings before tracking stops, switches, or usage charges.
+- Be transparent about credits, monitoring, and a la carte usage.
+- Do not hide feature limits or surprise users with missing tools.
+- Give helpful recommendations, not guarantees.
+- Make it clear when Xspresso is monitoring, regenerating, exporting, or billing usage.
+
+Copy principles:
+- Friendly, clear, and direct.
+- No hype that overpromises results.
+- No confusing jargon when simple wording works better.
+- Emphasize done-for-you, but still user-controlled.
+
+Monitoring principles:
+- Alerts should explain the issue and recommend the next action.
+- Underperforming ads should prompt regeneration or improvement.
+- Switching platforms should always show a clear warning.
+- Users should know exactly when credits are being spent.
+
+Privacy and consent:
+- Only use customer data for approved campaign actions.
+- Require explicit consent for tracking, monitoring, and third-party access where needed.
+- Keep user data protected and auditable.
+- Make it easy to review, export, or remove user-owned content.
+
+Product promise:
+Xspresso helps users move faster, waste less, and stay in command while the system does the heavy lifting.

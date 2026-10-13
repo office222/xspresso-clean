@@ -1,0 +1,58 @@
+Xspresso Phase 38 - Task Breakdown
+
+1) Deep orchestration across core modules
+- Coordinate campaigns, leads, alerts, billing, templates, and reports.
+- Keep all module state synchronized.
+
+2) Cross-campaign learning
+- Detect patterns across multiple campaigns.
+- Reuse what is working.
+- Highlight trends and repeated wins.
+
+3) Recommendation loops
+- Suggest next best actions.
+- Recommend stronger headlines, hooks, angles, or CTAs.
+- Offer regeneration when performance drops.
+
+4) Forecasting and performance analysis
+- Estimate likely outcomes from current trends.
+- Surface stronger and weaker campaigns.
+- Flag changes in CPC, CTR, and conversions.
+
+5) Multi-brand and multi-team intelligence
+- Improve support for multiple brands and teams.
+- Keep campaign ownership and workspace logic clean.
+- Support shared reporting views.
+
+6) Shared asset and template marketplace refinement
+- Improve reusability of templates and assets.
+- Make saved work easier to find and restore.
+- Support shared campaign structures.
+
+7) Workflow coordination
+- Keep campaign creation, approval, launch, and monitoring connected.
+- Reduce manual handoffs.
+- Make the user journey feel seamless.
+
+8) Guardrails and user control
+- Keep the user in command.
+- Require confirmation for sensitive actions.
+- Preserve clear warnings and opt-in choices.
+
+9) Credit intelligence and usage guidance
+- Show where credits are being used.
+- Recommend the right plan when usage grows.
+- Keep monitoring and regeneration costs transparent.
+
+10) Dashboard, monitoring, alerts, and launch-flow polish
+- Refine status cards and alert language.
+- Improve launch readiness checks.
+- Make monitoring and next-action prompts clearer.
+
+Success Criteria
+- The system can coordinate core modules without confusion.
+- Recommendations are useful and timely.
+- Reporting and forecasting feel helpful.
+- User control remains clear.
+- Credits and usage are understandable.
+- The experience feels more connected and polished.

@@ -1,0 +1,47 @@
+Xspresso Phase 32 — Task Breakdown
+
+1) Deepen orchestration
+- Coordinate campaigns, leads, alerts, billing, templates, and reports in one workflow.
+- Keep the system focused on doing the heavy lifting while the user stays in command.
+
+2) Expand cross-campaign learning
+- Detect patterns across multiple campaigns.
+- Reuse winning ideas and avoid repeating poor performers.
+- Surface smarter suggestions based on past results.
+
+3) Improve recommendation loops
+- Recommend better titles, hooks, angles, CTAs, and offers.
+- Suggest next steps before credits are wasted on weak performance.
+- Keep recommendations simple, actionable, and direct.
+
+4) Strengthen forecasting and trend analysis
+- Show trend shifts early.
+- Summarize likely outcomes based on current performance.
+- Flag possible issues before they grow.
+
+5) Refine multi-brand and multi-team intelligence
+- Support more than one brand or workspace.
+- Make it easier to compare, manage, and report across accounts.
+- Keep controls clear and permissions safe.
+
+6) Tighten shared asset and template refinement
+- Improve saved templates, reusable components, and shared assets.
+- Make it easy to start from proven work.
+- Keep the library organized and useful.
+
+7) Improve guardrails and user control
+- Keep users informed before credit-heavy actions happen.
+- Warn clearly when an action may reduce monitoring or increase cost.
+- Always give the user a clear choice.
+
+8) Improve credit intelligence and usage guidance
+- Show where credits are being spent.
+- Suggest better plan choices when usage patterns justify it.
+- Keep the pricing logic fair, visible, and easy to understand.
+
+9) Define success criteria
+- Users can orchestrate campaigns with less manual work.
+- Recommendations are useful and timely.
+- Trend analysis helps users act sooner.
+- Team, template, and workspace controls remain simple.
+- Credit guidance remains clear and trustworthy.

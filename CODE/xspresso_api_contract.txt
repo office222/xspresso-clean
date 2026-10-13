@@ -1,0 +1,37 @@
+# Xspresso API starter contract
+
+This contract describes the Node.js starter files in the current batch. It is a local MVP scaffold, not a production deployment.
+
+## Requirements
+- Node.js 20 or later
+- ES modules enabled (`"type": "module"` in `package.json`)
+- No third-party packages are required
+
+## Run locally
+1. Keep `package.json`, `xspresso_config.js`, `xspresso_json_store.js`, `xspresso_auth.js`, `xspresso_api_routes.js`, and `xspresso_server.js` together in the same directory.
+2. Run `npm start`.
+3. The API listens on port `8787` by default; the JSON development store is `./data/xspresso.json`.
+4. To run the test files in this batch, place `xspresso_test_helpers.js` and all `xspresso_*.test.js` files next to the server modules, then run: `node --test xspresso_config.test.js xspresso_json_store.test.js xspresso_auth.test.js xspresso_api_routes.test.js xspresso_api_security.test.js`.
+
+## Routes
+- `GET /api/health` — health check
+- `POST /api/auth/signup` — create a local account; body: `{ "email", "password", "name" }`
+- `POST /api/auth/login` — sign in; body: `{ "email", "password" }`
+- `GET /api/auth/me` — current account; requires `Authorization: Bearer <token>`
+- `POST /api/auth/logout` — revoke this process-local session
+- `GET /api/campaigns` — list the signed-in tenant's campaigns
+- `POST /api/campaigns` — create a draft; body requires `name`; supports `goal`, `platform`, `brief`, and `assets`
+- `GET /api/campaigns/:id` — get a campaign within the signed-in tenant
+- `PATCH /api/campaigns/:id` — edit name, goal, platform, brief, or assets
+- `DELETE /api/campaigns/:id` — archive the campaign
+
+## Environment configuration
+- `PORT` — API port (default `8787`)
+- `XSPRESSO_ALLOWED_ORIGIN` — one exact browser origin (default `http://localhost:8080`; wildcard is rejected)
+- `XSPRESSO_DATA_FILE` — local JSON file path (default `./data/xspresso.json`)
+- `XSPRESSO_BODY_LIMIT_BYTES` — request body size cap
+- `XSPRESSO_SESSION_TTL_MS` — in-memory session lifetime
+- `XSPRESSO_SIGNUPS_ENABLED=false` — disable public signups
+
+## Important limitations before public launch
+The JSON file store is single-process development storage, not a transactional database. Sessions are memory-only and are invalidated on restart. Add rate limiting, email verification and recovery, persistent revocable sessions, production database migrations/backups, provider-backed billing, platform OAuth integrations, CSRF protection if using cookies, and deployment secrets before exposing the service publicly. No ad platform is connected by this starter, and generated demo code must not be represented as live advertising or monitoring.

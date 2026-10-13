@@ -1,0 +1,25 @@
+Xspresso code batch notes
+
+Included files:
+- xspresso_562_review_approve_regenerate_panel_v2.js
+- xspresso_563_billing_credits_panel_v2.js
+- xspresso_564_lead_followup_screen_v2.js
+- xspresso_565_template_library_v2.js
+- xspresso_566_platform_switch_modal_v2.js
+- xspresso_567_main_app_wiring_v2.js
+
+What this batch covers:
+- review / approve / regenerate flow
+- billing and credits panel
+- lead follow-up and scoring
+- template library and reuse
+- platform switch modal and cost logic
+- main app wiring / state helpers
+
+Next good batch ideas:
+- dashboard cards / metrics
+- monitoring widgets
+- launch readiness panel
+- alerts center
+- app shell components
+- help center data

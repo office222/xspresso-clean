@@ -1,0 +1,43 @@
+Xspresso Board Shell Typography and Spacing Notes
+
+Purpose:
+Keep the board shell clean, premium, readable, and responsive.
+
+Typography rules:
+- Use one clear headline style.
+- Use one supporting style for short benefit lines.
+- Keep body copy short and scannable.
+- Avoid too many font sizes on the same screen.
+- Use bold only for key promise lines, CTA labels, and short emphasis.
+
+Spacing rules:
+- Give the logo/header room to breathe.
+- Use consistent padding around the business card component.
+- Keep the CTA area separated from the main copy.
+- Use even spacing between bullet points or benefit lines.
+- Avoid large empty gaps that break the flow.
+- Avoid tight stacking that makes the shell feel crowded.
+
+Layout rules:
+- Keep the cup left of the name.
+- Keep the header background white.
+- Keep the business card readable at smaller widths.
+- Let the layout shrink without stacking the logo awkwardly.
+- Keep buttons aligned and easy to scan.
+
+Copy tone:
+- Clear
+- Simple
+- Premium
+- Direct
+- Customer-focused
+
+Best product rule:
+The board shell should feel easy to read, easy to trust, and easy to act on.
+
+Acceptance checks:
+- Logo stays inline.
+- Text remains readable when the page shrinks.
+- Spacing feels even.
+- CTA buttons remain obvious.
+- The overall shell feels polished, not crowded.

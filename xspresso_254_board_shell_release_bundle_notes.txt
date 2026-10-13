@@ -1,0 +1,50 @@
+XSPRESSO BOARD SHELL — RELEASE BUNDLE NOTES
+
+Purpose
+- Keep the board shell clean, premium, and FrontPage-friendly.
+- Make the logo/header stay inline, with the cup left of the name.
+- Preserve a white top bar so the artwork does not look pixelated or muddy.
+- Keep the message simple: done-for-you marketing, you stay in command, we do the work.
+
+Release bundle checklist
+1. Header
+- White background.
+- Cup icon left of the name.
+- Logo should shrink gracefully without stacking.
+- No dark top bar behind the artwork.
+
+2. Hero area
+- Use a short headline.
+- Keep a single support line.
+- Avoid repeating the same promise too many times.
+- Make the CTA buttons clear and easy to read.
+
+3. Business card / board shell panel
+- Keep copy brief and readable.
+- Support the brand promise.
+- Make sure it looks good on smaller screens.
+
+4. Footer / support area
+- Keep it simple.
+- Use support/help links only if they add value.
+- Avoid clutter.
+
+5. Acceptance checks
+- Logo stays inline at normal and smaller widths.
+- Cup stays to the left of the name.
+- No stacking surprises.
+- White background remains visible.
+- CTA buttons remain obvious.
+- The board shell feels clean and premium.
+
+Core message to preserve
+- Xspresso is done-for-you marketing.
+- You stay in command.
+- We do the work.
+- More responses.
+- Less software chaos.
+
+Suggested next step
+- Review the board shell files as a group.
+- Merge the best wording and layout rules into the master project index.
+- Keep future files Xspresso-only and uniquely numbered.

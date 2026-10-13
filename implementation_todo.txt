@@ -1,0 +1,92 @@
+XSPRESSO IMPLEMENTATION TODO
+
+Purpose:
+Keep the build moving in a practical order so Xspresso V1 stays focused, shippable, and easy to maintain.
+
+Current V1 priorities:
+1. Finalize core onboarding flow
+   - Welcome screen
+   - Create new campaign
+   - Add offer details
+   - Choose goal and tone
+   - Build draft
+   - Review, tweak, and launch
+
+2. Finish monitoring logic
+   - CPC tracking
+   - CTR tracking
+   - conversion tracking
+   - underperforming ad alerts
+   - regenerate suggestions
+   - monitoring thresholds
+
+3. Finalize credits and usage
+   - all plans include all tools
+   - credits determine fair usage
+   - usage-based actions
+   - a la carte items
+   - daily / weekly / monthly monitoring costs
+   - upgrade suggestions when usage is high
+
+4. Finish platform-switch behavior
+   - big warning modal
+   - per-ad choices
+   - keep running / delete to library / keep monitoring
+   - standard vs rush changes
+   - platform-specific warnings
+
+5. Tighten campaign generation
+   - brief builder
+   - research step
+   - ad copy generation
+   - landing page copy
+   - cart / lead magnet copy
+   - follow-up email sequence
+   - platform-specific adaptation
+
+6. Polish dashboard and alerts
+   - campaign cards
+   - recent alerts
+   - credits remaining
+   - monitored ads summary
+   - quick actions
+   - clear next-step guidance
+
+7. Lock down library and reuse tools
+   - save campaign
+   - duplicate own campaign
+   - export / import
+   - templates and presets
+   - version history / restore points
+
+8. Billing and subscription behavior
+   - starter / pro / business / agency
+   - renewal reminders
+   - credit warnings
+   - pause / cancel / reactivate
+   - usage-based upgrade prompts
+
+9. Build support and help content
+   - FAQ
+   - help center topics
+   - common alerts explanation
+   - monitoring guidance
+   - credits explanation
+   - platform switching explanation
+
+10. Prepare V2 candidates
+   - sales letters
+   - VSLs
+   - video production
+   - advanced funnel copy
+   - deeper optimization
+   - approved reuse of the user's own work only
+
+Working principles:
+- Done-for-you marketing
+- Fast and simple
+- More responses, less software chaos
+- You stay in command
+- We do the work
+- All plans include every tool
+- Credits simply determine fair usage

@@ -1,0 +1,21 @@
+Xspresso Phase 31 — Scope
+
+This phase continues the long-term expansion of Xspresso with a focus on final refinement, orchestration, and product intelligence.
+
+Scope includes:
+- deeper orchestration across campaigns, leads, alerts, billing, templates, and reports
+- smarter cross-campaign learning and trend detection
+- stronger recommendation loops
+- broader forecasting and performance analysis
+- multi-brand and multi-team intelligence
+- shared assets and template marketplace refinement
+- improved workflow coordination
+- tighter guardrails and user control
+- clearer credit intelligence and usage guidance
+- continued polish for dashboard, monitoring, and alerts
+
+Success criteria:
+- Xspresso stays simple for the user
+- the system remains useful, fast, and clear
+- recommendations help users save time, money, and effort
+- the product continues to feel done-for-you, while the user stays in command

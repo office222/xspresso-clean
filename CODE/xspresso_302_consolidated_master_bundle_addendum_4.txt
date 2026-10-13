@@ -1,0 +1,247 @@
+XSPRESSO V1 CONSOLIDATION BUNDLE — ADDENDUM 4
+Purpose: one canonical startup path, deployment preflight, and local runtime smoke test.
+
+This is a single downloadable source bundle. Save each complete, labeled section under the filename shown in its heading. It supplements Addenda 2 and 3; it does not replace or duplicate the other master bundles. No tests or server have been run by the assistant.
+
+============================================================
+FILE: xspresso_v1_launch.js
+============================================================
+
+import { resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
+import { loadConfig } from './xspresso_config_v1.js';
+import { createXspressoEmailNotificationRuntime } from './xspresso_notification_email_runtime_v1.js';
+
+export async function startXspressoV1({ env = process.env } = {}) {
+  const config = loadConfig(env);
+  const runtime = createXspressoEmailNotificationRuntime({ env, config });
+  const address = await runtime.listen();
+  return { runtime, address };
+}
+
+async function main() {
+  const { runtime, address } = await startXspressoV1();
+  const host = address?.address || process.env.HOST || '127.0.0.1';
+  const port = address?.port || process.env.PORT || 3000;
+  console.log(`Xspresso V1 listening at ${host}:${port}`);
+  let closing = false;
+  const shutdown = async signal => {
+    if (closing) return;
+    closing = true;
+    console.log(`Xspresso V1 shutting down (${signal}).`);
+    try { await runtime.close(); process.exitCode = 0; }
+    catch (error) { console.error('Shutdown failed:', error?.message || 'unknown error'); process.exitCode = 1; }
+  };
+  process.once('SIGINT', () => { void shutdown('SIGINT'); });
+  process.once('SIGTERM', () => { void shutdown('SIGTERM'); });
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
+  main().catch(error => {
+    console.error('Xspresso V1 failed to start:', error?.message || 'unknown error');
+    process.exitCode = 1;
+  });
+}
+
+============================================================
+FILE: xspresso_v1_preflight.js
+============================================================
+
+import { mkdir, open, unlink } from 'node:fs/promises';
+import { join, resolve } from 'node:path';
+import { randomUUID } from 'node:crypto';
+import { pathToFileURL } from 'node:url';
+
+const truthy = value => ['1', 'true', 'yes', 'on'].includes(String(value || '').toLowerCase());
+const present = value => typeof value === 'string' && value.trim().length > 0;
+
+export function inspectEnvironment({ env = process.env, nodeVersion = process.versions.node } = {}) {
+  const errors = [];
+  const warnings = [];
+  const major = Number(String(nodeVersion).split('.')[0]);
+  if (!Number.isInteger(major) || major < 20) errors.push('Node.js 20 or newer is required.');
+
+  const hasOpenAIKey = present(env.OPENAI_API_KEY);
+  const hasOpenAIModel = present(env.OPENAI_MODEL);
+  if (hasOpenAIKey !== hasOpenAIModel) errors.push('Set both OPENAI_API_KEY and OPENAI_MODEL, or leave both unset.');
+  if (!hasOpenAIKey) warnings.push('Text generation is disabled until OpenAI credentials are configured.');
+  if (hasOpenAIKey && env.NODE_ENV === 'production' && !present(env.XSPRESSO_GENERATION_CREDIT_COST)) {
+    errors.push('Production AI generation requires XSPRESSO_GENERATION_CREDIT_COST to be explicit.');
+  }
+  if (present(env.OPENAI_IMAGE_MODEL) && !hasOpenAIKey) errors.push('OPENAI_IMAGE_MODEL requires OpenAI credentials.');
+
+  const smtpValues = ['SMTP_HOST', 'SMTP_FROM', 'SMTP_USER', 'SMTP_PASSWORD'];
+  const anySmtp = smtpValues.some(key => present(env[key]));
+  if (anySmtp && (!present(env.SMTP_HOST) || !present(env.SMTP_FROM))) {
+    errors.push('SMTP requires both SMTP_HOST and SMTP_FROM.');
+  }
+  if (!anySmtp) warnings.push('Email delivery is disabled until SMTP is configured.');
+  if (present(env.SMTP_USER) !== present(env.SMTP_PASSWORD)) errors.push('Set both SMTP_USER and SMTP_PASSWORD, or leave both unset.');
+
+  const metaValues = ['XSPRESSO_META_APP_ID', 'XSPRESSO_META_APP_SECRET', 'XSPRESSO_META_REDIRECT_URI'];
+  const metaCount = metaValues.filter(key => present(env[key])).length;
+  if (metaCount !== 0 && metaCount !== metaValues.length) errors.push('Meta OAuth requires app ID, app secret, and redirect URI together.');
+  if (metaCount === 0) warnings.push('Meta OAuth is not configured.');
+  if (present(env.XSPRESSO_CREDENTIALS_ENCRYPTION_KEY)) {
+    try {
+      if (Buffer.from(env.XSPRESSO_CREDENTIALS_ENCRYPTION_KEY, 'base64').length !== 32) {
+        errors.push('XSPRESSO_CREDENTIALS_ENCRYPTION_KEY must decode to 32 bytes.');
+      }
+    } catch { errors.push('XSPRESSO_CREDENTIALS_ENCRYPTION_KEY must be valid base64.'); }
+  }
+  if (env.NODE_ENV === 'production' && truthy(env.XSPRESSO_SIGNUP_ENABLED)) {
+    warnings.push('Public signup is enabled in production; disable it after the initial account is created.');
+  }
+  if (env.NODE_ENV === 'production' && present(env.XSPRESSO_PUBLIC_BASE_URL) && !env.XSPRESSO_PUBLIC_BASE_URL.startsWith('https://')) {
+    errors.push('XSPRESSO_PUBLIC_BASE_URL must use HTTPS in production.');
+  }
+
+  return { ok: errors.length === 0, nodeVersion, errors, warnings };
+}
+
+export async function runPreflight({ env = process.env, nodeVersion = process.versions.node } = {}) {
+  const report = inspectEnvironment({ env, nodeVersion });
+  const dataDir = resolve(env.XSPRESSO_DATA_DIR || './data');
+  try {
+    await mkdir(dataDir, { recursive: true, mode: 0o700 });
+    const probe = join(dataDir, `.xspresso-preflight-${randomUUID()}`);
+    const handle = await open(probe, 'wx', 0o600);
+    await handle.writeFile('ok');
+    await handle.close();
+    await unlink(probe);
+  } catch {
+    report.errors.push('XSPRESSO_DATA_DIR is not writable.');
+    report.ok = false;
+  }
+  return { ...report, dataDirectoryWritable: !report.errors.includes('XSPRESSO_DATA_DIR is not writable.') };
+}
+
+async function main() {
+  const report = await runPreflight();
+  console.log(`Xspresso preflight: ${report.ok ? 'READY' : 'NEEDS ATTENTION'}`);
+  for (const message of report.errors) console.error(`ERROR: ${message}`);
+  for (const message of report.warnings) console.warn(`WARNING: ${message}`);
+  if (report.ok) console.log('Data directory is writable; no secret values were printed.');
+  process.exitCode = report.ok ? 0 : 1;
+}
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
+  main().catch(error => { console.error('Preflight failed:', error?.message || 'unknown error'); process.exitCode = 1; });
+}
+
+============================================================
+FILE: xspresso_v1_preflight.test.js
+============================================================
+
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { inspectEnvironment } from './xspresso_v1_preflight.js';
+
+test('minimal development environment is allowed with explicit optional-feature warnings', () => {
+  const report = inspectEnvironment({
+    nodeVersion: '20.0.0',
+    env: { NODE_ENV: 'development', XSPRESSO_DATA_DIR: './data' },
+  });
+  assert.equal(report.ok, true);
+  assert.ok(report.warnings.some(message => message.includes('Text generation is disabled')));
+  assert.ok(report.warnings.some(message => message.includes('Email delivery is disabled')));
+});
+
+test('partial AI or SMTP credentials fail without echoing secret values', () => {
+  const secret = 'do-not-print-this-secret';
+  const report = inspectEnvironment({
+    nodeVersion: '20.0.0',
+    env: { NODE_ENV: 'test', OPENAI_API_KEY: secret, SMTP_HOST: 'smtp.example.test' },
+  });
+  assert.equal(report.ok, false);
+  const output = JSON.stringify(report);
+  assert.ok(!output.includes(secret));
+  assert.ok(report.errors.some(message => message.includes('Set both OPENAI_API_KEY')));
+  assert.ok(report.errors.some(message => message.includes('SMTP_HOST and SMTP_FROM')));
+});
+
+test('production requires explicit credit cost when text generation is enabled', () => {
+  const report = inspectEnvironment({
+    nodeVersion: '20.0.0',
+    env: { NODE_ENV: 'production', OPENAI_API_KEY: 'test-key', OPENAI_MODEL: 'test-model', XSPRESSO_SIGNUP_ENABLED: 'false' },
+  });
+  assert.ok(report.errors.some(message => message.includes('XSPRESSO_GENERATION_CREDIT_COST')));
+});
+
+============================================================
+FILE: xspresso_v1_smoke.test.js
+============================================================
+
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { mkdtemp, rm } from 'node:fs/promises';
+import { join } from 'node:path';
+import { tmpdir } from 'node:os';
+import { loadConfig } from './xspresso_config_v1.js';
+import { createXspressoEmailNotificationRuntime } from './xspresso_notification_email_runtime_v1.js';
+
+test('canonical V1 runtime starts, serves health, and supports signup locally', async () => {
+  const directory = await mkdtemp(join(tmpdir(), 'xspresso-v1-'));
+  const env = {
+    NODE_ENV: 'test',
+    XSPRESSO_DATA_DIR: directory,
+    XSPRESSO_SIGNUP_ENABLED: 'true',
+  };
+  const config = {
+    ...loadConfig(env),
+    host: '127.0.0.1',
+    port: 0,
+    dataFile: join(directory, 'xspresso-test.json'),
+  };
+  const runtime = createXspressoEmailNotificationRuntime({ env, config });
+  try {
+    const address = await runtime.listen();
+    const origin = `http://127.0.0.1:${address.port}`;
+    const health = await fetch(`${origin}/api/health`);
+    assert.equal(health.status, 200);
+
+    const signup = await fetch(`${origin}/api/auth/signup`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: 'smoke@example.test', password: 'A-long-test-password-2026', name: 'Smoke Test' }),
+    });
+    assert.ok(signup.status >= 200 && signup.status < 300);
+    const result = await signup.json();
+    assert.ok(result.token);
+    assert.ok(result.user?.tenantId);
+  } finally {
+    await runtime.close();
+    await rm(directory, { recursive: true, force: true });
+  }
+});
+
+============================================================
+FILE: xspresso_v1_package_manifest.json
+============================================================
+
+{
+  "name": "xspresso-marketing-platform",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node xspresso_v1_launch.js",
+    "preflight": "node xspresso_v1_preflight.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "nodemailer": "^10.0.9"
+  }
+}
+
+============================================================
+FILE: XSPRESSO_V1_ASSEMBLY_AND_RUN.txt
+============================================================
+
+1. Extract the labeled source sections into the existing Xspresso project directory. This bundle adds files; it does not replace the existing source modules.
+2. Keep one active Node package manifest. Copy the contents of xspresso_v1_package_manifest.json to package.json in the project root only when you are ready to make this V1 launcher canonical; do not keep multiple package.json files.
+3. Install dependencies in the project root, then run: npm run preflight
+4. Start locally with: npm start
+5. Run tests with: npm test
+6. The smoke test uses a temporary local data directory and performs signup against the local test server. It does not call OpenAI, Meta, or SMTP.
+7. Set secrets only in the server environment. The preflight reports missing configuration without printing secret values.
+8. This bundle is a V1 assembly aid, not a production certification. Tests and server have not been run here.

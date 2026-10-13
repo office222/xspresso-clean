@@ -1,0 +1,17 @@
+Xspresso batch 594–599
+
+Included files:
+- xspresso_594_notifications_center_v2.js
+- xspresso_595_activity_log_v2.js
+- xspresso_596_help_center_v4.js
+- xspresso_597_template_library_v4.js
+- xspresso_598_billing_credits_panel_v4.js
+- xspresso_599_ui_shell_components_v4.js
+
+This batch adds:
+- notifications center helpers
+- activity logging and credit summaries
+- help center topics and search
+- template save/restore/duplicate logic
+- billing and credits panel helpers
+- UI shell component helpers

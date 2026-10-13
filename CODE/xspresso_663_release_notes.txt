@@ -1,0 +1,26 @@
+Xspresso Batch Release Notes
+
+Files in this batch:
+- xspresso_658_index.html
+- xspresso_659_app.css
+- xspresso_660_app.js
+- xspresso_661_campaign_builder.js
+- xspresso_662_monitoring_engine.js
+
+What this batch adds:
+- a clean app shell and homepage
+- reusable visual styling
+- campaign brief creation and draft generation
+- monitoring / ad health evaluation
+- a basic dashboard rendering path
+
+Core product rule:
+Xspresso is done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.
+
+Next likely batch:
+- review / approve / regenerate panel
+- billing and credits panel
+- lead follow-up screen
+- template library
+- platform switch modal
+- main app wiring

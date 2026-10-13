@@ -1,0 +1,47 @@
+Xspresso Phase 13 — Task Breakdown
+
+Purpose:
+This phase focuses on the final orchestration layer of Xspresso, where the system starts coordinating campaigns, monitoring, leads, alerts, billing, and recommendations more intelligently across the whole app.
+
+1) Orchestration engine
+- Coordinate actions across campaigns, ads, leads, alerts, credits, and billing.
+- Keep modules in sync so the app feels unified.
+- Prioritize the most important next action for the user.
+
+2) Cross-module intelligence
+- Learn from campaign performance.
+- Connect alert trends to campaign changes.
+- Connect billing usage to platform actions.
+- Connect lead behavior to follow-up sequences.
+
+3) Smarter recommendations
+- Recommend campaign improvements.
+- Recommend ad regeneration when performance drops.
+- Recommend budget/credit adjustments.
+- Recommend upgrade opportunities only when they reduce cost or add clear value.
+
+4) Scheduled summaries
+- Build daily and weekly summaries.
+- Show campaign health at a glance.
+- Show credit usage at a glance.
+- Show alerts, wins, and underperforming items clearly.
+
+5) Workflow coordination
+- Help the user move from draft to launch.
+- Help the user move from alert to fix.
+- Help the user move from lead to follow-up.
+- Help the user move from low performance to regeneration.
+
+6) Safety and guardrails
+- Keep all actions explainable.
+- Keep the user in command.
+- Require approvals for sensitive changes.
+- Preserve the never-copy rule.
+- Avoid hidden actions and surprise usage.
+
+7) Success criteria
+- Xspresso can coordinate actions across the product without confusing the user.
+- Recommendations feel useful and timely.
+- The dashboard shows a clear next step.
+- Credits, monitoring, alerts, and billing all feel connected.
+- The product still feels fast, simple, and done-for-you.

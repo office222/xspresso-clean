@@ -1,0 +1,29 @@
+Xspresso Board Shell Wrap-Up Notes
+
+Purpose:
+- Keep the board shell clean, premium, and easy to scan.
+- Keep the cup left of the name logo.
+- Keep the top bar white.
+- Make sure the logo shrinks inline instead of stacking.
+- Keep the CTA buttons clear and action-focused.
+
+Current rules:
+1. The cup and name stay inline at the top.
+2. The header background stays white.
+3. The logo should shrink on smaller screens without overlapping.
+4. The business card area should stay simple and readable.
+5. CTA buttons should stay obvious and uncluttered.
+6. Footer/support links should remain subtle.
+
+Recommended next step:
+- Final visual test on desktop, tablet, and mobile.
+- Confirm the logo does not wrap.
+- Confirm the business card copy reads cleanly.
+- Confirm the CTA placement feels balanced.
+- Confirm the shell remains premium and simple.
+
+Best product reminder:
+- Xspresso is done-for-you marketing.
+- The user stays in command.
+- We do the work.
+- The shell should reflect that promise with clarity and confidence.

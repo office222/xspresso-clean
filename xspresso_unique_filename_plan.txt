@@ -1,0 +1,55 @@
+Xspresso Unique Filename Plan
+
+Purpose:
+Create a naming system for all future Xspresso project files so downloads do not collide with existing files.
+
+Recommended rule:
+Use a numbered prefix plus a clear topic name.
+
+Example format:
+- xspresso_01_master_index.txt
+- xspresso_02_v1_features.txt
+- xspresso_03_credits_usage.txt
+- xspresso_04_campaign_generation.txt
+- xspresso_05_ad_monitoring.txt
+- xspresso_06_lead_followup.txt
+
+Optional version format:
+- xspresso_v1_01_master_index.txt
+- xspresso_v1_02_features.txt
+- xspresso_v1_03_pricing.txt
+
+Rules:
+1. Never reuse an existing filename.
+2. Add a number if the topic already exists.
+3. Add v2, v3, etc. when the content changes significantly.
+4. Keep filenames short, readable, and clearly tied to Xspresso.
+5. Use lowercase letters and underscores for consistency.
+
+Suggested naming categories:
+- master index
+- product spec
+- copy blocks
+- HTML blocks
+- JavaScript logic
+- pricing and credits
+- monitoring and alerts
+- founder story
+- templates and presets
+- export/import
+- dashboard and UI
+- database schema
+- API spec
+- roadmap and open items
+- QA test plan
+
+Best practice:
+If a file already exists, create a numbered replacement instead of overwriting it.
+
+Examples of replacement names:
+- xspresso_07_platform_support_matrix.txt
+- xspresso_08_database_schema.txt
+- xspresso_09_billing_and_subscriptions.txt
+
+Goal:
+Keep the project organized, easy to download, and free from "already exists" filename conflicts.

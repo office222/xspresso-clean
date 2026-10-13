@@ -1,0 +1,13 @@
+{
+  "name": "xspresso-marketing-workspace",
+  "private": true,
+  "version": "0.1.1",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node xspresso_web_runtime_openai_v1.js",
+    "start:api": "node xspresso_runtime_server_v2.js",
+    "credits:admin": "node xspresso_credit_admin_cli_v1.js",
+    "test": "node --test"
+  }
+}

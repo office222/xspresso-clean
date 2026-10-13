@@ -1,0 +1,195 @@
+Xspresso Database Schema (Draft)
+
+1) users
+- id (pk)
+- name
+- email
+- password_hash
+- role
+- status
+- created_at
+- updated_at
+
+2) subscriptions
+- id (pk)
+- user_id (fk users.id)
+- plan
+- billing_cycle
+- status
+- started_at
+- renews_at
+- credits_included
+- credits_used
+- auto_renew
+- created_at
+- updated_at
+
+3) credits_ledger
+- id (pk)
+- user_id (fk users.id)
+- subscription_id (fk subscriptions.id)
+- source_type (campaign, monitor, upload, a_la_carte, adjustment)
+- source_id
+- credits_delta (+/-)
+- note
+- created_at
+
+4) campaigns
+- id (pk)
+- user_id (fk users.id)
+- name
+- goal
+- tone
+- status
+- platform
+- headline
+- subheadline
+- offer_description
+- product_name
+- product_url
+- product_image
+- created_at
+- updated_at
+
+5) campaign_versions
+- id (pk)
+- campaign_id (fk campaigns.id)
+- version_number
+- snapshot_json
+- note
+- created_at
+
+6) campaign_assets
+- id (pk)
+- campaign_id (fk campaigns.id)
+- asset_type (ad, landing_page, cart, lead_magnet, follow_up, hook, headline)
+- title
+- body_json
+- status
+- created_at
+- updated_at
+
+7) platform_connections
+- id (pk)
+- user_id (fk users.id)
+- platform_name
+- account_name
+- external_account_id
+- status
+- connected_at
+- updated_at
+
+8) ads
+- id (pk)
+- campaign_id (fk campaigns.id)
+- platform_connection_id (fk platform_connections.id)
+- name
+- status
+- cpc
+- ctr
+- impressions
+- clicks
+- conversions
+- monitoring_status
+- monitoring_mode (daily, weekly, monthly, manual)
+- last_checked_at
+- created_at
+- updated_at
+
+9) alerts
+- id (pk)
+- user_id (fk users.id)
+- campaign_id (fk campaigns.id, nullable)
+- ad_id (fk ads.id, nullable)
+- level (info, warning, critical)
+- title
+- message
+- status (open, read, dismissed, resolved)
+- created_at
+- resolved_at
+
+10) leads
+- id (pk)
+- user_id (fk users.id)
+- campaign_id (fk campaigns.id)
+- name
+- email
+- phone
+- source_platform
+- score
+- status (new, cold, warm, hot, customer)
+- tags_json
+- created_at
+- updated_at
+
+11) follow_up_sequences
+- id (pk)
+- campaign_id (fk campaigns.id)
+- name
+- status
+- created_at
+- updated_at
+
+12) follow_up_messages
+- id (pk)
+- sequence_id (fk follow_up_sequences.id)
+- day_offset
+- subject
+- body
+- message_type (welcome, reminder, benefit, offer)
+- created_at
+
+13) templates
+- id (pk)
+- user_id (fk users.id, nullable for shared templates)
+- name
+- category
+- description
+- data_json
+- created_at
+- updated_at
+
+14) library_items
+- id (pk)
+- user_id (fk users.id)
+- item_type (campaign, page, ad, sequence, template)
+- source_id
+- name
+- status (saved, archived, restored)
+- data_json
+- created_at
+- updated_at
+
+15) settings
+- id (pk)
+- user_id (fk users.id)
+- tone
+- default_goal
+- default_platform
+- monitoring_enabled
+- alert_thresholds_json
+- platform_defaults_json
+- created_at
+- updated_at
+
+Core relationships:
+- users 1 -> many subscriptions
+- users 1 -> many campaigns
+- campaigns 1 -> many campaign_assets
+- campaigns 1 -> many campaign_versions
+- campaigns 1 -> many ads
+- campaigns 1 -> many leads
+- campaigns 1 -> many follow_up_sequences
+- follow_up_sequences 1 -> many follow_up_messages
+- users 1 -> many alerts
+- users 1 -> many platform_connections
+- users 1 -> many library_items
+- users 1 -> many settings
+- subscriptions 1 -> many credits_ledger rows
+
+Notes:
+- Keep generated content in JSON fields where structure may change.
+- Keep monitoring status separate from ad status.
+- Keep credits movement in a ledger so usage is auditable.
+- Prefer snapshots for version history.
+- Support restore/duplicate using library_items and campaign_versions.

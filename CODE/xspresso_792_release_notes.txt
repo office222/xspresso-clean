@@ -1,0 +1,22 @@
+Xspresso batch 786-791 release notes
+
+Included:
+- xspresso_786_index.html
+- xspresso_787_app.css
+- xspresso_788_app.js
+- xspresso_789_campaign_flow.js
+- xspresso_790_monitoring_and_alerts.js
+- xspresso_791_dashboard_overview.js
+
+What this batch covers:
+- clean app shell and navigation
+- premium white-header layout
+- campaign brief to draft flow
+- monitoring and alert logic
+- dashboard overview summaries
+- responsive UI styling
+
+Notes:
+- filenames are unique and batch-numbered
+- this set is meant to be a workable starter app slice
+- the next batch can cover billing, leads, templates, platform switching, and help center integration

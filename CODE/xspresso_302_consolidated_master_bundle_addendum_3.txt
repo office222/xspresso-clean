@@ -1,0 +1,564 @@
+XSPRESSO CONSOLIDATED MASTER BUNDLE — ADDENDUM 3
+Feature: opt-in email digests for account activity.
+
+This is a source bundle, not a filename list. Save each complete section under its stated filename in the existing Xspresso project. Email categories default off. Email sends contain account activity summaries only; they do not publish ads, change budgets, or include lead email addresses.
+
+============================================================
+FILE: xspresso_notification_email_service_v1.js
+============================================================
+
+const DEFAULT_EMAIL_PREFERENCES = Object.freeze({
+  campaignUpdates: false,
+  monitoringAlerts: false,
+  leadFollowups: false,
+  creativeAssets: false,
+});
+const EMAIL_PREFERENCE_KEYS = new Set(Object.keys(DEFAULT_EMAIL_PREFERENCES));
+
+function fail(status, code, message) {
+  return Object.assign(new Error(message), { status, code });
+}
+function scopeFor(user) {
+  if (!user?.id || !user?.tenantId) throw fail(401, 'UNAUTHENTICATED', 'Authentication required.');
+  return { userId: user.id, tenantId: user.tenantId };
+}
+function eventTime(event) {
+  const value = event?.createdAt || event?.at || event?.updatedAt;
+  const ms = Date.parse(value || '');
+  return Number.isFinite(ms) ? ms : 0;
+}
+function eventCategory(event) {
+  const text = `${event?.kind || ''} ${event?.action || ''} ${event?.type || ''}`.toLowerCase();
+  if (text.includes('alert') || text.includes('monitor')) return 'monitoringAlerts';
+  if (text.includes('followup') || text.includes('lead')) return 'leadFollowups';
+  if (text.includes('asset') || text.includes('image') || text.includes('creative')) return 'creativeAssets';
+  return 'campaignUpdates';
+}
+function safeTitle(event) {
+  const value = String(event?.action || event?.kind || 'account activity')
+    .replace(/[^a-z0-9._ -]/gi, ' ')
+    .replace(/[._-]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  return value.slice(0, 100) || 'Account activity';
+}
+function compareCursor(event, cursor) {
+  const time = eventTime(event);
+  if (time !== cursor.lastEventAt) return time > cursor.lastEventAt;
+  return String(event.id || '').localeCompare(String(cursor.lastEventId || '')) > 0;
+}
+
+export class NotificationEmailService {
+  constructor({ store, mailer = null, clock = () => Date.now(), dashboardUrl = '/' }) {
+    if (!store?.read || !store?.update) throw new TypeError('store must support read and update');
+    this.store = store;
+    this.mailer = mailer;
+    this.clock = clock;
+    this.dashboardUrl = dashboardUrl;
+  }
+
+  async getPreferences(user) {
+    const scope = scopeFor(user);
+    const state = await this.store.read();
+    const row = (state.notificationEmailPreferences || []).find(
+      item => item.userId === scope.userId && item.tenantId === scope.tenantId,
+    );
+    return {
+      preferences: { ...DEFAULT_EMAIL_PREFERENCES, ...(row?.preferences || {}) },
+      emailAvailable: Boolean(this.mailer),
+      enabledAt: row?.enabledAt || null,
+      updatedAt: row?.updatedAt || null,
+    };
+  }
+
+  async updatePreferences(user, patch) {
+    const scope = scopeFor(user);
+    if (!patch || typeof patch !== 'object' || Array.isArray(patch) || !Object.keys(patch).length) {
+      throw fail(400, 'INVALID_PREFERENCES', 'Provide at least one email preference.');
+    }
+    for (const [key, value] of Object.entries(patch)) {
+      if (!EMAIL_PREFERENCE_KEYS.has(key) || typeof value !== 'boolean') {
+        throw fail(400, 'INVALID_PREFERENCES', `Unsupported email preference: ${key}.`);
+      }
+    }
+    const now = new Date(this.clock()).toISOString();
+    return this.store.update(state => {
+      state.notificationEmailPreferences ||= [];
+      let row = state.notificationEmailPreferences.find(
+        item => item.userId === scope.userId && item.tenantId === scope.tenantId,
+      );
+      if (!row) {
+        row = { ...scope, preferences: { ...DEFAULT_EMAIL_PREFERENCES }, createdAt: now, enabledAt: null };
+        state.notificationEmailPreferences.push(row);
+      }
+      const previouslyEnabled = Object.values(row.preferences || {}).some(Boolean);
+      row.preferences = { ...DEFAULT_EMAIL_PREFERENCES, ...(row.preferences || {}), ...patch };
+      const isEnabled = Object.values(row.preferences).some(Boolean);
+      if (!previouslyEnabled && isEnabled) row.enabledAt = now;
+      row.updatedAt = now;
+      return {
+        preferences: { ...row.preferences },
+        emailAvailable: Boolean(this.mailer),
+        enabledAt: row.enabledAt,
+        updatedAt: row.updatedAt,
+      };
+    });
+  }
+
+  async runOne() {
+    if (!this.mailer) return { sent: false, reason: 'email_not_configured' };
+    const snapshot = await this.store.read();
+    const users = snapshot.users || [];
+    const preferenceRows = snapshot.notificationEmailPreferences || [];
+    const cursors = snapshot.notificationEmailCursors || [];
+    const audit = snapshot.auditEvents || [];
+    const alerts = snapshot.alerts || [];
+
+    const events = [
+      ...audit.map((event, index) => ({ ...event, id: String(event.id || `audit-${index}`) })),
+      ...alerts.map(event => ({
+        id: `alert-${event.id}-${event.status || 'open'}`,
+        tenantId: event.tenantId,
+        action: event.status === 'resolved' ? 'monitoring.alert_resolved' : 'monitoring.alert_opened',
+        createdAt: event.updatedAt || event.createdAt,
+        kind: 'alert',
+      })),
+    ];
+
+    for (const user of users) {
+      if (!user?.id || !user?.tenantId || !user?.email) continue;
+      const prefRow = preferenceRows.find(row => row.userId === user.id && row.tenantId === user.tenantId);
+      const preferences = { ...DEFAULT_EMAIL_PREFERENCES, ...(prefRow?.preferences || {}) };
+      if (!Object.values(preferences).some(Boolean)) continue;
+      const cursor = cursors.find(row => row.userId === user.id && row.tenantId === user.tenantId) || {
+        lastEventAt: Date.parse(prefRow?.enabledAt || prefRow?.createdAt || new Date(this.clock()).toISOString()),
+        lastEventId: '',
+      };
+      const eligible = events
+        .filter(event => event.tenantId === user.tenantId && preferences[eventCategory(event)] === true && compareCursor(event, cursor))
+        .sort((a, b) => eventTime(a) - eventTime(b) || String(a.id).localeCompare(String(b.id)))
+        .slice(0, 20);
+      if (!eligible.length) continue;
+
+      const last = eligible[eligible.length - 1];
+      const digestKey = `${user.tenantId}:${user.id}:${eligible.map(item => item.id).join(',')}`;
+      const safeEvents = eligible.map(event => `• ${safeTitle(event)} — ${new Date(eventTime(event)).toISOString()}`);
+      const text = [
+        'Xspresso account activity',
+        '',
+        ...safeEvents,
+        '',
+        `Open your Xspresso dashboard: ${this.dashboardUrl}`,
+        'You can change email notification preferences in the dashboard.',
+      ].join('\n');
+
+      await this.mailer.send({
+        to: user.email,
+        subject: `Xspresso activity update (${eligible.length})`,
+        text,
+        idempotencyKey: `activity-digest-${digestKey}`.slice(0, 160),
+      });
+
+      const sentAt = new Date(this.clock()).toISOString();
+      await this.store.update(state => {
+        state.notificationEmailCursors ||= [];
+        let row = state.notificationEmailCursors.find(item => item.userId === user.id && item.tenantId === user.tenantId);
+        if (!row) {
+          row = { userId: user.id, tenantId: user.tenantId };
+          state.notificationEmailCursors.push(row);
+        }
+        row.lastEventAt = eventTime(last);
+        row.lastEventId = String(last.id);
+        row.updatedAt = sentAt;
+        state.notificationEmailDeliveries ||= [];
+        state.notificationEmailDeliveries.push({
+          id: digestKey,
+          userId: user.id,
+          tenantId: user.tenantId,
+          eventCount: eligible.length,
+          sentAt,
+        });
+        if (state.notificationEmailDeliveries.length > 5000) {
+          state.notificationEmailDeliveries.splice(0, state.notificationEmailDeliveries.length - 5000);
+        }
+        return true;
+      });
+      return { sent: true, userId: user.id, eventCount: eligible.length };
+    }
+    return { sent: false, reason: 'nothing_due' };
+  }
+}
+
+export class NotificationEmailScheduler {
+  constructor({ worker, intervalMs = 60_000, batchLimit = 20, onError = () => {}, timers = globalThis }) {
+    if (!worker?.runOne) throw new TypeError('worker.runOne is required');
+    this.worker = worker;
+    this.intervalMs = intervalMs;
+    this.batchLimit = batchLimit;
+    this.onError = onError;
+    this.timers = timers;
+    this.timer = null;
+    this.active = null;
+  }
+  async tick() {
+    if (this.active) return { skipped: true };
+    this.active = (async () => {
+      const results = [];
+      for (let i = 0; i < this.batchLimit; i += 1) {
+        const result = await this.worker.runOne();
+        results.push(result);
+        if (!result?.sent) break;
+      }
+      return results;
+    })();
+    try { return await this.active; }
+    finally { this.active = null; }
+  }
+  start() {
+    if (this.timer) return false;
+    void this.tick().catch(this.onError);
+    this.timer = this.timers.setInterval(() => { void this.tick().catch(this.onError); }, this.intervalMs);
+    this.timer?.unref?.();
+    return true;
+  }
+  async stop() {
+    if (this.timer) this.timers.clearInterval(this.timer);
+    this.timer = null;
+    if (this.active) await this.active.catch(this.onError);
+  }
+}
+
+export { DEFAULT_EMAIL_PREFERENCES, eventCategory };
+
+============================================================
+FILE: xspresso_notification_email_api_v1.js
+============================================================
+
+function send(res, status, payload) {
+  res.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' });
+  res.end(JSON.stringify(payload));
+}
+function bearer(req) {
+  const match = /^Bearer ([A-Za-z0-9_-]{20,512})$/.exec(req.headers?.authorization || '');
+  return match?.[1] || null;
+}
+async function readJson(req, maxBytes = 16 * 1024) {
+  const chunks = []; let size = 0;
+  for await (const chunk of req) {
+    size += chunk.length;
+    if (size > maxBytes) throw Object.assign(new Error('Request too large.'), { status: 413, code: 'BODY_TOO_LARGE' });
+    chunks.push(chunk);
+  }
+  if (!size) return {};
+  try { return JSON.parse(Buffer.concat(chunks).toString('utf8')); }
+  catch { throw Object.assign(new Error('Invalid JSON.'), { status: 400, code: 'INVALID_JSON' }); }
+}
+
+export function createNotificationEmailApiHandler({ auth, service, fallback }) {
+  if (!auth?.authenticate || !service) throw new TypeError('auth and service are required');
+  return async function notificationEmailApi(req, res) {
+    const url = new URL(req.url || '/', 'http://localhost');
+    if (url.pathname !== '/api/notifications/email-preferences') {
+      return fallback ? fallback(req, res) : send(res, 404, { error: 'Not found.' });
+    }
+    try {
+      const token = bearer(req);
+      if (!token) return send(res, 401, { error: 'Authentication required.' });
+      const user = await auth.authenticate(token);
+      if (!user) return send(res, 401, { error: 'Authentication required.' });
+      if (req.method === 'GET') return send(res, 200, await service.getPreferences(user));
+      if (req.method === 'PATCH') {
+        const body = await readJson(req);
+        return send(res, 200, await service.updatePreferences(user, body.preferences));
+      }
+      return send(res, 405, { error: 'Method not allowed.' });
+    } catch (error) {
+      const status = Number.isInteger(error.status) ? error.status : 500;
+      return send(res, status, { error: status >= 500 ? 'Email preferences request failed.' : error.message, code: error.code || 'EMAIL_PREFERENCES_ERROR' });
+    }
+  };
+}
+
+============================================================
+FILE: xspresso_notification_email_panel_v1.js
+============================================================
+
+const TOKEN_KEY = 'xspresso_token';
+const CATEGORIES = [
+  ['campaignUpdates', 'Campaign updates'],
+  ['monitoringAlerts', 'Performance and monitoring alerts'],
+  ['leadFollowups', 'Lead follow-up activity'],
+  ['creativeAssets', 'Creative asset activity'],
+];
+function el(tag, text, className) {
+  const node = document.createElement(tag);
+  if (text !== undefined) node.textContent = text;
+  if (className) node.className = className;
+  return node;
+}
+async function callApi(path, options = {}) {
+  const token = sessionStorage.getItem(TOKEN_KEY);
+  if (!token) throw new Error('Sign in to manage email notifications.');
+  const response = await fetch(path, {
+    ...options,
+    headers: { Authorization: `Bearer ${token}`, ...(options.body ? { 'Content-Type': 'application/json' } : {}), ...(options.headers || {}) },
+  });
+  let result = {};
+  try { result = await response.json(); } catch {}
+  if (!response.ok) throw new Error(result.error || 'Email notification request failed.');
+  return result;
+}
+function mount(root = document.getElementById('app')) {
+  if (!root || document.getElementById('xspresso-email-notification-panel')) return;
+  const panel = el('section', undefined, 'panel xspresso-email-notification-panel');
+  panel.id = 'xspresso-email-notification-panel';
+  panel.append(el('h2', 'Email notifications'));
+  panel.append(el('p', 'Choose which account updates may be emailed to you. Everything starts off. No ad actions are triggered by these emails.'));
+  const status = el('p', 'Loading email preferences…', 'muted');
+  panel.append(status);
+  const controls = el('div', undefined, 'stack');
+  const inputs = new Map();
+  for (const [key, label] of CATEGORIES) {
+    const row = el('label', undefined, 'row');
+    const input = el('input');
+    input.type = 'checkbox';
+    input.dataset.preference = key;
+    inputs.set(key, input);
+    row.append(input, el('span', label));
+    controls.append(row);
+  }
+  panel.append(controls);
+  const save = el('button', 'Save email preferences', 'button');
+  save.type = 'button';
+  panel.append(save);
+  async function load() {
+    try {
+      const result = await callApi('/api/notifications/email-preferences');
+      for (const [key, input] of inputs) input.checked = result.preferences?.[key] === true;
+      status.textContent = result.emailAvailable
+        ? 'Email delivery is configured; only selected categories will be sent.'
+        : 'Email delivery is not configured on this server. Preferences can still be saved.';
+    } catch (error) { status.textContent = error.message; }
+  }
+  save.addEventListener('click', async () => {
+    save.disabled = true;
+    try {
+      const preferences = Object.fromEntries([...inputs].map(([key, input]) => [key, input.checked]));
+      const result = await callApi('/api/notifications/email-preferences', { method: 'PATCH', body: JSON.stringify({ preferences }) });
+      status.textContent = result.emailAvailable ? 'Email preferences saved.' : 'Saved, but email delivery is not configured.';
+    } catch (error) { status.textContent = error.message; }
+    finally { save.disabled = false; }
+  });
+  (root.querySelector('main') || root).prepend(panel);
+  void load();
+}
+function boot() {
+  const root = document.getElementById('app');
+  if (!root) return;
+  mount(root);
+  new MutationObserver(() => mount(root)).observe(root, { childList: true, subtree: true });
+  document.addEventListener('submit', () => setTimeout(() => mount(root), 500));
+}
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot, { once: true });
+else boot();
+
+============================================================
+FILE: xspresso_notification_email_runtime_v1.js
+============================================================
+
+import { createServer } from 'node:http';
+import { readFile } from 'node:fs/promises';
+import { dirname, join, resolve } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { createXspressoNotificationRuntime } from './xspresso_notification_runtime_v1.js';
+import { NotificationEmailService, NotificationEmailScheduler } from './xspresso_notification_email_service_v1.js';
+import { createNotificationEmailApiHandler } from './xspresso_notification_email_api_v1.js';
+import { createSmtpMailerFromEnv } from './xspresso_smtp_mailer_adapter_v1.js';
+import { AuthRateLimiter } from './xspresso_auth_rate_limiter_v1.js';
+
+const ROOT = dirname(fileURLToPath(import.meta.url));
+const ASSETS = new Map([
+  ['/', ['xspresso_dashboard_meta_connection_v2.html', 'text/html; charset=utf-8']],
+  ['/xspresso_dashboard_meta_connection_v2.html', ['xspresso_dashboard_meta_connection_v2.html', 'text/html; charset=utf-8']],
+  ['/xspresso_dashboard_v2.css', ['xspresso_dashboard_v2.css', 'text/css; charset=utf-8']],
+  ['/xspresso_dashboard_app_v3_1.js', ['xspresso_dashboard_app_v3_1.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_dashboard_api_client_v3.js', ['xspresso_dashboard_api_client_v3.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_meta_connection_panel_v2.js', ['xspresso_meta_connection_panel_v2.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_meta_connection_api_v2.js', ['xspresso_meta_connection_api_v2.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_meta_connection_panel_v1.css', ['xspresso_meta_connection_panel_v1.css', 'text/css; charset=utf-8']],
+  ['/xspresso_asset_library_panel_v1.js', ['xspresso_asset_library_panel_v1.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_ai_image_panel_v1.js', ['xspresso_ai_image_panel_v1.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_campaign_kit_download_panel_v1.js', ['xspresso_campaign_kit_download_panel_v1.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_campaign_history_panel_v1.js', ['xspresso_campaign_history_panel_v1.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_campaign_iteration_panel_v1.js', ['xspresso_campaign_iteration_panel_v1.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_activity_feed_panel_v1.js', ['xspresso_activity_feed_panel_v1.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_activity_feed_panel_v1.css', ['xspresso_activity_feed_panel_v1.css', 'text/css; charset=utf-8']],
+  ['/xspresso_notification_panel_v1.js', ['xspresso_notification_panel_v1.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_notification_email_panel_v1.js', ['xspresso_notification_email_panel_v1.js', 'text/javascript; charset=utf-8']],
+]);
+function send(res, status, body, headers = {}) {
+  res.writeHead(status, { 'X-Content-Type-Options': 'nosniff', 'Referrer-Policy': 'strict-origin-when-cross-origin', ...headers });
+  res.end(body);
+}
+
+export function createXspressoEmailNotificationRuntime(options = {}) {
+  const env = options.env || process.env;
+  const base = createXspressoNotificationRuntime(options);
+  const mailer = createSmtpMailerFromEnv(env, { nodemailerModule: options.nodemailerModule });
+  const emailService = new NotificationEmailService({
+    store: base.store,
+    mailer,
+    dashboardUrl: env.XSPRESSO_PUBLIC_BASE_URL || '/',
+  });
+  const api = createNotificationEmailApiHandler({ auth: base.auth, service: emailService, fallback: base.api });
+  const scheduler = new NotificationEmailScheduler({
+    worker: emailService,
+    intervalMs: Number(env.XSPRESSO_NOTIFICATION_EMAIL_INTERVAL_MS || 60_000),
+    onError: error => console.error('Notification email worker error:', error?.message || 'unknown error'),
+  });
+  const webRoot = resolve(options.webRoot || ROOT);
+  const server = createServer(async (req, res) => {
+    const url = new URL(req.url || '/', 'http://localhost');
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+    if (req.method === 'POST' && ['/api/auth/login', '/api/auth/signup', '/api/auth/register'].includes(url.pathname)) {
+      const decision = limiter.consume(req.socket?.remoteAddress || 'unknown');
+      if (!decision.allowed) {
+        res.setHeader('Retry-After', String(decision.retryAfterSeconds));
+        return send(res, 429, JSON.stringify({ error: 'Too many requests.' }), { 'Content-Type': 'application/json; charset=utf-8' });
+      }
+    }
+    if (url.pathname.startsWith('/api/')) {
+      try { return await api(req, res); }
+      catch { if (!res.headersSent) return send(res, 500, JSON.stringify({ error: 'Internal server error.' }), { 'Content-Type': 'application/json; charset=utf-8' }); return; }
+    }
+    if (!['GET', 'HEAD'].includes(req.method || 'GET')) return send(res, 405, 'Method not allowed.');
+    const item = ASSETS.get(url.pathname);
+    if (!item) return send(res, 404, 'Not found.');
+    try {
+      let body = await readFile(join(webRoot, item[0]));
+      if (url.pathname === '/' || url.pathname.endsWith('.html')) {
+        let html = body.toString('utf8');
+        const inApp = '<script type="module" src="/xspresso_notification_panel_v1.js"></script>';
+        const email = '<script type="module" src="/xspresso_notification_email_panel_v1.js"></script>';
+        if (!html.includes(inApp)) html = html.replace('</body>', `${inApp}</body>`);
+        if (!html.includes(email)) html = html.replace('</body>', `${email}</body>`);
+        body = Buffer.from(html);
+      }
+      return send(res, 200, req.method === 'HEAD' ? '' : body, {
+        'Content-Type': item[1],
+        'Cache-Control': 'no-store',
+        'Content-Security-Policy': "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' blob: data:; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'",
+      });
+    } catch { return send(res, 500, 'Unable to load application asset.'); }
+  });
+  const limiter = new AuthRateLimiter({ maxAttempts: 10, windowMs: 60_000 });
+  const config = options.config || base.config;
+  let listening = false;
+  return {
+    ...base,
+    api,
+    server,
+    notificationEmailService: emailService,
+    emailScheduler: scheduler,
+    emailAvailable: Boolean(mailer),
+    async listen() {
+      await base.store.init?.();
+      await new Promise((resolveListen, reject) => {
+        server.once('error', reject);
+        server.listen(config.port, config.host, () => { server.off('error', reject); listening = true; resolveListen(); });
+      });
+      base.scheduler?.start?.();
+      scheduler.start();
+      return server.address();
+    },
+    async close() {
+      await scheduler.stop();
+      base.scheduler?.stop && await base.scheduler.stop();
+      if (listening) await new Promise((resolveClose, reject) => server.close(error => error ? reject(error) : resolveClose()));
+      await base.close?.();
+      await mailer?.close?.();
+    },
+  };
+}
+
+async function main() {
+  const runtime = createXspressoEmailNotificationRuntime();
+  const address = await runtime.listen();
+  console.log(`Xspresso notifications listening on ${address?.address}:${address?.port}`);
+  const stop = async () => { await runtime.close(); process.exit(0); };
+  process.once('SIGINT', stop);
+  process.once('SIGTERM', stop);
+}
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
+  main().catch(error => { console.error('Xspresso failed to start:', error.message); process.exitCode = 1; });
+}
+
+============================================================
+FILE: xspresso_notification_email_service_v1.test.js
+============================================================
+
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { NotificationEmailService } from './xspresso_notification_email_service_v1.js';
+
+function makeStore(state) {
+  let current = structuredClone(state);
+  return {
+    async read() { return structuredClone(current); },
+    async update(fn) { const next = structuredClone(current); const result = await fn(next); current = next; return structuredClone(result); },
+  };
+}
+const user = { id: 'user-1', tenantId: 'tenant-1', email: 'owner@example.test' };
+
+test('email preferences default off; opted-in activity sends a digest and advances the cursor', async () => {
+  const state = {
+    users: [user],
+    notificationEmailPreferences: [{ userId: user.id, tenantId: user.tenantId, enabledAt: '2026-10-09T00:00:00Z', preferences: { campaignUpdates: true } }],
+    notificationEmailCursors: [],
+    auditEvents: [{ id: 'event-1', tenantId: user.tenantId, userId: user.id, action: 'campaign.draft_saved', createdAt: '2026-10-09T01:00:00Z' }],
+    alerts: [],
+  };
+  const store = makeStore(state);
+  const messages = [];
+  const service = new NotificationEmailService({ store, mailer: { async send(message) { messages.push(message); return { id: 'sent-1' }; } }, clock: () => Date.parse('2026-10-10T00:00:00Z') });
+  const result = await service.runOne();
+  assert.equal(result.sent, true);
+  assert.equal(messages.length, 1);
+  assert.equal(messages[0].to, user.email);
+  assert.match(messages[0].text, /campaign draft saved/i);
+  assert.equal((await service.runOne()).sent, false);
+});
+
+test('disabled email sender does not consume activity', async () => {
+  const store = makeStore({ users: [user], notificationEmailPreferences: [], auditEvents: [{ id: 'e', tenantId: user.tenantId, action: 'campaign.created', createdAt: '2026-10-09T01:00:00Z' }] });
+  const service = new NotificationEmailService({ store, mailer: null });
+  const result = await service.runOne();
+  assert.equal(result.reason, 'email_not_configured');
+  const snapshot = await store.read();
+  assert.equal((snapshot.notificationEmailCursors || []).length, 0);
+});
+
+test('email preferences are opt-in and reject unknown categories', async () => {
+  const store = makeStore({ notificationEmailPreferences: [] });
+  const service = new NotificationEmailService({ store, mailer: null });
+  const initial = await service.getPreferences(user);
+  assert.equal(Object.values(initial.preferences).some(Boolean), false);
+  await assert.rejects(service.updatePreferences(user, { publishAds: true }), error => error.status === 400);
+  const updated = await service.updatePreferences(user, { monitoringAlerts: true });
+  assert.equal(updated.preferences.monitoringAlerts, true);
+});
+
+============================================================
+FILE: xspresso_notification_email_setup_v1.txt
+============================================================
+
+EMAIL NOTIFICATION ADDENDUM
+
+1. Save each labeled source section under the filename in its heading, in the same project directory as the existing activity notification and SMTP modules.
+2. Run with: node xspresso_notification_email_runtime_v1.js
+3. Set SMTP_HOST, SMTP_PORT, SMTP_FROM, and any required SMTP_USER/SMTP_PASSWORD variables on the server. If no SMTP transport is configured, email preferences remain available but no messages are sent.
+4. Email category preferences are per user and default to off. Users explicitly opt in through the dashboard panel.
+5. The worker sends short activity digests and does not include lead email addresses or perform publishing/spend actions. Delivery is at-least-once across a process crash between SMTP acceptance and cursor persistence; the SMTP adapter receives an idempotency key but SMTP servers may not guarantee deduplication.
+6. Test with: node --test xspresso_notification_email_service_v1.test.js
+7. Tests are provided as source and have not been executed here.

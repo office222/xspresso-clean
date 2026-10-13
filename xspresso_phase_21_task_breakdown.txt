@@ -1,0 +1,47 @@
+Xspresso Phase 21 — Task Breakdown
+
+1) Deeper autonomous orchestration
+- Coordinate campaigns, leads, alerts, billing, templates, and reports
+- Detect changes across the full system and surface the best next action
+- Keep the user in command while Xspresso handles the heavy lifting
+
+2) Smarter cross-campaign learning
+- Compare performance patterns across campaigns
+- Reuse winning patterns where appropriate
+- Suggest stronger headlines, hooks, angles, and follow-up timing
+
+3) Broader forecasting and recommendation loops
+- Forecast likely performance changes
+- Recommend adjustments before waste builds up
+- Suggest better actions based on observed trends
+
+4) Multi-brand and multi-team intelligence
+- Track separate brands, workspaces, or client accounts
+- Keep data separated cleanly
+- Provide useful summaries for teams and agencies
+
+5) Shared asset and template marketplace refinement
+- Improve saved template discovery
+- Support reusable assets and proven structures
+- Help users start from better foundations
+
+6) Workflow coordination
+- Keep alerts, monitoring, launch, billing, and lead follow-up connected
+- Reduce manual switching between modules
+- Surface only what matters most to the user
+
+7) Credit intelligence and usage suggestions
+- Show how credits are being used
+- Warn before waste builds up
+- Suggest a better plan if usage patterns justify it
+
+8) Guardrails and user control
+- Keep approvals clear
+- Make changes reversible where possible
+- Never let automation remove user control
+
+9) Success criteria
+- The system feels more predictive and coordinated
+- Users get better recommendations with less manual work
+- Cross-module actions stay consistent
+- The product remains simple, transparent, and useful

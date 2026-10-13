@@ -1,0 +1,44 @@
+Xspresso — Business Card Component Notes
+
+Purpose:
+Create a small, premium, easy-to-scan business card style component for the Quote3 front board shell.
+
+Goals:
+- Keep it visually clean and compact.
+- Match the Xspresso brand colors and tone.
+- Make the message clear at a glance.
+- Fit well inside the front board shell without crowding.
+
+Suggested content:
+- Brand name: Xspresso
+- Tagline: Done-for-you marketing
+- Short support line: Wake up your marketing.
+- Control line: You stay in command. We do the work.
+- Optional note: More responses. Less software chaos.
+
+Design direction:
+- Use white or light background.
+- Use orange as an accent, not a full background.
+- Keep typography bold but simple.
+- Maintain good spacing around the logo and text.
+- Ensure the component remains readable when the page is resized.
+
+Recommended layout:
+- Left: cup/logo graphic
+- Right: brand name and short copy
+- Optional small footer line below
+
+Mobile behavior:
+- Keep elements inline on larger screens.
+- Allow safe scaling on smaller screens.
+- Avoid overlapping the cup and name.
+- Prioritize readability over decorative effects.
+
+Helpful copy options:
+- Xspresso — Done-for-you marketing
+- Wake up your marketing.
+- More responses. Less software chaos.
+- You stay in command. We do the work.
+
+Implementation note:
+This component should be simple to drop into the board shell and should not introduce layout instability when the window is narrowed.

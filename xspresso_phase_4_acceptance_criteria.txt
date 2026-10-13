@@ -1,0 +1,57 @@
+Xspresso Phase 4 Acceptance Criteria
+
+Purpose:
+Define what success looks like for Phase 4, when Xspresso expands into team workflows, integrations, advanced reporting, and agency-scale productivity.
+
+Phase 4 is complete when:
+- Team and agency workflows are supported cleanly.
+- Integrations connect without confusing setup.
+- Advanced reporting is useful and easy to read.
+- More automation reduces manual steps.
+- Template expansion helps users move faster.
+- Library improvements make reuse easier.
+- Productivity and scale features work reliably.
+
+Acceptance Criteria:
+1. Team workflows
+- Users can work in shared or multi-user setups.
+- Permissions and access remain clear.
+- Activity is traceable.
+
+2. Integrations
+- External connections work as expected.
+- Sync behavior is clear.
+- Failures produce helpful messages.
+
+3. Advanced reporting
+- Reports summarize performance clearly.
+- Metrics are understandable at a glance.
+- The user can identify what is working and what needs attention.
+
+4. More automation
+- Repetitive work is reduced.
+- Automation does not remove user control.
+- Users can approve, tweak, or disable automation.
+
+5. Template expansion
+- Users can access more templates.
+- Templates can be reused and edited.
+- Templates remain consistent with Xspresso style and rules.
+
+6. Library improvements
+- Users can store, search, and reuse assets more easily.
+- Saved items are organized and retrievable.
+- Restore and duplicate actions work reliably.
+
+7. Productivity and scale
+- The system remains usable as user volume grows.
+- Key actions stay fast.
+- The interface does not become cluttered or confusing.
+
+Definition of Done:
+- Phase 4 features are stable.
+- The user experience remains simple.
+- The product still feels done-for-you, fast, and in the user's control.
+
+Guiding rule:
+Xspresso should always help the user move faster without making the system feel more complicated.

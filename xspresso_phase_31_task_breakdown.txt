@@ -1,0 +1,42 @@
+Xspresso Phase 31 — Task Breakdown
+
+1) Campaign orchestration
+- Connect the campaign builder to the monitoring and alert system.
+- Make sure campaign states stay in sync across draft, live, paused, and underperforming.
+- Keep launch, edit, regenerate, and duplicate actions available from the dashboard.
+
+2) Cross-campaign learning
+- Feed performance data back into future recommendations.
+- Surface patterns across campaigns, leads, alerts, and billing.
+- Suggest better hooks, titles, angles, and follow-up paths based on prior results.
+
+3) Recommendation engine
+- Recommend next actions when ads are underperforming.
+- Suggest when to regenerate, pause, or tweak.
+- Prioritize actions that protect credits and reduce wasted spend.
+
+4) Multi-brand and multi-team support
+- Support separate workspaces for different brands or client accounts.
+- Keep permissions and shared assets organized.
+- Make sure templates, libraries, and reports stay scoped correctly.
+
+5) Shared asset and template refinement
+- Improve how templates are saved, duplicated, and reused.
+- Allow users to start from proven campaign structures.
+- Keep the library simple to browse and restore from.
+
+6) Credit intelligence and usage guidance
+- Show smarter warnings when usage is rising.
+- Suggest the best plan if the user is repeatedly hitting usage limits.
+- Make daily, weekly, and monthly monitoring charges easy to understand.
+
+7) Guardrails and user control
+- Keep the user in command.
+- Require clear confirmations for major actions.
+- Make every important switch, alert, and regeneration understandable.
+
+8) Success criteria
+- Users can run campaigns without confusion.
+- Xspresso can guide the user to better actions.
+- Credits, monitoring, and alerts are easy to understand.
+- The system feels done-for-you without removing control.

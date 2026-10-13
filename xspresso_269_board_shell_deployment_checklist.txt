@@ -1,0 +1,27 @@
+Xspresso Board Shell Deployment Checklist
+
+Purpose:
+This file captures the final steps for packaging, validating, and deploying the Xspresso board shell component set.
+
+Checklist:
+- Confirm the top bar is white.
+- Confirm the cup logo stays left of the name/logo text.
+- Confirm the logo shrinks cleanly on smaller screens.
+- Confirm there is no overlap or stacking at common breakpoints.
+- Confirm the business card area remains readable.
+- Confirm CTA buttons are visible and clearly ordered.
+- Confirm the footer remains simple and uncluttered.
+- Confirm the board shell copy matches the Xspresso message.
+- Confirm all filenames follow the Xspresso-only naming pattern.
+- Confirm no duplicate filenames exist before download.
+
+Recommended release order:
+1. Review the header/logo behavior.
+2. Review responsive shrinking.
+3. Review CTA placement.
+4. Review footer/support links.
+5. Run one final acceptance pass.
+6. Package the approved files for release.
+
+Acceptance rule:
+The board shell is ready only when the logo stays inline, the layout remains readable on smaller screens, and the overall presentation feels clean and premium.

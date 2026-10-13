@@ -1,0 +1,44 @@
+Xspresso Phase 47 Acceptance Criteria
+
+1) Final refinement and stabilization
+- Campaign creation and launch flows are stable and usable.
+- Monitoring, alerts, billing, templates, and dashboard flows do not block normal use.
+
+2) Campaign creation and launch polish
+- Users can build a campaign, review it, approve it, and launch it without confusion.
+- Missing required fields are clearly flagged before launch.
+- Launch flow provides a clear readiness check and next step.
+
+3) Monitoring and alert tuning
+- Underperforming ads generate clear warnings.
+- Alerts suggest the next best action.
+- Users can regenerate, tweak, or pause based on the alert.
+
+4) Cross-campaign learning refinement
+- Campaign data, alerts, and performance history are reflected consistently in the system.
+- Recommendations improve based on prior campaign activity.
+
+5) Billing and credit clarity
+- Credits, usage, and plan limits are visible and understandable.
+- Users can see where credits were spent.
+- Upgrade suggestions appear only when they can save the user money.
+
+6) Template and library workflow polish
+- Users can save, reuse, duplicate, export, and restore their own work.
+- Library and template actions behave consistently.
+
+7) Dashboard clarity improvements
+- Dashboard shows active campaigns, alerts, credits remaining, and monitored ads clearly.
+- Each campaign card provides status and quick actions.
+
+8) Support and help text cleanup
+- Help, tooltips, and empty states are clear and friendly.
+- Error messages suggest the next action instead of stopping the user.
+
+9) Release readiness and final QA
+- The full flow works from onboarding to launch to monitoring.
+- Core copy matches the product promise.
+- No major blockers remain for the Phase 47 scope.
+
+Definition of done
+- Xspresso Phase 47 is complete when the product feels polished, understandable, and stable across campaign creation, launch, monitoring, billing, and reuse.

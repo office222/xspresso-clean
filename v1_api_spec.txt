@@ -1,0 +1,134 @@
+Xspresso V1 API / Product Spec
+
+Purpose:
+A done-for-you marketing system that helps users create campaigns faster, monitor performance, capture leads, and stay in command.
+
+Core Principles:
+- All plans include every tool.
+- Credits determine fair usage.
+- The user can approve, tweak, regenerate, or launch.
+- Xspresso should recommend improvements before users spend more credits on underperforming work.
+
+Primary V1 Modules:
+1) Onboarding
+2) Campaign Brief Builder
+3) Campaign Generation
+4) Edit / Approve / Regenerate
+5) Launch
+6) Monitoring / Alerts
+7) Lead Capture / Follow-up
+8) Credits / Billing / Usage
+9) Campaign Library / Templates
+10) Platform Switching / Monitoring Warnings
+
+Suggested API Endpoints:
+- POST /auth/login
+- POST /auth/register
+- GET /user/me
+- PUT /user/settings
+- GET /plans
+- POST /billing/subscribe
+- POST /billing/cancel
+- POST /billing/pause
+- POST /billing/reactivate
+- GET /billing/status
+
+Campaign Creation:
+- POST /campaigns/brief
+- POST /campaigns/generate
+- GET /campaigns
+- GET /campaigns/:id
+- PUT /campaigns/:id
+- POST /campaigns/:id/approve
+- POST /campaigns/:id/regenerate
+- POST /campaigns/:id/launch
+- POST /campaigns/:id/export
+- POST /campaigns/:id/duplicate
+
+Monitoring:
+- GET /campaigns/:id/status
+- GET /campaigns/:id/alerts
+- POST /campaigns/:id/monitor
+- POST /campaigns/:id/unmonitor
+- POST /ads/:id/regenerate
+- POST /ads/:id/pause
+- POST /ads/:id/move-to-library
+
+Lead Capture / Follow-up:
+- POST /leads
+- GET /leads
+- GET /leads/:id
+- POST /leads/:id/tag
+- POST /leads/:id/score
+- POST /followup/sequence
+- POST /followup/send
+
+Library / Templates:
+- GET /library
+- POST /library/save
+- POST /library/restore
+- POST /templates/save
+- GET /templates
+- POST /templates/apply
+
+Credits and Usage:
+- GET /credits
+- POST /credits/spend
+- POST /credits/add
+- GET /usage/history
+- GET /usage/summary
+
+Platform Switching:
+- POST /platforms/switch
+- POST /platforms/:name/monitoring
+- POST /platforms/:name/cancel-ads
+- POST /platforms/:name/move-to-library
+
+Data to Track:
+- user
+- plan
+- credits included
+- credits used
+- credits remaining
+- campaigns
+- ads
+- alerts
+- leads
+- library items
+- monitoring status
+- billing status
+
+Important Alerts:
+- Underperforming ad
+- CPC rising
+- Tracking stopped
+- Monitoring paused
+- Credits low
+- Subscription renewal
+- Platform switch warning
+
+Suggested UI Copy:
+- Done-for-you marketing, fast.
+- More responses. Less software chaos.
+- You stay in command. We do the work.
+- Improve before spending more credits.
+- Xspresso can regenerate this ad.
+- All plans include every tool. Credits simply determine fair usage.
+
+Build Order:
+1. Onboarding and brief builder
+2. Campaign generation
+3. Edit / approve / regenerate
+4. Launch
+5. Monitoring and alerts
+6. Lead capture and follow-up
+7. Credits / billing
+8. Templates / library
+9. Platform switching
+10. Dashboard polish
+
+Notes:
+- Keep the product simple.
+- Avoid feature bait-and-switch.
+- Show the user what is working, what needs attention, and what to do next.
+- Focus on speed, control, and results.

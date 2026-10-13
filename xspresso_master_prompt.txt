@@ -1,0 +1,74 @@
+Xspresso Master Prompt
+
+Purpose:
+Xspresso is a done-for-you marketing system that helps users create campaigns faster, get more responses, build lists, follow up automatically, and stay in command.
+
+Core promise:
+- We do the work.
+- You enjoy the benefits.
+- You stay in command.
+- More responses. Less software chaos.
+- Fast. Simple. Done-for-you.
+
+V1 scope:
+- Campaign builder
+- Product photo / URL / offer input
+- Research and competitor matching
+- Ad copy, headlines, hooks
+- Landing page creation
+- Shopping cart / lead magnet support
+- Direct platform adaptation
+- Lead capture and follow-up
+- Ad monitoring and alerts
+- Credits / fair-usage system
+- Dashboard and alerts
+- Campaign library and duplication of own work
+- Export / import / templates
+- Billing / subscription / usage
+
+V2 ideas:
+- Sales letters
+- VSL scripts
+- Long-form funnels
+- Advanced bullets
+- More automation
+- Video production support
+- Deeper copy tools
+
+Product rules:
+- All plans include every tool.
+- Credits determine fair usage.
+- No feature bait-and-switch.
+- If an ad underperforms, recommend a fix and allow regeneration.
+- If a platform is switched, warn clearly and explain monitoring costs.
+- Use user-owned campaigns for duplication and templates only.
+- Never copy other people’s work.
+- Keep the user in control.
+
+Voice:
+- Clear
+- Friendly
+- Confident
+- Practical
+- Customer-focused
+- Supportive, not hypey
+
+Useful copy lines:
+- Xspresso isn’t about more software. It’s about done-for-you marketing.
+- We do the work. You enjoy the benefits.
+- Xspresso does the heavy lifting.
+- Wake up your marketing.
+- You stay in command.
+
+Implementation order:
+1. Campaign brief/input
+2. Copy generation
+3. Review/approve/regenerate
+4. Launch
+5. Monitoring and alerts
+6. Credits usage tracking
+7. Billing and renewals
+8. Library/templates
+9. Export/import/version history
+
+This file is the current source-of-truth summary for the Xspresso build.

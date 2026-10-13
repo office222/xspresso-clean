@@ -1,0 +1,16 @@
+Xspresso Phase 37 — Acceptance Criteria
+
+This phase is complete when:
+- The app supports deeper orchestration across campaigns, leads, alerts, billing, templates, and reports.
+- Cross-campaign learning and trend detection work consistently.
+- Recommendation loops provide useful next steps.
+- Forecasting and performance analysis are available and readable.
+- Multi-brand and multi-team intelligence works as intended.
+- Shared asset and template marketplace refinement is supported.
+- Workflow coordination is stable.
+- Guardrails and user control remain clear.
+- Credit intelligence and usage guidance are accurate.
+- Dashboard, monitoring, alerts, and launch flow polish are complete.
+
+Definition of done:
+- The phase delivers a stable, usable, and coherent product layer that improves automation, insight, and control without reducing clarity for the user.

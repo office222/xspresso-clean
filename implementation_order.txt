@@ -1,0 +1,57 @@
+Xspresso Implementation Order
+
+1. Core campaign builder
+- Accept product photo, URL, or offer details
+- Generate headlines, hooks, ads, landing page copy, cart/lead capture copy, and follow-up
+
+2. Review and approval flow
+- Let the user edit, approve, or regenerate each section
+- Keep the user in command
+
+3. Launch flow
+- Check readiness before launch
+- Confirm required assets are present
+- Launch the campaign
+
+4. Monitoring engine
+- Track CPC, CTR, conversions, ad status, and performance trends
+- Show alerts when ads underperform or CPC rises
+
+5. Regeneration logic
+- Offer one-click regeneration when an ad underperforms
+- Suggest new title, hook, angle, or CTA
+
+6. Lead capture and follow-up
+- Capture leads from campaigns
+- Score and tag leads
+- Send campaign-level follow-up sequences
+
+7. Credits and usage
+- All tools available on every plan
+- Credits determine fair usage
+- Ongoing monitoring and a la carte actions consume credits
+
+8. Platform switching
+- Show a strong warning when switching platforms
+- Offer keep tracking, move to library, or track myself options
+- Support daily, weekly, monthly monitoring charges
+
+9. Library and duplication
+- Save campaigns to library
+- Duplicate user-owned campaigns only
+- Export and import templates
+
+10. Dashboard and alerts
+- Show active campaigns, alerts, credits, and recent activity
+- Provide clear next actions
+
+11. Billing
+- Track plan, renewal, usage, and upgrades
+- Suggest upgrade when it may save money
+
+12. V2 items
+- Sales letters
+- VSL scripts
+- Video production
+- Long-form funnels
+- Advanced campaign cloning of user-owned work

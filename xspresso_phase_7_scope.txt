@@ -1,0 +1,30 @@
+Xspresso Phase 7 Scope
+
+Phase 7 is for advanced scale and ecosystem growth.
+
+Focus areas:
+- multi-brand management
+- advanced team workspaces
+- shared asset libraries
+- deeper analytics and forecasting
+- recommendation engine improvements
+- workflow automation expansion
+- external integrations and connectors
+- reporting exports and scheduled summaries
+- stronger admin controls
+- marketplace / template sharing concepts
+- performance insights across multiple campaigns
+
+Phase 7 guardrails:
+- keep the core done-for-you promise intact
+- do not add complexity that weakens the user experience
+- maintain the user-in-command model
+- keep credits and usage transparent
+- preserve clear alerts and next actions
+
+Success criteria:
+- teams can manage multiple brands cleanly
+- reporting becomes more actionable
+- automation reduces manual work further
+- shared resources save time
+- the product still feels simple, fast, and guided

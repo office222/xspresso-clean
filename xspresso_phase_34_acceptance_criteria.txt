@@ -1,0 +1,42 @@
+Xspresso Phase 34 — Acceptance Criteria
+
+This phase is complete when the following are true:
+
+1. Orchestration and Optimization
+- Xspresso can coordinate campaigns, leads, alerts, billing, templates, and reports without breaking the core workflow.
+- Cross-campaign learning improves recommendations over time.
+- Trend detection identifies meaningful changes in performance.
+
+2. Recommendation Engine
+- Xspresso provides useful suggestions for the next best action.
+- Recommendation loops are consistent, understandable, and tied to measurable campaign behavior.
+- Suggestions stay aligned with the done-for-you, user-in-control product promise.
+
+3. Forecasting and Performance Analysis
+- Forecasting and performance analysis can summarize likely outcomes from current campaign data.
+- Reports remain readable, actionable, and simple for the user to understand.
+
+4. Multi-Brand / Multi-Team Intelligence
+- The system can support more than one brand or team context without mixing data incorrectly.
+- Shared assets and template marketplace ideas remain separated by ownership, permissions, and context.
+
+5. Workflow Coordination
+- Campaign, lead, alert, billing, template, and report workflows remain in sync.
+- Automated actions never override user control without confirmation when needed.
+
+6. Guardrails and User Control
+- All actions remain transparent.
+- Users can review, approve, tweak, or decline recommendations.
+- Credits, usage, and monitoring remain clear and predictable.
+
+7. Credit Intelligence and Usage Guidance
+- Xspresso can explain where credits are being used.
+- The system can suggest whether a next-tier plan may save the user money.
+- Usage guidance is simple, friendly, and fair.
+
+8. Stability and Clarity
+- The experience stays consistent and understandable.
+- The system remains aligned with the core promise: done-for-you marketing, but the user stays in command.
+
+Definition of Done:
+- Phase 34 is complete when orchestration, optimization, forecasting, recommendations, multi-brand coordination, workflow sync, guardrails, and credit intelligence are all working together in a clear and user-friendly way.

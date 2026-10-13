@@ -1,0 +1,376 @@
+XSPRESSO 302 — ADDENDUM 6
+Encrypted backup and restore for the JSON store
+
+Extract each section below into a file with the stated name in the Xspresso project root. This addendum uses Node built-ins only. Backups are AES-256-GCM encrypted; the key is never stored in the backup.
+
+===== FILE: xspresso_backup_service_v1.js =====
+import {
+  createCipheriv,
+  createDecipheriv,
+  createHash,
+  randomBytes,
+} from "node:crypto";
+import {
+  access,
+  lstat,
+  mkdir,
+  readFile,
+  readdir,
+  rename,
+  rm,
+  stat,
+  writeFile,
+} from "node:fs/promises";
+import { basename, dirname, resolve, sep } from "node:path";
+
+function backupError(message, code, status = 400) {
+  return Object.assign(new Error(message), { code, status });
+}
+
+function decodeKey(value) {
+  const key = Buffer.from(String(value || ""), "base64");
+  if (key.length !== 32) {
+    throw backupError(
+      "XSPRESSO_BACKUP_ENCRYPTION_KEY must be 32 bytes encoded as base64.",
+      "INVALID_BACKUP_KEY"
+    );
+  }
+  return key;
+}
+
+function isStoreObject(value) {
+  return value !== null && typeof value === "object" && !Array.isArray(value);
+}
+
+export class XspressoBackupService {
+  constructor({ dataFile, backupDir, encryptionKey, maxBackups = 20, clock = Date.now }) {
+    if (!dataFile || !backupDir) throw new TypeError("dataFile and backupDir are required.");
+    this.dataFile = resolve(dataFile);
+    this.backupDir = resolve(backupDir);
+    this.key = decodeKey(encryptionKey);
+    this.maxBackups = Math.max(1, Math.min(100, Number(maxBackups) || 20));
+    this.clock = clock;
+  }
+
+  #backupPath(filename) {
+    if (
+      typeof filename !== "string" ||
+      filename !== basename(filename) ||
+      !/^xspresso-backup-[A-Za-z0-9._-]+\.json\.enc$/.test(filename)
+    ) {
+      throw backupError("Invalid backup filename.", "INVALID_BACKUP_NAME");
+    }
+    const path = resolve(this.backupDir, filename);
+    if (!path.startsWith(`${this.backupDir}${sep}`)) {
+      throw backupError("Invalid backup path.", "INVALID_BACKUP_NAME");
+    }
+    return path;
+  }
+
+  async #atomicWrite(path, bytes) {
+    await mkdir(dirname(path), { recursive: true, mode: 0o700 });
+    const temporary = `${path}.${randomBytes(8).toString("hex")}.tmp`;
+    try {
+      await writeFile(temporary, bytes, { flag: "wx", mode: 0o600 });
+      await rename(temporary, path);
+    } catch (error) {
+      await rm(temporary, { force: true }).catch(() => {});
+      throw error;
+    }
+  }
+
+  #encrypt(raw, createdAt) {
+    const iv = randomBytes(12);
+    const cipher = createCipheriv("aes-256-gcm", this.key, iv);
+    const ciphertext = Buffer.concat([cipher.update(raw), cipher.final()]);
+    const envelope = {
+      format: "xspresso-encrypted-backup-v1",
+      createdAt,
+      sha256: createHash("sha256").update(raw).digest("hex"),
+      iv: iv.toString("base64"),
+      tag: cipher.getAuthTag().toString("base64"),
+      ciphertext: ciphertext.toString("base64"),
+    };
+    return Buffer.from(JSON.stringify(envelope), "utf8");
+  }
+
+  #decrypt(bytes) {
+    let envelope;
+    try {
+      envelope = JSON.parse(bytes.toString("utf8"));
+    } catch {
+      throw backupError("Backup file is not valid JSON.", "INVALID_BACKUP");
+    }
+    if (envelope?.format !== "xspresso-encrypted-backup-v1") {
+      throw backupError("Unsupported backup format.", "INVALID_BACKUP_FORMAT");
+    }
+
+    try {
+      const decipher = createDecipheriv(
+        "aes-256-gcm",
+        this.key,
+        Buffer.from(envelope.iv, "base64")
+      );
+      decipher.setAuthTag(Buffer.from(envelope.tag, "base64"));
+      const raw = Buffer.concat([
+        decipher.update(Buffer.from(envelope.ciphertext, "base64")),
+        decipher.final(),
+      ]);
+      const sha256 = createHash("sha256").update(raw).digest("hex");
+      if (sha256 !== envelope.sha256) {
+        throw backupError("Backup checksum mismatch.", "BACKUP_CHECKSUM_FAILED");
+      }
+      const store = JSON.parse(raw.toString("utf8"));
+      if (!isStoreObject(store)) {
+        throw backupError("Backup store must be a JSON object.", "INVALID_BACKUP_DATA");
+      }
+      return { raw, createdAt: envelope.createdAt, sha256 };
+    } catch (error) {
+      if (error?.code) throw error;
+      throw backupError(
+        "Could not decrypt backup; check the encryption key and file integrity.",
+        "BACKUP_DECRYPT_FAILED"
+      );
+    }
+  }
+
+  async createBackup() {
+    const raw = await readFile(this.dataFile);
+    let store;
+    try {
+      store = JSON.parse(raw.toString("utf8"));
+    } catch {
+      throw backupError("Current store is invalid JSON; backup cancelled.", "INVALID_STORE");
+    }
+    if (!isStoreObject(store)) {
+      throw backupError("Current store must be a JSON object.", "INVALID_STORE");
+    }
+
+    const createdAt = new Date(this.clock()).toISOString();
+    const stamp = createdAt.replace(/[:.]/g, "-");
+    const suffix = randomBytes(4).toString("hex");
+    const filename = `xspresso-backup-${stamp}-${suffix}.json.enc`;
+    await mkdir(this.backupDir, { recursive: true, mode: 0o700 });
+    await this.#atomicWrite(this.#backupPath(filename), this.#encrypt(raw, createdAt));
+    await this.#prune();
+
+    return {
+      filename,
+      createdAt,
+      bytes: raw.length,
+      sha256: createHash("sha256").update(raw).digest("hex"),
+    };
+  }
+
+  async listBackups() {
+    await mkdir(this.backupDir, { recursive: true, mode: 0o700 });
+    const names = await readdir(this.backupDir);
+    const result = [];
+    for (const filename of names) {
+      if (!/^xspresso-backup-[A-Za-z0-9._-]+\.json\.enc$/.test(filename)) continue;
+      const path = this.#backupPath(filename);
+      const info = await stat(path).catch(() => null);
+      if (info?.isFile()) {
+        result.push({ filename, bytes: info.size, modifiedAt: info.mtime.toISOString() });
+      }
+    }
+    return result.sort((a, b) => b.modifiedAt.localeCompare(a.modifiedAt));
+  }
+
+  async verifyBackup(filename) {
+    const path = this.#backupPath(filename);
+    const fileInfo = await lstat(path);
+    if (!fileInfo.isFile() || fileInfo.isSymbolicLink()) {
+      throw backupError("Backup path is not a regular file.", "INVALID_BACKUP_FILE");
+    }
+    const verified = this.#decrypt(await readFile(path));
+    return {
+      valid: true,
+      filename,
+      createdAt: verified.createdAt,
+      sha256: verified.sha256,
+      bytes: verified.raw.length,
+    };
+  }
+
+  async restoreBackup(filename, { confirmed = false } = {}) {
+    if (!confirmed) {
+      throw backupError("Restore requires explicit confirmation.", "RESTORE_CONFIRMATION_REQUIRED", 409);
+    }
+    const backupPath = this.#backupPath(filename);
+    const fileInfo = await lstat(backupPath);
+    if (!fileInfo.isFile() || fileInfo.isSymbolicLink()) {
+      throw backupError("Backup path is not a regular file.", "INVALID_BACKUP_FILE");
+    }
+    const restored = this.#decrypt(await readFile(backupPath));
+
+    // Preserve the current store before replacing it, when one exists.
+    await access(this.dataFile).then(
+      () => this.createBackup(),
+      () => undefined
+    );
+    await this.#atomicWrite(this.dataFile, restored.raw);
+    return {
+      restored: true,
+      filename,
+      createdAt: restored.createdAt,
+      sha256: restored.sha256,
+      restartRequired: true,
+    };
+  }
+
+  async #prune() {
+    const backups = await this.listBackups();
+    for (const backup of backups.slice(this.maxBackups)) {
+      await rm(this.#backupPath(backup.filename), { force: true });
+    }
+  }
+}
+
+===== END FILE =====
+
+===== FILE: xspresso_backup_cli_v1.js =====
+import { pathToFileURL } from "node:url";
+import { resolve, dirname, join } from "node:path";
+import { loadConfig } from "./xspresso_config_v1.js";
+import { XspressoBackupService } from "./xspresso_backup_service_v1.js";
+
+function createService(env = process.env) {
+  const config = loadConfig(env);
+  const backupDir = env.XSPRESSO_BACKUP_DIR || join(dirname(config.dataFile), "backups");
+  return new XspressoBackupService({
+    dataFile: config.dataFile,
+    backupDir,
+    encryptionKey: env.XSPRESSO_BACKUP_ENCRYPTION_KEY,
+    maxBackups: env.XSPRESSO_BACKUP_RETENTION || 20,
+  });
+}
+
+export async function runBackupCommand(argv = process.argv.slice(2), env = process.env) {
+  const [command, filename, ...flags] = argv;
+  const service = createService(env);
+
+  if (command === "backup") {
+    const result = await service.createBackup();
+    console.log(JSON.stringify(result, null, 2));
+    return result;
+  }
+  if (command === "list") {
+    const result = await service.listBackups();
+    console.log(JSON.stringify(result, null, 2));
+    return result;
+  }
+  if (command === "verify" && filename) {
+    const result = await service.verifyBackup(filename);
+    console.log(JSON.stringify(result, null, 2));
+    return result;
+  }
+  if (command === "restore" && filename) {
+    if (!flags.includes("--yes")) {
+      throw new Error("Restore requires --yes. Stop the app before restoring.");
+    }
+    const result = await service.restoreBackup(filename, { confirmed: true });
+    console.log(JSON.stringify(result, null, 2));
+    return result;
+  }
+
+  throw new Error(
+    "Usage: node xspresso_backup_cli_v1.js backup | list | verify <filename> | restore <filename> --yes"
+  );
+}
+
+const isMain = process.argv[1] &&
+  import.meta.url === pathToFileURL(resolve(process.argv[1])).href;
+if (isMain) {
+  runBackupCommand().catch(error => {
+    console.error(`${error.code || "BACKUP_ERROR"}: ${error.message}`);
+    process.exitCode = 1;
+  });
+}
+
+===== END FILE =====
+
+===== FILE: xspresso_backup_service_v1.test.js =====
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { join } from "node:path";
+import { tmpdir } from "node:os";
+import { XspressoBackupService } from "./xspresso_backup_service_v1.js";
+
+function makeService(dataFile, backupDir) {
+  return new XspressoBackupService({
+    dataFile,
+    backupDir,
+    encryptionKey: Buffer.alloc(32, 7).toString("base64"),
+  });
+}
+
+test("backup is encrypted, verifiable, and restorable", async () => {
+  const root = await mkdtemp(join(tmpdir(), "xspresso-backup-test-"));
+  const dataFile = join(root, "store.json");
+  const backupDir = join(root, "backups");
+  const original = JSON.stringify({ users: [{ email: "private@example.test" }], campaigns: [] });
+  await writeFile(dataFile, original, { mode: 0o600 });
+
+  try {
+    const service = makeService(dataFile, backupDir);
+    const backup = await service.createBackup();
+    const encryptedBytes = await readFile(join(backupDir, backup.filename));
+    assert.equal(encryptedBytes.includes(Buffer.from("private@example.test")), false);
+
+    const verified = await service.verifyBackup(backup.filename);
+    assert.equal(verified.valid, true);
+
+    await writeFile(dataFile, JSON.stringify({ users: [], campaigns: ["changed"] }));
+    await assert.rejects(
+      service.restoreBackup(backup.filename),
+      error => error.code === "RESTORE_CONFIRMATION_REQUIRED"
+    );
+    const restored = await service.restoreBackup(backup.filename, { confirmed: true });
+    assert.equal(restored.restartRequired, true);
+    assert.equal(await readFile(dataFile, "utf8"), original);
+    assert.ok((await service.listBackups()).length >= 2);
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+});
+
+test("tampered backups and traversal names are rejected", async () => {
+  const root = await mkdtemp(join(tmpdir(), "xspresso-backup-tamper-"));
+  const dataFile = join(root, "store.json");
+  const backupDir = join(root, "backups");
+  await writeFile(dataFile, JSON.stringify({ users: [], campaigns: [] }));
+
+  try {
+    const service = makeService(dataFile, backupDir);
+    const backup = await service.createBackup();
+    const filePath = join(backupDir, backup.filename);
+    const bytes = await readFile(filePath);
+    bytes[bytes.length - 1] ^= 1;
+    await writeFile(filePath, bytes);
+    await assert.rejects(service.verifyBackup(backup.filename));
+    await assert.rejects(
+      service.verifyBackup("../store.json"),
+      error => error.code === "INVALID_BACKUP_NAME"
+    );
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+});
+
+===== END FILE =====
+
+===== FILE: xspresso_backup_setup_v1.txt =====
+Xspresso backup and restore
+
+1. Set XSPRESSO_BACKUP_ENCRYPTION_KEY to a securely stored, randomly generated 32-byte key encoded as base64. Keep a protected copy outside the app host. If this key is lost, encrypted backups cannot be restored.
+2. Optional: set XSPRESSO_BACKUP_DIR and XSPRESSO_BACKUP_RETENTION. The default backup directory is a backups subdirectory beside the JSON data file; the default retention is 20 backups.
+3. Create a backup: node xspresso_backup_cli_v1.js backup
+4. List backups: node xspresso_backup_cli_v1.js list
+5. Verify a backup: node xspresso_backup_cli_v1.js verify <filename>
+6. Restore only while the app is stopped: node xspresso_backup_cli_v1.js restore <filename> --yes. Restore creates a pre-restore backup when the current store exists. Restart the app after restoring.
+7. Run tests: node --test xspresso_backup_service_v1.test.js
+
+Backups contain production data encrypted with AES-256-GCM and are written with restrictive permissions. Store the encryption key separately from both the data file and its backups.
+===== END FILE =====

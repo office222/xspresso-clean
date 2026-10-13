@@ -1,0 +1,74 @@
+Xspresso V1 Release Checklist
+
+Purpose:
+Use this checklist before launch to make sure the core product is ready, the messaging is consistent, and the user experience matches the promise.
+
+1) Core Promise Check
+- Done-for-you marketing
+- Fast and simple
+- More responses
+- Less software chaos
+- You stay in command
+- We do the work
+
+2) Product Scope Check
+- Campaign creation flow works
+- Landing pages generate correctly
+- Ad copy and headlines generate correctly
+- Follow-up emails generate correctly
+- Platform versions generate correctly
+- Lead capture works
+- Monitoring works
+- Alerts trigger correctly
+- Credits are tracked correctly
+- A la carte usage is tracked correctly
+
+3) Monitoring Check
+- CPC alerts fire at the right threshold
+- Underperforming ads are flagged
+- Regenerate recommendations are shown
+- Platform switch warnings are clear
+- Daily / weekly / monthly monitoring options work
+- Move to library wording is clear
+- Keep running / track myself options are clear
+
+4) Billing Check
+- Plans include every tool
+- Credits determine fair usage
+- Usage logs are visible
+- Upgrade suggestions appear when helpful
+- Renewal reminders are clear
+- Pause / cancel / reactivate work
+
+5) Dashboard Check
+- Campaign cards show status
+- Alerts are visible
+- Credits remaining are visible
+- Recent activity is visible
+- Quick actions are easy to understand
+
+6) Content Check
+- Hero message is clean
+- Bullets are short and clear
+- Founder story is emotional but not too long
+- Pricing language is fair and simple
+- Alerts are helpful, not scary
+
+7) Usability Check
+- User can approve what they like
+- User can tweak what they want
+- User can regenerate individual sections
+- User can save drafts
+- User can duplicate their own work
+- User can export/import their own campaigns
+
+8) Launch Readiness
+- All major screens load
+- No broken buttons
+- No placeholder text on public pages
+- No confusing duplicate sections
+- Credits and monitoring warnings are clear
+- Support flow is ready
+
+9) Final Rule
+If a feature does not help the user move faster, stay in command, or save time, it should be simplified or moved to V2.

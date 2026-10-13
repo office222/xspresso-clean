@@ -1,0 +1,44 @@
+Xspresso Board Shell Business Card HTML Notes
+
+Purpose:
+- Hold the cup logo and name inline.
+- Keep the header white.
+- Shrink cleanly on smaller screens.
+- Stay FrontPage-friendly.
+
+Recommended structure:
+- Use a 2-cell table inside the header row.
+- Left cell: cup image.
+- Right cell: logo text image.
+- Use white-space: nowrap to prevent stacking.
+- Use display:block on both images.
+- Set max-width and height:auto to help scaling.
+
+Suggested HTML behavior:
+- Cup stays left of the name.
+- Name stays aligned vertically with the cup.
+- Images remain on one line until the screen is too narrow.
+- Header remains white.
+
+Responsive guidance:
+- On smaller screens, scale the images down rather than letting them overlap.
+- Avoid floating elements.
+- Avoid absolute positioning.
+- Keep everything in table cells for compatibility.
+
+Copy guidance:
+- Keep the business card copy short.
+- Use the core promise first.
+- Follow with one support line.
+- End with demo / pricing buttons.
+
+Suggested copy:
+- Xspresso — Done for you marketing
+- Done-for-you marketing that gets responses.
+- More responses. Less software chaos.
+- You stay in command. We do the work.
+
+Implementation reminder:
+- If the logo text image is too wide, reduce the image file size itself.
+- HTML scaling helps, but the source asset should also be sized well.
+- Keep the entire header simple and clean.

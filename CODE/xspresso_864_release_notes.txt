@@ -1,0 +1,17 @@
+Xspresso Batch 859-864
+
+Files included:
+- xspresso_859_app_router_v4.js
+- xspresso_860_dashboard_metrics_v11.js
+- xspresso_861_monitoring_engine_v13.js
+- xspresso_862_review_panel_v3.js
+- xspresso_863_template_library_v3.js
+- xspresso_864_release_notes.txt
+
+This batch adds:
+- app routing
+- dashboard metric helpers
+- ad evaluation and alert generation
+- review / approve / regenerate UI rendering
+- template library save / restore / duplicate logic
+- release notes for the batch

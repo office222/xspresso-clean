@@ -1,0 +1,21 @@
+Xspresso batch 640–644 release notes
+
+Files included:
+- xspresso_640_app_shell.html
+- xspresso_641_dashboard_cards.js
+- xspresso_642_notifications_center.js
+- xspresso_643_help_center_data.js
+- xspresso_644_app_router.js
+
+What this batch adds:
+- app shell and navigation
+- dashboard card rendering
+- notification storage/rendering
+- help center data and search
+- app routing and section mounting
+
+Notes:
+- app shell uses the shared CSS from xspresso_555_app_shell.css
+- dashboard and alerts are wired into the main app router
+- help center is route-ready at #help
+- campaign builder and monitoring routes are placeholders for the next batch

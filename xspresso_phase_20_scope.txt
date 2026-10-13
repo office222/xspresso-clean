@@ -1,0 +1,27 @@
+Xspresso Phase 20 — Scope
+
+Purpose:
+Phase 20 focuses on the next expansion layer for Xspresso: deeper orchestration, stronger cross-campaign intelligence, richer recommendations, and more automated workflow coordination while keeping the product simple and user-controlled.
+
+Scope:
+- Deeper orchestration across campaigns, leads, alerts, billing, templates, and reports
+- Smarter cross-campaign learning
+- More advanced recommendation loops
+- Broader forecasting and trend analysis
+- Shared asset and template intelligence
+- Stronger team and agency controls
+- Marketplace / reusable component ideas
+- Tighter guardrails and user control
+
+Principles:
+- Keep Xspresso done-for-you
+- Keep the user in command
+- Never copy; always create original outputs
+- Make the next best action obvious
+- Reduce waste, time, and tool juggling
+
+Success Criteria:
+- Xspresso can coordinate more of the workflow automatically
+- Users still feel in control
+- Recommendations are useful, timely, and specific
+- The system stays simple enough to use

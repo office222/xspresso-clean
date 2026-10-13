@@ -1,0 +1,49 @@
+Xspresso Phase 20 — Task Breakdown
+
+1) Deeper orchestration across campaigns, leads, alerts, billing, templates, and reports
+- Connect the major product modules so they share state cleanly.
+- Ensure campaign changes flow into leads, alerts, billing, and reporting.
+- Keep the system responsive and consistent across screens.
+
+2) Smarter cross-campaign learning
+- Detect patterns across multiple campaigns.
+- Reuse helpful learnings to improve new outputs.
+- Surface shared insights without overwhelming the user.
+
+3) More advanced recommendation loops
+- Recommend the next best action when a campaign or ad needs attention.
+- Prioritize recommendations by likely impact.
+- Offer one-click fixes when possible.
+
+4) Broader forecasting and trend analysis
+- Show trend direction for performance, credits, and usage.
+- Give simple future-facing indicators that help users plan.
+- Keep forecasting clear and easy to scan.
+
+5) Shared asset and template intelligence
+- Reuse high-performing templates and assets.
+- Make templates easier to search, organize, and apply.
+- Support reusable building blocks across campaigns.
+
+6) Stronger team and agency controls
+- Add roles, permissions, and accountability.
+- Support multiple users working on shared accounts.
+- Keep ownership and access rules clear.
+
+7) Marketplace / reusable component ideas
+- Prepare for sharing templates and assets.
+- Let users reuse approved components across accounts.
+- Keep any sharing tied to user-owned work.
+
+8) Tighter guardrails and user control
+- Keep the user in command.
+- Make all important actions reviewable, editable, and reversible.
+- Maintain clear warnings, confirmations, and activity history.
+
+9) Success criteria
+- Orchestration works reliably.
+- Learning loops improve recommendations.
+- Forecasting is understandable.
+- Shared assets remain organized.
+- Team controls stay safe.
+- The product still feels fast, simple, and done-for-you.

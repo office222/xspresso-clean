@@ -1,0 +1,58 @@
+Xspresso Phase 36 — Task Breakdown
+
+1) Final orchestration polish
+- Tighten the flow between campaigns, leads, alerts, billing, templates, and reports.
+- Make sure each module can pass useful next-step data to the next module.
+
+2) Cross-campaign learning
+- Detect patterns across multiple campaigns.
+- Reuse winning titles, hooks, angles, and follow-up ideas.
+- Surface useful overlaps without copying unrelated content.
+
+3) Recommendation loops
+- Turn performance signals into clear suggestions.
+- Recommend next actions when ads, campaigns, or leads need attention.
+- Keep recommendations short, specific, and actionable.
+
+4) Forecasting and performance analysis
+- Estimate likely outcomes from current trends.
+- Show easy-to-read summaries for performance direction.
+- Highlight changes in CPC, CTR, conversions, and lead quality.
+
+5) Multi-brand / multi-team intelligence
+- Support separate brands or workspaces.
+- Keep shared logic while respecting account boundaries.
+- Let team users see only what they should see.
+
+6) Template marketplace refinement
+- Improve shared asset handling.
+- Let users reuse their own templates and approved structures.
+- Keep the marketplace safe, organized, and easy to search.
+
+7) Workflow coordination
+- Coordinate campaign creation, launch, monitoring, alerts, and follow-up.
+- Keep the user aware of what happened and what to do next.
+- Reduce manual switching between tools and screens.
+
+8) Guardrails and user control
+- Keep the user in command.
+- Require approvals for sensitive actions.
+- Make warnings clear before changes are applied.
+- Preserve the "approve what you like, tweak what you want" philosophy.
+
+9) Credit intelligence and usage guidance
+- Show how credits are being used.
+- Warn when usage is moving toward upgrade territory.
+- Suggest better plan fit when it could save money.
+
+10) Dashboard, monitoring, alerts, and launch-flow polish
+- Make the dashboard easier to scan.
+- Improve monitoring messages.
+- Make alerts more helpful.
+- Reduce friction in the launch flow.
+
+Definition of success:
+- The product feels coordinated instead of fragmented.
+- Recommendations are useful instead of noisy.
+- The user still feels in control.
+- The system saves time, reduces waste, and supports better decisions.

@@ -1,0 +1,25 @@
+Xspresso batch 806-811 release notes
+
+Included files:
+- xspresso_806_app_router_v3.js
+- xspresso_807_dashboard_view_v2.js
+- xspresso_808_campaign_builder_screen_v2.js
+- xspresso_809_monitoring_and_alerts_v2.js
+- xspresso_810_billing_credits_panel_v2.js
+- xspresso_811_ui_shell.css
+
+Summary:
+- Added a simple hash router
+- Added dashboard rendering
+- Added campaign builder screen markup
+- Added monitoring/alert scoring helpers
+- Added billing/credits panel helpers
+- Added shared UI shell styling
+
+Next recommended batch:
+- help center panel
+- template library panel
+- lead follow-up panel
+- platform switch modal
+- review/approve/regenerate panel
+- dashboard cards / widgets

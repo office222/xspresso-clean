@@ -1,0 +1,63 @@
+Xspresso Implementation Tasks
+
+1. Campaign Builder
+- Add offer input
+- Generate draft assets
+- Review and approve
+- Launch campaign
+
+2. Monitoring Engine
+- Track ads
+- Track CPC
+- Detect underperforming ads
+- Show alerts
+- Recommend next actions
+
+3. Credits / Usage Engine
+- Track credits used
+- Apply usage charges
+- Support daily, weekly, monthly monitoring
+- Show upgrade suggestions
+
+4. Platform Switching
+- Warn when switching platforms
+- Show ads on current platform
+- Let user keep running, move to library, or keep monitoring
+- Support standard and rush changes
+
+5. Follow-Up Engine
+- Capture leads
+- Tag leads
+- Score leads
+- Send follow-up sequences
+
+6. Library / Templates
+- Save campaigns
+- Duplicate own campaigns
+- Restore from library
+- Start from templates
+
+7. Dashboard
+- Show campaign status
+- Show alerts
+- Show credits remaining
+- Show recent activity
+
+8. Billing / Plans
+- Show plan details
+- Show credit totals
+- Show renewal date
+- Suggest upgrades when useful
+
+9. Copy / UI
+- Keep voice simple
+- Keep voice customer-focused
+- Emphasize done-for-you
+- Emphasize user stays in command
+
+10. Next Build Order
+- Finish core campaign flow
+- Finish monitoring alerts
+- Finish platform switch modal
+- Finish credits and billing
+- Finish dashboard polish

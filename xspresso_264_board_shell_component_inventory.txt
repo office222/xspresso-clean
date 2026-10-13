@@ -1,0 +1,63 @@
+Xspresso Board Shell Component Inventory
+
+Purpose:
+This file captures the reusable pieces of the board shell so the layout can be rebuilt or adjusted without hunting through multiple notes.
+
+Core Components:
+1. White Top Bar
+- White background only
+- Cup icon stays left of the name/logo text
+- No stacking or overlap on shrink
+- Responsive inline behavior
+
+2. Business Card Panel
+- Main brand card in the board shell
+- Short positioning line
+- Short support line
+- Demo and pricing buttons
+- Clean, premium spacing
+
+3. Hero Area
+- Done-for-you marketing message
+- Wake up your marketing line
+- More responses. Less software chaos.
+- You stay in command. We do the work.
+
+4. Primary CTA Row
+- Try the Demo
+- See Pricing
+- Buttons should remain clearly separated
+- Buttons should stay readable on smaller screens
+
+5. Footer / Support Strip
+- Simple and light
+- Support or help-center links
+- No clutter
+- No competing messages
+
+6. Responsive Rules
+- Logo stays inline
+- Cup remains left of name
+- Text scales down before wrapping
+- Avoid overlap at tablet widths
+- Maintain white background in header
+
+7. Copy Rules
+- Keep language clear and direct
+- Avoid too much hype
+- Emphasize done-for-you
+- Emphasize user control
+- Emphasize time savings
+- Emphasize less software chaos
+
+8. Acceptance Checklist
+- Header is white
+- Cup remains left of name
+- Logo shrinks without wrapping
+- Business card remains readable
+- CTA buttons are visible and distinct
+- Footer stays simple
+- Layout feels premium and clean
+
+Suggested File Use:
+Use this file as the quick reference when editing the board shell or rebuilding the top of the page.

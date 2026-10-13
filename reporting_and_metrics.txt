@@ -1,0 +1,117 @@
+Xspresso V1 - Reporting and Metrics
+
+Purpose:
+Provide clear, useful reporting so users can see what is working, what needs attention, and where credits are being spent.
+
+Core Principles:
+- Keep the reports simple.
+- Show the user what matters most.
+- Highlight wins, warnings, and opportunities.
+- Connect reporting to next actions.
+- Avoid clutter and vanity metrics.
+
+Primary Metrics:
+- Impressions
+- Clicks
+- Click-through rate (CTR)
+- Cost per click (CPC)
+- Conversions
+- Conversion rate
+- Leads captured
+- Follow-up engagement
+- Credits used
+- Credits remaining
+- Ads under monitoring
+- Alerts generated
+
+Suggested Report Views:
+1) Overview Report
+   - Total campaigns
+   - Active campaigns
+   - Draft campaigns
+   - Credits remaining
+   - Alerts open
+   - Monitored ads
+
+2) Campaign Report
+   - Campaign name
+   - Platform
+   - Status
+   - CPC
+   - CTR
+   - Conversions
+   - Leads captured
+   - Monitoring status
+
+3) Ad Report
+   - Ad name
+   - Title
+   - Hook
+   - Angle
+   - Platform
+   - Status
+   - CPC trend
+   - CTR trend
+   - Suggested action
+
+4) Credit Report
+   - Credits included
+   - Credits used
+   - Credits remaining
+   - Credits spent on monitoring
+   - Credits spent on generation
+   - Credits spent on a la carte items
+
+5) Alert Report
+   - Underperforming ads
+   - Rising CPC
+   - Low CTR
+   - Tracking paused
+   - Platform switch warnings
+   - Regeneration recommendations
+
+Report Intervals:
+- Daily
+- Weekly
+- Monthly
+- Per campaign
+- Per ad
+
+Recommended Alert Thresholds:
+- CPC warning: user configurable
+- CPC critical: user configurable
+- CTR warning: user configurable
+- CTR critical: user configurable
+- Conversion warning: user configurable
+
+Recommended Messaging:
+- This campaign is performing well.
+- This ad is underperforming.
+- CPC is rising.
+- CTR is low.
+- Credits are running low.
+- This campaign may need a tweak.
+- Xspresso recommends regenerating this ad.
+
+Suggested Next Actions:
+- Regenerate ad
+- Rewrite headline
+- Try new hook
+- Change angle
+- Pause campaign
+- Continue monitoring
+- Move ad to library
+- Increase monitoring
+- Review platform settings
+
+User-Friendly Summary Line:
+Xspresso should show users what is working, what is not, and what to do next without making them dig through a pile of numbers.
+
+Future Enhancements:
+- Export reports to CSV
+- Export reports to PDF
+- Scheduled email summaries
+- Weekly performance digest
+- Best-performing creative summary
+- Credit usage forecast
+- Upgrade recommendation based on usage

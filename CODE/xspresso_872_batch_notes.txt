@@ -1,0 +1,7 @@
+Batch notes:
+- help center panel
+- settings store
+- activity log
+- dashboard cards
+- app shell HTML/CSS
+- main app bootstrap

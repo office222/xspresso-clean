@@ -1,0 +1,153 @@
+Xspresso Recommendation and Action Playbooks
+
+Purpose
+This file defines what Xspresso should recommend when it sees a metric, alert, or report that needs attention.
+
+Core Rule
+Always give the user a clear next step.
+Do not just report a problem.
+Recommend an action.
+
+Recommendation Categories
+1. Campaign underperforming
+2. Ad underperforming
+3. CPC rising
+4. CTR falling
+5. Leads not converting
+6. Credits running low
+7. Monitoring costs getting high
+8. Platform switch creating risk
+9. Follow-up not producing replies
+10. Launch blocked or incomplete
+
+Campaign Underperforming
+If a campaign is underperforming, recommend one or more of:
+- Rewrite the headline
+- Improve the hook
+- Test a new angle
+- Adjust the offer
+- Replace the image
+- Simplify the landing page
+- Pause weak variations
+- Regenerate the campaign
+
+Ad Underperforming
+If an ad is underperforming, recommend:
+- Regenerate this ad
+- Try a new title
+- Try a new hook
+- Try a different CTA
+- Change the creative
+- Pause monitoring until improved
+
+CPC Rising
+If CPC is rising, recommend:
+- Lower-cost angle
+- Stronger headline
+- Better audience match
+- New platform version
+- Reduce spend on weak variations
+- Regenerate ad copy
+
+CTR Falling
+If CTR falls, recommend:
+- New hook
+- More direct headline
+- Better image
+- Stronger offer framing
+- Shorter copy
+- A/B test another variation
+
+Leads Not Converting
+If leads are not converting, recommend:
+- Improve follow-up sequence
+- Tighten the offer
+- Add urgency
+- Add proof or testimonials
+- Rewrite the CTA
+- Simplify the page
+
+Credits Running Low
+If credits are low, recommend:
+- Review active monitoring
+- Pause weak campaigns
+- Stop unnecessary platform tracking
+- Buy more credits
+- Upgrade if usage would save money
+
+Monitoring Costs Too High
+If monitoring is consuming too many credits, recommend:
+- Reduce the number of monitored ads
+- Switch to weekly monitoring
+- Archive inactive ads
+- Keep only the best performers under watch
+
+Platform Switch Risk
+If the user switches platforms, recommend:
+- Keep monitoring active if the ad still matters
+- Move the ad to library if it should be paused
+- Leave it alone if the user will manage it manually
+- Use standard switch instead of rush if urgency is low
+
+Follow-Up Not Producing Replies
+If follow-up is not getting responses, recommend:
+- Rewrite the subject line
+- Shorten the message
+- Add a stronger offer
+- Improve the reminder email
+- Test a new follow-up cadence
+- Use a different tone
+
+Launch Incomplete
+If a campaign cannot launch, recommend:
+- Add missing headline
+- Add missing platform version
+- Add lead capture or shopping cart
+- Check credits
+- Review the offer details
+
+Recommended Response Format
+When Xspresso detects an issue, its message should follow this pattern:
+- What is happening
+- Why it matters
+- What to do next
+
+Example:
+This ad is underperforming.
+Improve it before spending more credits.
+Xspresso recommends regenerating this ad with a new title, hook, or angle.
+
+Example:
+CPC is rising on this campaign.
+Try a lower-cost angle before adding more credits.
+
+Example:
+Credits are running low.
+You may want to pause weak campaigns or upgrade if your current usage is saving you money.
+
+Friendly Tone Rules
+- Clear
+- Helpful
+- Direct
+- Not alarmist
+- Not confusing
+- Always helpful
+
+Best Practice
+Every report or alert should end with one of the following:
+- Regenerate
+- Rewrite
+- Pause
+- Review
+- Upgrade
+- Archive
+- Monitor
+- Tweak
+- Launch
+- Save
+
+Summary
+Xspresso should turn every report into a recommendation engine.
+If something is weak, it should say so.
+If something can be improved, it should say how.
+If something is costing too much, it should suggest the smarter move.

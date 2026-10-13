@@ -1,0 +1,17 @@
+Batch 761-766 release notes
+
+Files:
+- xspresso_761_app_entry.js
+- xspresso_762_campaign_builder_screen.js
+- xspresso_763_monitoring_engine_v12.js
+- xspresso_764_review_panel_v14.js
+- xspresso_765_billing_credits_panel_v11.js
+- xspresso_766_help_center_panel_v11.js
+
+What this batch adds:
+- app bootstrap and state summary
+- campaign brief validation and draft scaffolding
+- monitoring / alert evaluation
+- review / approve / regenerate helpers
+- billing / credits summary
+- help center topics and search

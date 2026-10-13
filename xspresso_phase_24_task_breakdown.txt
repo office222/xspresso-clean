@@ -1,0 +1,41 @@
+Xspresso Phase 24 — Task Breakdown
+
+1) Deeper autonomous campaign orchestration
+- Coordinate campaigns across ads, landing pages, follow-up, alerts, billing, and templates.
+- Keep the system focused on moving users from idea to launch with less manual work.
+
+2) Smarter cross-campaign learning
+- Reuse performance patterns from one campaign to inform the next.
+- Identify repeating wins and weak points across multiple campaigns.
+
+3) Stronger recommendation loops
+- Suggest the next best action when performance changes.
+- Recommend tweaks to title, hook, angle, CTA, or creative when needed.
+
+4) Broader forecasting and trend analysis
+- Surface upcoming risks or opportunities based on recent behavior.
+- Show simple trend direction for clicks, leads, conversions, CPC, and engagement.
+
+5) Multi-brand and multi-team intelligence
+- Support multiple brands, campaigns, and working groups.
+- Allow separate views and defaults for different teams or brands.
+
+6) Improved workflow coordination
+- Keep campaign, lead, alert, and billing actions synchronized.
+- Ensure one part of the workflow updates the rest when changes happen.
+
+7) Tighter guardrails and user control
+- Keep the user in command.
+- Require clear confirmation before high-impact actions.
+- Preserve the "approve, tweak, or regenerate" workflow.
+
+8) Better credit intelligence and usage guidance
+- Show where credits are being used.
+- Warn when credits are being spent on low-performing actions.
+- Suggest a plan upgrade when it could save money.
+
+9) Success criteria
+- The system gives clearer, smarter recommendations.
+- Workflow orchestration feels more automatic.
+- Users keep control without feeling buried in complexity.
+- Credit usage and performance insights are easy to understand.

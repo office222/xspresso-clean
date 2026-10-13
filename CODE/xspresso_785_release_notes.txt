@@ -1,0 +1,23 @@
+Xspresso code batch release notes
+
+Files included:
+- xspresso_780_app_router.js
+- xspresso_781_lead_followup.js
+- xspresso_782_template_library.js
+- xspresso_783_platform_switch_modal.js
+- xspresso_784_help_center.js
+
+What this batch adds:
+- simple hash-based app routing
+- lead capture, scoring, and follow-up helpers
+- template save / restore / duplicate logic
+- platform switch warnings and monitoring cost helpers
+- help center search and article lookup
+
+Recommended next batch:
+- dashboard renderer
+- billing / credits panel
+- monitoring engine
+- alerts center
+- campaign review panel
+- app shell HTML/CSS

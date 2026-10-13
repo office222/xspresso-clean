@@ -1,0 +1,137 @@
+Xspresso Data Models
+
+This file defines the core objects used across Xspresso V1.
+
+1) User
+- id
+- name
+- email
+- plan
+- billingCycle
+- status
+- creditsIncluded
+- creditsUsed
+- creditsRemaining
+- platformConnections
+- createdAt
+- updatedAt
+
+2) Campaign
+- id
+- userId
+- name
+- productName
+- productUrl
+- productImage
+- offerDescription
+- audience
+- goal
+- tone
+- status
+- platforms
+- monitoringStatus
+- createdAt
+- updatedAt
+
+3) Ad
+- id
+- campaignId
+- platform
+- name
+- headline
+- hook
+- body
+- cpc
+- ctr
+- clicks
+- impressions
+- conversions
+- status
+- monitoringPlan
+- monitoringCreditsPerDay
+- createdAt
+- updatedAt
+
+4) Lead
+- id
+- campaignId
+- sourcePlatform
+- name
+- email
+- phone
+- tags
+- score
+- status
+- createdAt
+- updatedAt
+
+5) Subscription
+- id
+- userId
+- plan
+- billingCycle
+- status
+- creditsIncluded
+- creditsUsed
+- autoRenew
+- startedAt
+- renewsAt
+- pausedAt
+- canceledAt
+
+6) Alert
+- id
+- campaignId
+- adId
+- title
+- message
+- level
+- status
+- createdAt
+- dismissedAt
+- resolvedAt
+
+7) Activity
+- id
+- userId
+- campaignId
+- type
+- title
+- message
+- creditsUsed
+- createdAt
+
+8) Template
+- id
+- name
+- category
+- description
+- data
+- createdAt
+- updatedAt
+
+9) Library Item
+- id
+- sourceCampaignId
+- name
+- tags
+- status
+- createdAt
+- updatedAt
+
+10) Settings
+- userId
+- tone
+- defaultGoal
+- defaultPlatform
+- monitoringEnabled
+- alertThresholds
+- credits
+- platformDefaults
+- updatedAt
+
+Notes:
+- Keep the model simple for V1.
+- Every object should include createdAt and updatedAt.
+- Only store what Xspresso needs to run campaigns, monitor results, and manage credits.
+- Support user-owned duplication, export, import, and restore from library.

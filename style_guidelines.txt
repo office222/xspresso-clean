@@ -1,0 +1,65 @@
+Xspresso Style Guidelines
+
+1) Core Tone
+- Clear
+- Confident
+- Helpful
+- Customer-focused
+- Done-for-you
+- Friendly, not flashy
+- Premium, not noisy
+
+2) Key Phrases to Reinforce
+- Done-for-you marketing
+- You stay in command
+- We do the work
+- More responses
+- Less software chaos
+- Wake up your marketing
+- More for less
+- Time back, not more busywork
+
+3) Copy Rules
+- Keep headlines short and clear
+- Use bullets where possible
+- Avoid long paragraphs at the top of the page
+- Use simple words over jargon
+- Make benefits obvious fast
+- Keep promises believable
+- Never imply copying another creator’s work
+- Emphasize that users can tweak and approve
+
+4) Visual Style
+- White backgrounds where possible
+- Burnt orange as an accent, not the entire background
+- Dark charcoal for contrast
+- Clean spacing between sections
+- Avoid clutter and tiny text
+- Use strong hierarchy: headline > subheadline > bullets > CTA
+
+5) Button Style
+- Short, direct labels
+- Try the Demo
+- See Pricing
+- Approve Changes
+- Launch Campaign
+- Regenerate This Ad
+- Keep Monitoring
+
+6) Error / Alert Tone
+- Calm
+- Clear
+- Actionable
+- Helpful
+- No blame
+
+Examples:
+- This ad is underperforming. Improve it before spending more credits.
+- CPC is rising. Try a new headline or angle.
+- Switching platforms will stop tracking unless you choose a monitoring option.
+
+7) Product Feel
+Xspresso should feel like a smart, practical assistant that helps users move faster without making them feel dumb, trapped, or overloaded.
+
+8) Summary
+Keep it clean, fast, helpful, and focused on results.

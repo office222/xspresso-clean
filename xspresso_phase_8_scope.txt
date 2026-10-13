@@ -1,0 +1,37 @@
+Xspresso Phase 8 Scope
+
+Purpose:
+Expand Xspresso into a more intelligent, adaptive marketing system with deeper optimization, better guidance, and stronger large-scale workflow support.
+
+Phase 8 Focus:
+- Smarter optimization suggestions
+- Deeper performance analysis
+- More adaptive campaign recommendations
+- Stronger team and workspace controls
+- Better scheduled reporting
+- More advanced automation rules
+- Improved account-level insights
+- Better campaign forecasting ideas
+- Stronger notification prioritization
+- More refined credit / usage intelligence
+
+What Phase 8 Is Not:
+- Not a replacement for core V1 or V2 features
+- Not a cloning / copy tool for third-party work
+- Not a feature dump
+- Not a feature that removes user control
+
+Guardrails:
+- Keep the user in command
+- Keep recommendations explainable
+- Keep actions reversible where possible
+- Avoid black-box behavior
+- Keep credits and usage visible
+- Continue emphasizing done-for-you speed and simplicity
+
+Success Criteria:
+- Users receive smarter recommendations
+- Campaign optimization feels more proactive
+- Large accounts have better visibility and control
+- Reports become more useful and actionable
+- The system remains clear, fair, and easy to understand

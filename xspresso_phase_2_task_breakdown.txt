@@ -1,0 +1,73 @@
+Xspresso Phase 2 Task Breakdown
+
+Purpose:
+Phase 2 adds deeper selling power to Xspresso after the V1 core is stable.
+
+Phase 2 Goals:
+- Add long-form sales letters
+- Add VSL script generation
+- Add advanced bullet writing
+- Add video production support
+- Add campaign cloning for the user's own work
+- Add stronger automation around high-converting assets
+
+Core Phase 2 Tasks:
+1. Sales Letter Generator
+- Long-form sales page copy
+- Section-by-section editing
+- Headline, lead, proof, offer, CTA blocks
+
+2. VSL Script Generator
+- Opening hook
+- Problem agitation
+- Solution explanation
+- Offer presentation
+- CTA script
+
+3. Advanced Bullet Builder
+- Curiosity bullets
+- Benefit bullets
+- Problem/solution bullets
+- Story-driven bullets
+
+4. Video Production Support
+- Turn sales copy into video script outlines
+- Create scene beats
+- Create voiceover drafts
+- Create CTA endings
+
+5. Own-Work Cloning
+- Duplicate the user's own campaigns
+- Duplicate their own sales pages
+- Duplicate their own sequences
+- Keep original assets intact
+
+6. Funnel Expansion
+- Longer funnel paths
+- Better upsells
+- Cross-sell structure
+- Better continuity between assets
+
+7. Automation Expansion
+- More triggered actions
+- Better regeneration rules
+- Better asset reuse
+- Better suggestion engine
+
+8. Review and Control
+- User approves or edits each section
+- User can regenerate one part without rebuilding everything
+- User stays in command
+
+Phase 2 Guardrails:
+- Never copy other people's work
+- Only reuse the user's own content
+- Keep the output original and strategy-based
+- Keep the user in control
+
+Success Criteria:
+- Sales letters can be generated cleanly
+- VSL scripts can be generated cleanly
+- Video support is usable
+- Users can duplicate their own work safely
+- Phase 2 feels like a natural upgrade from V1

@@ -1,0 +1,37 @@
+Xspresso Quote3 Front Board Shell
+Header and Logo Notes
+
+Purpose:
+- Keep the cup logo left of the name logo.
+- Make the header shrink cleanly on smaller screens.
+- Prevent the cup from stacking on top of the name when the page narrows.
+- Keep the board shell looking clean, simple, and premium.
+
+Header layout goals:
+- Use a two-cell inline table for the logo area.
+- Keep the cup icon and text logo on one line.
+- Allow the text logo to scale down while staying inline.
+- Keep the background white behind the logo area.
+- Avoid dark header bars that make the graphics look pixelated or heavy.
+
+Recommended behavior:
+- Cup image stays fixed to the left of the name image.
+- Text logo uses max-width and height:auto so it can shrink.
+- Add small spacing between the cup and text logo.
+- Use white background in the top header area.
+- Keep header simple and clean.
+
+Responsive notes:
+- On narrow screens, the logo should still stay inline if possible.
+- If needed, the text logo should shrink before wrapping.
+- The cup image should remain visible and aligned with the brand name.
+- Avoid large padding that forces the logos to break apart.
+
+Style notes:
+- White background for header area.
+- Orange accents only for brand highlights, not the full top bar.
+- Keep the header minimal so the brand mark is the focus.
+
+Implementation reminder:
+- If the header image still becomes too wide, reduce the source image size rather than adding more layout complexity.
+- The main rule is: stay inline first, shrink second, wrap only as a last resort.

@@ -1,0 +1,25 @@
+Xspresso Batch Release Notes
+
+Included files:
+- xspresso_458_campaign_generation_core_v2.js
+- xspresso_459_monitoring_engine_v2.js
+- xspresso_460_billing_credits_panel_v2.js
+- xspresso_461_app_shell_nav_v2.js
+- xspresso_462_launch_flow_v2.js
+- xspresso_463_dashboard_overview_v2.js
+
+This batch adds:
+- campaign brief generation
+- monitoring and alert evaluation
+- credits and billing helpers
+- app shell navigation helpers
+- launch readiness and launch flow
+- dashboard overview helpers
+
+Next suggested batch:
+- review / approve / regenerate panel
+- campaign editor
+- lead follow-up panel
+- settings panel
+- activity feed
+- help/support panel

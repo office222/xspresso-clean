@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xspresso</title>
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <img class="cup" src="images/Xspresso_cup.gif" alt="Xspresso cup" />
+        <img class="wordmark" src="images/Xspresso_logo_txt.gif" alt="Xspresso" />
+      </div>
+      <div class="top-actions">
+        <button class="btn btn-secondary" id="btnHelp">Help</button>
+        <button class="btn btn-primary" id="btnCreate">Create Campaign</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="navpanel">
+        <button class="nav-item active" data-view="dashboard">Dashboard</button>
+        <button class="nav-item" data-view="builder">Create Campaign</button>
+        <button class="nav-item" data-view="monitoring">Monitoring</button>
+        <button class="nav-item" data-view="leads">Leads</button>
+        <button class="nav-item" data-view="library">Library</button>
+        <button class="nav-item" data-view="templates">Templates</button>
+        <button class="nav-item" data-view="credits">Credits</button>
+        <button class="nav-item" data-view="billing">Billing</button>
+        <button class="nav-item" data-view="settings">Settings</button>
+      </aside>
+
+      <section class="content">
+        <section class="hero-card">
+          <div class="eyebrow">Done-for-you marketing</div>
+          <h1>Xspresso gets responses, builds your list, and follows up automatically.</h1>
+          <p>You stay in command. We do the work.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" id="heroDemo">Try the Demo</button>
+            <button class="btn btn-secondary" id="heroPricing">See Pricing</button>
+          </div>
+        </section>
+
+        <section id="appView" class="view-shell"></section>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

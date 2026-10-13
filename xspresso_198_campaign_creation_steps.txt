@@ -1,0 +1,31 @@
+Xspresso V1 — Campaign Creation Steps
+
+1. User enters a product photo, URL, or a few details about the offer.
+2. Xspresso builds a smart brief from the user input.
+3. Xspresso researches matching products, competing offers, and audience signals.
+4. Xspresso generates campaign assets:
+   - headlines
+   - hooks
+   - ad copy
+   - landing page copy
+   - cart or lead capture copy
+   - follow-up emails
+5. Xspresso adapts the campaign for each selected platform.
+6. The user reviews, edits, approves, or regenerates sections.
+7. The campaign is launched.
+8. Xspresso monitors performance, CPC, and alerts.
+9. If an ad underperforms, Xspresso recommends a fix or regenerates it.
+10. The user can save, duplicate, export, or reuse the campaign from the library.
+
+Core Rule:
+- Xspresso is done-for-you marketing.
+- The user stays in command.
+- Xspresso does the heavy lifting.
+- Credits determine fair usage.
+
+Helpful UI Copy:
+- Wake up your marketing.
+- More responses. Less software chaos.
+- Approve what you like.
+- Tweak what you want.
+- Improve before spending more credits on an ad that is not performing.

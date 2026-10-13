@@ -1,0 +1,12 @@
+Xspresso Board Shell Final Review Notes
+
+- Keep the cup left of the name logo.
+- Use a white header background.
+- Make the logo shrink cleanly on smaller screens.
+- Prevent wrapping/stacking where possible.
+- Keep the business card readable.
+- Keep CTA buttons clear and visible.
+- Keep the layout premium, simple, and clean.
+- Xspresso-only filenames going forward.
+
+Next step: final visual review and polish.

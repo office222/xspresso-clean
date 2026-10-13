@@ -1,0 +1,15 @@
+Xspresso Board Shell — Open Items
+
+1. Keep the cup logo left of the name logo.
+2. Keep the header background white.
+3. Make sure the logo shrinks cleanly on smaller screens.
+4. Prevent the cup and name from stacking or wrapping awkwardly.
+5. Keep the business card readable and premium.
+6. Keep CTA buttons clear and easy to tap.
+7. Keep the footer simple and supportive.
+8. Keep the whole shell FrontPage-friendly.
+9. Use Xspresso-only filenames for all future project files.
+10. Preserve the core message: done-for-you marketing, you stay in command, we do the work.
+
+Recommended next step:
+- Review the assembled board shell and confirm the final spacing, sizing, and copy tone before moving to the next UI block.

@@ -1,0 +1,19 @@
+Xspresso code batch 520-524
+
+Files included:
+- xspresso_520_campaign_state_machine.js
+- xspresso_521_notifications_center.js
+- xspresso_522_dashboard_router_v3.js
+- xspresso_523_help_center_data_v2.js
+- xspresso_524_project_bootstrap.js
+
+What this batch covers:
+- campaign state transitions
+- notification and alert helpers
+- dashboard routing and summary helpers
+- help center topics and search helpers
+- project bootstrap/demo wiring
+
+Core product reminder:
+Xspresso is done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.
+We do the work. You enjoy the benefits.

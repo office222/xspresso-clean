@@ -1,0 +1,61 @@
+Xspresso Phase 50 — Task Breakdown
+
+1) Final product consolidation
+- Review all V1 modules and make sure they work together cleanly.
+- Remove redundant flows and simplify handoff points.
+- Confirm the product still matches the core promise.
+
+2) Release readiness
+- Verify the app is stable enough for release.
+- Check that campaign creation, editing, launch, monitoring, and alerts all connect properly.
+- Make sure the user can move through the app without dead ends.
+
+3) Core V1 feature finalization
+- Finalize landing page generation.
+- Finalize ad creation.
+- Finalize follow-up automation.
+- Finalize platform adaptation.
+- Finalize campaign library and duplication.
+
+4) Monitoring and alerts
+- Finalize performance checks.
+- Finalize underperforming ad warnings.
+- Finalize CPC and CTR alerts.
+- Finalize platform switch warnings and monitoring choices.
+
+5) Credits, billing, and usage behavior
+- Finalize credits usage rules.
+- Finalize a la carte usage items.
+- Finalize monitoring costs.
+- Finalize upgrade suggestions when usage grows.
+
+6) Platform switching rules
+- Finalize the warning modal.
+- Finalize per-ad and bulk choices.
+- Finalize delete-to-library wording.
+- Finalize keep-monitoring pricing.
+
+7) Dashboard and reporting
+- Finalize the dashboard summary cards.
+- Finalize campaign card actions.
+- Finalize alert center behavior.
+- Finalize activity history and usage reporting.
+
+8) Onboarding, help, and support
+- Finalize onboarding questions.
+- Finalize tooltips and inline help.
+- Finalize FAQ and objection handling.
+- Finalize empty states and error messages.
+
+9) Quality assurance
+- Check each screen flow from login to launch.
+- Confirm guardrails are in place.
+- Confirm copy is clear and consistent.
+- Confirm the product still feels done-for-you but user-controlled.
+
+10) Success criteria
+- The product is ready to ship as a polished V1.
+- The user can build, edit, launch, monitor, and improve campaigns.
+- Credits, billing, and usage rules are clear.
+- Warnings, alerts, and recommendations are helpful.
+- The core promise remains simple: done-for-you marketing, fast.

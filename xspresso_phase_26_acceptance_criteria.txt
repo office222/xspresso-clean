@@ -1,0 +1,15 @@
+Xspresso Phase 26 — Acceptance Criteria
+
+This phase is complete when:
+- Final refinement and stabilization are in place.
+- Workflow polish is complete across campaign creation, review, launch, monitoring, and alerts.
+- Recommendations are clear, helpful, and actionable.
+- Cross-campaign intelligence works consistently.
+- Team and multi-brand coordination behaves as expected.
+- Credit and usage clarity is visible to the user.
+- Guardrails and user control are preserved.
+- No major blocking issues remain in the core V1/V2 workflow.
+- The product feels consistent, simple, and stable.
+
+Definition of done:
+Xspresso is stable, polished, easy to use, and ready for the next expansion stage.

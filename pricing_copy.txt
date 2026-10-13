@@ -1,0 +1,28 @@
+XSPRESSO PRICING COPY
+
+Core pricing philosophy:
+All plans include every tool. Credits simply determine fair usage.
+
+Short version:
+No feature limits. No bait-and-switch. Spend credits however you like.
+
+Customer-facing version:
+Every plan gives you access to the full Xspresso system. What changes by plan is how much you can use it. If you need more output, you can add credits or move up a tier.
+
+Fair use version:
+All plans include every tool. Credits determine usage. Heavy use consumes more credits; light use consumes fewer.
+
+Pricing story:
+Xspresso gives you more for less because it removes wasted time, wasted tools, and wasted effort. Instead of stitching together multiple software products, you get one system that helps you create, launch, monitor, and improve faster.
+
+Upgrade prompt:
+Based on your current usage, the next tier may save you money.
+
+A la carte prompt:
+Need more? Add credits anytime.
+
+Monitoring prompt:
+Monitoring and ongoing tracking use credits because they require active resources.
+
+Best one-line summary:
+All plans include every tool. Credits simply determine fair usage.

@@ -1,0 +1,25 @@
+Xspresso Phase 14 Scope
+
+Purpose:
+This phase represents the long-range expansion layer after the core Xspresso system is stable.
+
+Focus areas:
+- deeper autonomous optimization
+- broader multi-brand intelligence
+- cross-campaign learning across accounts and offers
+- more advanced recommendation loops
+- richer forecasting and trend analysis
+- smarter workflow orchestration
+- stronger team and agency controls
+- improved marketplace / template sharing ideas
+- additional integrations and automations
+- continued safety, permissions, and guardrails
+
+Guiding principle:
+Keep the system simple for the user while making the backend smarter over time.
+
+Success criteria:
+- the system continues to reduce manual work
+- recommendations become more useful over time
+- multi-brand and multi-team usage stays organized
+- the product remains fast, clear, and easy to command

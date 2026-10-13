@@ -1,0 +1,54 @@
+XSPRESSO FILE NAMING CONVENTION
+
+Purpose:
+Avoid filename collisions and keep every export unique, sortable, and easy to find.
+
+Recommended naming pattern:
+- xspresso_###_<topic>.txt
+- xspresso_###_<topic>_v2.txt
+- xspresso_###_<topic>_2026-10-07.txt
+
+Examples:
+- xspresso_188_file_naming_convention.txt
+- xspresso_189_master_index.txt
+- xspresso_190_credits_usage.txt
+- xspresso_191_campaign_generation.txt
+- xspresso_192_dashboard_html.txt
+
+Rules:
+1. Always start with "xspresso_".
+2. Use a unique number so files sort in build order.
+3. Keep topic names short and clear.
+4. Use _v2, _v3, etc. only when revising the same topic.
+5. Never reuse the exact same filename for a new export.
+
+Good topic names:
+- master_index
+- v1_features
+- credits_usage
+- campaign_generation
+- ad_monitoring
+- lead_followup
+- billing
+- dashboard
+- alerts
+- pricing
+- hero_copy
+- founder_story
+- templates
+
+Recommended practice:
+- Use numbered files for the main project library.
+- Use dated files for temporary notes or one-off exports.
+- Keep the master index updated with every new file.
+
+Example folder structure:
+- product/
+- copy/
+- ui/
+- logic/
+- library/
+- assets/
+
+Bottom line:
+Unique names prevent download conflicts and make the Xspresso project easier to manage over time.

@@ -1,0 +1,68 @@
+Xspresso Frontend Shell Plan
+
+This file captures the next build block for Xspresso: the app shell and top-level frontend layout.
+
+Core goals:
+- Keep the interface simple
+- Make the user feel in command
+- Show the current campaign status clearly
+- Surface alerts, credits, and next actions without clutter
+- Keep navigation obvious and fast
+
+Recommended shell sections:
+1. Top header
+   - Xspresso logo
+   - account name
+   - credits remaining
+   - alerts indicator
+
+2. Main navigation
+   - Dashboard
+   - Campaigns
+   - Create
+   - Library
+   - Alerts
+   - Billing
+   - Settings
+
+3. Main content area
+   - campaign cards
+   - draft preview
+   - monitoring status
+   - quick actions
+
+4. Right-side helper panel
+   - suggested next step
+   - monitoring notes
+   - underperforming ad warnings
+   - credit usage reminders
+
+5. Footer/status strip
+   - plan name
+   - credits used
+   - monitoring active/inactive
+   - last sync time
+
+UI principles:
+- White background with orange accents
+- Clear hierarchy
+- Large readable headings
+- Short labels
+- Friendly but direct alerts
+- No feature confusion
+- No hidden controls
+
+Recommended homepage summary line:
+"Xspresso does the heavy lifting. You stay in command."
+
+Recommended dashboard summary line:
+"More responses. Less software chaos."
+
+Recommended shell behavior:
+- Always show credits
+- Always show monitoring status
+- Always show unresolved alerts
+- Keep the primary action visible
+- Make edit/tweak actions easy to find
+
+This shell should be the foundation for the app pages that follow.

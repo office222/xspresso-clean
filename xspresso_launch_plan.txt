@@ -1,0 +1,87 @@
+Xspresso Launch Plan
+
+Purpose:
+This file defines the recommended launch process for Xspresso, from final review to public release, with an emphasis on keeping the product simple, done-for-you, and easy to understand.
+
+Core launch message:
+Xspresso is done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.
+We do the work. You enjoy the benefits.
+
+Launch phases:
+
+1) Pre-Launch Review
+- Confirm the core promise is consistent across the hero, feature section, pricing, and founder story.
+- Confirm V1 scope is clear.
+- Confirm the app, pricing, and credits system all match the same rules.
+- Confirm platform switch warnings and monitoring behavior are understandable.
+- Confirm all copy is customer-focused and easy to scan.
+
+2) Soft Launch
+- Release to a small group of users first.
+- Watch where users hesitate or stop.
+- Track which sections are confusing.
+- Track which actions are used most often.
+- Track where users spend credits fastest.
+- Collect feedback on onboarding, campaign generation, and monitoring.
+
+3) Public Launch
+- Open the product to all users.
+- Keep the messaging simple.
+- Keep the hero focused on done-for-you marketing.
+- Keep the pricing model clear: all tools included, credits determine usage.
+- Keep the dashboard easy to understand.
+- Keep alerts short and helpful.
+
+4) Post-Launch Optimization
+- Review usage logs.
+- Review alerts.
+- Review underperforming ad fixes.
+- Review platform switch behavior.
+- Review credit usage patterns.
+- Improve confusing screens.
+- Add better defaults where needed.
+- Refine the onboarding flow.
+
+Launch checklist:
+- Hero section approved
+- Feature list approved
+- Pricing table approved
+- Founder story approved
+- Dashboard approved
+- Monitoring rules approved
+- Credits and a la carte rules approved
+- Platform switch modal approved
+- Alerts and warnings approved
+- Support/help copy approved
+- V1 scope locked
+
+Suggested launch priority:
+- Campaign builder
+- Draft generation
+- Review and approve flow
+- Launch flow
+- Monitoring dashboard
+- Alerts and regeneration
+- Lead capture and follow-up
+- Credits and subscription logic
+- Platform switching rules
+- Library and reuse tools
+
+Launch success indicators:
+- Users understand what Xspresso does quickly
+- Users can build a campaign without confusion
+- Users can review and tweak without starting over
+- Users can launch without needing help
+- Users understand their credit usage
+- Users understand when to regenerate an underperforming ad
+- Users understand what happens when they switch platforms
+
+Public-facing launch language:
+- Done-for-you marketing, fast.
+- More responses. Less software chaos.
+- You stay in command. We do the work.
+- All plans include every tool. Credits simply determine fair usage.
+- Improve before spending more credits on something that is not performing.
+
+Final launch rule:
+Do not launch with unclear pricing, unclear monitoring rules, or unclear credits. The first launch should feel simple, helpful, and trustworthy.

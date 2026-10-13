@@ -1,0 +1,49 @@
+Xspresso Board Shell Component Notes
+
+Purpose:
+- Keep the cup icon left of the Xspresso name logo.
+- Keep the header clean, white, and responsive.
+- Prevent the logo from stacking on smaller screens.
+- Support the board shell / business card style layout.
+
+Visual Rules:
+- Use a white background behind the entire top bar.
+- Keep the cup and text logo inline on one row.
+- Scale the logo down gracefully on narrow screens.
+- Do not let the cup overlap the text logo.
+- Use orange only as an accent color, not as the full header background.
+
+Layout Rules:
+- Cup image should stay left of the text logo.
+- Text logo should shrink with max-width and height:auto.
+- Keep all top-bar elements aligned vertically in the middle.
+- Use nowrap where needed, but allow the whole logo group to scale down.
+
+Recommended Header Behavior:
+- Desktop: cup + name appear side by side, centered or left aligned.
+- Tablet: logo group stays inline and scales down.
+- Mobile: logo group still stays inline, but both images shrink.
+
+Suggested Copy:
+- Xspresso — Done for you marketing.
+- Done-for-you marketing that gets responses.
+- More responses. Less software chaos.
+- You stay in command. We do the work.
+
+Suggested Button Labels:
+- Try the Demo
+- See Pricing
+
+Implementation Notes:
+- Use a table-based header for best FrontPage compatibility.
+- Use display:block on images to remove spacing gaps.
+- Set max-width on the text logo image.
+- Keep the top bar white so the graphics stay crisp.
+- If needed, reduce the text logo file size for better small-screen behavior.
+
+Acceptance Check:
+- Cup remains left of the logo text.
+- Header remains white.
+- Images stay inline.
+- Logo shrinks instead of stacking.
+- Page remains easy to edit in FrontPage.

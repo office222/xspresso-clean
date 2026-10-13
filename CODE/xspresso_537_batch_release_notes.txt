@@ -1,0 +1,22 @@
+Xspresso batch release notes
+
+This batch adds:
+- campaign orchestration
+- dashboard overview helpers
+- alerts and notifications
+- lead capture and follow-up
+- billing and credits helpers
+
+Naming rule:
+- Xspresso-only filenames
+- numbered prefixes
+- no duplicate filenames
+- keep the working set small
+
+Suggested next batch:
+- campaign editor screen
+- launch readiness panel
+- template library helpers
+- platform switch modal
+- app shell components
+- help center data

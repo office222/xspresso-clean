@@ -1,0 +1,46 @@
+Xspresso - Testing and QA
+
+Purpose:
+This file defines the basic quality checks for Xspresso before release.
+
+Core QA Areas:
+- Campaign creation flow
+- Ad generation flow
+- Landing page generation
+- Follow-up email flow
+- Lead capture flow
+- Platform upload flow
+- Monitoring and alert flow
+- Credits and billing flow
+- Platform switch flow
+- Library / duplicate / export flow
+
+Acceptance Checks:
+1. User can create a campaign from a URL, image, or offer description.
+2. User can generate ads, headlines, and landing page copy.
+3. User can edit and approve generated sections.
+4. User can launch a campaign.
+5. User can see monitoring alerts.
+6. User can regenerate underperforming ads.
+7. User can view credit usage.
+8. User can switch platforms with clear warnings.
+9. User can move ads to library.
+10. User can duplicate their own campaigns.
+
+Functional Checks:
+- No locked tools based on plan.
+- Credits are deducted correctly.
+- Alerts show clear next actions.
+- Monitoring warnings are easy to understand.
+- Platform switch modal displays selected platform name.
+- Library actions only affect the user's own content.
+
+UI Checks:
+- Hero section is readable and clean.
+- Buttons are visible and distinct.
+- Tables do not break on smaller windows.
+- Logo stays inline.
+- Colors remain consistent.
+
+Release Rule:
+Do not release until core flows work end-to-end and the user can complete a basic campaign without confusion.

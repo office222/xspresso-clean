@@ -1,0 +1,22 @@
+Xspresso Board Shell Final Finish Notes
+
+Purpose:
+- Keep the board shell clean, premium, and easy to scan.
+- Maintain the white header background.
+- Keep the cup logo left of the Xspresso name.
+- Prevent stacking or wrapping when the page shrinks.
+- Keep the business card component readable.
+- Keep CTA buttons clear and action-focused.
+
+Acceptance checks:
+- Logo stays inline at normal widths.
+- Logo scales down on smaller screens without overlapping.
+- Header remains white.
+- Business card stays balanced and readable.
+- CTA buttons remain visible and easy to click.
+- Footer stays simple and supportive.
+
+Best reminder:
+- Done-for-you marketing.
+- You stay in command.
+- We do the work.

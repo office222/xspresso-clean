@@ -1,0 +1,107 @@
+XSPRESSO COMPONENT LIBRARY
+
+Purpose:
+Reusable UI components for the Xspresso app and landing pages.
+
+1) Hero Banner
+- Main headline
+- Support line
+- CTA buttons
+- Short bullet block
+- Optional trust line
+
+2) Campaign Card
+- Campaign name
+- Status badge
+- Platform label
+- CPC / CTR / conversions summary
+- Quick action menu
+- Alerts count
+
+3) Alert Card
+- Alert level
+- Alert title
+- Short message
+- Recommended next action
+- Dismiss / resolve controls
+
+4) Monitoring Panel
+- Ad name
+- Platform name
+- Tracking status
+- Daily / weekly / monthly credits
+- Keep running / move to library / keep monitoring actions
+
+5) Credits Summary Panel
+- Total credits
+- Used credits
+- Remaining credits
+- Monitoring credits
+- Action credits
+- Upgrade suggestion
+
+6) Campaign Builder Block
+- Offer input
+- Audience input
+- Goal selector
+- Tone selector
+- Platform selector
+- Generate button
+
+7) Review / Approve Block
+- Editable sections
+- Approve buttons
+- Regenerate buttons
+- Save draft
+- Launch campaign
+
+8) Platform Switch Modal
+- Warning header
+- Platform name inserted dynamically
+- All ads action options
+- Per-ad action options
+- Monitoring cost choices
+- Confirm / cancel buttons
+
+9) Follow-Up Sequence Block
+- Welcome email
+- Reminder email
+- Benefit email
+- Offer email
+- Sequence editor
+
+10) Template Picker
+- Template name
+- Category
+- Short description
+- Use template button
+- Save as template button
+
+11) Dashboard Summary Row
+- Active campaigns
+- Drafts
+- Alerts
+- Credits remaining
+- Monitored ads
+- Platform connections
+
+12) Settings Panel
+- Tone
+- Default goal
+- Monitoring thresholds
+- Platform behavior
+- Billing / usage settings
+
+13) Library View
+- Saved campaigns
+- Saved templates
+- Duplicated campaigns
+- Restore / export / delete actions
+
+Component Rules:
+- Keep labels short and clear.
+- Prefer action words.
+- Show the next step.
+- Keep user in command.
+- Use orange as an accent, not a full background.
+- Make every component editable and reusable.

@@ -1,0 +1,58 @@
+XSPRESSO BOARD SHELL RELEASE CHECKLIST
+
+Purpose:
+This file keeps the Quote3 / board shell build clean, consistent, and ready for final integration.
+
+1) Header / Logo Rules
+- Keep the cup logo to the left of the Xspresso name.
+- Use a white background behind the logo area.
+- Prevent the cup from stacking above the name on smaller screens.
+- Allow the logo to shrink inline when space is limited.
+- Keep the top bar clean and premium.
+
+2) Business Card Rules
+- Keep the business card readable and simple.
+- Use a clear headline, short support line, and two CTA buttons.
+- Keep the copy focused on done-for-you marketing.
+- Use short, easy-to-scan text.
+- Avoid clutter and repetition.
+
+3) CTA Rules
+- Primary CTA should be the main action.
+- Secondary CTA should be smaller and less visually dominant.
+- Keep CTA language short and direct.
+- Use action-oriented language like Try the Demo, See Pricing, Launch, Save Draft, or Export.
+
+4) Responsive Rules
+- The header must stay inline as the screen shrinks.
+- The cup and name should remain side by side as long as possible.
+- The layout should not feel crowded on mobile.
+- Use white space and clean spacing.
+- Avoid wrap surprises.
+
+5) Footer Rules
+- Keep the footer simple.
+- Include only necessary support or trust links.
+- Do not overcrowd the bottom of the shell.
+- Keep the closing line premium and calm.
+
+6) Acceptance Checks
+- Logo stays inline.
+- White background stays white.
+- Card copy stays readable.
+- CTAs are visible and balanced.
+- Layout feels polished on desktop and smaller screens.
+- No unnecessary repetition.
+
+7) Final Build Reminder
+The board shell should feel like a premium software interface, not a flyer.
+It should be clean, easy to scan, and aligned with the Xspresso promise:
+
+- Done-for-you marketing
+- More responses
+- Less software chaos
+- You stay in command
+- We do the work
+
+8) Next Step
+When this shell is ready, move the same design rules into the remaining sections of the app so the whole product feels consistent.

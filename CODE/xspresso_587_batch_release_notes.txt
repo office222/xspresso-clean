@@ -1,0 +1,20 @@
+Xspresso batch release notes
+===========================
+
+This batch adds the next app foundation:
+- dashboard metric helpers
+- monitoring and ad health evaluation
+- alerts and notification helpers
+- lead capture, scoring, and follow-up timeline
+- settings store and defaults
+
+Recommended usage:
+- keep these files in the app/logic layer
+- connect dashboard widgets to the dashboard metrics helpers
+- connect alerts screens to alerts center helpers
+- connect lead capture UI to the lead timeline helpers
+- connect settings screens to the settings store helpers
+
+Core product reminder:
+Xspresso is done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.
+We do the work. You enjoy the benefits.

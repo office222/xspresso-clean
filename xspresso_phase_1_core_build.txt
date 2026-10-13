@@ -1,0 +1,54 @@
+Xspresso Phase 1 Core Build
+
+Purpose:
+Build the minimum complete version of Xspresso that can create campaigns, monitor ads, capture leads, follow up automatically, and manage credits fairly.
+
+Phase 1 Objectives:
+- Done-for-you campaign generation
+- Landing pages and shopping cart
+- Ad copy, headlines, hooks, and angles
+- Platform adaptation
+- Lead capture and follow-up
+- Monitoring and alerts
+- Credits and usage accounting
+- Platform switch warning flow
+- Campaign library and duplicate own work
+- Dashboard overview
+
+Phase 1 Must-Haves:
+1. Campaign builder
+2. Draft generation
+3. Review and approve flow
+4. Launch flow
+5. Monitoring dashboard
+6. Alert engine
+7. Lead capture and follow-up engine
+8. Credits engine
+9. Platform switch modal
+10. Library and template system
+
+Phase 1 Should-Haves:
+- Version history
+- Export / import
+- Activity log
+- Settings panel
+- Basic help text
+- Empty states and error messages
+
+Phase 1 Constraints:
+- No cloning of other people’s campaigns
+- No feature bait-and-switch
+- All tools included on every plan
+- Credits determine usage
+- Keep the user in command
+
+Phase 1 Success Criteria:
+- User can create a campaign from a brief
+- User can approve or regenerate sections
+- User can launch a campaign
+- User can monitor performance
+- User can receive alerts and next-step suggestions
+- User can track credits and see fair usage
+
+Phase 1 Output:
+A usable done-for-you marketing system with the core workflow complete and ready for real users.

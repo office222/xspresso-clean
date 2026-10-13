@@ -1,0 +1,28 @@
+Xspresso Phase 15 Scope
+
+This file defines the next expansion layer for Xspresso after the core product phases.
+
+Scope:
+- Even deeper autonomous optimization
+- Wider multi-brand coordination
+- Cross-campaign learning at scale
+- Smarter recommendation loops
+- Stronger forecasting and trend analysis
+- More advanced workflow orchestration
+- Higher-level team and agency controls
+- Marketplace / shared template ideas
+- More integrations and automation hooks
+- Safety and user-control guardrails
+
+Goals:
+- Reduce manual work even further
+- Improve outcomes with smarter suggestions
+- Keep the user in command while Xspresso handles the heavy lifting
+- Maintain clear credits / usage logic
+- Preserve the done-for-you positioning
+
+Definition of done:
+- The feature set is clearly scoped
+- The guardrails are defined
+- The user experience remains simple
+- The next implementation steps are obvious

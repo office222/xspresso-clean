@@ -1,0 +1,37 @@
+Xspresso Phase 2 Scope
+
+Phase 2 expands Xspresso beyond the core V1 workflow.
+
+Primary goals:
+- Sales letters
+- VSL scripts
+- Longer-form funnels
+- Advanced bullet writing
+- Video production support
+- Deeper campaign cloning of the user's own work
+- More automation around scaling winning campaigns
+
+Phase 2 should still preserve the core rules:
+- Done-for-you first
+- User stays in command
+- All tools included
+- Credits determine usage
+- Never copy other people's work
+- Improve, regenerate, and reuse the user's own assets
+
+Recommended Phase 2 modules:
+1. Sales letter generator
+2. VSL generator
+3. Long-form funnel writer
+4. Advanced story and proof builder
+5. Video ad / video script builder
+6. Campaign scaling assistant
+7. Improved library and versioning tools
+
+Suggested Phase 2 user promise:
+- Turn a good campaign into a full selling system
+- Build longer-form assets faster
+- Scale what is already working
+- Keep the user in control while Xspresso does the heavy lifting
+
+Phase 2 should only begin once Phase 1 is stable, launch-ready, and easy to use.

@@ -1,0 +1,12 @@
+Xspresso Phase 51 Acceptance Criteria
+
+- Users can create a campaign end-to-end from offer input to draft output.
+- Users can review, edit, approve, and regenerate individual sections without losing the rest of the campaign.
+- The dashboard clearly shows campaign status, alerts, credits, and monitored ads.
+- Monitoring flags underperforming ads and recommends the next best action before more credits are spent.
+- Platform switching warnings clearly explain what will happen to tracked ads, library items, and monitoring costs.
+- Billing, credits, and a la carte usage are easy to understand and visible to the user.
+- Templates, library items, and duplicated user-owned campaigns can be saved, restored, and reused safely.
+- Onboarding, help text, and tooltips are clear enough for a new user to get started quickly.
+- The product feels consistent with the core promise: done-for-you marketing, more responses, less software chaos, you stay in command.
+- Final QA confirms the core V1 flow is stable enough for release readiness.

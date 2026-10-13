@@ -1,0 +1,36 @@
+Xspresso Phase 61 — Acceptance Criteria
+
+This phase is complete when the following are true:
+
+1) Orchestration and workflow
+- Campaigns, leads, alerts, billing, templates, and reports work together without breaking the user flow.
+- Cross-campaign learning and trend detection are active and stable.
+- Recommendation loops provide useful next steps, not vague suggestions.
+
+2) Forecasting and intelligence
+- Forecasting and performance analysis are available and readable.
+- Multi-brand and multi-team intelligence remains consistent across workspaces.
+- Shared asset and template marketplace behavior is reliable.
+
+3) Dashboard and usability
+- The dashboard is clear and easy to scan.
+- Monitoring and alert information is understandable at a glance.
+- Users can see what needs attention and what to do next.
+
+4) Credits and usage
+- Credit intelligence is visible and understandable.
+- Usage guidance is clear enough to prevent confusion.
+- The system explains credits before users spend them.
+
+5) Onboarding and help
+- Onboarding is simple.
+- Help text, tooltips, and support copy are clean and useful.
+- New users can understand the flow without outside help.
+
+6) Release readiness
+- Core flows are stable.
+- Major bugs are resolved.
+- The product is ready for handoff, internal use, or the next build stage.
+
+Definition of done:
+Xspresso can guide users through campaign creation, monitoring, billing, templates, and reporting with clear feedback, stable behavior, and understandable next actions.

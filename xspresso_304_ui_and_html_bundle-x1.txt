@@ -1,0 +1,212 @@
+Xspresso UI and HTML Bundle
+
+Purpose
+This file contains the reusable UI and HTML building blocks for Xspresso. It is meant to stay clean, FrontPage-friendly, and easy to paste into the project without creating more tiny fragments.
+
+1) Reusable Hero Block
+
+<tr>
+  <td class="hero" style="padding:34px 28px; background:#ffffff;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="1" bgcolor="#ffffff" bordercolor="#d9d9d9" style="border-collapse:collapse;">
+      <tr>
+        <td width="100%" valign="top" style="padding:28px 24px;">
+          <div style="text-align:center; color:#c65a1e; font-size:14px; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:8px;">
+            Xspresso — Done for you marketing
+          </div>
+
+          <h1 style="margin:0; text-align:center; font-size:34px; line-height:1.15; color:#111111; font-weight:bold;">
+            Done-for-you marketing that gets responses.
+          </h1>
+
+          <div style="text-align:center; margin-top:10px; font-size:22px; line-height:1.3; color:#c65a1e; font-weight:bold;">
+            More responses. Less software chaos.
+          </div>
+
+          <div style="text-align:center; margin-top:12px; font-size:18px; line-height:1.4; color:#111111; font-weight:bold;">
+            Xspresso does the heavy lifting.
+          </div>
+
+          <div style="max-width:760px; margin:18px auto 0 auto;">
+            <ul style="margin:0; padding-left:24px; font-size:16px; line-height:1.6; color:#222222;">
+              <li>Turn a product photo, web page, or offer details into marketing fast.</li>
+              <li>Find matching products and competing offers.</li>
+              <li>Create ads, landing pages, carts, lead magnets, headlines, hooks, and campaign angles.</li>
+              <li>Adapt each ad to the platform it’s going to.</li>
+              <li>Watch ads, CPC, and stats.</li>
+              <li>Warn you when something is off.</li>
+              <li>Tell you what to do next.</li>
+            </ul>
+          </div>
+
+          <div style="text-align:center; margin-top:18px; font-size:18px; line-height:1.4; color:#111111; font-weight:bold;">
+            Wake up your marketing.
+          </div>
+
+          <div style="text-align:center; margin-top:6px; font-size:18px; line-height:1.4; color:#111111; font-weight:bold;">
+            You stay in command. We do the work.
+          </div>
+
+          <p style="text-align:center; margin-top:20px;">
+            <a href="#demo" class="btn2">Try the Demo</a>
+            &nbsp;&nbsp;
+            <a href="#pricing" class="btn">See Pricing</a>
+          </p>
+
+          <p class="note" style="text-align:center; color:#c65a1e; font-size:13px; margin-top:12px;">
+            No credit card required for the demo.
+          </p>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+2) Reusable Board Shell Header
+
+<tr>
+  <td class="topbar" style="padding:20px 28px; background:#ffffff;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+      <tr>
+        <td valign="middle" style="padding:0; white-space:nowrap;">
+          <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+            <tr>
+              <td valign="middle" style="padding:0 8px 0 0; white-space:nowrap;">
+                <img src="images/Xspresso_cup.gif" alt="Xspresso" border="0"
+                     style="display:block; width:70px; max-width:70px; height:auto;">
+              </td>
+              <td valign="middle" style="padding:0; white-space:nowrap;">
+                <img src="images/Xspresso_logo_txt.gif" alt="Xspresso" border="0"
+                     style="display:block; width:100%; max-width:560px; height:auto;">
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td align="right" style="width:1%; background:#ffffff;">
+          &nbsp;
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+3) Reusable Board Shell Business Card Panel
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; background:#ffffff; border:1px solid #dddddd;">
+  <tr>
+    <td style="padding:28px 24px; text-align:center;">
+      <div style="font-size:14px; letter-spacing:1px; text-transform:uppercase; color:#c65a1e; font-weight:bold; margin-bottom:8px;">
+        Xspresso — Done-for-you marketing
+      </div>
+      <div style="font-size:32px; line-height:1.15; font-weight:bold; color:#111111; margin-bottom:10px;">
+        Done-for-you marketing that gets responses.
+      </div>
+      <div style="font-size:20px; line-height:1.3; font-weight:bold; color:#c65a1e; margin-bottom:12px;">
+        More responses. Less software chaos.
+      </div>
+      <div style="font-size:16px; line-height:1.6; color:#333333; max-width:760px; margin:0 auto;">
+        Xspresso helps users create campaigns faster, monitor them smarter, and stay in command while the work gets done.
+      </div>
+      <p style="margin-top:18px;">
+        <a href="#demo" class="btn2">Try the Demo</a>
+        &nbsp;&nbsp;
+        <a href="#pricing" class="btn">See Pricing</a>
+      </p>
+    </td>
+  </tr>
+</table>
+
+4) Reusable Switch Platform Modal
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; font-family:Arial, Helvetica, sans-serif;">
+  <tr>
+    <td align="center" style="padding:20px 10px;">
+      <table width="980" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; background:#ffffff; border:1px solid #dddddd;">
+        <tr>
+          <td colspan="2" align="center" style="background:#111111; color:#ffffff; padding:18px; font-size:24px; font-weight:bold;">
+            Warning: switching off [Platform Name] will stop Xspresso from tracking your ads there.
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:18px 20px; font-size:16px; line-height:1.5; color:#222222;">
+            Choose which ads you want Xspresso to keep tracking, or choose the option that fits your ads best.
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 20px 20px 20px; font-size:15px; line-height:1.5; color:#222222;">
+            <div style="margin-bottom:10px;"><label><input type="checkbox"> Keep running all ads — I will track them myself</label></div>
+            <div style="margin-bottom:10px;"><label><input type="checkbox"> Delete all ads from [Platform Name] and move them to my library</label></div>
+            <div style="margin-bottom:10px;"><label><input type="checkbox"> Keep monitoring all ads on [Platform Name] for a usage cost</label></div>
+            <div style="margin-left:20px; margin-bottom:8px;"><label><input type="radio" name="monitor_term"> 5 credits per day</label></div>
+            <div style="margin-left:20px; margin-bottom:8px;"><label><input type="radio" name="monitor_term"> X credits per week</label></div>
+            <div style="margin-left:20px;"><label><input type="radio" name="monitor_term"> X credits per month</label></div>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="padding:0 20px 24px 20px;">
+            <input type="submit" value="Confirm Changes" style="background:#c65a1e; color:#ffffff; border:0; padding:12px 24px; font-size:16px; font-weight:bold; cursor:pointer;">
+            &nbsp;&nbsp;
+            <input type="button" value="Cancel" style="background:#dddddd; color:#222222; border:0; padding:12px 24px; font-size:16px; font-weight:bold; cursor:pointer;">
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+5) Reusable Dashboard Summary Block
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; background:#ffffff; border:1px solid #dddddd;">
+  <tr>
+    <td style="padding:24px;">
+      <div style="font-size:24px; font-weight:bold; color:#111111; margin-bottom:10px;">Welcome back</div>
+      <div style="font-size:16px; color:#444444; margin-bottom:18px;">Xspresso is keeping watch.</div>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+        <tr>
+          <td style="padding:12px; border:1px solid #dddddd;">Active Campaigns</td>
+          <td style="padding:12px; border:1px solid #dddddd;">Drafts</td>
+          <td style="padding:12px; border:1px solid #dddddd;">Alerts</td>
+          <td style="padding:12px; border:1px solid #dddddd;">Credits Remaining</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+6) Reusable CTA Button Styles
+
+Primary CTA:
+- Try the Demo
+
+Secondary CTA:
+- See Pricing
+
+Optional buttons:
+- Save Draft
+- Launch Now
+- Export
+- View Dashboard
+
+Button rule:
+- keep the primary action obvious
+- keep the secondary action lighter
+- do not overload the user with too many buttons
+
+7) Responsive Behavior Notes
+- Keep the white header background
+- Keep the cup left of the name/logo
+- Logo should shrink cleanly on smaller screens
+- Prevent wrap / stacking issues
+- Keep the board shell readable on mobile and tablet
+- Keep the footer minimal and supportive
+
+8) Core UI Message
+Use these lines consistently:
+- Xspresso — Done-for-you marketing
+- Done-for-you marketing that gets responses.
+- More responses. Less software chaos.
+- You stay in command. We do the work.
+
+9) Final UI Rule
+If a UI element makes the page feel crowded, remove it.
+If it helps the user understand what to do next, keep it.
+If it repeats the same message without adding value, cut it.

@@ -1,0 +1,21 @@
+Xspresso Phase 32 Scope
+
+This phase covers:
+- further refinement of autonomous orchestration across campaigns, leads, alerts, billing, templates, and reports
+- stronger cross-campaign learning and trend detection
+- more advanced recommendation loops
+- broader forecasting and performance analysis
+- multi-brand and multi-team intelligence improvements
+- shared assets and template marketplace refinement
+- improved workflow coordination and scheduling
+- tighter guardrails and user control
+- clearer credit intelligence and usage guidance
+- continued polish for dashboard, monitoring, alerts, and reporting
+
+Success criteria:
+- the system remains simple for the user
+- recommendations are useful and actionable
+- alerts are clear and timely
+- credits and usage remain easy to understand
+- multi-brand workflows remain organized
+- guardrails keep the product safe and controllable

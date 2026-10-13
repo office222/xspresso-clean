@@ -1,0 +1,20 @@
+Xspresso Phase 35 Scope
+
+This phase covers:
+- deeper orchestration and optimization across campaigns, leads, alerts, billing, templates, and reports
+- smarter cross-campaign learning and trend detection
+- stronger recommendation loops
+- broader forecasting and performance analysis
+- multi-brand and multi-team intelligence
+- shared asset and template marketplace refinement
+- improved workflow coordination
+- tighter guardrails and user control
+- clearer credit intelligence and usage guidance
+- continued refinement of dashboard, monitoring, and alerts
+
+Success criteria:
+- Xspresso keeps feeling faster, smarter, and easier to use
+- users always have a clear next action
+- recommendations remain helpful and not pushy
+- credit usage stays understandable and fair
+- the system continues to support done-for-you marketing while keeping users in command

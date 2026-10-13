@@ -1,0 +1,19 @@
+Xspresso batch 725-729 is ready.
+
+Included files:
+- xspresso_725_lead_followup_timeline_v8.js
+- xspresso_726_template_library_v9.js
+- xspresso_727_settings_store_v6.js
+- xspresso_728_activity_log_v4.js
+- xspresso_729_help_center_data_v9.js
+
+What this batch adds:
+- lead scoring and follow-up timelines
+- template save / restore / duplicate logic
+- settings defaults and update helpers
+- activity logging and usage summaries
+- help center topics and search
+
+Notes:
+- filenames are unique and Xspresso-only
+- this batch is safe to merge into the larger app build

@@ -1,0 +1,30 @@
+Xspresso Phase 61 Scope
+
+This phase continues final stabilization and handoff readiness for Xspresso.
+
+Covers:
+- deeper orchestration across campaigns, leads, alerts, billing, templates, and reports
+- smarter cross-campaign learning and trend detection
+- stronger recommendation loops
+- broader forecasting and performance analysis
+- multi-brand and multi-team workflow refinement
+- shared asset and template marketplace cleanup
+- dashboard clarity and usability polish
+- monitoring and alert reliability improvements
+- onboarding, help text, and tooltip cleanup
+- release hardening and handoff readiness
+
+Primary goals:
+- keep the product simple for users
+- keep the user in command
+- avoid feature clutter
+- make warnings, credits, and monitoring clearer
+- improve trust, visibility, and workflow smoothness
+
+Acceptance ideas:
+- campaigns create, edit, approve, launch, and monitor cleanly
+- alerts are understandable and actionable
+- credits and billing are easy to read
+- platform switching warnings are clear
+- templates, library, and reuse workflows are smooth
+- dashboard shows what matters at a glance

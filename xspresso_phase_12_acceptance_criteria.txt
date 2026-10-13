@@ -1,0 +1,55 @@
+Xspresso Phase 12 — Acceptance Criteria
+
+Purpose:
+Phase 12 is the final expansion layer for Xspresso. It should add deeper automation, stronger intelligence loops, richer recommendations, improved forecasting, and higher-level workflow orchestration — while preserving the core Xspresso promise:
+- done-for-you marketing
+- user stays in command
+- all tools included
+- credits determine fair usage
+- faster, simpler, more useful output
+
+Acceptance Criteria:
+1. Deeper Automation
+- The system can automate multi-step tasks without manual re-entry at every stage.
+- Users can approve, tweak, or reject automation suggestions.
+- Automation never overrides the user’s control.
+
+2. Stronger Intelligence Loops
+- The system learns from prior campaign performance, monitoring data, and user decisions.
+- Recommendations improve over time based on available campaign history.
+- The system can surface patterns across campaigns.
+
+3. Richer Recommendations
+- Xspresso can recommend next actions based on performance, credits, and campaign state.
+- Recommendations must be simple, clear, and actionable.
+- Every recommendation should suggest a next step, not just report a problem.
+
+4. Improved Forecasting
+- The system can estimate likely outcomes, usage, and plan fit using available campaign and credit data.
+- Forecasts should be presented as helpful guidance, not guarantees.
+- Forecast messages should be clearly labeled as estimates.
+
+5. Higher-Level Workflow Orchestration
+- Xspresso can coordinate multiple related workflow steps in sequence.
+- Users can start from a brief and move through generation, review, launch, monitoring, and improvement without rebuilding from scratch.
+- Workflow states remain visible and understandable.
+
+6. Safety and Guardrails
+- The user remains in control at all times.
+- No feature should silently do major actions without confirmation.
+- The system must preserve the "never copy" rule.
+- The system must continue to avoid bait-and-switch feature gating.
+
+7. Output Quality
+- Outputs must remain customer-focused, useful, and fast to review.
+- Copy should remain aligned with Xspresso voice:
+  - done-for-you
+  - fast
+  - simple
+  - more responses
+  - less software chaos
+  - you stay in command
+  - we do the work
+
+Definition of Done:
+Phase 12 is complete when all listed acceptance criteria are met and the expansion layer remains consistent with the core Xspresso product principles.

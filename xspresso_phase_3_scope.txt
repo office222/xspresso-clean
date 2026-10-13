@@ -1,0 +1,73 @@
+Xspresso Phase 3 Scope
+
+Purpose:
+Phase 3 focuses on making Xspresso more scalable, more controllable, and more polished for real-world use.
+
+Phase 3 goals:
+- Strengthen usage controls and billing clarity
+- Improve dashboard insights and reporting
+- Expand monitoring and alert options
+- Improve platform switching behavior
+- Add deeper library and reuse tools
+- Add stronger collaboration / admin controls if needed
+- Improve speed, stability, and UX polish
+
+Phase 3 feature areas:
+1. Usage and billing
+- clearer credit summaries
+- usage trend views
+- upgrade suggestions based on use
+- a la carte add-on management
+- renewal reminders
+
+2. Monitoring and alerts
+- better alert grouping
+- smarter recommendations
+- customizable thresholds
+- more detailed status summaries
+- better underperforming ad guidance
+
+3. Library and reuse
+- improved templates
+- better version browsing
+- duplicate from library
+- restore / archive controls
+- organize campaigns by tags and folders
+
+4. Dashboard improvements
+- richer KPI summaries
+- performance trend charts
+- quick actions for campaigns
+- recent activity and usage views
+
+5. Platform switching
+- clearer warnings
+- per-ad switch controls
+- clearer delete / move-to-library behavior
+- standard vs rush changes
+
+6. Stability and polish
+- fix edge cases
+- tighten UI spacing and layout
+- reduce confusing messages
+- improve mobile behavior
+- improve load speed and consistency
+
+Phase 3 guardrails:
+- keep the product simple
+- avoid unnecessary feature bloat
+- keep the user in command
+- keep all tools included for every plan
+- preserve the credits-based fairness model
+- never break the done-for-you promise
+
+Phase 3 success criteria:
+- users understand what they are paying for
+- users can track usage clearly
+- alerts help users improve campaigns faster
+- switching platforms is understandable and safe
+- the system feels more polished and reliable
+- the product remains easy to explain
+
+One-line summary:
+Phase 3 makes Xspresso more scalable, more transparent, and more polished without losing the simple done-for-you experience.

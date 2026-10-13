@@ -1,0 +1,46 @@
+Xspresso Phase 6 — Acceptance Criteria
+
+Purpose:
+Phase 6 is complete when advanced automation, smarter AI guidance, deeper reporting, team scale, higher-level integrations, and enterprise controls work reliably and align with Xspresso’s core promise.
+
+Acceptance Criteria:
+
+1) Advanced automation works
+- Users can define automation triggers and outcomes.
+- Automation rules execute without manual intervention.
+- Failed automations are logged clearly.
+
+2) Smarter AI guidance works
+- Xspresso can recommend next best actions based on campaign data.
+- Suggestions are relevant, concise, and actionable.
+- Guidance improves user decision-making without removing user control.
+
+3) Deeper reporting works
+- Users can view detailed campaign, lead, credit, and monitoring reports.
+- Reports are readable, useful, and exportable.
+- Reporting reflects current data accurately.
+
+4) Team scale works
+- Multiple users can collaborate without data conflicts.
+- Permissions are respected.
+- Shared assets and templates work as expected.
+
+5) Higher-level integrations work
+- External services can connect through approved integration paths.
+- Webhooks and sync events fire correctly.
+- Integration errors are surfaced clearly.
+
+6) Enterprise controls work
+- Admin-level controls can be configured safely.
+- Audit and activity history remain intact.
+- Safety and guardrails remain enforced.
+
+7) Product alignment remains intact
+- The product still feels fast, simple, and done-for-you.
+- Users still stay in command.
+- No feature should weaken the core promise of reducing waste, confusion, and software chaos.
+
+Definition of Done:
+- All Phase 6 features function as intended.
+- Core workflows remain stable.
+- The experience still supports the Xspresso promise: done-for-you marketing, more responses, less software chaos, and the user stays in command.

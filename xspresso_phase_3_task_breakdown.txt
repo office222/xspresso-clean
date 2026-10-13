@@ -1,0 +1,68 @@
+Xspresso Phase 3 Task Breakdown
+
+Purpose:
+Phase 3 focuses on billing, credits, monitoring polish, dashboard refinement, platform switching clarity, and overall stability.
+
+Phase 3 Tasks:
+1. Billing and Subscription Refinement
+- Confirm plan tiers
+- Confirm renewal timing
+- Confirm upgrade/downgrade behavior
+- Confirm pause/cancel/reactivate flows
+- Confirm renewal reminders
+
+2. Credit and Usage Controls
+- Finalize credit display across the app
+- Finalize credit consumption rules
+- Finalize a la carte pricing actions
+- Show credits used, remaining, and tied to monitoring
+- Add low-credit warnings
+
+3. Monitoring and Alert Polish
+- Refine underperforming ad alerts
+- Refine CPC and CTR warning thresholds
+- Improve recommendation text
+- Make monitoring messages short and actionable
+- Ensure every alert suggests a next step
+
+4. Platform Switching Improvements
+- Finalize switch warning modal
+- Show ad-by-ad decisions clearly
+- Confirm delete-to-library wording
+- Finalize daily / weekly / monthly monitoring options
+- Add rush vs standard handling
+
+5. Dashboard Improvements
+- Make campaign cards easier to scan
+- Show clear status badges
+- Show alerts and next actions at a glance
+- Show credits remaining and usage summary
+- Keep the dashboard simple and actionable
+
+6. Library and Reuse
+- Confirm save, duplicate, export, and import flows
+- Keep version history intact
+- Keep user-owned campaigns reusable
+- Ensure restore flows are clear
+
+7. Stability and Polish
+- Fix edge cases
+- Improve empty states
+- Improve error messages
+- Check accessibility and readability
+- Reduce clutter across the app
+
+Phase 3 Guardrails:
+- Keep all tools available on all plans
+- Credits determine usage, not access
+- Keep the user in command
+- Keep copy short, clear, and helpful
+- Always recommend a next action
+
+Success Criteria:
+- Billing feels simple and fair
+- Credit usage is visible and understandable
+- Monitoring alerts are useful and actionable
+- Platform switching is clear and controlled
+- Dashboard feels easy to scan
+- The product feels stable and ready for broader use

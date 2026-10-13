@@ -1,0 +1,64 @@
+Xspresso V1 — Automation Rules and Triggers
+
+Purpose:
+Define when Xspresso should act automatically so users get done-for-you marketing without losing control.
+
+Core principle:
+Xspresso should do the heavy lifting, but the user remains in command.
+
+1) Campaign generation triggers
+- Trigger when the user enters a product photo, URL, or offer details.
+- Trigger when the user selects a template or preset.
+- Trigger when the user asks Xspresso to regenerate a section.
+
+2) Monitoring triggers
+- Trigger a warning when CPC rises above the user’s threshold.
+- Trigger a warning when CTR drops below the user’s threshold.
+- Trigger an alert when conversions remain at zero after enough clicks.
+- Trigger a reminder when an ad is underperforming.
+- Trigger a reminder when monitored credits are being used on weak performance.
+
+3) Follow-up triggers
+- Add a lead to the follow-up sequence when an opt-in form is submitted.
+- Tag a lead when they open, click, reply, or purchase.
+- Move a lead into a stronger sequence when the score crosses a threshold.
+
+4) Platform switching triggers
+- Show a warning when the user switches away from a monitored platform.
+- Ask whether to keep monitoring, move ads to library, or leave them alone.
+- Start or stop monitoring charges based on the selected option.
+
+5) Regeneration triggers
+- Offer regeneration when an ad is underperforming.
+- Suggest a new title, hook, angle, CTA, or creative.
+- Let the user regenerate one section without changing the rest.
+
+6) Credit triggers
+- Deduct credits when an action is performed.
+- Deduct credits when monitoring continues by day, week, or month.
+- Show a warning when credits run low.
+- Suggest an upgrade when usage patterns indicate a better tier.
+
+7) Notification triggers
+- Send an alert when a campaign needs attention.
+- Send an alert when tracking is paused.
+- Send an alert when a monitored ad is no longer active.
+- Send an alert when the next best action is available.
+
+8) Automation guardrails
+- Never launch without a readiness check.
+- Never delete or move ads without confirmation.
+- Never spend credits silently.
+- Never copy other people’s campaigns.
+- Always let the user approve, tweak, or override.
+
+9) Friendly UI copy
+- Xspresso is watching.
+- Improve before spending more credits.
+- Regenerate this ad.
+- Keep monitoring.
+- You stay in command.
+- We do the work.
+
+10) Best one-line summary
+Xspresso should automate the repetitive parts of marketing while always giving the user a clear chance to approve, tweak, or stop the action.

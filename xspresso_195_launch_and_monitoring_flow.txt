@@ -1,0 +1,58 @@
+Xspresso V1 — Launch and Monitoring Flow
+
+1) Launch readiness
+- Confirm headline exists
+- Confirm ad copy exists
+- Confirm landing page exists
+- Confirm follow-up is enabled
+- Confirm platform version is selected
+- Confirm credits are available
+
+2) Launch action
+- User reviews the draft
+- User approves or tweaks sections
+- User confirms launch
+- Campaign moves to live status
+
+3) Post-launch monitoring
+- Track ad status
+- Track CPC
+- Track CTR
+- Track conversions
+- Track performance trends
+- Watch for alerts
+
+4) Alert behavior
+- If CPC rises, warn the user
+- If CTR drops, suggest a new title or hook
+- If conversions are zero after clicks, flag underperformance
+- If platform tracking stops, show a clear warning
+
+5) Underperforming ad flow
+- Detect weak performance
+- Show a warning message
+- Recommend a fix before more credits are spent
+- Offer regeneration of the ad with a new title, hook, or angle
+
+6) Credits / usage behavior
+- Monitoring may consume credits daily, weekly, or monthly
+- Keeping multiple ads watched should cost more than watching a single ad
+- The dashboard should show credits used and credits remaining
+
+7) Platform switch flow
+- Warn the user before switching platforms
+- Show which ads will stop tracking
+- Offer keep-running, move-to-library, or keep-monitoring choices
+- If monitoring continues, display the credit cost
+
+8) User-facing copy examples
+- "You’re ready to go live."
+- "Xspresso is watching your campaigns."
+- "This ad is underperforming. Improve it before spending more credits."
+- "Regenerate this ad with a new title, hook, or angle."
+- "Switching off [Platform Name] will stop Xspresso from tracking your ads there."
+
+9) Best product rule
+- Xspresso should guide the user from launch to monitoring without confusion.
+- Every warning should suggest the next best action.
+- Every monitored ad should have a clear status and a clear path to improvement.

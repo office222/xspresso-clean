@@ -1,0 +1,47 @@
+Xspresso Project Snapshot
+=========================
+
+Current core positioning:
+- Done-for-you marketing, fast.
+- Xspresso gets responses, builds lists, follows up automatically, and lets the user stay in command.
+- We do the work. You enjoy the benefits.
+
+V1 priorities:
+- Campaign creation from product photo, URL, or offer details
+- Research and competitive matching
+- Ad copy, headlines, hooks, landing pages, carts, lead magnets, and follow-up emails
+- Platform-specific adaptation
+- Monitoring dashboard with alerts
+- Credits and fair-usage model
+- Platform switch warnings and per-ad controls
+- Library, duplicate, export/import, and version history
+- Templates and presets
+- Launch flow with readiness checks
+- Billing / subscription / usage tracking
+
+Core rules:
+- All plans include every tool.
+- Credits simply determine fair usage.
+- If an ad underperforms, Xspresso should recommend a fix before more credits are spent.
+- When switching platforms, clearly warn the user and let them choose what happens to each ad.
+- Users can save, reuse, and duplicate their own campaigns.
+- No copying other people’s work.
+
+V2 candidates:
+- Sales letters
+- VSLs
+- Long-form funnels
+- Video production support
+- Deeper optimization
+- More automation and campaign cloning of the user’s own work
+
+Recommended next steps:
+1. Finalize the V1 product spec.
+2. Tighten the credits and a la carte menu.
+3. Finish the dashboard copy and alert copy.
+4. Polish onboarding and launch flow.
+5. Continue building the HTML lander when ready.
+
+Naming convention reminder:
+- Use numbered filenames for every new file to avoid collisions.
+- Example: xspresso_190_next_file_name.txt

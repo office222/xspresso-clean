@@ -1,0 +1,12 @@
+Xspresso Phase 49 Acceptance Criteria
+
+This phase is complete when:
+- Campaign creation and launch flows are stable and easy to use.
+- Monitoring and alert logic works reliably.
+- Billing and credit clarity are consistent and visible.
+- Template and library workflows are polished.
+- Dashboard views are clear and actionable.
+- Support and help text are clean and helpful.
+- Users can move through the product without confusion.
+- Guardrails prevent bad states and protect the user.
+- Core end-to-end Xspresso workflows behave as expected.

@@ -1,0 +1,57 @@
+Xspresso — Roadmap and Open Items
+
+Current direction:
+- Done-for-you marketing system
+- Fast, simple, all-in-one workflow
+- User stays in command while Xspresso does the heavy lifting
+- Credits determine fair usage
+
+Completed build areas:
+- Campaign generation
+- Ad monitoring and alerts
+- Lead capture and follow-up
+- Billing and credits
+- Platform switching rules
+- Library / reuse / duplication
+- Templates and presets
+- Dashboard and campaign cards
+- Notification system
+- Security and permissions
+- Integration planning
+- Test plan
+
+Open items to refine next:
+1. Video production flow
+   - turn campaigns into short videos and VSL assets
+   - define editable sections and export options
+
+2. Social upload workflow
+   - per-platform formatting and upload rules
+   - direct upload limits per plan
+   - one-click publish / schedule options
+
+3. Reporting and analytics
+   - trend charts
+   - campaign performance summaries
+   - credits used vs results gained
+
+4. AI assistant prompts
+   - smarter suggestions for headlines, hooks, and offers
+   - improved regeneration prompts for underperforming ads
+
+5. V2 feature candidates
+   - sales letters
+   - VSL scripts
+   - video production
+   - cloning of own campaigns only
+   - advanced automation and optimization
+
+Working principles:
+- Never copy someone else’s work
+- Allow users to use their own campaigns as templates
+- Always show clear warnings before actions that affect live ads
+- Recommend fixes before spending more credits on underperforming ads
+- Keep every plan useful by including every tool
+
+Next recommended build block:
+- Video production workflow

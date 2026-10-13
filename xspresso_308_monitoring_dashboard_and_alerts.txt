@@ -1,0 +1,109 @@
+Xspresso V1 — Monitoring Dashboard and Alerts
+
+Purpose:
+Give users a clear, calm place to see what is working, what needs attention, and what to do next.
+
+Dashboard sections:
+1. Top summary cards
+- Active campaigns
+- Drafts
+- Alerts
+- Credits remaining
+- Monitored ads
+- Platform connections
+- Recent activity
+
+2. Campaign cards
+Each campaign card should show:
+- Campaign name
+- Status
+- Platform
+- CPC
+- CTR
+- Conversions
+- Monitoring status
+- Alert count
+- Last updated
+
+3. Alerts feed
+Recent alerts should show:
+- title
+- message
+- severity
+- suggested action
+- timestamp
+
+Alert levels:
+- Info
+- Warning
+- Critical
+
+4. Suggested actions
+Every alert should recommend the next best step:
+- Review
+- Tweak headline
+- Change hook
+- Try new angle
+- Regenerate ad
+- Pause monitoring
+- Move to library
+- Keep watching
+
+5. Underperforming ad rule
+If an ad is underperforming, Xspresso should say so clearly and recommend improvement before more credits are spent.
+
+Recommended copy:
+- This ad is underperforming.
+- Improve it before spending more credits monitoring an ad that is not performing.
+- Xspresso can regenerate this ad with a new title, hook, or angle.
+
+6. CPC warning rule
+If CPC rises above the warning threshold:
+- alert the user
+- explain it simply
+- suggest a tweak
+
+Example copy:
+- CPC is rising.
+- This campaign may need a tweak.
+- Try a new title or hook.
+
+7. Credits visibility
+The dashboard should always show:
+- credits included
+- credits used
+- credits remaining
+- monitoring usage
+- renewal date
+
+8. Monitoring behavior
+After launch, Xspresso should continue to watch:
+- ad status
+- CPC
+- CTR
+- conversions
+- tracking interruptions
+- performance drops
+
+9. User control
+The user should be able to:
+- view
+- edit
+- pause
+- regenerate
+- export
+- move to library
+- keep monitoring
+
+10. Friendly helper text
+- Xspresso is keeping watch.
+- We’ll tell you when something changes.
+- You stay in command.
+- We do the work.
+
+11. Best product rule
+The monitoring dashboard should never feel confusing.
+It should always answer:
+- What is happening?
+- What needs attention?
+- What should I do next?

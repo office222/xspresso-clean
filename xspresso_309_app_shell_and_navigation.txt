@@ -1,0 +1,57 @@
+Xspresso App Shell and Navigation
+
+1) App Shell Structure
+- White top bar with the Xspresso cup + wordmark inline
+- Left navigation menu
+- Main content area
+- Right-side help/status panel
+- Optional thin footer/status strip
+
+2) Core Navigation Items
+- Dashboard
+- Create Campaign
+- Monitoring
+- Leads
+- Library
+- Templates
+- Credits
+- Billing
+- Settings
+- Help
+
+3) Navigation Rules
+- Keep the menu short and clear
+- Always show the user what is happening now, what needs attention, and what to do next
+- Use consistent labels across all screens
+- Keep the main action obvious on every page
+
+4) Dashboard Behavior
+- Show active campaigns
+- Show drafts
+- Show alerts
+- Show credits remaining
+- Show monitored ads
+- Show recent activity
+- Keep the dashboard readable at a glance
+
+5) Primary Action Rule
+- Every screen should have one obvious primary action
+- Examples: Create Campaign, Review Draft, Launch Now, Fix Underperforming Ad, Add Credits
+
+6) Screen Consistency
+- Use the same header, spacing, button style, and color language across the app
+- Keep orange as an accent, not the dominant background
+- Keep the overall feel premium, clean, and calm
+
+7) Helpful Copy
+- Xspresso keeps the work organized so you can stay in command.
+- You stay in command. We do the work.
+- Approve what you like. Tweak what you want. Launch when ready.
+
+8) Next App Block
+Recommended next file: Campaign Builder Screen
+- Offer input
+- Goal selection
+- Tone selection
+- Platform selection
+- Generate Draft button

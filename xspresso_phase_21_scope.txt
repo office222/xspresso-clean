@@ -1,0 +1,24 @@
+Xspresso Phase 21 Scope
+
+This phase is a continuation of the advanced orchestration layer and focuses on the next level of intelligence, scale, and usability.
+
+Focus areas:
+- deeper autonomous orchestration across campaigns, leads, alerts, billing, templates, and reports
+- smarter cross-campaign learning and trend detection
+- broader forecasting and recommendation loops
+- stronger multi-brand and multi-team intelligence
+- shared asset and template marketplace refinement
+- more advanced workflow coordination
+- tighter guardrails and user control
+- clearer credit intelligence and usage suggestions
+
+Primary outcome:
+Xspresso becomes even better at helping users move fast, stay in command, and avoid wasted effort while the system handles more of the repetitive work.
+
+Success criteria:
+- orchestration is more proactive and reliable
+- recommendations are more useful and timely
+- forecasting gives clearer direction
+- team and brand controls remain simple
+- guardrails continue to protect the user experience
+- the system still feels done-for-you, but user-controlled

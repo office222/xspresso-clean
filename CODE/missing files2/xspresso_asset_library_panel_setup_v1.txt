@@ -1,0 +1,9 @@
+Asset library setup
+
+1. Place these files beside the existing Xspresso source files; keep the filenames unchanged.
+2. Install/use the existing project package manifest (the runtime uses only Node built-ins beyond the existing Xspresso dependencies).
+3. Start with: node xspresso_meta_assets_runtime_v1.js
+4. Sign in, open a campaign, and paste its campaign ID into the Creative Assets panel. Upload PNG, JPEG, or WebP files.
+5. Assets are stored under the data directory in a private campaign-assets subfolder. Do not put that folder under the public web root.
+
+This upload path only stores and attaches creatives. It does not publish ads or activate spending. The included service tests are source files and have not been run here.

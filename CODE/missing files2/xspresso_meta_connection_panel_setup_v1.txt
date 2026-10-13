@@ -1,0 +1,17 @@
+XSPRESSO META CONNECTION PANEL — ASSEMBLY
+
+Use the uniquely named runtime:
+  node xspresso_meta_dashboard_runtime_v2.js
+
+Keep these dashboard files together in the project folder:
+  xspresso_dashboard_meta_connection_v1.html
+  xspresso_dashboard_v2.css
+  xspresso_dashboard_app_v3_1.js
+  xspresso_dashboard_api_client_v3.js
+  xspresso_meta_connection_panel_v1.js
+  xspresso_meta_connection_panel_v1.css
+  xspresso_static_meta_connection_v1.js
+
+The Meta OAuth API must already be configured in the server environment. The panel asks for the Meta ad account ID and its three-letter currency, starts the OAuth redirect, then checks connection status after returning. It never handles the Meta access token in browser code.
+
+This batch adds the dashboard control surface; it does not replace the Meta app setup, OAuth credentials, or callback URL configuration. Tests are included but have not been run.

@@ -1,0 +1,58 @@
+Xspresso V2 Feature Candidates
+
+Goal:
+Define the next layer of Xspresso after V1 is stable and shippable.
+
+Core V2 ideas:
+- Sales letters
+- VSL scripts
+- Long-form funnel copy
+- Video production support
+- Campaign cloning of the user’s own work
+- Deeper automation for funnels
+- Expanded monitoring and optimization
+- More advanced conversion assets
+
+Suggested V2 direction:
+1. Copy expansion
+   - Sales letter creation
+   - VSL creation
+   - Long-form page writing
+   - Bullet writing at scale
+
+2. Media expansion
+   - Script-to-video support
+   - Video ad production support
+   - Platform-specific video outputs
+
+3. Reuse and scaling
+   - Clone your own winning campaigns
+   - Duplicate your own pages, ads, and sequences
+   - Build variants faster from proven work
+
+4. Optimization expansion
+   - Smarter recommendations
+   - Better tracking summaries
+   - Deeper alert logic
+   - More advanced performance guidance
+
+5. Workflow expansion
+   - More templates and presets
+   - More automation options
+   - Larger campaign libraries
+   - More advanced export/import flows
+
+Important product rule:
+- Keep V2 as an upgrade path, not a distraction from V1.
+- V1 must stay focused on fast, done-for-you marketing.
+- V2 should deepen selling power and media production.
+
+Suggested V2 positioning:
+- Xspresso V1: build and launch faster
+- Xspresso V2: sell harder and scale further
+
+Open questions for later:
+- Should V2 be sold as a premium tier or separate add-on?
+- Should video production be native or integrated?
+- Should cloning be limited to user-owned campaigns only?
+- Should sales letters and VSLs be bundled together or sold separately?

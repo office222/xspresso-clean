@@ -1,0 +1,56 @@
+SLICZ QUICK INSTALL CHECKLIST
+
+1) Upload files
+- Put public files into public_html/
+- Put private files into slicz_private/
+- Keep config and helpers out of public_html/
+
+2) Set the core file paths
+- public_html/index.php
+- public_html/.htaccess
+- public_html/includes/header.php
+- public_html/includes/footer.php
+- public_html/assets/css/style.css
+- public_html/assets/js/app.js
+- slicz_private/config/app.php
+- slicz_private/config/db.php
+- slicz_private/schema.sql
+
+3) Install the database
+- Create the database
+- Import schema.sql
+- Update db.php with real DB credentials
+
+4) Check permissions
+- Folders: 755
+- Public files: 644
+- Private config files: 600
+- .htaccess: 644
+
+5) Test the main routes
+- /
+- /store
+- /product
+- /cart
+- /checkout
+- /login
+- /register
+- /vendor
+- /admin
+
+6) Confirm the app loads correctly
+- Logo displays
+- Header and footer display
+- Product pages load
+- Vendor dashboard loads
+- Admin dashboard loads
+
+7) Ignore duplicate batch files
+- Keep the canonical app files only
+- Ignore the repeated batch/download note files
+
+8) Final go-live
+- Recheck route links
+- Recheck image paths
+- Recheck private/public file placement
+- Launch

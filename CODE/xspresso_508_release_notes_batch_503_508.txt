@@ -1,0 +1,25 @@
+Xspresso Code Batch 503–508
+
+Included files:
+- xspresso_503_campaign_state_machine.js
+- xspresso_504_onboarding_flow.js
+- xspresso_505_alerts_center_v4.js
+- xspresso_506_dashboard_router_v2.js
+- xspresso_507_campaign_actions.js
+- xspresso_508_release_notes_batch_503_508.txt
+
+What this batch adds:
+- campaign lifecycle states
+- onboarding flow helpers
+- alerts / health evaluation
+- dashboard view routing
+- approve / regenerate / duplicate actions
+- batch release notes
+
+Recommended next batch:
+- credits / billing UI
+- template library helpers
+- platform switch modal
+- monitoring dashboard widgets
+- help center data
+- app shell CSS

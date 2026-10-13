@@ -1,0 +1,104 @@
+Xspresso V1 — Admin Console Flow
+
+Purpose:
+Give the user a simple place to manage campaigns, credits, monitoring, alerts, templates, billing, and platform settings without digging through complicated menus.
+
+Core admin sections:
+1. Dashboard
+2. Campaigns
+3. Monitoring
+4. Alerts
+5. Credits and usage
+6. Templates and library
+7. Billing and subscription
+8. Platform settings
+9. User settings
+10. Support and help
+
+Dashboard:
+- Show active campaigns
+- Show drafts
+- Show recent alerts
+- Show credits remaining
+- Show monitored ads
+- Show quick actions
+
+Campaigns:
+- View all campaigns
+- Filter by status: live, draft, paused, needs attention
+- Open campaign details
+- Edit campaign
+- Duplicate campaign
+- Regenerate campaign sections
+- Export campaign
+
+Monitoring:
+- View monitored ads
+- See CPC, CTR, conversions, and status
+- Sort by performance
+- Open underperforming ad alerts
+- Regenerate ad when needed
+- Pause or continue monitoring
+
+Alerts:
+- Show warnings and critical issues
+- Explain what happened
+- Suggest the next action
+- Let the user dismiss or resolve alerts
+
+Credits and usage:
+- Show total credits
+- Show credits used
+- Show credits remaining
+- Show what credits were spent on
+- Warn when credits are low
+- Suggest upgrade if usage is high
+
+Templates and library:
+- View saved templates
+- View saved campaigns
+- Duplicate own campaigns
+- Restore archived items
+- Save current campaign as template
+
+Billing and subscription:
+- Show current plan
+- Show renewal date
+- Show plan credits included
+- Show usage summary
+- Offer upgrade if it saves money
+- Pause, cancel, or reactivate
+
+Platform settings:
+- Choose supported platforms
+- Set platform monitoring defaults
+- Set switch behavior
+- Set upload behavior
+- Configure daily, weekly, and monthly monitoring options
+
+User settings:
+- Set tone
+- Set default goal
+- Set default platform
+- Set monitoring thresholds
+- Set alert preferences
+- Set credit thresholds for warnings
+
+Support and help:
+- Show quick help links
+- Show FAQ
+- Show onboarding tips
+- Show alert explanations
+- Show monitoring guidance
+- Show billing help
+
+Best product rule:
+The admin console should help the user stay in command, see what is happening, and take action fast.
+
+Friendly UI copy:
+- Stay in command
+- Xspresso is watching
+- Approve what you like
+- Tweak what you want
+- We do the work
+

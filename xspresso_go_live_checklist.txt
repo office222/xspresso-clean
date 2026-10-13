@@ -1,0 +1,66 @@
+Xspresso Go-Live Checklist
+
+Purpose:
+A final checklist to make sure the first public release of Xspresso is ready, consistent, and easy to launch.
+
+Checklist:
+1. Brand and messaging
+- Confirm the core promise is consistent everywhere.
+- Make sure the hero says done-for-you marketing clearly.
+- Keep the message focused on more responses, less software chaos, and the user staying in command.
+
+2. Product scope
+- Confirm V1 includes campaign creation.
+- Confirm V1 includes ad generation.
+- Confirm V1 includes landing pages, shopping cart, or lead capture.
+- Confirm V1 includes follow-up.
+- Confirm V1 includes monitoring and alerts.
+- Confirm V1 includes credits and usage rules.
+
+3. Dashboard and workflow
+- Confirm the dashboard shows active campaigns, alerts, credits remaining, and monitored ads.
+- Confirm campaign cards show performance and quick actions.
+- Confirm users can approve, edit, regenerate, and launch from one flow.
+
+4. Monitoring and alerts
+- Confirm underperforming ads trigger helpful alerts.
+- Confirm alerts recommend a next step.
+- Confirm platform switch warnings are clear.
+- Confirm monitoring costs are visible before confirmation.
+
+5. Billing and usage
+- Confirm all plans include every tool.
+- Confirm credits determine usage.
+- Confirm a la carte items are visible.
+- Confirm upgrade suggestions appear when usage makes it sensible.
+
+6. Lead capture and follow-up
+- Confirm leads are captured correctly.
+- Confirm follow-up sequences are connected to the right campaign.
+- Confirm lead scoring and list routing work as expected.
+
+7. Templates and library
+- Confirm users can save campaigns to the library.
+- Confirm users can duplicate their own work.
+- Confirm templates are easy to start from.
+- Confirm restore and version history work.
+
+8. Launch readiness
+- Confirm no required fields are missing.
+- Confirm preview screens render correctly.
+- Confirm launch confirmation is clear.
+- Confirm post-launch monitoring starts correctly.
+
+9. Support and safety
+- Confirm error messages are friendly and useful.
+- Confirm help text is in place.
+- Confirm privacy, consent, and original-use guardrails are clear.
+
+10. Final pass
+- Test on the primary browsers.
+- Test a small mobile view.
+- Test one full end-to-end campaign.
+- Fix anything that feels confusing, slow, or unfinished.
+
+Release Rule:
+If the product is clear, usable, and consistent with the core promise, it is ready to go live.

@@ -1,0 +1,687 @@
+XSPRESSO LOGIC / CODE BUNDLE
+=============================
+
+Purpose
+-------
+This file collects the core logic notes and code scaffolding for Xspresso V1.
+It is meant to pair with:
+- xspresso_300_consolidated_master_bundle.txt
+- xspresso_301_consolidated_master_bundle_addendum.txt
+- xspresso_302_consolidated_master_bundle_addendum_2.txt
+- xspresso_303_download_ready_master_bundle.txt
+- xspresso_304_ui_and_html_bundle.txt
+
+Core Product Message
+--------------------
+Xspresso is done-for-you marketing that gets responses, builds your list,
+follows up automatically, and lets you stay in command.
+
+We do the work. You enjoy the benefits.
+
+--------------------------------------------------------------------
+1) Core App Configuration
+--------------------------------------------------------------------
+
+const XSPRESSO_CONFIG = {
+  brandName: "Xspresso",
+  coreMessage: "Done-for-you marketing that gets responses.",
+  supportMessage: "You stay in command. We do the work.",
+  pricingMessage: "All plans include every tool. Credits determine usage.",
+  defaultTone: "simple",
+  defaultGoal: "sales",
+  defaultPlatform: "general"
+};
+
+--------------------------------------------------------------------
+2) Campaign Brief Builder
+--------------------------------------------------------------------
+
+function buildCampaignBrief(input) {
+  return {
+    productName: input.productName || "Untitled Offer",
+    productUrl: input.productUrl || "",
+    productImage: input.productImage || "",
+    offerDescription: input.offerDescription || "",
+    audience: input.audience || "general audience",
+    goal: input.goal || XSPRESSO_CONFIG.defaultGoal,
+    tone: input.tone || XSPRESSO_CONFIG.defaultTone,
+    platform: input.platform || XSPRESSO_CONFIG.defaultPlatform,
+    templateType: input.templateType || "basic",
+    notes: input.notes || ""
+  };
+}
+
+function validateBrief(brief) {
+  const missing = [];
+
+  if (!brief.productName) missing.push("productName");
+  if (!brief.offerDescription) missing.push("offerDescription");
+  if (!brief.audience) missing.push("audience");
+
+  return {
+    valid: missing.length === 0,
+    missing
+  };
+}
+
+function applySmartDefaults(brief) {
+  return {
+    ...brief,
+    headlineStyle: brief.goal === "leads" ? "curiosity" : "benefit",
+    callToAction: brief.goal === "sales" ? "Buy Now" : "Learn More",
+    followUpEnabled: true,
+    monitoringEnabled: true
+  };
+}
+
+--------------------------------------------------------------------
+3) Campaign Research and Generation
+--------------------------------------------------------------------
+
+function researchCampaign(brief) {
+  return {
+    matchingProducts: [],
+    competingOffers: [],
+    audienceSignals: [],
+    angleSuggestions: []
+  };
+}
+
+function generateCampaignCopy(brief, research) {
+  return {
+    headlines: [
+      "Done-for-you marketing that gets responses.",
+      "More responses. Less software chaos.",
+      "Wake up your marketing."
+    ],
+    hooks: [
+      "Turn one offer into a full campaign.",
+      "Let Xspresso do the heavy lifting.",
+      "Stay in command while the work gets done."
+    ],
+    adCopy: [
+      "Xspresso helps you turn an offer into ads, landing pages, and follow-up faster.",
+      "Done-for-you marketing that saves time and reduces software chaos."
+    ],
+    landingPage: {
+      headline: "Done-for-you marketing that gets responses.",
+      subheadline: "More responses. Less software chaos.",
+      body: "Turn your product details into a campaign you can launch faster."
+    },
+    shoppingCart: {
+      headline: "Simple checkout",
+      body: "Get the offer while it is available."
+    },
+    leadMagnet: {
+      headline: "Grab your free guide",
+      body: "Build trust and capture leads."
+    },
+    followUp: [
+      "Thanks for checking this out.",
+      "Here’s a quick reminder about the offer.",
+      "You may want to take another look before it’s gone."
+    ]
+  };
+}
+
+function adaptForPlatform(copy, platform) {
+  return {
+    platform,
+    headline: copy.headlines[0],
+    body: copy.adCopy[0],
+    format: platform === "TikTok" ? "vertical" : "square",
+    notes: `Adjusted for ${platform}`
+  };
+}
+
+function buildCampaign(data) {
+  const brief = applySmartDefaults(buildCampaignBrief(data));
+  const research = researchCampaign(brief);
+  const copy = generateCampaignCopy(brief, research);
+
+  const platformVersions = {};
+  (brief.platforms || []).forEach((platform) => {
+    platformVersions[platform] = adaptForPlatform(copy, platform);
+  });
+
+  return {
+    brief,
+    research,
+    copy,
+    platformVersions,
+    status: "draft",
+    createdAt: new Date().toISOString()
+  };
+}
+
+--------------------------------------------------------------------
+4) Section Approval / Regeneration
+--------------------------------------------------------------------
+
+function approveSection(campaign, sectionName) {
+  const approved = campaign.approvedSections || [];
+  if (!approved.includes(sectionName)) approved.push(sectionName);
+  return { ...campaign, approvedSections: approved };
+}
+
+function unapproveSection(campaign, sectionName) {
+  return {
+    ...campaign,
+    approvedSections: (campaign.approvedSections || []).filter(
+      (section) => section !== sectionName
+    )
+  };
+}
+
+function updateSection(campaign, sectionName, newValue) {
+  return {
+    ...campaign,
+    [sectionName]: newValue,
+    status: "draft",
+    updatedAt: new Date().toISOString()
+  };
+}
+
+function regenerateSection(campaign, sectionName, prompt = "") {
+  return {
+    ...campaign,
+    [sectionName]: `Regenerated ${sectionName} content`,
+    status: "draft",
+    lastRegeneratedSection: sectionName,
+    regenerationPrompt: prompt,
+    updatedAt: new Date().toISOString()
+  };
+}
+
+function regenerateAll(campaign) {
+  return {
+    ...campaign,
+    headline: "Done-for-you marketing that gets responses.",
+    subheadline: "More responses. Less software chaos.",
+    hooks: [],
+    ads: [],
+    landingPage: {},
+    shoppingCart: {},
+    leadMagnet: {},
+    followUpEmails: [],
+    platformVersions: {},
+    approvedSections: [],
+    status: "draft",
+    updatedAt: new Date().toISOString()
+  };
+}
+
+--------------------------------------------------------------------
+5) Launch Readiness and Launch Flow
+--------------------------------------------------------------------
+
+function checkLaunchReadiness(campaign) {
+  const missing = [];
+
+  if (!campaign.headline && !campaign.copy?.headlines?.length) missing.push("headline");
+  if (!campaign.adCopy && !campaign.ads?.length) missing.push("ad copy");
+  if (!campaign.landingPage && !campaign.copy?.landingPage) missing.push("landing page");
+  if (!campaign.platformVersions || Object.keys(campaign.platformVersions).length === 0) {
+    missing.push("platform version");
+  }
+
+  return {
+    ready: missing.length === 0,
+    missing
+  };
+}
+
+function launchCampaign(campaign) {
+  const readiness = checkLaunchReadiness(campaign);
+  if (!readiness.ready) {
+    return {
+      success: false,
+      message: "Campaign is not ready to launch.",
+      missing: readiness.missing
+    };
+  }
+
+  return {
+    success: true,
+    status: "live",
+    launchedAt: new Date().toISOString(),
+    message: "Campaign launched successfully."
+  };
+}
+
+--------------------------------------------------------------------
+6) Monitoring and Alerts
+--------------------------------------------------------------------
+
+const AlertLevel = {
+  INFO: "info",
+  WARNING: "warning",
+  CRITICAL: "critical"
+};
+
+function buildAlert({ campaignId, adId, title, message, level }) {
+  return {
+    id: `alt_${Date.now()}`,
+    campaignId,
+    adId,
+    title,
+    message,
+    level: level || AlertLevel.WARNING,
+    status: "open",
+    createdAt: new Date().toISOString()
+  };
+}
+
+function getAdHealth(ad) {
+  const poorCTR = ad.ctr < 0.8;
+  const highCPC = ad.cpc > 1.5;
+  const noConversions = ad.conversions === 0 && ad.clicks > 20;
+
+  if (noConversions || highCPC || poorCTR) {
+    return {
+      status: "underperforming",
+      message: "This ad is underperforming.",
+      recommendation: "Improve it before spending more credits monitoring an ad that is not performing."
+    };
+  }
+
+  return {
+    status: "healthy",
+    message: "This ad is performing acceptably.",
+    recommendation: "Keep monitoring."
+  };
+}
+
+function suggestAdFix(ad) {
+  const health = getAdHealth(ad);
+  if (health.status === "underperforming") {
+    return {
+      warning: health.message,
+      action: health.recommendation,
+      buttons: [
+        "Regenerate this ad",
+        "Rewrite the title",
+        "Test a new hook",
+        "Try a different angle",
+        "Change the CTA"
+      ]
+    };
+  }
+
+  return {
+    warning: "No immediate changes needed.",
+    action: "Keep monitoring.",
+    buttons: ["Keep watching", "Review later"]
+  };
+}
+
+function buildNotification(alert) {
+  let action = "Review this campaign.";
+  if (alert.title === "Underperforming ad") {
+    action = "Regenerate this ad with a new title, hook, or angle.";
+  }
+  if (alert.title === "CPC is rising") {
+    action = "Try a new headline or lower-cost angle.";
+  }
+
+  return {
+    title: alert.title,
+    message: alert.message,
+    action
+  };
+}
+
+function dismissAlert(alert) {
+  return {
+    ...alert,
+    status: "dismissed",
+    dismissedAt: new Date().toISOString()
+  };
+}
+
+function resolveAlert(alert) {
+  return {
+    ...alert,
+    status: "resolved",
+    resolvedAt: new Date().toISOString()
+  };
+}
+
+--------------------------------------------------------------------
+7) Credits, Pricing, Billing, and Usage
+--------------------------------------------------------------------
+
+const pricingPlans = {
+  starter: {
+    name: "Starter",
+    monthlyPrice: 29,
+    yearlyPrice: 24,
+    creditsIncluded: 500,
+    monitoredAds: 12,
+    socialPlatforms: 2
+  },
+  pro: {
+    name: "Pro",
+    monthlyPrice: 49,
+    yearlyPrice: 40,
+    creditsIncluded: 1500,
+    monitoredAds: 60,
+    socialPlatforms: 5
+  },
+  business: {
+    name: "Business",
+    monthlyPrice: 99,
+    yearlyPrice: 79,
+    creditsIncluded: 4000,
+    monitoredAds: 150,
+    socialPlatforms: 8
+  },
+  agency: {
+    name: "Agency",
+    monthlyPrice: 329,
+    yearlyPrice: 279,
+    creditsIncluded: 10000,
+    monitoredAds: 500,
+    socialPlatforms: 12
+  }
+};
+
+function createSubscription(userId, planName, billingCycle = "monthly") {
+  const plan = pricingPlans[planName];
+  if (!plan) return { success: false, message: "Invalid plan selected." };
+
+  return {
+    userId,
+    plan: planName,
+    billingCycle,
+    status: "active",
+    startedAt: new Date().toISOString(),
+    renewsAt: getRenewalDate(billingCycle),
+    creditsIncluded: plan.creditsIncluded,
+    creditsUsed: 0,
+    autoRenew: true
+  };
+}
+
+function getRenewalDate(billingCycle) {
+  const now = new Date();
+  if (billingCycle === "yearly") now.setFullYear(now.getFullYear() + 1);
+  else now.setMonth(now.getMonth() + 1);
+  return now.toISOString();
+}
+
+function updateSubscriptionUsage(subscription, creditsUsed) {
+  return {
+    ...subscription,
+    creditsUsed: subscription.creditsUsed + creditsUsed
+  };
+}
+
+function checkCreditWarning(subscription) {
+  const remaining = subscription.creditsIncluded - subscription.creditsUsed;
+  const threshold = subscription.creditsIncluded * 0.2;
+
+  if (remaining <= threshold) {
+    return {
+      warning: true,
+      message: `You have ${remaining} credits left this cycle.`
+    };
+  }
+
+  return {
+    warning: false,
+    message: "You are within your current credit usage."
+  };
+}
+
+function suggestPlanUpgrade(subscription, usageLog) {
+  const currentPlan = pricingPlans[subscription.plan];
+  const totalUsed = usageLog.reduce((sum, item) => sum + (item.creditsUsed || 0), 0);
+
+  if (totalUsed > currentPlan.creditsIncluded * 0.8) {
+    return {
+      shouldSuggest: true,
+      message: "Based on your usage, the next tier may save you money."
+    };
+  }
+
+  return {
+    shouldSuggest: false,
+    message: "You are within your current plan."
+  };
+}
+
+function pauseSubscription(subscription) {
+  return {
+    ...subscription,
+    status: "paused",
+    pausedAt: new Date().toISOString()
+  };
+}
+
+function cancelSubscription(subscription) {
+  return {
+    ...subscription,
+    status: "canceled",
+    canceledAt: new Date().toISOString(),
+    autoRenew: false
+  };
+}
+
+function reactivateSubscription(subscription) {
+  return {
+    ...subscription,
+    status: "active",
+    reactivatedAt: new Date().toISOString(),
+    autoRenew: true
+  };
+}
+
+--------------------------------------------------------------------
+8) Lead Capture and Follow-Up
+--------------------------------------------------------------------
+
+function buildFollowUpSequence(offer) {
+  return [
+    {
+      day: 0,
+      type: "welcome",
+      subject: "Thanks for checking this out",
+      body: "Here’s a quick introduction to the offer."
+    },
+    {
+      day: 1,
+      type: "reminder",
+      subject: "A quick reminder",
+      body: "You may want to take another look."
+    },
+    {
+      day: 3,
+      type: "benefit",
+      subject: "Why this may be worth a second look",
+      body: "Here’s a little more about the value."
+    },
+    {
+      day: 5,
+      type: "offer",
+      subject: "Don’t miss this",
+      body: "Here’s a special reason to act now."
+    }
+  ];
+}
+
+function updateLeadScore(lead, action) {
+  switch (action) {
+    case "opened_email":
+      lead.score += 5;
+      break;
+    case "clicked_link":
+      lead.score += 10;
+      break;
+    case "replied":
+      lead.score += 15;
+      break;
+    case "visited_offer":
+      lead.score += 12;
+      break;
+    case "purchased":
+      lead.score += 50;
+      lead.status = "customer";
+      break;
+    default:
+      break;
+  }
+
+  return lead;
+}
+
+function classifyLead(lead) {
+  if (lead.score >= 50) return "hot";
+  if (lead.score >= 20) return "warm";
+  if (lead.score > 0) return "cold";
+  return "new";
+}
+
+function routeLeadToList(lead) {
+  const group = classifyLead(lead);
+  switch (group) {
+    case "hot": return "hot-leads-list";
+    case "warm": return "warm-leads-list";
+    case "cold": return "cold-leads-list";
+    default: return "new-leads-list";
+  }
+}
+
+--------------------------------------------------------------------
+9) Library, Templates, and Reuse
+--------------------------------------------------------------------
+
+function duplicateCampaign(campaign, overrides = {}) {
+  return {
+    ...campaign,
+    id: `dup_${campaign.id}_${Date.now()}`,
+    name: overrides.name || `${campaign.name} Copy`,
+    productName: overrides.productName || campaign.productName,
+    productUrl: overrides.productUrl || campaign.productUrl,
+    productImage: overrides.productImage || campaign.productImage,
+    offerDescription: overrides.offerDescription || campaign.offerDescription,
+    updatedAt: new Date().toISOString()
+  };
+}
+
+function saveAsTemplate(campaign, templateName) {
+  return {
+    id: `tpl_${Date.now()}`,
+    name: templateName || `${campaign.name || "Untitled"} Template`,
+    category: campaign.category || "general",
+    description: "Saved from a user campaign.",
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+    data: { ...campaign }
+  };
+}
+
+function createCampaignFromTemplate(template, overrides = {}) {
+  return {
+    ...template.data,
+    ...overrides,
+    id: `cmp_${Date.now()}`,
+    name: overrides.name || template.name.replace(" Template", ""),
+    status: "draft",
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  };
+}
+
+--------------------------------------------------------------------
+10) Dashboard Helpers
+--------------------------------------------------------------------
+
+function buildCampaignSummary(campaign) {
+  return {
+    id: campaign.id,
+    name: campaign.name,
+    status: campaign.status,
+    platform: campaign.platform || "Multiple",
+    cpc: campaign.cpc || 0,
+    ctr: campaign.ctr || 0,
+    conversions: campaign.conversions || 0,
+    monitoringStatus: campaign.monitoringStatus || "active"
+  };
+}
+
+function buildDashboardOverview(user, campaigns, alerts) {
+  return {
+    userName: user.name || "Welcome back",
+    totalCampaigns: campaigns.length,
+    activeCampaigns: campaigns.filter((c) => c.status === "live").length,
+    drafts: campaigns.filter((c) => c.status === "draft").length,
+    alerts: alerts.length,
+    creditsRemaining: user.creditsRemaining || 0,
+    monitoredAds: campaigns.reduce((sum, c) => sum + (c.monitoredAds || 0), 0),
+    platformConnections: user.platformConnections || 0,
+    campaigns: campaigns.map(buildCampaignSummary),
+    recentAlerts: alerts.slice(0, 5)
+  };
+}
+
+--------------------------------------------------------------------
+11) Platform Switching Rules
+--------------------------------------------------------------------
+
+function buildPlatformSwitchWarning(platformName, adList) {
+  return {
+    title: `Warning: switching off ${platformName} will stop Xspresso from tracking your ads there.`,
+    message: `Choose which ads you want Xspresso to keep tracking, or choose the option that fits your ads best.`,
+    platform: platformName,
+    ads: adList,
+    options: [
+      "Keep running all ads — I will track them myself",
+      `Delete all ads from ${platformName} and move them to my library`,
+      `Keep monitoring all ads on ${platformName} for a usage cost`,
+      "I will monitor them myself"
+    ]
+  };
+}
+
+function getMonitoringCost(term, creditRate) {
+  if (term === "daily") return creditRate;
+  if (term === "weekly") return creditRate * 7;
+  if (term === "monthly") return creditRate * 30;
+  return 0;
+}
+
+--------------------------------------------------------------------
+12) Activity Logging / Usage History
+--------------------------------------------------------------------
+
+function logActivity({ userId, campaignId, type, title, message, creditsUsed = 0 }) {
+  return {
+    id: `act_${Date.now()}`,
+    userId,
+    campaignId,
+    type,
+    title,
+    message,
+    creditsUsed,
+    createdAt: new Date().toISOString()
+  };
+}
+
+function buildCreditSummary(activities, creditsIncluded) {
+  const totalUsed = activities.reduce((sum, a) => sum + (a.creditsUsed || 0), 0);
+  return {
+    creditsIncluded,
+    creditsUsed: totalUsed,
+    creditsRemaining: creditsIncluded - totalUsed
+  };
+}
+
+--------------------------------------------------------------------
+13) Final Product Message
+--------------------------------------------------------------------
+
+Xspresso is done-for-you marketing that gets responses, builds your list,
+ follows up automatically, and lets you stay in command.
+
+We do the work. You enjoy the benefits.

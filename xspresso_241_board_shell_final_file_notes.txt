@@ -1,0 +1,29 @@
+Xspresso Board Shell Final File Notes
+
+Purpose:
+- Keep the board shell clean, premium, responsive, and easy to use.
+- Keep the cup left of the name logo.
+- Keep the header background white.
+- Prevent the logo from stacking or wrapping awkwardly.
+- Keep the business card readable on smaller screens.
+- Keep the CTA buttons clear and action-focused.
+
+Layout rules:
+1. Use a white header background.
+2. Keep the cup icon and logo text in one inline row.
+3. Use responsive sizing so the logo shrinks smoothly.
+4. Avoid dark header backgrounds behind the logo.
+5. Use simple, readable typography and spacing.
+6. Keep CTA buttons visible and easy to tap.
+7. Keep footer content simple and minimal.
+
+Acceptance checks:
+- Cup stays left of the name on desktop and smaller screens.
+- Logo scales down instead of stacking.
+- Header remains white.
+- Business card stays readable.
+- CTAs remain visible and consistent.
+- The board shell feels polished and premium.
+
+Recommended next step:
+- Use this as the final reference file for the board shell assembly and polish pass.

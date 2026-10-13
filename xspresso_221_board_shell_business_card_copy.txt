@@ -1,0 +1,30 @@
+Xspresso Board Shell Business Card Copy
+
+Purpose:
+A short, clean business card block for the board shell that keeps the cup left of the name, stays readable as the page shrinks, and reinforces the core Xspresso message.
+
+Recommended copy:
+- Xspresso — Done-for-you marketing
+- Wake up your marketing.
+- More responses. Less software chaos.
+- You stay in command. We do the work.
+
+Short support line options:
+- Done-for-you marketing that gets responses.
+- More for less, so you can get your time back.
+- Build faster without the software chaos.
+
+Layout guidance:
+- Keep the cup image left of the name logo.
+- Use a white background behind the logo area.
+- Allow the logo to shrink cleanly on smaller screens.
+- Prevent the cup and name from stacking unless absolutely necessary.
+- Keep the copy short so the card feels premium and easy to scan.
+
+Button ideas:
+- Try the Demo
+- See Pricing
+- Learn More
+
+Best rule:
+Keep the business card simple, clean, and readable. It should feel like a polished summary of Xspresso, not a second hero section.

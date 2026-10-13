@@ -1,0 +1,45 @@
+Xspresso Board Shell Button States
+
+Purpose:
+Define the main CTA button styles and behavior for the board shell so the launch area feels clean, clear, and consistent.
+
+Primary buttons:
+- Try the Demo
+- See Pricing
+- Launch Campaign
+- Save Draft
+- Export
+- Duplicate
+
+Button rules:
+- Primary CTA should be the strongest visual element in the board shell.
+- Secondary CTA should remain visible but lighter.
+- Buttons should stay readable on white backgrounds.
+- Use the orange accent color for the main CTA.
+- Use dark text or white text only when contrast is strong.
+- Keep button labels short and action-focused.
+
+Button state behavior:
+- Default: visible and active.
+- Hover: slight color shift and subtle emphasis.
+- Disabled: muted and clearly unavailable.
+- Loading: show a simple "Working..." state.
+- Confirm actions: use strong but calm wording.
+
+Recommended button language:
+- Try the Demo
+- See Pricing
+- Launch Campaign
+- Save Draft
+- Export Campaign
+- Duplicate Campaign
+
+Best product rule:
+The board shell should always make the next step obvious without making the user feel pushed.
+
+Acceptance checks:
+- CTA buttons are easy to find.
+- Button labels are short and clear.
+- Primary and secondary actions are visually distinct.
+- Buttons stay readable on smaller screens.
+- The board shell still feels clean and premium.

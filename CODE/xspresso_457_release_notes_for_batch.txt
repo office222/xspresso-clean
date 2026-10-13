@@ -1,0 +1,19 @@
+Xspresso Batch Release Notes
+
+Included files:
+- xspresso_452_alerts_monitoring_widgets.js
+- xspresso_453_launch_readiness_panel.js
+- xspresso_454_activity_feed.js
+- xspresso_455_help_center.js
+- xspresso_456_settings_preferences.js
+
+This batch adds:
+- alerts and monitoring widgets
+- launch readiness checks
+- activity feed helpers
+- help center helpers
+- settings/preferences helpers
+
+Core reminder:
+Xspresso is done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.
+We do the work. You enjoy the benefits.

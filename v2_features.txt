@@ -1,0 +1,59 @@
+Xspresso V2 Features
+
+Purpose:
+Xspresso V2 expands the V1 done-for-you marketing system into deeper sales assets, more advanced reuse tools, and richer media creation.
+
+Core V2 Additions:
+- Sales letter generation
+- VSL script generation
+- Long-form funnel copy
+- Advanced bullet writing
+- Campaign cloning of the user's own work
+- Video production support
+- Stronger campaign optimization tools
+- Expanded automation and workflow controls
+
+Sales Letter Module:
+- Generate long-form sales pages
+- Create sections for headline, lead, proof, benefits, objections, and CTA
+- Support multiple tones and lengths
+- Allow section-by-section editing and regeneration
+
+VSL Module:
+- Convert an offer into a video script
+- Generate opening hooks, story sections, proof, offer presentation, and CTA
+- Produce short and long VSL versions
+- Support simple scene or slide prompts for video production
+
+Campaign Cloning / Reuse:
+- Duplicate the user's own winning campaigns
+- Reuse own landing pages, ads, and follow-up sequences
+- Preserve the original campaign while creating editable copies
+- Clearly prevent copying other people's work
+
+Video Production Support:
+- Turn campaign copy into video-ready scripts
+- Provide scene-by-scene outlines
+- Create platform-specific video versions
+- Support ad videos, VSLs, and short promotional clips
+
+Advanced Automation:
+- More campaign rules
+- More sophisticated follow-up branching
+- Better reuse of assets
+- Faster duplication of successful marketing systems
+
+V2 Positioning:
+Xspresso V1 = done-for-you marketing, fast.
+Xspresso V2 = deeper selling assets, video, and advanced reuse.
+
+Guiding Rule:
+V2 should still keep the same promise:
+- done-for-you
+- fast
+- simple
+- you stay in command
+- we do the work
+
+User-Facing Summary:
+Xspresso V2 helps users create bigger sales assets, stronger funnels, and video-ready marketing from the campaigns they already trust.

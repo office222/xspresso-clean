@@ -1,0 +1,14 @@
+Xspresso Phase 36 — Acceptance Criteria
+
+This phase is complete when:
+- Final orchestration polish works across campaigns, leads, alerts, billing, templates, and reports.
+- Cross-campaign learning is active and produces useful recommendations.
+- Recommendation loops are working and suggest the next best action.
+- Forecasting and performance analysis are visible in a usable way.
+- Multi-brand and multi-team intelligence works without confusion.
+- Template marketplace refinement behaves correctly.
+- Workflow coordination is stable.
+- Guardrails and user control are respected.
+- Credit intelligence and usage guidance are clear.
+- Dashboard, monitoring, alerts, and launch-flow polish feel consistent and usable.
+- The system remains aligned with the core promise: done-for-you marketing, fast, while the user stays in command.

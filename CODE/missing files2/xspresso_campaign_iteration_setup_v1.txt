@@ -1,0 +1,10 @@
+Xspresso feedback-to-revision workflow
+
+Files in this batch are uniquely named. Run the new version with:
+  node xspresso_campaign_iteration_runtime_v1.js
+
+The iteration endpoint creates a pending proposal; it does not overwrite the active draft or approve/publish anything. The user must explicitly apply the proposal. Applying saves a new draft version and clears approval, so it must be reviewed and approved again.
+
+The dashboard feedback panel is injected by the runtime. It uses the existing Xspresso session token and current version check.
+
+Set OPENAI_API_KEY and OPENAI_MODEL on the server. Set XSPRESSO_ITERATION_CREDIT_COST explicitly in production. Existing credit grants are managed by the local admin CLI. Tests are included but were not executed here.

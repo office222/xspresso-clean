@@ -1,0 +1,29 @@
+Xspresso Code Batch Notes
+=========================
+
+Files in this batch:
+- xspresso_419_ui_shell_components.js
+- xspresso_420_dashboard_cards.js
+- xspresso_421_help_support_panel.js
+- xspresso_422_lead_capture_detail.js
+- xspresso_423_template_save_restore.js
+- xspresso_424_billing_renewal_ui.js
+- xspresso_425_main_app_wiring.js
+
+What this batch adds:
+- app shell and top bar
+- dashboard summary cards
+- campaign cards
+- help/support panel
+- lead detail and follow-up timeline
+- template save/restore helpers
+- billing and renewal UI
+- basic app wiring
+
+Next good batch:
+- alerts / monitoring widgets
+- launch readiness screen
+- platform switch modal
+- campaign builder form
+- review/approve/regenerate panel
+- file registry helpers

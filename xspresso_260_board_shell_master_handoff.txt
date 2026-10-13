@@ -1,0 +1,37 @@
+XSPRESSO BOARD SHELL MASTER HANDOFF
+
+Purpose:
+Create a clean, premium, FrontPage-friendly board shell for Xspresso with the logo inline, the cup always left of the name, and the whole header able to shrink gracefully on smaller screens.
+
+Core rules:
+- Use Xspresso-only filenames.
+- Keep the top header background white.
+- Keep the cup logo to the left of the name logo.
+- Prevent stacking/wrapping whenever possible.
+- Let the logo shrink rather than overlap.
+- Keep the business card readable.
+- Keep the CTA buttons clear and simple.
+- Keep footer/support copy minimal.
+- Make the layout feel polished, simple, and premium.
+
+Responsive behavior:
+- On smaller screens, the logo should scale down instead of breaking layout.
+- The cup and name should stay inline as long as possible.
+- If space is tight, the whole header should compress cleanly instead of overlapping.
+
+Suggested board shell structure:
+1. White header with cup + name logo
+2. Hero / business card component
+3. CTA row
+4. Short support/footer area
+
+Acceptance checks:
+- The cup stays left of the name.
+- No logo overlap.
+- No ugly wrap/stack issues.
+- Buttons are easy to read.
+- The board shell looks clean at desktop and mobile widths.
+
+Reminder:
+This board shell should reflect the Xspresso promise:
+"Done-for-you marketing. You stay in command. We do the work."

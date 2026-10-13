@@ -1,0 +1,64 @@
+Xspresso — Performance Metrics and KPIs
+
+Purpose:
+Define the core numbers Xspresso should track so users can see what is working, what needs attention, and what to improve next.
+
+Primary KPIs:
+- Campaigns created
+- Campaigns launched
+- Active campaigns
+- Ads monitored
+- Ads underperforming
+- Alerts generated
+- Leads captured
+- Follow-up emails sent
+- Credits used
+- Credits remaining
+- Platform connections
+- Conversion results
+
+Campaign-level metrics:
+- Impressions
+- Clicks
+- CTR
+- CPC
+- Conversions
+- Conversion rate
+- Cost per lead
+- Cost per sale
+- Revenue per campaign
+- Return on ad spend (when available)
+
+Monitoring metrics:
+- Ad status
+- Tracking active or paused
+- Last checked time
+- Daily / weekly / monthly monitoring usage
+- Platform switch status
+- Alerts unresolved
+
+User-facing summary blocks:
+- What is working
+- What needs attention
+- What is underperforming
+- What to tweak next
+- What credits were used for
+- What was regenerated
+
+Suggested dashboard language:
+- Your campaigns are live.
+- Xspresso is keeping watch.
+- This ad may need a tweak.
+- This campaign is performing well.
+- Credits used this cycle.
+- You have X credits remaining.
+
+Rules:
+- Always show one next action.
+- Always keep the user in command.
+- Avoid overwhelming the user with too many numbers.
+- Favor clear summaries over raw data dumps.
+- If performance drops, recommend regeneration or a tweak before more credits are spent.
+
+One-line summary:
+Xspresso should track the few numbers that matter most and turn them into simple next steps.

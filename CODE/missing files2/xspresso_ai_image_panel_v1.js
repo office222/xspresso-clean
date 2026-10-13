@@ -1,0 +1,18 @@
+const TOKEN_KEY='xspresso_token';
+const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;};
+function token(){try{return sessionStorage.getItem(TOKEN_KEY)||'';}catch{return'';}}
+async function request(path,options={}){const headers=new Headers(options.headers||{});const t=token();if(t)headers.set('authorization',`Bearer ${t}`);const r=await fetch(path,{...options,headers});let body={};try{body=await r.json();}catch{}if(!r.ok)throw new Error(body.message||`Request failed (${r.status})`);return body;}
+function mount(){const root=document.getElementById('app');if(!root||document.getElementById('xspresso-ai-image-panel'))return;const target=root.querySelector('main')||root;
+ const panel=el('section','panel');panel.id='xspresso-ai-image-panel';panel.append(el('h2','','Generate an image concept'));
+ panel.append(el('p','muted','Generation is user-triggered. The result is saved as a campaign asset for review; it does not publish an ad.'));
+ const form=el('form','stack');const campaign=el('input','field');campaign.placeholder='Campaign ID';campaign.required=true;
+ const prompt=el('textarea','field');prompt.placeholder='Describe the visual, audience, mood, and product details…';prompt.rows=4;prompt.required=true;prompt.maxLength=5000;
+ const row=el('div','row');const size=el('select','field');for(const [v,t] of [['1024x1024','Square'],['1536x1024','Landscape'],['1024x1536','Portrait']]){const o=el('option','',t);o.value=v;size.append(o);}
+ const quality=el('select','field');for(const v of ['low','medium','high']){const o=el('option','',`Quality: ${v}`);o.value=v;quality.append(o);}
+ const format=el('select','field');for(const v of ['png','jpeg','webp']){const o=el('option','',`Format: ${v.toUpperCase()}`);o.value=v;format.append(o);}
+ const generate=el('button','button','Generate preview');generate.type='submit';row.append(size,quality,format,generate);form.append(campaign,prompt,row);const status=el('p','status','');const preview=el('div','asset-list');panel.append(form,status,preview);target.prepend(panel);
+ form.addEventListener('submit',async event=>{event.preventDefault();generate.disabled=true;status.textContent='Generating…';preview.replaceChildren();try{const result=await request(`/api/campaigns/${encodeURIComponent(campaign.value.trim())}/images/generate`,{method:'POST',headers:{'content-type':'application/json','idempotency-key':crypto.randomUUID()},body:JSON.stringify({prompt:prompt.value,size:size.value,quality:quality.value,background:'opaque',outputFormat:format.value})});const asset=result.asset;status.textContent='Preview saved to campaign assets. Review it before approving or publishing anything.';const image=el('img','asset-preview');image.alt=asset.fileName||'Generated campaign concept';const blob=await request(`/api/assets/${encodeURIComponent(asset.id)}`,{method:'GET'});/* JSON endpoint is not used for image bytes; fetch the private image with bearer. */const imageResponse=await fetch(`/api/assets/${encodeURIComponent(asset.id)}`,{headers:{authorization:`Bearer ${token()}`}});if(!imageResponse.ok)throw new Error('Could not load generated image preview.');image.src=URL.createObjectURL(await imageResponse.blob());preview.append(image);}catch(e){status.textContent=e.message;}finally{generate.disabled=false;}});
+}
+const observer=new MutationObserver(()=>mount());
+function start(){mount();const root=document.getElementById('app');if(root)observer.observe(root,{subtree:true,childList:true});}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();

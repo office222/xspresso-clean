@@ -1,0 +1,17 @@
+Xspresso code batch notes
+
+Files in this batch:
+- xspresso_687_campaign_builder_form_v6.js
+- xspresso_688_campaign_review_panel_v10.js
+- xspresso_689_launch_flow_v8.js
+- xspresso_690_billing_credits_panel_v8.js
+- xspresso_691_platform_switch_modal_v8.js
+- xspresso_692_main_app_wiring_v4.js
+
+This batch covers:
+- campaign brief building and validation
+- review / approve / regenerate flow
+- launch readiness and launch execution
+- credits and billing summary
+- platform switching and ad selection
+- main app wiring and state helpers

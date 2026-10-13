@@ -1,0 +1,84 @@
+Xspresso Platform Support Matrix
+
+Purpose:
+Track which platforms Xspresso supports, what each platform can do, and what limits apply.
+
+Suggested Fields:
+- Platform Name
+- Supported Actions
+- Upload Types
+- Monitoring Supported
+- Direct Upload Supported
+- Notes / Rules
+- Status (Planned / Beta / Live / Unsupported)
+
+Example Structure:
+
+Platform: TikTok
+- Supported Actions: ad upload, monitoring, alerts, platform switch warnings
+- Upload Types: image, short video, text caption
+- Monitoring Supported: Yes
+- Direct Upload Supported: Yes
+- Notes / Rules: vertical format preferred; warn on policy or size issues
+- Status: Live
+
+Platform: Facebook
+- Supported Actions: ad upload, monitoring, alerts, platform switch warnings
+- Upload Types: image, video, text caption
+- Monitoring Supported: Yes
+- Direct Upload Supported: Yes
+- Notes / Rules: square and landscape supported; keep copy clean
+- Status: Live
+
+Platform: Instagram
+- Supported Actions: ad upload, monitoring, alerts, platform switch warnings
+- Upload Types: image, story, reel
+- Monitoring Supported: Yes
+- Direct Upload Supported: Yes
+- Notes / Rules: visual-first; resize media as needed
+- Status: Live
+
+Platform: YouTube
+- Supported Actions: video upload, monitoring, alerts, platform switch warnings
+- Upload Types: long video, short video
+- Monitoring Supported: Yes
+- Direct Upload Supported: Yes
+- Notes / Rules: video production support needed; V2 candidate
+- Status: Planned
+
+Platform: LinkedIn
+- Supported Actions: ad upload, monitoring, alerts, platform switch warnings
+- Upload Types: image, text, document
+- Monitoring Supported: Yes
+- Direct Upload Supported: Yes
+- Notes / Rules: professional tone; B2B-friendly
+- Status: Planned
+
+Platform: Reddit
+- Supported Actions: post draft, monitoring, alerts
+- Upload Types: text, image
+- Monitoring Supported: Optional
+- Direct Upload Supported: Planned
+- Notes / Rules: community rules vary; careful wording required
+- Status: Planned
+
+Platform: X / Twitter
+- Supported Actions: post draft, monitoring, alerts
+- Upload Types: text, image, short video
+- Monitoring Supported: Optional
+- Direct Upload Supported: Planned
+- Notes / Rules: concise copy; short-form friendly
+- Status: Planned
+
+General Rules:
+- Every supported platform should have a visible status.
+- If a platform is not supported, show a friendly note.
+- If a platform needs special formatting, Xspresso should warn the user.
+- If a user switches platforms, explain monitoring and credit changes clearly.
+- If a platform is not listed, allow the user to request it.
+- No promises unless support is verified.
+
+Suggested User Copy:
+- Choose from the platforms Xspresso supports.
+- If your platform is not listed, tell Xspresso and we’ll see what we can do.
+- Support may be limited by platform rules, sizes, or upload requirements.

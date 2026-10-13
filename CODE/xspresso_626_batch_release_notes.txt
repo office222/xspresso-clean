@@ -1,0 +1,20 @@
+# Xspresso batch release notes
+
+## Included files
+- xspresso_621_campaign_builder_v3.js
+- xspresso_622_review_panel_v6.js
+- xspresso_623_launch_flow_v4.js
+- xspresso_624_alerts_center_v7.js
+- xspresso_625_main_app_init_v2.js
+
+## What this batch adds
+- campaign brief building and validation
+- review / approve / regenerate helpers
+- launch readiness and launch flow
+- alerts and ad health checks
+- main app initialization wiring
+
+## Notes
+- Designed to keep the V1 app flow simple.
+- Supports the "done-for-you" positioning.
+- Keeps the user in command while the app does the heavy lifting.

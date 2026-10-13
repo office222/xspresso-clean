@@ -1,0 +1,111 @@
+XSPRESSO FEATURE PRIORITY MATRIX
+
+Purpose:
+This file groups Xspresso features into build priorities so the product stays focused, shippable, and easy to expand.
+
+========================
+V1 — MUST HAVE
+========================
+1. Campaign creation
+- Product photo / URL / offer details input
+- Audience selection
+- Goal selection
+- Tone selection
+- Template selection
+
+2. Campaign output
+- Headlines
+- Hooks
+- Ad copy
+- Landing page copy
+- Shopping cart copy
+- Lead magnet copy
+- Follow-up emails
+- Platform-specific versions
+
+3. Review and approve
+- Edit sections
+- Regenerate sections
+- Approve sections
+- Save draft
+- Launch
+
+4. Monitoring
+- Ad status
+- CPC tracking
+- Basic performance stats
+- Alerts for underperformance
+- Suggested next action
+
+5. Lead capture and follow-up
+- Lead capture
+- Tagging
+- Lead scoring
+- Autoresponder / follow-up sequence
+
+6. Credits and billing
+- All tools included
+- Credits determine fair usage
+- A la carte usage
+- Upgrade suggestions
+
+========================
+V1 — SHOULD HAVE
+========================
+1. Campaign library
+- Save campaigns
+- Duplicate own campaigns
+- Restore templates
+- Export / import
+
+2. Dashboard
+- Campaign summary cards
+- Alerts feed
+- Credits summary
+- Monitoring summary
+
+3. Platform switching
+- Warning modal
+- Daily / weekly / monthly monitoring choices
+- Move-to-library option
+- Keep running option
+
+4. Performance improvement
+- Regenerate underperforming ads
+- Suggest new title / hook / angle
+- Warn before credits are wasted
+
+========================
+V2 — NICE TO HAVE
+========================
+1. Sales letters
+2. VSL scripts
+3. Long-form funnels
+4. Video production support
+5. Advanced campaign cloning of user-owned work
+6. Smarter optimization suggestions
+7. Expanded automation and team workflows
+
+========================
+CORE PRODUCT PRINCIPLES
+========================
+- Done-for-you first
+- Fast and simple
+- You stay in command
+- We do the work
+- More responses, less software chaos
+- No feature bait-and-switch
+- All plans include every tool
+- Credits determine usage
+- Never copy, only inspire and create original work
+
+========================
+NEXT BUILD FOCUS
+========================
+1. Finalize V1 scope
+2. Finish UI copy
+3. Clean up pricing and credits
+4. Tighten monitoring alerts
+5. Prepare V2 expansion notes
+
+End of file.

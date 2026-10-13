@@ -1,0 +1,13 @@
+Xspresso batch release notes
+
+This batch adds the following reusable pieces:
+- campaign actions helpers
+- dashboard card builders
+- notifications center helpers
+- platform switch modal logic
+- app shell CSS
+- release notes for the batch
+
+Naming rule:
+Use unique Xspresso-only filenames.
+Avoid fragmenting the project into tiny one-off files.

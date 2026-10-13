@@ -1,0 +1,72 @@
+Xspresso Release Packaging Notes
+
+Purpose:
+This file captures the current release packaging approach for Xspresso so the product can be organized cleanly for development, handoff, and future deployment.
+
+Release Goals:
+- Keep Xspresso V1 focused on done-for-you marketing.
+- Make the product easy to build, test, and maintain.
+- Keep all tools available across plans, with credits controlling fair usage.
+- Preserve the core user promise: the user stays in command while Xspresso does the work.
+
+Recommended Release Buckets:
+1. Product Logic
+- campaign generation
+- ad monitoring
+- credits engine
+- billing and subscriptions
+- lead capture and follow-up
+- platform switching rules
+- alerts and notifications
+
+2. UI and Frontend
+- hero section
+- campaign builder
+- dashboard
+- alerts center
+- platform switch modal
+- pricing table
+- founder story page
+- settings panel
+
+3. Documentation
+- README / master index
+- feature lists
+- release notes
+- setup notes
+- support / FAQ
+- QA checklist
+
+4. Assets
+- logo files
+- hero images
+- pricing graphics
+- UI icons
+- template thumbnails
+
+Suggested Release Names:
+- Xspresso V1 Core
+- Xspresso Builder Pack
+- Xspresso Monitoring Pack
+- Xspresso Launch Pack
+
+Packaging Principles:
+- Do not lock major features behind confusing tiers.
+- Use credits and usage limits instead of feature bait-and-switch.
+- Keep alerts helpful and actionable.
+- Keep platform switching warnings clear and personal.
+- Keep all campaign assets editable.
+- Allow users to approve, tweak, regenerate, and relaunch.
+
+Suggested Delivery Order:
+1. Core campaign builder
+2. Monitoring and alerts
+3. Credits and billing
+4. Dashboard and UI polish
+5. Templates and reuse
+6. Documentation and support
+7. Final release checklist
+
+Notes:
+- This file is meant to help package the project into a clean, shippable release.
+- Future versions can add sales letters, VSLs, cloning of user-owned campaigns, and video production support.

@@ -1,0 +1,20 @@
+Xspresso Phase 32 — Acceptance Criteria
+
+This file defines the acceptance criteria for Phase 32 of Xspresso.
+
+Phase 32 is complete when:
+- deeper orchestration across campaigns, leads, alerts, billing, templates, and reports is stable
+- smarter cross-campaign learning and trend detection are working
+- stronger recommendation loops are producing useful next-step guidance
+- broader forecasting and performance analysis is available
+- multi-brand and multi-team intelligence works cleanly
+- shared assets and template marketplace refinement is supported
+- improved workflow coordination is reliable
+- tighter guardrails and user control are enforced
+- clearer credit intelligence and usage guidance is visible to users
+- dashboard, monitoring, and alerts remain polished and usable
+
+Definition of done:
+- the Phase 32 workflow is consistent, testable, and ready for the next expansion layer
+- users can understand what Xspresso is doing, what it costs, and what to do next
+- Xspresso continues to feel done-for-you, fast, simple, and under user control

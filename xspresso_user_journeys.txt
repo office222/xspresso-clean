@@ -1,0 +1,76 @@
+Xspresso User Journeys
+
+1) First-time visitor
+- Sees the hero message: Done-for-you marketing.
+- Understands that Xspresso helps create campaigns fast.
+- Clicks Try the Demo or See Pricing.
+- Reads the feature blocks, founder story, and pricing.
+- Decides whether to start with a small plan.
+
+2) New user onboarding
+- User signs up and lands on the welcome screen.
+- Xspresso asks what the user wants to create: landing page, ad campaign, lead magnet, follow-up emails, or a full campaign.
+- User adds product details, URL, image, offer description, audience, goal, and tone.
+- Xspresso builds a campaign brief.
+- Xspresso generates the first draft.
+
+3) Campaign creation
+- User reviews the generated output.
+- Xspresso provides headlines, hooks, ads, landing page copy, cart copy, lead magnet copy, and follow-up emails.
+- User can edit, approve, or regenerate individual sections.
+- User can save versions and keep the original work safe.
+
+4) Platform adaptation
+- User selects one or more destination platforms.
+- Xspresso adapts the campaign for each platform.
+- Xspresso applies platform-specific formatting and content adjustments.
+- User chooses whether to upload, export, or save for later.
+
+5) Launch flow
+- Xspresso checks launch readiness.
+- Missing items are shown clearly.
+- User confirms the launch.
+- Campaign goes live.
+- Xspresso begins monitoring the ad or campaign.
+
+6) Monitoring and alerts
+- Xspresso tracks CPC, basic stats, ad status, and performance changes.
+- If something is off, Xspresso shows a clear alert.
+- Alerts suggest a next action such as a new title, hook, angle, or CTA.
+- Underperforming ads can be regenerated before more credits are used.
+
+7) Lead capture and follow-up
+- When a visitor converts, Xspresso captures the lead.
+- Lead data is tagged by campaign and source platform.
+- Xspresso scores leads based on engagement.
+- Leads are routed into the correct follow-up sequence.
+- Campaign-level autoresponder messages keep the conversation going.
+
+8) Platform switching
+- User switches active platforms.
+- Xspresso warns that monitoring on the old platform may stop.
+- User can keep ads running, move them to the library, or keep monitoring for a usage cost.
+- User can apply choices to all ads or choose ad by ad.
+
+9) Credits and usage
+- Every plan includes every tool.
+- Credits determine fair usage.
+- The user sees how credits were spent.
+- If the user is using more than expected, Xspresso can suggest an upgrade that may save money.
+- Extra usage can be purchased a la carte.
+
+10) Library and reuse
+- User saves campaigns, ads, landing pages, and sequences to the library.
+- User duplicates their own winning campaigns.
+- User exports and imports their own work.
+- User starts new campaigns from templates or presets.
+
+11) Return visit
+- User logs in and sees the dashboard.
+- Xspresso shows active campaigns, alerts, credits remaining, and monitored ads.
+- User checks what needs attention.
+- User improves, regenerates, or launches another campaign.
+
+Core journey summary
+- Input -> Brief -> Draft -> Review -> Launch -> Monitor -> Improve -> Reuse
+- Xspresso should help users move faster while staying in command.

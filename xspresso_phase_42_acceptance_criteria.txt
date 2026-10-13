@@ -1,0 +1,20 @@
+Xspresso Phase 42 Acceptance Criteria
+
+This phase is complete when the following are true:
+
+1. Deeper orchestration across campaigns, leads, alerts, billing, templates, and reports is functioning.
+2. Smarter cross-campaign learning and trend detection are active.
+3. Recommendation loops are producing useful next actions.
+4. Forecasting and performance analysis are available and readable.
+5. Multi-brand and multi-team intelligence is working as intended.
+6. Shared asset and template marketplace refinement is in place.
+7. Workflow coordination is working across major modules.
+8. Guardrails and user control remain clear and strong.
+9. Credit intelligence and usage guidance are visible and understandable.
+10. Dashboard, monitoring, alerts, and launch-flow polish are present.
+
+Definition of done:
+- Users can move through the system without confusion.
+- The product stays aligned with the done-for-you, user-in-command philosophy.
+- The system provides useful guidance, recommendations, and visibility.
+- The phase improves the product without adding unnecessary complexity.

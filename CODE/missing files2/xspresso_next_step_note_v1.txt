@@ -1,0 +1,18 @@
+Xspresso — next build step
+
+Project progress
+- Campaign drafting with OpenAI
+- Human review and approval
+- Meta read-only metrics and OAuth connection
+- CSV metrics import and monitoring
+- Campaign image upload and AI image generation
+
+Recommended next milestone: package the current application into a single, runnable project with a canonical manifest, a unique file inventory, and end-to-end validation. This avoids adding another disconnected feature while the project has accumulated many generated files and some duplicate names.
+
+Important status
+- The Meta connector is currently read-only.
+- Campaign publishing and budget changes are not enabled.
+- SMTP and Meta/OAuth configuration require server-side secrets.
+- Tests have been generated but not executed in this environment.
+
+When assembling the project, keep one package.json in the project root. Use the latest Xspresso-prefixed package manifest as its source, and do not copy older manifests over it.

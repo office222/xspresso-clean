@@ -1,0 +1,31 @@
+Xspresso Board Shell Final Notes
+
+Purpose:
+- Keep the cup image left of the name logo.
+- Keep the header background white.
+- Ensure the logo scales down cleanly on smaller screens.
+- Prevent the cup and name from stacking or overlapping.
+- Keep the layout FrontPage-friendly and simple to maintain.
+
+Recommended rules:
+1. Use a two-cell inline table for the logo.
+2. Put the cup in the first cell and the name image in the second cell.
+3. Use white-space:nowrap on the logo row to prevent wrapping.
+4. Use display:block on both images to remove spacing gaps.
+5. Use max-width and height:auto so the text logo can shrink safely.
+6. Keep the top bar background white, with orange used only as an accent.
+
+Responsive behavior:
+- On wider screens, the cup and logo should sit on the same line.
+- On narrow screens, the images should scale down instead of stacking.
+- If needed, use a smaller source image for the text logo rather than letting it stretch.
+
+Acceptance checks:
+- Cup stays left of the name.
+- No overlap when the browser is resized.
+- No dark background behind the logo.
+- The header remains clean and premium.
+- The board shell looks consistent with the rest of Xspresso.
+
+Next suggested step:
+- Create the final top bar and logo block as a reusable HTML component.

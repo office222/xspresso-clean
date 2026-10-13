@@ -1,0 +1,21 @@
+Xspresso Batch 491-496 Release Notes
+
+Files included:
+- xspresso_491_campaign_builder_core_v3.js
+- xspresso_492_review_panel_v3.js
+- xspresso_493_launch_flow_v3.js
+- xspresso_494_activity_log_v3.js
+- xspresso_495_templates_library_v3.js
+
+What this batch adds:
+- campaign brief building
+- smart defaults
+- review / approve / regenerate scaffolding
+- launch readiness and launch flow
+- activity history and credit summaries
+- template save / restore / duplicate helpers
+
+Notes:
+- These files are intentionally lightweight scaffolding.
+- They are designed to be wired into the app shell and dashboard next.
+- Keep future additions in numbered batches to avoid filename collisions.

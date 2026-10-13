@@ -1,0 +1,58 @@
+Xspresso Phase 4 Task Breakdown
+
+Purpose:
+Phase 4 expands Xspresso from a strong solo-user system into a more team-friendly and agency-ready platform.
+
+1) Team and Agency Workflows
+- Add team members to campaigns and workspaces.
+- Allow permission-based access for editing, approving, viewing, and billing.
+- Support shared libraries and shared templates.
+- Add role-based actions for owner, admin, editor, and viewer.
+
+2) Integrations
+- Plan for integrations with common marketing tools.
+- Support import/export to and from other systems.
+- Allow webhooks or sync points for campaign, lead, and alert updates.
+- Keep integrations optional so the core product stays simple.
+
+3) Advanced Reporting
+- Expand reporting beyond basic campaign stats.
+- Add performance summaries by campaign, platform, offer, and date range.
+- Show usage, monitoring, and credit trends.
+- Provide exportable reports for team review.
+
+4) More Automation
+- Add deeper automation rules for monitoring and follow-up.
+- Trigger actions when ads underperform or lead scores change.
+- Support scheduled tasks and saved workflows.
+- Allow automation templates that users can reuse.
+
+5) Template Expansion
+- Add more template categories for launches, lead magnets, sales letters, VSLs, and platform-specific campaigns.
+- Allow teams to save and share internal templates.
+- Add template versioning and template notes.
+
+6) Library Improvements
+- Improve search, tags, and filters in the library.
+- Support reusable blocks, saved ads, saved pages, and saved sequences.
+- Add restore, duplicate, archive, and favorite actions.
+- Make it easy to start from proven work.
+
+7) Productivity and Scale
+- Improve bulk actions for campaigns, ads, and leads.
+- Add stronger dashboard filtering.
+- Support higher-volume accounts and agencies.
+- Keep the workflow fast even as usage grows.
+
+8) Guardrails
+- Keep the same original-work rule: users can reuse their own work, not copy others.
+- Keep every feature editable and user-controlled.
+- Keep credits and usage transparent.
+- Keep the product done-for-you, but still in command.
+
+9) Success Criteria
+- Teams can collaborate safely.
+- Agencies can manage more clients and campaigns.
+- Reporting is clearer and more useful.
+- Automation reduces manual work without creating confusion.
+- The core Xspresso promise still holds: more responses, less software chaos, and users stay in command.

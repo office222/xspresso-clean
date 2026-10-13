@@ -1,0 +1,76 @@
+Xspresso V1 — Campaign Output Structure
+
+Purpose:
+Turn a brief into a complete editable campaign draft that can be reviewed, tweaked, approved, and launched.
+
+Core output object:
+- campaignId
+- status
+- generatedAt
+- headline
+- subheadline
+- hooks
+- ads
+- landingPage
+- shoppingCart
+- leadMagnet
+- followUpEmails
+- platformVersions
+- notes
+- editableSections
+
+Key deliverables:
+1. Headlines
+2. Subheadline
+3. Hooks
+4. Ad copy
+5. Landing page copy
+6. Shopping cart copy
+7. Lead magnet copy
+8. Follow-up emails
+9. Platform-specific versions
+10. Notes for review
+
+Campaign output flow:
+1. Build a campaign brief
+2. Research competitors and matching products
+3. Generate campaign copy
+4. Adapt copy for selected platforms
+5. Assemble the output object
+6. Mark editable sections
+7. Review and tweak
+8. Approve and launch
+
+Editable sections:
+- headline
+- subheadline
+- hooks
+- ads
+- landingPage
+- shoppingCart
+- leadMagnet
+- followUpEmails
+- platformVersions
+
+Review state:
+- Show the user the full draft
+- Let them edit one section without affecting the rest
+- Let them regenerate a single section
+- Let them regenerate everything if needed
+
+Launch-ready state:
+- All required sections exist
+- Platform versions selected
+- Follow-up enabled
+- Credits available
+- User approves the draft
+
+Friendly UI language:
+- Here’s your draft
+- Approve what you like
+- Tweak what you want
+- Regenerate any section
+- Launch when ready
+
+Best product rule:
+Xspresso should turn a brief into a complete, editable campaign draft that is easy to review and launch.

@@ -1,0 +1,77 @@
+Xspresso V1 — Support and Help Center
+
+This file covers the support/help layer for Xspresso.
+
+1) Core support goals
+- Help users get unstuck quickly.
+- Keep answers short, clear, and actionable.
+- Reduce confusion around credits, monitoring, alerts, and launches.
+- Keep the user in command while Xspresso does the heavy lifting.
+
+2) Suggested help topics
+- What Xspresso does
+- How credits work
+- How monitoring works
+- What happens when you switch platforms
+- How to regenerate an underperforming ad
+- How lead capture and follow-up work
+- How to duplicate your own campaigns
+- How to save and restore templates
+- How to export and import campaigns
+- How billing and renewal work
+
+3) In-app helper messages
+- "Need help? Start with your dashboard."
+- "Xspresso can regenerate this for you."
+- "Improve before spending more credits."
+- "You can always tweak this later."
+- "You stay in command."
+- "We do the work."
+
+4) Help article outline
+Each help article should include:
+- What this feature does
+- When to use it
+- What it costs in credits
+- What happens if you switch or pause it
+- Common mistakes
+- Recommended next step
+
+5) Support categories
+- Getting started
+- Campaign creation
+- Monitoring and alerts
+- Platform switching
+- Credits and usage
+- Billing and renewal
+- Templates and library
+- Export and import
+- Permissions and security
+- Troubleshooting
+
+6) Troubleshooting principles
+- Show the problem in plain language.
+- Explain what probably caused it.
+- Offer the next best action.
+- Keep the user from wasting credits on a bad state.
+- Avoid long, technical explanations unless needed.
+
+7) Friendly support tone
+- Clear
+- Calm
+- Helpful
+- No blame
+- No jargon overload
+- No feature bait-and-switch
+
+8) Example support copy
+- "This ad is underperforming. Try a new title or hook."
+- "Switching platforms will stop tracking on the old platform unless you choose a monitoring option."
+- "Your credits are running low. Consider upgrading if the next tier saves you money."
+- "You can duplicate your own campaigns to move faster next time."
+
+9) Best support rule
+Support should always help the user get back to a useful next step.
+
+10) Summary
+Xspresso's support/help system should be simple, short, and action-oriented so users can solve issues quickly and keep moving.

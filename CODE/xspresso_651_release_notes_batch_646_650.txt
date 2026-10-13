@@ -1,0 +1,22 @@
+Xspresso Batch 646-650 Release Notes
+
+Files included:
+- xspresso_646_dashboard_overview_v6.js
+- xspresso_647_monitoring_engine_v9.js
+- xspresso_648_alerts_center_v9.js
+- xspresso_649_lead_followup_v6.js
+- xspresso_650_help_center_v6.js
+
+What this batch adds:
+- dashboard summary helpers and primary action logic
+- ad performance evaluation and monitoring alerts
+- alerts center creation, evaluation, and resolution helpers
+- lead capture, scoring, classification, and follow-up sequence helpers
+- help center topics, article lookup, and search helpers
+
+Next suggested batch:
+- billing and credits UI
+- template library save/restore
+- platform switch modal
+- campaign builder form
+- review / approve / regenerate panel

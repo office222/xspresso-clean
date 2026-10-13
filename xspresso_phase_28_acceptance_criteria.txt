@@ -1,0 +1,16 @@
+Xspresso Phase 28 — Acceptance Criteria
+
+This phase is complete when:
+- The final refinement layer works smoothly
+- Deeper orchestration and optimization behave correctly
+- Cross-campaign learning improves recommendations
+- Recommendation loops are accurate and useful
+- Forecasting and trend analysis produce actionable summaries
+- Multi-brand and multi-team intelligence stays consistent
+- Shared asset and template marketplace refinement is functional
+- Guardrails and user control remain intact
+- Credit intelligence and usage guidance are clear
+- The system remains simple, stable, and aligned with the Xspresso promise
+
+Definition of done:
+Xspresso can coordinate campaigns, improve recommendations, and guide users clearly while staying fast, simple, and done-for-you.

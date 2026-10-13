@@ -1,0 +1,226 @@
+Xspresso Database Schema (V1)
+================================
+
+Purpose
+-------
+This file defines the core data entities needed for Xspresso V1.
+It supports campaign creation, monitoring, credits, billing, follow-up, templates, and library reuse.
+
+Core Tables
+-----------
+
+1) users
+--------
+- id (PK)
+- name
+- email
+- password_hash
+- plan
+- status
+- credits_included
+- credits_used
+- credits_remaining
+- platform_connections
+- created_at
+- updated_at
+
+2) subscriptions
+-----------------
+- id (PK)
+- user_id (FK -> users.id)
+- plan_name
+- billing_cycle (monthly/yearly)
+- status (active/paused/canceled/past_due)
+- auto_renew (boolean)
+- started_at
+- renews_at
+- created_at
+- updated_at
+
+3) campaigns
+------------
+- id (PK)
+- user_id (FK -> users.id)
+- name
+- product_name
+- product_url
+- product_image
+- offer_description
+- audience
+- goal
+- tone
+- status (draft/live/paused/needs_attention/underperforming)
+- platform_scope
+- launch_ready (boolean)
+- created_at
+- updated_at
+
+4) campaign_versions
+--------------------
+- id (PK)
+- campaign_id (FK -> campaigns.id)
+- version_number
+- note
+- snapshot_json
+- created_at
+
+5) ads
+------
+- id (PK)
+- campaign_id (FK -> campaigns.id)
+- platform_name
+- name
+- title
+- hook
+- body
+- cta
+- creative_type
+- cpc
+- ctr
+- impressions
+- clicks
+- conversions
+- status (running/paused/warning/underperforming)
+- monitoring_status (active/stopped)
+- created_at
+- updated_at
+
+6) monitored_ads
+----------------
+- id (PK)
+- user_id (FK -> users.id)
+- platform_name
+- ad_id (FK -> ads.id, nullable if platform-level monitoring)
+- monitoring_type (daily/weekly/monthly)
+- credits_per_term
+- active (boolean)
+- started_at
+- stopped_at
+- created_at
+- updated_at
+
+7) leads
+--------
+- id (PK)
+- user_id (FK -> users.id)
+- campaign_id (FK -> campaigns.id)
+- source_platform
+- name
+- email
+- phone
+- score
+- status (new/cold/warm/hot/customer)
+- tags_json
+- created_at
+- updated_at
+
+8) follow_up_sequences
+----------------------
+- id (PK)
+- campaign_id (FK -> campaigns.id)
+- name
+- enabled (boolean)
+- messages_json
+- created_at
+- updated_at
+
+9) alerts
+---------
+- id (PK)
+- user_id (FK -> users.id)
+- campaign_id (FK -> campaigns.id, nullable)
+- ad_id (FK -> ads.id, nullable)
+- title
+- message
+- level (info/warning/critical)
+- status (open/read/dismissed/resolved)
+- action_recommended
+- created_at
+- updated_at
+
+10) activities
+--------------
+- id (PK)
+- user_id (FK -> users.id)
+- campaign_id (FK -> campaigns.id, nullable)
+- type (generate/edit/monitor/alert/export/import/launch)
+- title
+- message
+- credits_used
+- created_at
+
+11) credits_ledger
+------------------
+- id (PK)
+- user_id (FK -> users.id)
+- campaign_id (FK -> campaigns.id, nullable)
+- item_type (landing_page/ad_batch/upload/monitoring/rush/etc)
+- item_name
+- credits_change (+/-)
+- reason
+- created_at
+
+12) templates
+-------------
+- id (PK)
+- user_id (FK -> users.id, nullable for system templates)
+- name
+- category
+- description
+- template_json
+- source_campaign_id (nullable)
+- created_at
+- updated_at
+
+13) library_items
+-----------------
+- id (PK)
+- user_id (FK -> users.id)
+- item_type (campaign/ad/page/sequence/template)
+- item_name
+- item_json
+- original_source_id (nullable)
+- status (saved/restored/archived)
+- created_at
+- updated_at
+
+14) settings
+------------
+- id (PK)
+- user_id (FK -> users.id)
+- tone
+- default_goal
+- default_platform
+- monitoring_enabled (boolean)
+- alert_thresholds_json
+- platform_defaults_json
+- created_at
+- updated_at
+
+15) integrations
+-----------------
+- id (PK)
+- user_id (FK -> users.id)
+- type (payment/social/email/analytics/storage)
+- provider_name
+- access_token_encrypted
+- refresh_token_encrypted
+- status (active/error/disconnected)
+- created_at
+- updated_at
+
+Relationship Notes
+------------------
+- A user can have many subscriptions, campaigns, ads, leads, alerts, activities, templates, and library items.
+- A campaign can have many ads, versions, leads, alerts, and follow-up sequences.
+- Ads can be monitored at ad-level or platform-level.
+- Credits should be deducted through the credits_ledger for full transparency.
+- campaign_versions should store snapshots so users can restore older work.
+
+Implementation Notes
+--------------------
+- Use UUIDs for primary keys if desired.
+- Keep JSON columns for flexible fields like messages_json, tags_json, and alert_thresholds_json.
+- Store encrypted tokens only in integrations.
+- Always write to credits_ledger when spending or restoring credits.
+- Keep alert/action_recommended short and clear for the dashboard.

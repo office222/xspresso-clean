@@ -1,0 +1,27 @@
+Xspresso Code Starter Pack
+
+Files included:
+- xspresso_400_index.html
+- xspresso_401_styles.css
+- xspresso_402_data_models.js
+- xspresso_403_campaign_builder.js
+- xspresso_404_monitoring_engine.js
+- xspresso_405_app.js
+
+What this set gives you:
+- a working app shell
+- a campaign builder screen
+- a review / regenerate flow
+- a monitoring dashboard
+- simple data models
+- a starter app script
+
+How to use:
+1. Put all files in the same folder.
+2. Open xspresso_400_index.html in a browser.
+3. Hook the files into your real backend later.
+4. Replace placeholder data with live data when ready.
+
+Main product reminder:
+Xspresso is done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.
+We do the work. You enjoy the benefits.

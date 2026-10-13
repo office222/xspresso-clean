@@ -1,0 +1,37 @@
+Xspresso Board Shell — Release Ready Notes
+
+Goal:
+Keep the board shell clean, premium, readable, and consistent with the Xspresso brand.
+
+Must-haves:
+- White header background
+- Cup logo stays left of the name logo
+- Logo scales down cleanly on smaller screens
+- No wrapping or stacking issues unless the screen is extremely narrow
+- Business card content stays readable
+- CTA buttons remain clear and easy to click
+- Footer remains simple and uncluttered
+
+Content focus:
+- Done-for-you marketing
+- You stay in command
+- We do the work
+- More responses
+- Less software chaos
+
+Layout reminders:
+- Use orange as an accent, not the dominant background
+- Keep spacing consistent between sections
+- Keep the hero clean and short
+- Keep action buttons near the main message
+- Avoid repeating the same message too many times
+
+Acceptance check:
+- Looks good on a wide screen
+- Still readable when the page shrinks
+- Logo remains inline
+- No duplicate filenames
+- FrontPage-friendly structure
+
+Next step:
+Create the final release bundle once the board shell is visually approved.

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Xspresso - Switch Platform Modal</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; background:#f4f4f4; color:#222; }
+    .modal-wrap { max-width: 980px; margin: 24px auto; background:#fff; border:1px solid #ddd; }
+    .modal-head { background:#111; color:#fff; padding:18px 22px; font-size:22px; font-weight:bold; }
+    .modal-body { padding:20px 22px; }
+    .warn { color:#c65a1e; font-weight:bold; }
+    .section { margin-top:18px; padding-top:14px; border-top:1px solid #e5e5e5; }
+    .section h3 { margin:0 0 10px 0; font-size:18px; color:#111; }
+    .small { font-size:13px; color:#666; line-height:1.5; }
+    .ad-list { width:100%; border-collapse:collapse; margin-top:10px; }
+    .ad-list td, .ad-list th { border:1px solid #ddd; padding:10px; vertical-align:top; }
+    .ad-list th { background:#f7f1e8; text-align:left; }
+    .actions label { display:block; margin:6px 0; }
+    .pill { display:inline-block; background:#f7f1e8; color:#111; padding:4px 8px; border-radius:999px; font-size:12px; font-weight:bold; }
+    .footer { padding:18px 22px 22px 22px; }
+    .btn { display:inline-block; background:#c65a1e; color:#fff; text-decoration:none; padding:12px 18px; font-weight:bold; border-radius:4px; }
+    .btn.secondary { background:#ddd; color:#222; }
+  </style>
+</head>
+<body>
+  <div class="modal-wrap">
+    <div class="modal-head">Warning: switching off [Platform Name] will stop Xspresso from tracking your ads there.</div>
+    <div class="modal-body">
+      <p class="warn">You can keep specific ads running, move them to your library, or keep monitoring them for a usage cost.</p>
+      <p>Choose what you want Xspresso to do with your ads on <strong>[Platform Name]</strong>.</p>
+
+      <div class="section">
+        <h3>All ads on [Platform Name]</h3>
+        <label><input type="radio" name="all_ads_action"> Keep running all ads — I will track them myself</label><br>
+        <label><input type="radio" name="all_ads_action"> Delete all ads from [Platform Name] and move them to my library</label><br>
+        <label><input type="radio" name="all_ads_action"> Keep monitoring all ads on [Platform Name] for a usage cost</label>
+        <div class="actions" style="margin-top:10px; padding-left:22px;">
+          <label><input type="radio" name="monitor_term"> 5 credits per day</label>
+          <label><input type="radio" name="monitor_term"> X credits per week</label>
+          <label><input type="radio" name="monitor_term"> X credits per month</label>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Choose specific ads</h3>
+        <p class="small">Select one or more ads below and choose an action for each ad.</p>
+        <table class="ad-list">
+          <tr>
+            <th width="35%">Ad Name</th>
+            <th>Action</th>
+          </tr>
+          <tr>
+            <td><label><input type="checkbox"> Jones Street Pub</label></td>
+            <td>
+              <label><input type="radio" name="jones_action"> Keep running</label><br>
+              <label><input type="radio" name="jones_action"> Delete from [Platform Name] and move to library</label><br>
+              <label><input type="radio" name="jones_action"> Keep Xspresso monitoring this ad</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label><input type="checkbox"> Light Touch Body Cream</label></td>
+            <td>
+              <label><input type="radio" name="lt_action"> Keep running</label><br>
+              <label><input type="radio" name="lt_action"> Delete from [Platform Name] and move to library</label><br>
+              <label><input type="radio" name="lt_action"> Keep Xspresso monitoring this ad</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label><input type="checkbox"> Tango Ad</label></td>
+            <td>
+              <label><input type="radio" name="tango_action"> Keep running</label><br>
+              <label><input type="radio" name="tango_action"> Delete from [Platform Name] and move to library</label><br>
+              <label><input type="radio" name="tango_action"> Keep Xspresso monitoring this ad</label>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="section">
+        <h3>Important note</h3>
+        <p class="small">
+          <span class="pill">Delete from [Platform Name] and move to library</span> means the ad will be removed from the platform and saved in your Xspresso library for later use or restore.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <a href="#" class="btn">Confirm Changes</a>
+      &nbsp;&nbsp;
+      <a href="#" class="btn secondary">Cancel</a>
+    </div>
+  </div>
+</body>
+</html>

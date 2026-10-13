@@ -1,0 +1,17 @@
+Xspresso Phase 25 — Acceptance Criteria
+
+This phase is complete when the system can:
+
+- Coordinate deeper autonomous campaign orchestration across campaigns, leads, alerts, billing, templates, and reports.
+- Learn from performance across campaigns and surface smarter recommendations.
+- Detect trends and generate clearer forecasting summaries.
+- Support stronger multi-brand and multi-team intelligence.
+- Improve workflow coordination without breaking the user’s control model.
+- Keep guardrails, permissions, and user approval intact.
+- Provide better credit intelligence and usage guidance.
+- Maintain a simple, understandable user experience even as automation expands.
+
+Definition of done:
+- The phase’s orchestration, intelligence, and workflow goals are demonstrably working.
+- The user still stays in command.
+- Xspresso continues to feel done-for-you, fast, and simple.

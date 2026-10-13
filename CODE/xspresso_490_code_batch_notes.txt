@@ -1,0 +1,17 @@
+Xspresso code batch notes
+
+Included files:
+- xspresso_484_campaign_api.js
+- xspresso_485_monitoring_dashboard.js
+- xspresso_486_notifications_center.js
+- xspresso_487_settings_store.js
+- xspresso_488_help_center_data.js
+- xspresso_489_app_init.js
+
+Purpose:
+- provide core campaign data helpers
+- build dashboard summaries and alerts
+- manage notifications
+- store user settings
+- supply help center data
+- wire app initialization

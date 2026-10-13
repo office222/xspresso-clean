@@ -1,0 +1,58 @@
+Xspresso — Post Launch Optimization
+
+Purpose:
+Help users improve campaigns after launch using monitoring data, alerts, and quick regeneration.
+
+Core Goals:
+- Watch campaign health after launch
+- Detect underperforming ads early
+- Recommend the next best action
+- Regenerate weak ads quickly
+- Help users spend credits wisely
+- Keep users in command while Xspresso handles the heavy lifting
+
+Post-Launch Workflow:
+1. Campaign goes live
+2. Xspresso monitors CPC, CTR, clicks, conversions, and alerts
+3. If performance is good, Xspresso keeps watching
+4. If performance drops, Xspresso suggests a tweak
+5. If performance is poor, Xspresso recommends regeneration
+6. User approves the change
+7. Xspresso updates the campaign or ad version
+
+Optimization Signals:
+- Rising CPC
+- Low CTR
+- Low conversions
+- Ad fatigue
+- Offer mismatch
+- Weak headline
+- Weak hook
+- Poor platform fit
+
+Recommended Actions:
+- Rewrite the title
+- Test a new hook
+- Try a different angle
+- Update the CTA
+- Change the creative
+- Regenerate the ad
+- Pause monitoring if needed
+- Move to library if the ad is no longer needed
+
+Friendly Product Copy:
+- Improve before spending more credits.
+- Xspresso can regenerate this ad.
+- This campaign may need a tweak.
+- Keep what works. Fix what doesn’t.
+- You stay in command. Xspresso does the work.
+
+Reporting:
+- Daily activity summary
+- Alerts by campaign
+- Credits used for monitoring
+- Suggestions for next actions
+- Best-performing versions saved in history
+
+Key Rule:
+If an ad is underperforming, do not keep paying to watch it without a recommendation. Xspresso should always suggest a better next step before more credits are used.

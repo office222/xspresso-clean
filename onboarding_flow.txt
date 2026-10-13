@@ -1,0 +1,94 @@
+Xspresso V1 — Onboarding Flow
+
+1) Welcome Screen
+Welcome to Xspresso.
+Done-for-you marketing, fast.
+
+Primary message:
+- Tell Xspresso what you sell.
+- Xspresso helps build the campaign.
+- You stay in command and approve what you like.
+
+2) Choose What You Want To Create
+User selects one:
+- Landing page
+- Ad campaign
+- Lead magnet
+- Follow-up emails
+- Full campaign
+- Improve an existing campaign
+
+3) Add Your Offer
+User provides any of the following:
+- Product name
+- Product photo
+- URL
+- Short description
+- Price
+- Audience
+- Platform destination
+
+Helpful note:
+The more you tell Xspresso, the better it can help.
+
+4) Choose Your Goal
+User selects one:
+- Get clicks
+- Get leads
+- Get sales
+- Build a list
+- Follow up automatically
+- Improve an existing campaign
+
+5) Choose Your Tone
+User selects one:
+- Direct
+- Friendly
+- Bold
+- Premium
+- Simple
+- Persuasive
+
+6) Build Draft
+Xspresso generates:
+- Headlines
+- Hooks
+- Ad copy
+- Landing page copy
+- Cart copy
+- Lead magnet copy
+- Follow-up emails
+- Platform-specific versions
+
+Key line:
+Xspresso does the heavy lifting. You stay in command.
+
+7) Review and Tweak
+User can:
+- Edit text
+- Regenerate a section
+- Swap tone
+- Shorten copy
+- Make it stronger
+- Make it simpler
+
+8) Launch
+Options:
+- Launch now
+- Save for later
+- Export
+- Duplicate
+- Send to social platform
+
+9) Monitor
+After launch, Xspresso watches:
+- Ad status
+- CPC
+- Stats
+- Performance drops
+- Alerts and warnings
+
+If something looks off, Xspresso alerts the user and suggests next steps.
+
+Best user-facing summary:
+Approve what you like. Tweak what you want. Launch when ready.

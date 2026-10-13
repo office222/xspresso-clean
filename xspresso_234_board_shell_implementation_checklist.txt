@@ -1,0 +1,28 @@
+Xspresso Board Shell Implementation Checklist
+
+Purpose:
+A quick checklist to help finalize the board shell and keep the header, business card, CTA, footer, and responsive behavior consistent.
+
+Checklist:
+- Keep the cup logo left of the Xspresso name.
+- Use a white header background.
+- Make sure the logo shrinks cleanly on smaller screens.
+- Prevent the logo from stacking or wrapping awkwardly.
+- Keep the business card component readable and balanced.
+- Keep the main message short and premium.
+- Use CTA buttons with clear hierarchy.
+- Keep the primary CTA more prominent than the secondary CTA.
+- Keep footer support links simple and useful.
+- Keep all copy aligned with the core promise: done-for-you marketing, fast.
+- Maintain the voice: more responses, less software chaos, you stay in command.
+- Confirm the layout still looks good in FrontPage-style editing.
+
+Acceptance checks:
+- Header stays inline.
+- Card remains readable.
+- Buttons are easy to scan.
+- Footer does not feel crowded.
+- Page feels polished, simple, and premium.
+
+Next recommended step:
+Build the final reusable board shell component from these notes.

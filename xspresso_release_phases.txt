@@ -1,0 +1,41 @@
+Xspresso Release Phases
+
+Phase 1: Core Build
+- Campaign brief input
+- Campaign generation
+- Edit / approve / regenerate flow
+- Launch flow
+- Dashboard overview
+- Credits and usage model
+- Basic monitoring and alerts
+
+Phase 2: Workflow Hardening
+- Platform switch modal
+- Underperforming ad recommendations
+- Lead capture and follow-up
+- Campaign library and duplication
+- Version history and restore
+- Export / import / share
+
+Phase 3: Billing and Control
+- Plan selection
+- Renewal reminders
+- Credit warnings
+- Upgrade suggestions
+- A la carte usage controls
+- Activity history and reporting
+
+Phase 4: Expansion
+- Additional templates and presets
+- Better automation rules
+- More platform support
+- More detailed insights
+- V2 features such as sales letters and VSL support
+
+Release Principles
+- All plans include every tool
+- Credits determine fair usage
+- User stays in command
+- Done-for-you, but editable
+- Recommend improvements before spending more credits on poor-performing ads
+- Never copy; always create original work inspired by strategy

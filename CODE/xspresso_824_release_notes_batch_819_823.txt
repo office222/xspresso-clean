@@ -1,0 +1,19 @@
+Xspresso batch 819-823
+
+Included files:
+- xspresso_819_main_app_bootstrap_v4.js
+- xspresso_820_dashboard_overview_v12.js
+- xspresso_821_monitoring_alerts_panel_v4.js
+- xspresso_822_lead_followup_screen_v8.js
+- xspresso_823_help_center_panel_v12.js
+
+What this batch covers:
+- app bootstrap and initial wiring
+- dashboard overview summaries
+- monitoring and alerts panel
+- lead capture and follow-up screen
+- help center panel
+
+Build note:
+Keep the app clean, readable, and centered on the core promise:
+Done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.

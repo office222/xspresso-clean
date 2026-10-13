@@ -1,0 +1,11 @@
+Xspresso Phase 22 — Acceptance Criteria
+
+1) Deeper autonomous orchestration works across campaigns, leads, alerts, billing, templates, and reports.
+2) Cross-campaign learning improves recommendations over time.
+3) Recommendation loops produce clearer, more useful next steps.
+4) Multi-brand / multi-team intelligence works without breaking user control.
+5) Workflow coordination remains consistent across the core modules.
+6) Credit intelligence gives accurate usage guidance and upgrade suggestions.
+7) Guardrails and user control remain intact.
+8) The system stays understandable, editable, and simple to use.
+9) Phase 22 is considered complete when the above areas work together reliably and the user can launch, monitor, improve, and manage campaigns with less manual effort.

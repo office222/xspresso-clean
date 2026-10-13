@@ -1,0 +1,43 @@
+Xspresso Phase 21 — Acceptance Criteria
+
+This file defines the acceptance criteria for the next major stage of Xspresso.
+
+1) Autonomous orchestration
+- The system can coordinate campaigns, leads, alerts, billing, templates, and reports with less manual intervention.
+- Workflow steps are connected cleanly across modules.
+
+2) Cross-campaign learning
+- The system can use performance from one campaign to inform suggestions on another.
+- Recommendations should be consistent and explainable.
+
+3) Recommendation loops
+- The system should suggest the next best action when performance changes.
+- Suggestions should be clear, actionable, and user-friendly.
+
+4) Forecasting and trend analysis
+- The system should surface trends over time.
+- Forecast summaries should be understandable at a glance.
+
+5) Multi-brand intelligence
+- The system should support smarter management across multiple brands, campaigns, or workspaces.
+- Separate workspaces should stay organized and distinct.
+
+6) Shared assets and template intelligence
+- Reusable templates and assets should remain easy to find and apply.
+- Shared components should not break the user’s flow.
+
+7) Team and agency controls
+- Team permissions should remain enforced.
+- Shared work should still respect user roles and access limits.
+
+8) Guardrails and user control
+- The user must remain in command.
+- Regeneration, approval, and launch actions must remain explicit.
+- The system must not act silently on major decisions.
+
+9) Credit intelligence
+- Usage suggestions should be clear when credits are being consumed heavily.
+- The system should surface cost-saving suggestions when appropriate.
+
+10) Definition of done
+- The phase is complete when orchestration, learning, recommendations, forecasting, and user control all work together without making the product confusing or unstable.

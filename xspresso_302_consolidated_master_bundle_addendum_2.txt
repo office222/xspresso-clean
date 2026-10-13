@@ -1,0 +1,79 @@
+Xspresso Consolidated Master Bundle Addendum 2
+
+66) Final UI Cleanup Rule
+The Xspresso UI should stay clean, premium, and simple.
+
+Keep the interface focused on:
+- clear navigation
+- a readable dashboard
+- obvious CTA buttons
+- easy campaign review
+- simple alerts
+- visible credit usage
+- no clutter
+
+UI rule:
+- if a control does not help the user move forward, remove it or move it deeper
+- keep the important actions obvious
+- keep the language short and friendly
+
+67) Release Packaging Summary
+The current Xspresso release should package the product around the core promise:
+
+Xspresso is done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.
+
+We do the work. You enjoy the benefits.
+
+The release should include:
+- campaign builder
+- campaign generation
+- review / approve / regenerate flow
+- launch flow
+- monitoring and alerts
+- lead capture and follow-up
+- credits and billing
+- library / templates / reuse
+- security / support / integrations
+- board shell / dashboard shell
+
+68) Final Dashboard Rule
+The dashboard should tell the user three things immediately:
+- what is working
+- what needs attention
+- what to do next
+
+Dashboard rule:
+- show status at a glance
+- keep cards readable
+- keep alerts short
+- keep the next action visible
+
+69) Final File Organization Rule
+The project should now be maintained with a small number of master files.
+
+Recommended working set:
+- xspresso_300_consolidated_master_bundle.txt
+- xspresso_301_consolidated_master_bundle_addendum.txt
+- xspresso_302_consolidated_master_bundle_addendum_2.txt
+- one copy file
+- one UI/HTML file
+- one logic/spec file
+
+Rule:
+- no tiny one-off files unless absolutely necessary
+- if it matters, add it to the master bundle
+- if it is only a note, keep it inside the bundle
+
+70) Final Build Reminder
+Before adding anything new, ask:
+- does this improve the core user flow?
+- does this support done-for-you marketing?
+- does this reduce confusion?
+- does this help the user stay in command?
+
+If the answer is no, save it for later.
+
+Final product message:
+Xspresso is done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.
+
+We do the work. You enjoy the benefits.

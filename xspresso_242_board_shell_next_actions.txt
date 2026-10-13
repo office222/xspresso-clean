@@ -1,0 +1,23 @@
+Xspresso Board Shell — Next Actions
+
+This file captures the next build steps for the board shell and related UI cleanup.
+
+Key points:
+- Keep the cup left of the name logo.
+- Keep the top header background white.
+- Make the logo shrink cleanly on smaller screens.
+- Prevent the logo from stacking or wrapping awkwardly.
+- Keep the business card readable and premium.
+- Keep the CTA buttons clear and action-focused.
+- Keep the footer simple and supportive.
+- Keep all filenames Xspresso-only and uniquely numbered.
+
+Recommended next step:
+- Finalize the reusable HTML for the board shell header and business card component.
+
+Acceptance checks:
+- Logo remains inline.
+- White header background stays clean.
+- Small screens do not break the layout.
+- Buttons remain visible and easy to tap.
+- Overall look stays polished and simple.

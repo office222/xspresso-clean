@@ -1,0 +1,58 @@
+Xspresso Phase 7 Acceptance Criteria
+
+This file defines the minimum acceptable outcome for Phase 7.
+
+Phase 7 includes:
+- Multi-brand management
+- Advanced team workspaces
+- Shared asset libraries
+- Deeper analytics and forecasting
+- Workflow automation expansion
+- Integrations and scheduled summaries
+- Marketplace / template sharing ideas
+
+Acceptance criteria:
+
+1. Multi-brand management
+- A user can create and manage more than one brand workspace.
+- Each brand keeps its own campaigns, assets, alerts, and settings.
+- Brand switching is clear and reliable.
+
+2. Advanced team workspaces
+- Multiple users can work in the same workspace.
+- Roles and permissions are respected.
+- Team actions are visible in activity history.
+
+3. Shared asset libraries
+- Users can store and reuse shared assets.
+- Assets are searchable and organized.
+- Users can duplicate their own shared assets safely.
+
+4. Deeper analytics and forecasting
+- Campaign summaries show useful performance trends.
+- Forecasting surfaces likely outcomes or usage needs.
+- Reports are readable and actionable.
+
+5. Workflow automation expansion
+- More triggers and rules can be configured.
+- Automated actions follow the user’s chosen logic.
+- Users can review, edit, or disable automation.
+
+6. Integrations and scheduled summaries
+- Integrations can send and receive data reliably.
+- Scheduled summaries are delivered on time.
+- Integration failures are visible and recoverable.
+
+7. Marketplace / template sharing ideas
+- Templates can be shared in a controlled way.
+- Shared templates follow the safety and originality rules.
+- Users can import approved templates without confusion.
+
+Phase 7 is complete when:
+- multi-brand management works reliably
+- team collaboration is stable
+- shared assets are usable
+- analytics provide value
+- automation behaves predictably
+- integrations and scheduled summaries work
+- template sharing is safe and clear

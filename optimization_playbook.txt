@@ -1,0 +1,99 @@
+XSPRESSO V1 — OPTIMIZATION PLAYBOOK
+
+Purpose:
+Help Xspresso improve campaigns after launch by suggesting the next best action based on performance.
+
+Core goal:
+Save time, save credits, and improve results without forcing the user to guess.
+
+Guiding rule:
+If a campaign or ad is not performing well, Xspresso should recommend the smallest useful improvement first.
+
+Optimization flow:
+1. Detect performance issue.
+2. Identify the likely cause.
+3. Suggest the best next action.
+4. Offer one-click regeneration or edit.
+5. Re-check after the change.
+
+Common optimization triggers:
+- CPC rising
+- CTR dropping
+- Conversions low or flat
+- High clicks with no sales
+- Lead capture underperforming
+- Follow-up sequence not converting
+- Platform-specific format mismatch
+- Ad monitoring costs exceeding return
+
+Recommended actions by issue:
+
+1) CPC rising
+- Try a new headline
+- Change the hook
+- Test a different angle
+- Swap image or creative
+- Lower bid or pause weak variation
+
+2) CTR low
+- Rewrite the title
+- Make the opening line stronger
+- Improve thumbnail or first visual
+- Simplify the message
+
+3) Clicks without conversions
+- Improve landing page clarity
+- Add stronger offer proof
+- Shorten page copy
+- Strengthen CTA
+- Review checkout or lead form
+
+4) Leads but no sales
+- Improve follow-up sequence
+- Add reminder email
+- Add offer urgency
+- Add testimonial or proof
+- Move hot leads into sales sequence
+
+5) Monitoring cost too high
+- Stop watching weak ads
+- Move ad to library
+- Regenerate before more credits are spent
+- Switch to a cheaper monitoring term
+
+Optimization messages:
+- This ad is underperforming.
+- Improve it before spending more credits.
+- Xspresso recommends regenerating this ad.
+- Try a new title, hook, or angle.
+- This campaign may need a landing page tweak.
+- Your follow-up sequence may need a stronger offer.
+
+One-click actions:
+- Regenerate ad
+- Rewrite headline
+- Rewrite hook
+- Change angle
+- Change CTA
+- Edit landing page
+- Edit follow-up sequence
+- Pause monitoring
+- Move to library
+
+Re-check cycle:
+After any change, Xspresso should re-evaluate:
+- ad status
+- CPC
+- CTR
+- conversions
+- lead activity
+- monitoring cost
+
+User-facing philosophy:
+- Better to improve than to waste credits.
+- Small changes can make a big difference.
+- The user stays in command.
+- Xspresso does the heavy lifting.
+
+Best summary line:
+Xspresso should watch performance, suggest improvements, and help users spend credits only when they are likely to help results.

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xspresso — Done-for-you marketing</title>
+  <link rel="stylesheet" href="xspresso_401_styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo-mark" aria-hidden="true">☕</div>
+        <div class="brand-text">
+          <div class="brand-name">Xspresso</div>
+          <div class="brand-tag">Done-for-you marketing</div>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <button class="btn btn-secondary" data-action="open-dashboard">Dashboard</button>
+        <button class="btn btn-primary" data-action="create-campaign">Create Campaign</button>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <nav class="nav">
+        <a href="#dashboard" class="nav-item active">Dashboard</a>
+        <a href="#builder" class="nav-item">Create Campaign</a>
+        <a href="#monitoring" class="nav-item">Monitoring</a>
+        <a href="#leads" class="nav-item">Leads</a>
+        <a href="#library" class="nav-item">Library</a>
+        <a href="#templates" class="nav-item">Templates</a>
+        <a href="#credits" class="nav-item">Credits</a>
+        <a href="#billing" class="nav-item">Billing</a>
+        <a href="#settings" class="nav-item">Settings</a>
+        <a href="#help" class="nav-item">Help</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section class="hero-card" id="dashboard">
+        <div>
+          <p class="eyebrow">Done-for-you marketing that gets responses</p>
+          <h1>Wake up your marketing.</h1>
+          <p class="hero-copy">Build campaigns faster, monitor them smarter, and stay in command while Xspresso does the work.</p>
+          <div class="cta-row">
+            <button class="btn btn-primary" data-action="create-campaign">Try the Demo</button>
+            <button class="btn btn-secondary" data-action="see-pricing">See Pricing</button>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-card"><span id="stat-campaigns">0</span><label>Campaigns</label></div>
+          <div class="stat-card"><span id="stat-alerts">0</span><label>Alerts</label></div>
+          <div class="stat-card"><span id="stat-credits">0</span><label>Credits left</label></div>
+        </div>
+      </section>
+
+      <section class="grid-3">
+        <article class="info-card">
+          <h2>Done-for-you campaigns</h2>
+          <p>Turn a product photo, URL, or offer into ads, pages, hooks, and follow-up copy.</p>
+        </article>
+        <article class="info-card">
+          <h2>You stay in command</h2>
+          <p>Approve what you like, tweak what you want, and regenerate anything that does not fit.</p>
+        </article>
+        <article class="info-card">
+          <h2>Monitoring that helps</h2>
+          <p>Xspresso watches CPC, alerts you early, and recommends the next best action.</p>
+        </article>
+      </section>
+
+      <section class="panel" id="builder">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Campaign Builder</p>
+            <h2>Create a draft in minutes</h2>
+          </div>
+          <button class="btn btn-primary" data-action="generate-draft">Generate Draft</button>
+        </div>
+        <form id="campaign-form" class="builder-form">
+          <label>Product name<input name="productName" type="text" placeholder="Light Touch Body Cream" /></label>
+          <label>Offer description<textarea name="offerDescription" rows="4" placeholder="A moisturizing body cream for daily use"></textarea></label>
+          <div class="form-row">
+            <label>Goal
+              <select name="goal">
+                <option value="sales">Sales</option>
+                <option value="leads">Leads</option>
+                <option value="clicks">Clicks</option>
+                <option value="list">List building</option>
+              </select>
+            </label>
+            <label>Tone
+              <select name="tone">
+                <option value="simple">Simple</option>
+                <option value="friendly">Friendly</option>
+                <option value="bold">Bold</option>
+                <option value="premium">Premium</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row">
+            <label>Platform
+              <select name="platform">
+                <option value="general">General</option>
+                <option value="facebook">Facebook</option>
+                <option value="instagram">Instagram</option>
+                <option value="tiktok">TikTok</option>
+                <option value="youtube">YouTube</option>
+              </select>
+            </label>
+            <label>Audience<input name="audience" type="text" placeholder="People who want a simple skincare solution" /></label>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel" id="monitoring">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Monitoring</p>
+            <h2>What needs attention</h2>
+          </div>
+          <button class="btn btn-secondary" data-action="refresh-monitoring">Refresh</button>
+        </div>
+        <div id="alerts-list" class="alerts-list"></div>
+      </section>
+
+      <section class="panel" id="draft-output">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Draft preview</p>
+            <h2>Current campaign draft</h2>
+          </div>
+          <button class="btn btn-secondary" data-action="regenerate-draft">Regenerate</button>
+        </div>
+        <div id="draft-preview" class="draft-preview">
+          <p class="muted">No draft yet. Create one from the builder above.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="xspresso_402_data_models.js"></script>
+  <script src="xspresso_403_campaign_builder.js"></script>
+  <script src="xspresso_404_monitoring_engine.js"></script>
+  <script src="xspresso_405_app.js"></script>
+</body>
+</html>

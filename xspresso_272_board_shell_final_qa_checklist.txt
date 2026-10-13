@@ -1,0 +1,24 @@
+Xspresso Board Shell — Final QA Checklist
+
+Purpose:
+This file captures the final check for the board shell layout and confirms the reusable shell is ready for the next stage.
+
+Checklist:
+- White header background is used.
+- Cup logo stays left of the name logo.
+- Logo scales down cleanly on smaller screens.
+- The logo does not wrap or stack unexpectedly.
+- Business card content remains readable.
+- CTA buttons are visible and distinct.
+- Footer remains simple and premium.
+- The board shell stays FrontPage-friendly.
+- Xspresso-only filenames are used.
+
+Acceptance Notes:
+- The board shell should feel polished, not crowded.
+- The header should stay clean at all sizes.
+- The main message should remain visible and easy to scan.
+- The shell should support the Xspresso promise: done-for-you marketing, you stay in command, we do the work.
+
+Next Step:
+- Review the next reusable component or start packaging the current shell set for export.

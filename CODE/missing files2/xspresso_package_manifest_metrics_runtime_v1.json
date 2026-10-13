@@ -1,0 +1,14 @@
+{
+  "name": "xspresso-marketing-app",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node xspresso_metrics_web_runtime_v1.js",
+    "test": "node --test",
+    "credits:admin": "node xspresso_credit_admin_cli_v1.js"
+  },
+  "dependencies": {
+    "nodemailer": "^10.0.9"
+  }
+}

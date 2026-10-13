@@ -1,0 +1,88 @@
+Xspresso Prompt Library
+
+Purpose:
+This file contains reusable prompt patterns for Xspresso so the app can generate consistent, customer-focused marketing assets quickly.
+
+Core Brand Voice:
+- Done-for-you
+- Fast
+- Simple
+- More responses
+- Less software chaos
+- You stay in command
+- We do the work
+
+Prompt Types:
+
+1) Campaign Brief Prompt
+Use when turning a product or offer into a full campaign.
+Prompt structure:
+"Create a done-for-you marketing campaign for [product/offer]. Audience: [audience]. Goal: [goal]. Tone: [tone]. Output: headlines, hooks, ad copy, landing page copy, cart copy, lead magnet copy, and follow-up emails. Keep it original, customer-focused, and aligned with the user’s goal."
+
+2) Ad Copy Prompt
+Use when generating ad variations.
+Prompt structure:
+"Write [number] ad variations for [product/offer]. Include different hooks, headlines, and calls to action. Make them customer-focused, concise, and suited for [platform]."
+
+3) Landing Page Prompt
+Use when building landing page copy.
+Prompt structure:
+"Write a landing page for [product/offer]. Include a strong headline, subheadline, benefits, proof, call to action, and a closing statement. Tone: [tone]. Keep it clear, persuasive, and easy to scan."
+
+4) Follow-Up Email Prompt
+Use when creating email sequences.
+Prompt structure:
+"Write a [number]-email follow-up sequence for [product/offer]. Include a welcome message, reminder, benefit-focused message, and offer email. Keep the tone [tone] and the copy short enough to be readable on mobile."
+
+5) Platform Adaptation Prompt
+Use when adapting content to a social platform.
+Prompt structure:
+"Adapt this campaign content for [platform]. Match the format, length, and tone to the platform. Create a version that fits the platform’s style while keeping the core message the same."
+
+6) Underperforming Ad Prompt
+Use when regenerating an ad.
+Prompt structure:
+"This ad is underperforming. Improve it before spending more credits. Regenerate this ad with a new title, hook, or angle. Return 3 fresh options."
+
+7) Founder Story Prompt
+Use when generating or refining founder copy.
+Prompt structure:
+"Write a founder story for Xspresso that explains why the product exists, the pain that led to building it, and why it helps people avoid wasted time, wasted money, and confusion. Keep it emotional, honest, and persuasive without sounding overdone."
+
+8) Bullet Block Prompt
+Use when writing bullets for the LP.
+Prompt structure:
+"Write [number] bullets for Xspresso that promise a clear benefit, create curiosity, and support the headline: [headline]. Keep them short, customer-focused, and easy to scan."
+
+9) Pricing Copy Prompt
+Use when writing pricing or usage explanations.
+Prompt structure:
+"Explain Xspresso’s pricing in a fair, simple way. All plans include every tool. Credits determine fair usage. Mention a la carte usage and upgrade savings if relevant. Keep the copy clear and customer-friendly."
+
+10) Support / Help Prompt
+Use when generating help content.
+Prompt structure:
+"Write a simple help explanation for [feature]. Explain what it does, why it matters, and what the user should do next. Keep the tone friendly and reassuring."
+
+Special Prompt Rules:
+- Never copy another company’s page or exact wording.
+- Always generate original output.
+- Keep the user in command.
+- Favor clear action steps over vague marketing language.
+- If an ad is underperforming, recommend a fix before spending more credits.
+- If data is missing, still produce a useful draft.
+
+Reusable Short Prompts:
+- "Make it clearer"
+- "Make it shorter"
+- "Make it more customer-focused"
+- "Make it more premium"
+- "Make it more direct"
+- "Make it more done-for-you"
+- "Make it more like a simple premium SaaS"
+- "Turn this into bullets"
+- "Turn this into a friendly customer-facing version"
+- "Turn this into a founder-story version"
+
+Best Practice:
+The prompt library should be flexible enough that Xspresso can reuse the same core ideas across landing pages, ads, follow-up, monitoring, alerts, and pricing copy.

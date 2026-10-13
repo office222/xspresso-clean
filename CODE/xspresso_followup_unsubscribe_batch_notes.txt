@@ -1,0 +1,19 @@
+Xspresso follow-up opt-out batch
+
+Files in this batch:
+- xspresso_unsubscribe_tokens_v1.js
+- xspresso_unsubscribe_service_v1.js
+- xspresso_followup_delivery_worker_v3.js
+- xspresso_unsubscribe_http_route_v1.js
+- xspresso_unsubscribe_service_v1.test.js
+- xspresso_followup_unsubscribe_worker_v3.test.js
+
+Integration:
+1. Create UnsubscribeTokenService with an environment-provided signing secret of at least 32 bytes. Do not commit the secret.
+2. Create UnsubscribeService with the persistent store and token service.
+3. Use FollowupDeliveryWorker from v3 with the token service, a configured HTTPS public base URL, and a mailer adapter.
+4. Mount createUnsubscribeRoute before the authenticated API fallback so the email recipient can open and confirm the link without signing in.
+5. The GET route only presents a confirmation page; the POST performs the opt-out, avoiding automatic opt-outs from email link scanners.
+6. Run the Node built-in test runner after placing these files beside their imports. Tests have not been run in this environment.
+
+The mailer provider must support idempotency keys to reduce duplicate deliveries after process interruption. This batch does not claim legal compliance; verify applicable messaging rules and provider requirements before launch.

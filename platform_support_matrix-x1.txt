@@ -1,0 +1,86 @@
+Xspresso Platform Support Matrix
+
+Purpose:
+This file tracks which platforms Xspresso can upload to, monitor on, and adapt for.
+
+Guiding rules:
+- Each platform has its own rules, sizes, and limits.
+- Users only see platforms that are enabled for their plan.
+- If a platform is not supported yet, Xspresso should say so clearly.
+- If a platform is partially supported, Xspresso should state what is and is not available.
+- If Xspresso can monitor existing ads on a connected platform, it should say that clearly.
+
+Platform record fields:
+- platform_name
+- supported_uploads
+- supported_monitoring
+- supported_ad_types
+- supported_media_types
+- supported_sizes
+- api_status
+- notes
+- plan_limits
+
+Suggested support levels:
+- full: upload, monitor, adapt, and manage
+- partial: some features supported, others limited
+- monitor_only: track stats and alerts only
+- pending: planned but not yet available
+- unavailable: not supported
+
+Example matrix layout:
+
+Platform: TikTok
+- supported_uploads: yes
+- supported_monitoring: yes
+- supported_ad_types: image, video
+- supported_media_types: square, vertical
+- supported_sizes: platform-specific
+- api_status: active
+- notes: monitor existing ads where permissions allow
+- plan_limits: by plan and credits
+
+Platform: Facebook
+- supported_uploads: yes
+- supported_monitoring: yes
+- supported_ad_types: image, video, text
+- supported_media_types: square, landscape, vertical
+- supported_sizes: platform-specific
+- api_status: active
+- notes: direct upload and stats tracking available when connected
+- plan_limits: by plan and credits
+
+Platform: Instagram
+- supported_uploads: yes
+- supported_monitoring: yes
+- supported_ad_types: image, video, reels
+- supported_media_types: square, vertical
+- supported_sizes: platform-specific
+- api_status: active
+- notes: may require format adaptation for stories/reels
+- plan_limits: by plan and credits
+
+Platform: YouTube
+- supported_uploads: partial
+- supported_monitoring: yes
+- supported_ad_types: video
+- supported_media_types: landscape, vertical
+- supported_sizes: platform-specific
+- api_status: partial
+- notes: V2 candidate for deeper video workflows
+- plan_limits: by plan and credits
+
+User-facing copy examples:
+- "Your platform is supported."
+- "This platform is supported with limits."
+- "Xspresso can monitor this platform but upload support is not available yet."
+- "This platform is not listed yet. Tell Xspresso and we will see what we can do. No promises."
+
+Switching rules:
+- If the user switches platforms, Xspresso should show a warning.
+- If tracking on the old platform stops, the user should be told clearly.
+- If monitoring can continue for credits, the cost should be displayed.
+- If ads are moved to library, the system should explain that they will be removed from the platform and saved locally in Xspresso.
+
+Notes:
+This file should be updated as platform support changes.

@@ -1,0 +1,19 @@
+Xspresso backend service batch 3
+
+Files in this batch:
+- xspresso_lead_service_v1.js: tenant-scoped lead capture, consent evidence, timeline, and status changes.
+- xspresso_credit_ledger_service_v1.js: append-only, idempotent credit entries and balance queries.
+- xspresso_metrics_service_v1.js: daily campaign metric snapshots and aggregates.
+- xspresso_settings_service_v1.js: validated user preferences with an allowlist.
+- xspresso_job_queue_v1.js: single-process persistent queue with leases, retry backoff, and idempotency.
+- xspresso_api_client_v1.js: browser fetch client for the existing auth/campaign API.
+
+Also attached as an additional security helper (not part of the six-file batch):
+- xspresso_request_security_v1.js: fixed-window in-memory rate limiter and response security headers.
+
+Integration notes:
+1. These service modules use the existing JsonStore and AuthService conventions. JsonStore currently validates required base arrays but permits additional collections; the services initialize their own collections.
+2. Services are not automatically wired into xspresso_api_routes.js yet. Routes need to instantiate the services and call them only after authentication; derive tenantId from the authenticated user, never from request body values.
+3. The JSON file store and in-memory job leases/limiter are local single-process development tools, not multi-instance production infrastructure.
+4. The browser API client keeps the bearer token in memory. It deliberately does not persist authentication tokens to localStorage.
+5. No code was executed or tested in this environment. Run the existing Node test suite and add tests for these services before relying on them.

@@ -1,0 +1,17 @@
+Batch 601-606 created.
+
+Included:
+- dashboard widgets
+- campaign review panel
+- launch readiness panel
+- monitoring engine
+- notifications center
+- app shell components
+
+Next suggested batch:
+- billing and credits panel
+- lead follow-up screen
+- template library
+- platform switch modal
+- help center data
+- main app wiring

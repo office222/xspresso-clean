@@ -1,0 +1,28 @@
+Xspresso Batch Release Notes
+=============================
+
+Files in this batch:
+- xspresso_538_ui_shell_components.js
+- xspresso_539_file_registry.js
+- xspresso_540_template_library.js
+- xspresso_541_activity_log.js
+- xspresso_542_help_center.js
+
+What this batch adds:
+- reusable UI shell components
+- filename registry helpers
+- template save / restore / duplicate logic
+- activity logging and summaries
+- help center content and search
+
+Core product reminder:
+Xspresso is done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.
+We do the work. You enjoy the benefits.
+
+Suggested next batch:
+- dashboard cards
+- billing / credits panel
+- launch readiness panel
+- alerts / notifications center
+- campaign review panel
+- platform switch modal

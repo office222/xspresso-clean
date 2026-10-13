@@ -1,0 +1,66 @@
+Xspresso — Quote3 Front Board Shell Layout Notes
+
+Goal:
+Create a clean, simple front board shell that presents the business card component clearly and keeps the layout easy to read on desktop and mobile.
+
+Core layout principles:
+- Keep the board shell white or very light.
+- Use burnt orange only as an accent.
+- Keep the business card component left-aligned or centered depending on available width.
+- Avoid heavy borders that make the layout feel crowded.
+- Make the shell shrink gracefully on smaller screens.
+- Keep the user-facing message simple and premium.
+
+Suggested structure:
+1. Top shell header
+   - Xspresso brand mark
+   - Short supporting line
+   - Optional small utility area
+
+2. Main board area
+   - Business card component
+   - Key marketing message
+   - One or two short support lines
+
+3. Optional supporting blocks
+   - Quick benefits
+   - Short feature bullets
+   - Call to action
+
+Business card component goals:
+- Show the brand clearly
+- Keep the logo and cup inline
+- Prevent overlap on narrow screens
+- Keep the design professional and readable
+
+Responsive behavior:
+- On wide screens, show logo elements side by side.
+- On medium screens, shrink the logo but keep it inline.
+- On small screens, reduce padding and scale images down.
+- Keep text from wrapping awkwardly around the logo.
+
+Recommended copy tone:
+- Done-for-you
+- Fast
+- Simple
+- You stay in command
+- We do the work
+
+Suggested helper lines:
+- Wake up your marketing.
+- More responses. Less software chaos.
+- You stay in command. We do the work.
+
+Implementation notes:
+- Use tables if this is going into FrontPage.
+- Use inline styles for critical layout behavior.
+- Use max-width and height:auto for images.
+- Keep the board shell modular so it can be swapped later.
+- Avoid overly dark backgrounds behind the logo.
+
+If this becomes a live component later, the same layout can be reused for:
+- homepage hero shell
+- dashboard header block
+- pricing highlight block
+- founder story header
+- business card / brand card panel

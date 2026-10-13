@@ -1,0 +1,102 @@
+XSPRESSO UI COMPONENTS
+======================
+
+Purpose:
+This file defines the main UI pieces for Xspresso V1 so the app stays simple, fast, and easy to build.
+
+1) Global Layout
+- Top header with logo
+- Main nav
+- Primary content area
+- Right-side alerts or helper panel
+- Footer with credits/plan status
+
+2) Hero / Welcome Panel
+- Welcome text
+- Short product promise
+- Primary CTA buttons
+- Quick summary of what Xspresso does
+
+3) Campaign Builder
+- Offer input fields
+- Goal selector
+- Tone selector
+- Platform selector
+- Template selector
+- Generate button
+
+4) Draft Review Panel
+- Headline block
+- Hook block
+- Ad copy block
+- Landing page block
+- Follow-up block
+- Platform version block
+- Edit / regenerate buttons
+
+5) Launch Panel
+- Readiness checklist
+- Missing items warning
+- Launch button
+- Save draft button
+- Schedule later button
+
+6) Dashboard Cards
+- Active campaigns card
+- Drafts card
+- Alerts card
+- Credits remaining card
+- Monitored ads card
+- Platform connections card
+
+7) Campaign Card
+- Campaign name
+- Status badge
+- Platform name
+- CPC / CTR / conversions
+- Quick actions: view, edit, duplicate, pause, regenerate
+
+8) Alert Center
+- Alert title
+- Alert message
+- Severity badge
+- Recommended next action
+- Dismiss / resolve buttons
+
+9) Monitoring Modal
+- Warning text for platform switching
+- All ads options
+- Per-ad options
+- Daily / weekly / monthly monitoring choices
+- Confirm / cancel buttons
+
+10) Credits Panel
+- Credits included
+- Credits used
+- Credits remaining
+- A la carte options
+- Upgrade suggestion
+
+11) Library / Templates Panel
+- Saved campaigns
+- Templates
+- Duplicate / restore / export / import buttons
+- Search and filter
+
+12) Settings Panel
+- Tone defaults
+- Monitoring thresholds
+- Platform behavior
+- Billing preferences
+- Alert preferences
+
+Core UI Rules:
+- Keep every screen simple
+- Show the user what to do next
+- Keep the user in command
+- Use clear labels
+- Use visible warnings when money or tracking is involved
+- Avoid clutter and nested complexity
+
+One-line summary:
+Xspresso UI should make it easy to build, review, launch, monitor, and improve campaigns without confusion.

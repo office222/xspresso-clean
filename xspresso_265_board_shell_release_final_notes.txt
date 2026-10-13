@@ -1,0 +1,21 @@
+Xspresso Board Shell Release Final Notes
+
+Purpose:
+- Keep the board shell clean, premium, and FrontPage-friendly.
+- Keep the cup left of the name/logo.
+- Keep the top bar white.
+- Prevent wrap/stack issues on smaller screens.
+- Keep the business card readable.
+- Keep CTA buttons clear and action-focused.
+
+Acceptance checks:
+- Header background is white.
+- Cup and name stay inline.
+- Logo shrinks cleanly on smaller screens.
+- No overlap or stacking surprises.
+- CTA buttons remain visible and usable.
+- Footer stays simple.
+- The core promise is reflected clearly: done-for-you marketing, you stay in command, we do the work.
+
+Next step:
+- Review the final assembled board shell and confirm it is ready for reuse as a clean layout component.

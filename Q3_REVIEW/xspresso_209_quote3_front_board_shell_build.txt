@@ -1,0 +1,43 @@
+Xspresso Quote3 Front Board Shell Build Notes
+
+Purpose:
+- Create a clean front board shell for the Quote3 area.
+- Keep the business card component aligned and responsive.
+- Make the layout readable, simple, and easy to extend.
+
+Layout goals:
+- White or very light background for the board shell.
+- Orange used only as an accent.
+- Keep the title, logo, and business card component inline when possible.
+- Allow shrinking without stacking awkwardly.
+- Keep content centered and tidy.
+
+Recommended structure:
+1. Board shell wrapper
+2. Header / title area
+3. Business card component area
+4. Supporting copy area
+5. Action / CTA area
+
+Business card component goals:
+- Keep it visually distinct.
+- Match the Xspresso brand colors.
+- Use simple copy with strong benefit language.
+- Support responsive resizing.
+
+Suggested copy tone:
+- Done-for-you
+- Fast
+- Simple
+- You stay in command
+- We do the work
+
+Implementation reminders:
+- Use tables where needed for older page builders.
+- Avoid wrapping the logo and card content at small sizes.
+- Set max-width rules where possible.
+- Keep the board shell lightweight.
+
+Suggested next step:
+- Build the actual HTML shell for Quote3.
+- Then slot the business card component into the center column.

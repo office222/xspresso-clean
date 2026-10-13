@@ -1,0 +1,52 @@
+Xspresso Board Shell Final Polish Notes
+
+This file captures the last-pass polish notes for the board shell and business card component.
+
+Goals:
+- Keep the shell clean, premium, and easy to scan.
+- Keep the cup logo left of the wordmark at all sizes.
+- Keep the top bar white.
+- Keep the core message short and readable.
+- Keep the CTA buttons obvious and uncluttered.
+
+Header rules:
+- Use a white background behind the logo.
+- Keep the cup and name inline.
+- Prevent the logo from stacking if the page shrinks.
+- Use responsive scaling so the header stays balanced.
+
+Business card rules:
+- Show the core promise in a short, strong format.
+- Keep the benefit line simple.
+- Avoid repeating the same message too many times.
+- Keep the card readable on desktop and mobile.
+
+CTA rules:
+- Primary CTA should be the main action.
+- Secondary CTA should be smaller and less dominant.
+- Keep button spacing clean and consistent.
+- Avoid too many competing action buttons.
+
+Copy tone:
+- Done-for-you.
+- Fast.
+- Simple.
+- More responses.
+- Less software chaos.
+- You stay in command.
+- We do the work.
+
+Footer / support:
+- Keep footer copy short.
+- Add only the support links the user truly needs.
+- Avoid clutter in the closing area.
+
+Acceptance checks:
+- Logo stays inline when the window shrinks.
+- Header background stays white.
+- Buttons remain readable and aligned.
+- The shell feels polished, not crowded.
+- The overall design feels premium and simple.
+
+Next recommended step:
+- Continue refining the board shell layout in small passes until the component feels ready for reuse across the project.

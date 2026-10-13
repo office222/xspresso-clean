@@ -1,0 +1,62 @@
+XSPRESSO V1 FEATURES
+
+Core Positioning
+- Done-for-you marketing that gets responses.
+- More responses. Less software chaos.
+- You stay in command. We do the work.
+
+V1 Scope
+1. Campaign Creation
+- Accept product photo, URL, or offer details.
+- Research matching products and competing offers.
+- Generate ads, hooks, headlines, campaign angles, landing page copy, cart copy, lead magnet copy, and follow-up emails.
+
+2. Platform Adaptation
+- Adapt each ad and asset to the destination platform.
+- Support platform-specific sizes, formats, and text variations.
+
+3. Landing Pages / Shopping Cart
+- Build landing pages for each campaign.
+- Include shopping cart or lead magnet options.
+- Keep pages editable before launch.
+
+4. Lead Capture and Follow-Up
+- Capture leads from campaigns.
+- Send automatic follow-up messages.
+- Support campaign-level autoresponder logic.
+
+5. Monitoring
+- Watch ads, CPC, and campaign stats.
+- Alert the user when something is off.
+- Suggest next steps when performance drops.
+
+6. Credits / Usage
+- All plans include every tool.
+- Credits determine fair usage.
+- No feature bait-and-switch.
+
+7. Underperforming Ad Logic
+- Warn when an ad is underperforming.
+- Recommend a new title, hook, angle, or CTA.
+- Allow one-click regeneration.
+
+8. Platform Switching
+- Show a clear warning when switching platforms.
+- Offer keep-running, move-to-library, or continue-monitoring options.
+- Support daily, weekly, or monthly monitoring charges.
+
+9. Campaign Library
+- Save, reuse, duplicate, export, and import user-owned campaigns.
+- Support version history and restore points.
+- Allow templates and presets.
+
+10. Dashboard
+- Show active campaigns, drafts, alerts, credits remaining, and monitored ads.
+- Provide quick actions for edit, duplicate, pause, regenerate, export, and monitor.
+
+Core Rules
+- Keep it fast.
+- Keep it simple.
+- Keep it customer-focused.
+- Keep the user in command.
+- Make it easy to approve, tweak, regenerate, and launch.

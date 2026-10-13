@@ -1,0 +1,7 @@
+XSPRESSO ACTIVITY FEED
+
+Runtime entry point: node xspresso_activity_feed_runtime_v1.js
+
+The activity API is GET /api/activity?limit=50 and POST /api/activity/read. It scopes events to the signed-in user's tenant. The dashboard panel reads audit events, campaign revisions, and monitoring alerts; marking as read is per user.
+
+The runtime wraps the campaign-iteration runtime and serves the same dashboard assets plus the activity panel. Keep this filename distinct from prior runtime/package files. Tests are included but were not executed.

@@ -1,0 +1,14 @@
+Xspresso batch notes:
+- Navigation menu helpers
+- Dashboard overview helpers
+- Campaign review / approve / regenerate helpers
+- Launch readiness and launch flow helpers
+- Lead capture, scoring, and follow-up helpers
+
+Next good batch areas:
+- billing / credits panel
+- alerts / notifications center
+- monitoring widgets
+- help center data
+- app shell components
+- template library helpers

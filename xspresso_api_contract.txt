@@ -1,0 +1,193 @@
+Xspresso API Contract
+
+Purpose
+This file defines the core request/response shape for the main Xspresso flows so the app stays consistent as the product grows.
+
+Core principles
+- All plans include every tool.
+- Credits determine usage.
+- Users stay in command.
+- Xspresso does the heavy lifting.
+- Alerts should always suggest the next best action.
+
+Primary endpoints
+
+1) Create campaign
+POST /api/campaigns
+Request:
+{
+  "productName": "",
+  "productUrl": "",
+  "productImage": "",
+  "offerDescription": "",
+  "audience": "",
+  "goal": "sales",
+  "tone": "simple",
+  "platforms": ["TikTok", "Facebook"]
+}
+Response:
+{
+  "success": true,
+  "campaignId": "cmp_001",
+  "status": "draft",
+  "creditsUsed": 0
+}
+
+2) Generate campaign assets
+POST /api/campaigns/{id}/generate
+Request:
+{
+  "section": "all"
+}
+Response:
+{
+  "success": true,
+  "campaignId": "cmp_001",
+  "headline": "Done-for-you marketing that gets responses.",
+  "ads": [],
+  "landingPage": {},
+  "followUpEmails": []
+}
+
+3) Regenerate section
+POST /api/campaigns/{id}/regenerate
+Request:
+{
+  "section": "headline"
+}
+Response:
+{
+  "success": true,
+  "section": "headline",
+  "message": "Section regenerated."
+}
+
+4) Launch campaign
+POST /api/campaigns/{id}/launch
+Request:
+{
+  "confirm": true
+}
+Response:
+{
+  "success": true,
+  "status": "live",
+  "launchedAt": "2026-01-01T00:00:00Z"
+}
+
+5) Monitor campaign
+GET /api/campaigns/{id}/monitor
+Response:
+{
+  "success": true,
+  "status": "warning",
+  "cpc": 1.42,
+  "ctr": 0.8,
+  "alerts": []
+}
+
+6) Build alert
+POST /api/alerts
+Request:
+{
+  "campaignId": "cmp_001",
+  "adId": "ad_001",
+  "level": "warning",
+  "title": "CPC is rising",
+  "message": "This ad may need a tweak before you spend more credits."
+}
+Response:
+{
+  "success": true,
+  "alertId": "alt_001"
+}
+
+7) Capture lead
+POST /api/leads
+Request:
+{
+  "name": "",
+  "email": "",
+  "campaignId": "cmp_001",
+  "sourcePlatform": "TikTok"
+}
+Response:
+{
+  "success": true,
+  "leadId": "lead_001",
+  "status": "new"
+}
+
+8) Update credits / usage
+POST /api/credits/use
+Request:
+{
+  "userId": "user_001",
+  "amount": 125,
+  "reason": "extraLandingPage"
+}
+Response:
+{
+  "success": true,
+  "creditsRemaining": 375
+}
+
+9) Switch platform
+POST /api/platforms/switch
+Request:
+{
+  "platform": "TikTok",
+  "action": "keep_monitoring",
+  "term": "daily"
+}
+Response:
+{
+  "success": true,
+  "message": "Platform switch processed.",
+  "monitoringActive": true
+}
+
+10) Library / duplicate own work
+POST /api/library/duplicate
+Request:
+{
+  "campaignId": "cmp_001"
+}
+Response:
+{
+  "success": true,
+  "newCampaignId": "cmp_002"
+}
+
+11) Export campaign
+GET /api/campaigns/{id}/export
+Response:
+{
+  "success": true,
+  "format": "json",
+  "data": {}
+}
+
+12) Import campaign
+POST /api/campaigns/import
+Request:
+{
+  "data": {}
+}
+Response:
+{
+  "success": true,
+  "campaignId": "cmp_003"
+}
+
+Error handling
+- Missing required fields should return a clear message.
+- Underperforming ads should return a warning and a suggested fix.
+- If credits are low, return a friendly upgrade suggestion.
+- If a platform switch would stop monitoring, show a big warning and ask for confirmation.
+
+Suggested response style
+- Keep messages short and clear.
+- Always suggest the next best action.
+- Avoid vague failures.
+- Always keep the user in command.

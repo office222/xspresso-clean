@@ -1,0 +1,218 @@
+XSPRESSO V1 — ADDENDUM 5 (COMPLETE)
+Campaign workflow end-to-end test and acceptance checklist
+
+============================================================
+FILE: xspresso_v1_campaign_workflow.e2e.test.js
+============================================================
+
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mkdtemp, rm } from "node:fs/promises";
+import { join } from "node:path";
+import { tmpdir } from "node:os";
+import { loadConfig } from "./xspresso_config_v1.js";
+import { createXspressoEmailNotificationRuntime } from "./xspresso_notification_email_runtime_v1.js";
+
+const makeDraft = (headline) => ({
+  headline,
+  subheadline: "A simple way to organize your work",
+  hooks: ["Make your next step easier"],
+  ads: [{
+    primaryText: "Plan, organize, and move forward with confidence.",
+    headline,
+    callToAction: "Learn more"
+  }],
+  landingPage: {
+    headline,
+    body: "Explore a clearer way to plan your work."
+  },
+  followUpEmails: [{
+    subject: "Getting started",
+    body: "Here are a few helpful next steps.",
+    delayDays: 1
+  }]
+});
+
+async function api(origin, path, options = {}) {
+  const headers = { ...(options.headers || {}) };
+  if (options.token) headers.authorization = `Bearer ${options.token}`;
+  if (options.body !== undefined) headers["content-type"] = "application/json";
+  if (options.idempotencyKey) headers["idempotency-key"] = options.idempotencyKey;
+
+  const response = await fetch(`${origin}${path}`, {
+    method: options.method || "GET",
+    headers,
+    body: options.body === undefined ? undefined : JSON.stringify(options.body)
+  });
+  const body = await response.json().catch(() => ({}));
+  return { response, body };
+}
+
+test("user controls AI revision, approval, and export; nothing is published", async () => {
+  const dataDir = await mkdtemp(join(tmpdir(), "xspresso-v1-e2e-"));
+  let modelCalls = 0;
+
+  const fetchImpl = async () => {
+    modelCalls += 1;
+    const output = modelCalls === 1
+      ? makeDraft("A clearer way to organize")
+      : makeDraft("Make space for focused work");
+
+    return new Response(JSON.stringify({
+      status: "completed",
+      output: [{
+        type: "message",
+        content: [{ type: "output_text", text: JSON.stringify(output) }]
+      }]
+    }), {
+      status: 200,
+      headers: { "content-type": "application/json" }
+    });
+  };
+
+  const env = {
+    NODE_ENV: "test",
+    XSPRESSO_DATA_DIR: dataDir,
+    XSPRESSO_SIGNUP_ENABLED: "true",
+    OPENAI_API_KEY: "test-key",
+    OPENAI_MODEL: "test-model",
+    XSPRESSO_GENERATION_CREDIT_COST: "0",
+    XSPRESSO_ITERATION_CREDIT_COST: "0"
+  };
+
+  const config = {
+    ...loadConfig(env),
+    host: "127.0.0.1",
+    port: 0,
+    dataFile: join(dataDir, "xspresso-test.json")
+  };
+
+  const runtime = createXspressoEmailNotificationRuntime({ env, config, fetchImpl });
+
+  try {
+    const address = await runtime.listen();
+    const origin = `http://127.0.0.1:${address.port}`;
+
+    const signup = await api(origin, "/api/auth/signup", {
+      method: "POST",
+      body: {
+        email: "workflow@example.test",
+        password: "A-long-test-password-2026",
+        name: "Workflow Test"
+      }
+    });
+    assert.ok(signup.response.ok, JSON.stringify(signup.body));
+    const token = signup.body.token;
+    assert.ok(token, "signup must return a session token");
+
+    const created = await api(origin, "/api/campaigns", {
+      method: "POST",
+      token,
+      body: {
+        name: "Workflow test campaign",
+        platform: "meta",
+        goal: "traffic",
+        brief: {
+          productName: "Project Planner",
+          description: "A lightweight planning tool",
+          audience: "People who want to organize their work",
+          offer: "Try the starter plan",
+          brandVoice: "Clear, practical, encouraging",
+          verifiedClaims: []
+        }
+      }
+    });
+    assert.ok(created.response.ok, JSON.stringify(created.body));
+    const campaignId = created.body.campaign.id;
+    assert.ok(campaignId);
+
+    const generated = await api(origin, `/api/campaigns/${campaignId}/generate`, {
+      method: "POST",
+      token,
+      idempotencyKey: "e2e-generation-0001",
+      body: { notes: "Keep it practical and concise." }
+    });
+    assert.ok(generated.response.ok, JSON.stringify(generated.body));
+
+    const original = await api(origin, `/api/campaigns/${campaignId}/draft`, { token });
+    assert.ok(original.response.ok, JSON.stringify(original.body));
+    const baseVersion = original.body.version;
+    const originalHeadline = original.body.draft.headline;
+
+    const proposed = await api(origin, `/api/campaigns/${campaignId}/proposals`, {
+      method: "POST",
+      token,
+      idempotencyKey: "e2e-iteration-0001",
+      body: {
+        feedback: "Make the headline more focused and less generic.",
+        baseVersion
+      }
+    });
+    assert.ok(proposed.response.ok, JSON.stringify(proposed.body));
+    const proposal = proposed.body.proposal;
+    assert.ok(proposal?.id);
+    assert.notEqual(proposal.draft.headline, originalHeadline);
+
+    // A proposal must not silently replace the current draft.
+    const unchanged = await api(origin, `/api/campaigns/${campaignId}/draft`, { token });
+    assert.equal(unchanged.body.draft.headline, originalHeadline);
+    assert.equal(unchanged.body.version, baseVersion);
+
+    const applied = await api(
+      origin,
+      `/api/campaigns/${campaignId}/proposals/${proposal.id}/apply`,
+      {
+        method: "POST",
+        token,
+        body: { expectedVersion: baseVersion }
+      }
+    );
+    assert.ok(applied.response.ok, JSON.stringify(applied.body));
+
+    const revised = await api(origin, `/api/campaigns/${campaignId}/draft`, { token });
+    assert.equal(revised.body.draft.headline, proposal.draft.headline);
+    assert.ok(revised.body.version > baseVersion);
+
+    const approved = await api(origin, `/api/campaigns/${campaignId}/approve`, {
+      method: "POST",
+      token,
+      body: { expectedVersion: revised.body.version }
+    });
+    assert.ok(approved.response.ok, JSON.stringify(approved.body));
+
+    const exported = await api(
+      origin,
+      `/api/campaigns/${campaignId}/export/approved`,
+      { token }
+    );
+    assert.ok(exported.response.ok, JSON.stringify(exported.body));
+    assert.equal(exported.body.campaign.id, campaignId);
+    assert.equal(exported.body.creative.headline, proposal.draft.headline);
+
+    const finalCampaign = await api(origin, `/api/campaigns/${campaignId}`, { token });
+    assert.ok(finalCampaign.response.ok);
+    assert.equal(finalCampaign.body.campaign.status, "draft");
+    assert.equal(modelCalls, 2);
+  } finally {
+    await runtime.close();
+    await rm(dataDir, { recursive: true, force: true });
+  }
+});
+
+============================================================
+FILE: xspresso_v1_acceptance_checklist.txt
+============================================================
+
+1. Install dependencies from the single active package manifest.
+2. Run the preflight script before starting the server.
+3. Start the integrated runtime with test credentials or mocked provider calls.
+4. Run the end-to-end test above.
+5. Confirm that proposing AI feedback leaves the current draft unchanged.
+6. Confirm that applying a proposal creates a new version and invalidates prior approval.
+7. Confirm that approval applies only to the latest version.
+8. Confirm that exporting an approved campaign does not publish or activate it.
+9. Confirm cross-tenant requests cannot read or export another tenant's campaign.
+10. Confirm that failed provider calls do not leave a campaign approved or published.
+
+STATUS
+This is a test-and-checklist bundle. It has not been executed. Treat the project as unverified until the complete test suite passes in the assembled working directory.

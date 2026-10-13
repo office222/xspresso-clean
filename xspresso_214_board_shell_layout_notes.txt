@@ -1,0 +1,45 @@
+Xspresso Board Shell Layout Notes
+
+Purpose:
+Create a clean front-board shell area that keeps the brand readable, responsive, and aligned with the Xspresso message.
+
+Core layout goals:
+- Keep the cup logo left of the name logo.
+- Keep both images inline on wide screens.
+- Allow the header to shrink gracefully on smaller screens.
+- Use a white background for the logo/header area.
+- Keep the top section clean and premium.
+
+Recommended structure:
+1. White top header bar
+2. Inline logo row (cup + name)
+3. Hero section with clear headline
+4. Short support line
+5. Clean bullet block
+6. CTA buttons
+
+Responsive behavior:
+- Use a table-based layout for older HTML-friendly builds.
+- Set images to display:block.
+- Use max-width on the name logo.
+- Prevent wrapping with white-space:nowrap where possible.
+- Keep the cup image at a fixed visual size.
+- Let the text logo scale down before it stacks.
+
+Design principles:
+- Simple
+- Clean
+- Easy to scan
+- No clutter
+- Orange as accent only
+- White background behind the logo
+
+Message alignment:
+- Done-for-you marketing
+- More responses
+- Less software chaos
+- You stay in command
+- We do the work
+
+Implementation reminder:
+If the browser gets narrow, the logo should reduce in size rather than overlap or stack badly. Use a small enough base width for the text logo image so the full brand stays inline as long as possible.

@@ -1,0 +1,20 @@
+Xspresso Phase 18 Acceptance Criteria
+
+This file defines the Phase 18 definition of done.
+
+Acceptance criteria:
+- Cross-channel orchestration at scale works as designed.
+- AI-assisted campaign optimization suggestions are generated clearly.
+- Multi-brand coordination behaves correctly.
+- Recommendation loops are useful and actionable.
+- Forecasting and trend analysis are available and readable.
+- Shared assets and template intelligence can be reused safely.
+- Team and agency workflow refinement works smoothly.
+- Marketplace / reusable component ideas are represented in the product plan.
+- Guardrails and user control remain intact.
+- The product remains aligned with Xspresso's core promise: done-for-you marketing, fast, with the user still in command.
+
+Definition of done:
+- The feature set is stable enough to support the next expansion phase.
+- The user can understand what Xspresso did, what it recommends, and what to do next.
+- The system remains simple, safe, and useful.

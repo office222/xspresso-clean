@@ -1,0 +1,48 @@
+Xspresso Phase 61 — Task Breakdown
+
+1) Orchestration and workflow refinement
+- Tighten the flow across campaigns, leads, alerts, billing, templates, and reports.
+- Keep the main user path fast, clear, and low-friction.
+
+2) Cross-campaign learning and trend detection
+- Improve how Xspresso learns from multiple campaigns.
+- Surface trends that help the user make better decisions.
+
+3) Recommendation loop improvements
+- Make recommendations more specific and more actionable.
+- Ensure every recommendation points to a clear next step.
+
+4) Forecasting and performance analysis
+- Refine forecasting signals.
+- Improve performance summaries so the user can see what is working and what is not.
+
+5) Multi-brand and multi-team workflow refinement
+- Support more structured use across brands or teams.
+- Keep permissions, ownership, and clarity in place.
+
+6) Shared asset and template marketplace cleanup
+- Refine how templates and reusable assets are organized.
+- Make it easier to find, reuse, and manage saved work.
+
+7) Dashboard clarity and usability polish
+- Improve the readability of dashboard cards, alerts, and usage panels.
+- Keep the layout simple and action-focused.
+
+8) Monitoring and alert reliability improvements
+- Make alerts consistent and easy to understand.
+- Keep underperforming ad warnings and platform notices reliable.
+
+9) Onboarding, help text, and tooltip cleanup
+- Polish onboarding prompts and helper text.
+- Make tooltips short, useful, and friendly.
+
+10) Release hardening and handoff readiness
+- Review the final build for stability.
+- Prepare the product for handoff, release, or next-stage packaging.
+
+Success criteria
+- The workflow is smooth and easy to follow.
+- Recommendations are clear and useful.
+- Monitoring and alerts behave consistently.
+- Dashboard, help text, and templates are polished.
+- The product feels ready for the next release stage.

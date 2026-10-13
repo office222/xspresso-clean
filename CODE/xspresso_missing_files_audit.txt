@@ -1,0 +1,62 @@
+XSPRESSO MISSING FILES AUDIT
+============================
+
+BOTTOM LINE
+-----------
+I did NOT find an obvious critical missing-file problem for a launchable Xspresso app.
+The repo looks overbuilt and heavily duplicated, but the core app/runtime/platform set appears to be present.
+
+WHAT IS LIKELY TRUE
+-------------------
+1. Core app files exist.
+2. Platform/runtime/auth/API files exist.
+3. UI shell / dashboard / campaign / monitoring files exist in multiple generations.
+4. Most remaining work is cleanup, canonical selection, and install ordering.
+
+WHAT LOOKS MISSING
+------------------
+No clearly launch-blocking file is missing from the file list.
+
+There ARE numbering gaps in the sequence, but those appear to be historical or unused slots, not proven missing files.
+Examples of gaps that are NOT automatically problems:
+- 406
+- 429
+- 443
+- 509
+- 509-series and other skipped numbers
+
+These gaps do not by themselves mean the app is broken.
+
+WHAT YOU SHOULD DO
+------------------
+KEEP:
+- the latest canonical version of each real feature family
+- core runtime/auth/API/service files
+- the active app shell/UI files
+- the install/launch docs you actually use
+- the tests that support the kept runtime files
+
+IGNORE / ARCHIVE:
+- release-note batches
+- code batch notes
+- duplicated old feature generations
+- older v1/v2/v3 files once a newer canonical version exists
+- planning/phase/task-breakdown clutter you do not actively need
+
+INSTALL ORDER
+-------------
+1. Canonical app/runtime files
+2. Platform/auth/API/service files
+3. Shared UI shell files
+4. Active docs and launch notes
+5. Tests
+6. Archive duplicates and release-note noise
+
+RECOMMENDATION
+--------------
+I would not stop the install because of missing files.
+I would instead clean the repo down to the canonical set and install from that.
+
+If you want a hard answer:
+- Missing critical files: NO obvious ones found.
+- Missing/uncertain numbering slots: YES, but they appear non-critical.

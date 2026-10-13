@@ -1,0 +1,24 @@
+Xspresso Phase 36 Scope
+
+This phase focuses on final refinement and product hardening.
+
+Scope:
+- Final orchestration polish across campaigns, leads, alerts, billing, templates, and reports
+- Smarter cross-campaign learning and trend detection
+- Stronger recommendation loops
+- Broader forecasting and performance analysis
+- Multi-brand and multi-team intelligence
+- Shared asset and template marketplace refinement
+- Improved workflow coordination
+- Tighter guardrails and user control
+- Clearer credit intelligence and usage guidance
+- Continued polish for dashboard, monitoring, alerts, and launch flow
+
+Goal:
+Make the platform feel cohesive, reliable, and simple to operate while preserving the done-for-you promise and user control.
+
+Success criteria:
+- Users can launch, monitor, improve, and reuse campaigns without confusion
+- Alerts and recommendations remain clear and actionable
+- Credits, usage, and plan behavior remain transparent
+- The app feels fast, clean, and dependable

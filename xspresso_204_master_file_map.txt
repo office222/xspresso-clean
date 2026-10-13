@@ -1,0 +1,86 @@
+Xspresso Master File Map v204
+
+Purpose:
+This file gives a simple map of the current Xspresso project files so the build stays organized and avoids duplicate names.
+
+Core files:
+- README.txt
+- xspresso_master_index.txt
+- xspresso_v1_features.txt
+- credits_and_usage.txt
+- campaign_generation.js
+- ad_monitoring.js
+- lead_followup.js
+- billing.js
+- switch_platform_modal.html
+- dashboard.html
+- alerts_notifications.js
+- platform_rules.js
+- hero_copy.txt
+- founder_story.txt
+- pricing_copy.txt
+- alerts_copy.txt
+- onboarding_flow.txt
+- campaign_output_structure.txt
+- template_system.txt
+- export_import_share.txt
+- monitoring_rules.txt
+- release_checklist.txt
+- data_models.txt
+- api_endpoints.txt
+- ui_components.txt
+- deployment_and_repo_plan.txt
+- security_and_permissions.txt
+- integrations.txt
+- bullet_bank.txt
+- qa_test_plan.txt
+- roadmap_and_open_items.txt
+- next_steps.txt
+- v2_feature_candidates.txt
+- v1_api_spec.txt
+- environment_and_config.txt
+- campaign_state_machine.txt
+- reporting_and_metrics.txt
+- support_and_help_center.txt
+- xspresso_faq.txt
+- xspresso_message_map.txt
+- xspresso_user_journey.txt
+- implementation_todo.txt
+- architecture_overview.txt
+- database_schema.txt
+- credits_ledger.txt
+- release_notes_and_changelog.txt
+- platform_support_matrix.txt
+- xspresso_unique_filename_plan.txt
+- xspresso_188_file_naming_convention.txt
+- xspresso_189_project_snapshot.txt
+- xspresso_190_ui_shell_notes.txt
+- xspresso_191_component_map.txt
+- xspresso_192_integration_notes.txt
+- xspresso_193_frontend_shell_plan.txt
+- xspresso_194_backend_routes.txt
+- xspresso_195_launch_and_monitoring_flow.txt
+- xspresso_196_current_build_status.txt
+- xspresso_197_next_build_notes.txt
+- xspresso_198_campaign_creation_steps.txt
+- xspresso_199_admin_console_flow.txt
+- xspresso_200_release_packaging_notes.txt
+- xspresso_201_automation_rules_and_triggers.txt
+- xspresso_202_prompt_library.txt
+- xspresso_203_file_registry.txt
+
+Recommended next files:
+- xspresso_205_component_state_notes.txt
+- xspresso_206_dashboard_metrics_notes.txt
+- xspresso_207_user_roles_and_permissions.txt
+- xspresso_208_campaign_templates_catalog.txt
+
+Naming rule:
+Always use a new numbered filename for new files so downloads do not collide with existing files.
+
+Current build reminder:
+- All plans include every tool.
+- Credits determine fair usage.
+- Xspresso should stay done-for-you.
+- The user stays in command.
+- The system should warn on underperforming ads and recommend improvement before more credits are spent.

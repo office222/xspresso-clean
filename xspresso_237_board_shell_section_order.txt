@@ -1,0 +1,60 @@
+Xspresso Board Shell Section Order
+
+Purpose:
+Keep the front board shell clean, readable, and premium while preserving the Xspresso brand message.
+
+Recommended Order:
+1. Top header / logo row
+   - White background
+   - Cup logo left of text logo
+   - Shrinks cleanly on smaller screens
+   - Never stacks cup on top of name
+
+2. Hero / primary message
+   - Xspresso — Done-for-you marketing
+   - Wake up your marketing
+   - More responses. Less software chaos.
+   - You stay in command. We do the work.
+
+3. Business card component
+   - Short promise
+   - Quick supporting bullets
+   - Demo and pricing CTA buttons
+   - Keep this section visually simple
+
+4. CTA row
+   - Primary button: Try the Demo
+   - Secondary button: See Pricing
+   - Keep spacing clear and premium
+
+5. Supporting section / bullets
+   - Done-for-you benefits
+   - More responses
+   - List building
+   - Follow-up automation
+   - Less software juggling
+
+6. Footer / support links
+   - Help center
+   - Billing help
+   - Platform monitoring help
+   - Platform switching help
+   - Keep footer small and simple
+
+Responsive Rules:
+- Header must stay inline on desktop and mobile where possible.
+- The cup must remain left of the name.
+- White background behind the logo and header area.
+- Images should shrink rather than wrap awkwardly.
+- The layout should remain FrontPage-friendly.
+
+Acceptance Criteria:
+- Looks clean at full width.
+- Logo remains inline and readable.
+- No dark background behind logo.
+- CTA buttons are easy to see.
+- Business card is readable without clutter.
+- The shell feels premium, simple, and fast.
+
+Key Message:
+Xspresso is done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.

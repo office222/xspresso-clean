@@ -1,0 +1,75 @@
+Xspresso Phase 4 Scope
+
+Purpose:
+Phase 4 expands Xspresso beyond the core done-for-you workflow into a more mature product ecosystem.
+
+Focus:
+- Team and agency workflows
+- Stronger integrations
+- Better reporting and exports
+- More automation controls
+- More templates and presets
+- More advanced campaign management
+
+Potential Phase 4 Features:
+1. Team Workspaces
+- Shared campaign spaces
+- User roles and permissions
+- Review and approval workflows for teams
+- Shared library items and templates
+
+2. Integrations
+- Email platforms
+- CRM connections
+- Webhooks
+- Zap-style automation hooks
+- Import/export with more tools
+
+3. Advanced Reporting
+- Deeper performance summaries
+- Trend charts
+- Campaign comparisons
+- Credit usage by feature
+- Exportable reports
+
+4. More Automation
+- Rule-based actions
+- Auto-pause rules
+- Auto-regenerate suggestions
+- Auto-follow-up branching
+- Scheduled campaign actions
+
+5. Template Expansion
+- More vertical-specific templates
+- Industry presets
+- Seasonal campaigns
+- Offer-type presets
+- Multi-step funnel templates
+
+6. Library and Reuse Improvements
+- Better version tagging
+- Searchable library
+- Filters and categories
+- Favorites and pinned campaigns
+- Restore and duplicate shortcuts
+
+7. Productivity and Scale
+- Bulk actions
+- Bulk uploads
+- Bulk exports
+- Multi-campaign dashboards
+- Agency-friendly management tools
+
+Guardrails:
+- Keep the product easy to understand
+- Do not hide core tools behind confusing feature walls
+- Keep credits and usage clear
+- Keep the user in command
+- Keep the done-for-you promise intact
+- Avoid adding complexity that hurts the fast/simple feel
+
+Definition of Success:
+Phase 4 should make Xspresso more powerful for teams and scaling users without losing the clarity and simplicity of V1 and V2.
+
+Summary:
+Phase 4 is about scaling Xspresso into a more complete platform for teams, agencies, and power users while keeping the original promise: done-for-you marketing, fast, simple, and under user control.

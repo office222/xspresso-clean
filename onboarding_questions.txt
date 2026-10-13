@@ -1,0 +1,66 @@
+Xspresso V1 — Onboarding Questions
+
+Purpose:
+Collect just enough information to build a useful first draft without overwhelming the user.
+
+Core questions:
+1. What are you selling?
+   - Product name
+   - Product image
+   - Product URL
+   - Short description
+
+2. Who is it for?
+   - Audience description
+   - Customer pain point
+   - Desired outcome
+
+3. What do you want Xspresso to build?
+   - Landing page
+   - Ad campaign
+   - Lead magnet
+   - Follow-up sequence
+   - Full campaign
+
+4. What is your main goal?
+   - Clicks
+   - Leads
+   - Sales
+   - List growth
+   - Follow-up automation
+
+5. What tone do you want?
+   - Simple
+   - Friendly
+   - Bold
+   - Premium
+   - Direct
+   - Persuasive
+
+6. Where will this campaign run?
+   - Platform name
+   - Upload destination
+   - Monitoring needed or not
+
+7. Do you want a template?
+   - Start fresh
+   - Use a preset
+   - Use a saved campaign
+
+8. Do you want Xspresso to monitor it after launch?
+   - Yes
+   - No
+   - Yes, with credits
+
+Helpful UX rule:
+- If the user skips a question, Xspresso should continue with smart defaults.
+- Never block the user unless required fields are missing.
+
+Friendly copy:
+- Tell Xspresso as much as you can.
+- If you do not know, Xspresso can still build a draft.
+- You stay in command.
+- Xspresso does the heavy lifting.
+
+Best one-line summary:
+Xspresso should ask only the questions needed to create a strong first draft, then fill in the rest with smart defaults.

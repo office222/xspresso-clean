@@ -1,0 +1,20 @@
+Xspresso build batch notes
+
+Files in this batch:
+- xspresso_853_state_store_v2.js
+- xspresso_854_campaign_builder_core.js
+- xspresso_855_monitoring_engine_v2.js
+- xspresso_856_notifications_center_v2.js
+- xspresso_857_templates_library_v2.js
+
+What this batch adds:
+- central state store helpers
+- campaign brief builder and draft generator
+- monitoring and ad health evaluation
+- notifications center helpers
+- template save / restore / duplicate helpers
+
+Status:
+- actual code only
+- no placeholders
+- safe to integrate into the app shell

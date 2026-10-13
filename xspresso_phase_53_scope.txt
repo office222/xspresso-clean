@@ -1,0 +1,35 @@
+Xspresso Phase 53 — Scope
+
+Purpose:
+Continue the final stabilization and refinement of Xspresso so the V1 product is ready for release, with all core flows working cleanly and consistently.
+
+Scope:
+- Campaign creation and launch flow refinement
+- Monitoring and alert tuning
+- Billing and credit clarity
+- Template, library, and reuse workflow polish
+- Dashboard clarity improvements
+- Support/help text cleanup
+- Final QA and release readiness
+
+Key outcomes:
+- Users can create, review, approve, launch, and monitor campaigns without confusion
+- Users understand credits, usage, and a la carte behavior clearly
+- Platform switch warnings and monitoring rules remain clear and actionable
+- Dashboard and alerts present the right next step at a glance
+- The product feels stable, cohesive, and launch-ready
+
+Guardrails:
+- Keep the experience simple
+- Keep the user in command
+- Keep all tools included in all plans
+- Use credits for fair usage, not feature bait-and-switch
+- Recommend better actions when ads underperform
+
+Success criteria:
+- Core flows are stable
+- Wording is consistent across screens
+- Monitoring rules are understandable
+- Billing and credits are transparent
+- Dashboard guidance is clear
+- The release feels polished and ready for users

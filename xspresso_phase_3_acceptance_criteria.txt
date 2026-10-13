@@ -1,0 +1,49 @@
+Xspresso Phase 3 Acceptance Criteria
+
+Phase 3 is complete when the following are true:
+
+1. Billing and usage are clear
+- Users can see credits remaining, credits used, and credits tied to monitoring.
+- Users can understand when and why credits are spent.
+- Upgrade suggestions appear only when they are likely to save money.
+
+2. Monitoring is stable and useful
+- Ads can be tracked reliably.
+- Underperforming ads trigger clear warnings.
+- Alerts recommend a next action.
+- Regeneration is available for weak ads.
+
+3. Platform switching is understandable
+- Switching off a platform shows a clear warning.
+- Users can keep specific ads running.
+- Users can move ads to their library.
+- Users can keep monitoring for a usage cost.
+- Daily, weekly, and monthly monitoring terms are visible.
+
+4. Dashboard is informative
+- The dashboard shows active campaigns, alerts, monitored ads, and credits remaining.
+- Campaign cards show status, performance, and quick actions.
+- Users can see what needs attention quickly.
+
+5. Library and reuse work well
+- Users can save campaigns to the library.
+- Users can duplicate their own work.
+- Users can export and import their own campaigns.
+- Users can restore previous versions.
+
+6. Stability and polish are acceptable
+- The app does not feel broken or confusing.
+- Core flows are fast and understandable.
+- Errors are clear.
+- Empty states are helpful.
+- The system feels ready for real use.
+
+7. Product promise still holds
+- Xspresso remains done-for-you.
+- The user stays in command.
+- All tools remain included.
+- Credits determine usage and fair use.
+- The experience still feels fast and simple.
+
+Definition of done:
+If a user can create a campaign, edit it, launch it, monitor it, respond to alerts, manage credits, and reuse their work without confusion, Phase 3 is successful.

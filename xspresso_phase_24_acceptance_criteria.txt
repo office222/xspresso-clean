@@ -1,0 +1,19 @@
+Xspresso Phase 24 — Acceptance Criteria
+
+This phase is complete when:
+- Deeper autonomous orchestration is working across campaigns, leads, alerts, billing, templates, and reports.
+- Cross-campaign learning is producing better recommendations over time.
+- Recommendation loops are improving the next best action for the user.
+- Forecasting and trend analysis are giving useful forward-looking insight.
+- Multi-brand / multi-team intelligence is functioning clearly.
+- Workflow coordination is keeping the system organized and useful.
+- Guardrails and user control remain strong.
+- Credit intelligence and usage guidance are visible and understandable.
+- The user can still approve, tweak, or override the system easily.
+- The system still feels simple, fast, and done-for-you.
+
+Definition of done:
+- The feature set behaves consistently.
+- The user gets clear guidance.
+- The user stays in command.
+- The system helps save time and reduce waste.

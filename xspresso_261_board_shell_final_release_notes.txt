@@ -1,0 +1,29 @@
+Xspresso Board Shell Final Release Notes
+
+Purpose:
+This file captures the final release-ready rules for the Xspresso board shell so the header, business card, CTA area, and footer all behave consistently.
+
+Final requirements:
+- White header background.
+- Cup stays left of the name/logo.
+- Logo shrinks cleanly on smaller screens.
+- No wrapping or stacking that puts the cup above the name unless the screen is extremely narrow.
+- Business card copy stays readable.
+- CTA buttons stay clear, simple, and visible.
+- Footer remains minimal and premium.
+- Layout stays FrontPage-friendly.
+- Keep the Xspresso-only naming convention.
+
+Acceptance checklist:
+- The logo appears inline on desktop and tablet.
+- The logo scales down on narrow screens.
+- The header never looks dark or heavy.
+- The business card section remains readable at all sizes.
+- Primary and secondary CTAs are easy to spot.
+- The shell looks clean, polished, and release-ready.
+
+Core message to preserve:
+Done-for-you marketing. You stay in command. We do the work.
+
+Next step:
+If this looks good, continue with the next numbered Xspresso board shell support file or the reusable HTML component version.

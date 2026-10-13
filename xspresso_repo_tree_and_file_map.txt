@@ -1,0 +1,159 @@
+XSPRESSO REPO TREE AND FILE MAP
+
+Purpose:
+This document maps the current Xspresso build into a practical repo / folder structure. It is the working source of truth for organizing files, code, copy, UI blocks, and product decisions.
+
+--------------------------------------------------
+RECOMMENDED REPO STRUCTURE
+--------------------------------------------------
+
+xspresso/
+  README.md
+  xspresso_master_index.txt
+  xspresso_master_prompt.txt
+  xspresso_build_checkpoint.txt
+  xspresso_release_notes.txt
+
+  /product
+    core_principles.txt
+    v1_features.txt
+    v2_features.txt
+    feature_priority_matrix.txt
+    roadmap_and_milestones.txt
+    implementation_order.txt
+    implementation_tasks.txt
+    architecture_overview.txt
+    integration_flow.txt
+    release_checklist.txt
+    xspresso_launch_plan.txt
+    xspresso_quality_assurance.txt
+    xspresso_screen_flow.txt
+
+  /copy
+    hero_copy.txt
+    pricing_copy.txt
+    alerts_copy.txt
+    founder_story.txt
+    headline_bank.txt
+    faq_and_objections.txt
+    onboarding_questions.txt
+    onboarding_flow.txt
+    xspresso_content_blocks.txt
+
+  /ui
+    hero_block.html
+    pricing_table.html
+    alert_modal.html
+    switch_platform_modal.html
+    dashboard.html
+    ui_components.txt
+    component_library.txt
+    style_guidelines.txt
+    empty_states_and_error_messages.txt
+
+  /logic
+    campaign_generation.js
+    ad_monitoring.js
+    lead_followup.js
+    credits_engine.js
+    billing.js
+    platform_rules.js
+    alerts_notifications.js
+    database_schema.txt
+    api_endpoints.txt
+    xspresso_api_contract.txt
+    monitoring_rules.txt
+
+  /library
+    swipe_notes.txt
+    bullet_bank.txt
+    story_bank.txt
+    template_system.txt
+    export_import_share.txt
+    version_history.txt
+    support_and_help.txt
+
+  /assets
+    logo_notes.txt
+    image_list.txt
+    upload_list.txt
+
+--------------------------------------------------
+MASTER BUILD PRINCIPLES
+--------------------------------------------------
+
+1. Done-for-you first.
+2. The user stays in command.
+3. All plans include every tool.
+4. Credits determine fair usage.
+5. No feature bait-and-switch.
+6. Keep the product fast and simple.
+7. Optimize for more responses, not more software clutter.
+8. Monitor, warn, and recommend next actions.
+9. Regenerate underperforming ads before spending more credits.
+10. Let users save, reuse, and duplicate only their own work.
+
+--------------------------------------------------
+CORE PRODUCT SUMMARY
+--------------------------------------------------
+
+Xspresso is a done-for-you marketing system that helps users create campaigns faster, follow up automatically, monitor performance, and stay in command.
+
+--------------------------------------------------
+CURRENT BUILD STATUS
+--------------------------------------------------
+
+Completed concepts and files include:
+- core positioning
+- V1 feature set
+- credits and usage model
+- campaign generation flow
+- monitoring rules
+- underperforming ad regeneration logic
+- lead capture and follow-up logic
+- campaign duplication and library flow
+- export/import/share flow
+- version history and restore flow
+- template and preset system
+- smart brief builder
+- campaign output structure
+- edit/approve/regenerate interface
+- launch flow
+- dashboard overview
+- campaign cards
+- alerts and notifications
+- admin/settings panel
+- usage log/activity history
+- billing/subscription logic
+- onboarding flow
+- screen flow
+- empty states and error messages
+- style guidelines
+- component library
+- launch plan
+- quality assurance
+- architecture overview
+- integration flow
+- support/help copy
+- V2 features list
+
+--------------------------------------------------
+NEXT RECOMMENDED FILES
+--------------------------------------------------
+
+1. credits_engine.js
+2. pricing_table.html
+3. campaign_builder.html
+4. review_approve.html
+5. launch_modal.html
+6. monitoring_dashboard.html
+7. alerts_center.html
+8. settings_panel.html
+9. help_center.txt
+10. release_notes_v2.txt
+
+--------------------------------------------------
+NOTES
+--------------------------------------------------
+
+This file is meant to help keep the project organized as the build expands. It can be mirrored into GitHub, Google Drive, or any other file system later.

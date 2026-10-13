@@ -1,0 +1,33 @@
+Xspresso Board Shell Master Checklist
+
+Purpose:
+This file gathers the final board shell requirements into one reference so the release package stays clean, consistent, and easy to review.
+
+Core rules:
+- Keep the cup left of the name logo.
+- Use a white top bar background.
+- Let the logo shrink cleanly on smaller screens.
+- Prevent wrapping or stacking where possible.
+- Keep the business card readable and premium.
+- Keep CTA buttons clear and action-focused.
+- Keep the footer simple and trustworthy.
+- Keep copy short, clean, and Xspresso-only.
+
+Required sections:
+1. Header / logo
+2. Business card component
+3. Hero / main promise
+4. CTA row
+5. Footer / support links
+6. Responsive behavior rules
+7. Release checklist
+
+Acceptance criteria:
+- Logo remains inline at normal widths.
+- Logo scales down on smaller screens.
+- White header stays clean and uncluttered.
+- Buttons are visible and easy to tap.
+- Board shell feels premium, simple, and finished.
+
+Next step:
+Use this checklist as the final review guide before packaging the board shell for release.

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xspresso Dashboard</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; margin:0; padding:0; background:#f4f4f4; color:#222; }
+    .wrap { max-width:1200px; margin:0 auto; padding:24px; }
+    .top { background:#ffffff; border:1px solid #ddd; padding:22px; margin-bottom:20px; }
+    .brand { font-size:28px; font-weight:bold; color:#111; margin:0 0 6px 0; }
+    .sub { color:#555; margin:0; font-size:16px; }
+    .grid { display:flex; flex-wrap:wrap; gap:16px; margin-bottom:20px; }
+    .card { background:#ffffff; border:1px solid #ddd; padding:18px; flex:1 1 220px; min-width:220px; }
+    .card h3 { margin:0 0 8px 0; font-size:16px; color:#777; text-transform:uppercase; letter-spacing:1px; }
+    .card .num { font-size:34px; font-weight:bold; color:#c65a1e; margin:0; }
+    .section { background:#ffffff; border:1px solid #ddd; padding:18px; margin-bottom:20px; }
+    .section h2 { margin:0 0 12px 0; font-size:22px; color:#111; }
+    .campaign { border:1px solid #e3e3e3; padding:14px; margin-bottom:12px; background:#fafafa; }
+    .campaign h4 { margin:0 0 6px 0; font-size:18px; color:#111; }
+    .meta { font-size:14px; color:#666; margin:0 0 8px 0; }
+    .status { display:inline-block; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; text-transform:uppercase; letter-spacing:0.5px; }
+    .live { background:#e7f7ea; color:#1d7a34; }
+    .draft { background:#eee; color:#666; }
+    .warn { background:#fff3da; color:#a86400; }
+    .danger { background:#fde7e7; color:#b12828; }
+    .actions { margin-top:10px; }
+    .btn { display:inline-block; background:#111; color:#fff; text-decoration:none; padding:8px 14px; font-size:14px; border-radius:4px; margin-right:8px; }
+    .btn.alt { background:#c65a1e; }
+    .list { margin:0; padding-left:20px; }
+    .note { color:#666; font-size:14px; }
+    .alert { border-left:5px solid #c65a1e; padding:12px 14px; background:#fff7f0; margin-bottom:10px; }
+    .footer { text-align:center; color:#777; font-size:13px; padding:10px 0 30px; }
+    @media (max-width: 700px) {
+      .wrap { padding:14px; }
+      .card { min-width:100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">Xspresso Dashboard</div>
+      <p class="sub">You stay in command. Xspresso does the heavy lifting.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Active Campaigns</h3>
+        <p class="num">12</p>
+      </div>
+      <div class="card">
+        <h3>Monitored Ads</h3>
+        <p class="num">48</p>
+      </div>
+      <div class="card">
+        <h3>Credits Remaining</h3>
+        <p class="num">1,250</p>
+      </div>
+      <div class="card">
+        <h3>Alerts</h3>
+        <p class="num">3</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Recent Alerts</h2>
+      <div class="alert">
+        <strong>CPC is rising.</strong> Jones Street Pub may need a tweak before more credits are spent.
+      </div>
+      <div class="alert">
+        <strong>This ad is underperforming.</strong> Xspresso recommends regenerating it with a new title, hook, or angle.
+      </div>
+      <div class="alert">
+        <strong>Tracking paused on TikTok.</strong> Choose whether to keep monitoring or move these ads to your library.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Campaigns</h2>
+      <div class="campaign">
+        <h4>Jones Street Pub</h4>
+        <p class="meta">Platform: TikTok | CPC: 1.42 | CTR: 0.8% | Conversions: 2</p>
+        <span class="status live">Live</span>
+        <div class="actions">
+          <a href="#" class="btn">View</a>
+          <a href="#" class="btn alt">Regenerate</a>
+        </div>
+      </div>
+      <div class="campaign">
+        <h4>Light Touch Body Cream</h4>
+        <p class="meta">Platform: Facebook | CPC: 1.18 | CTR: 1.1% | Conversions: 7</p>
+        <span class="status live">Live</span>
+        <div class="actions">
+          <a href="#" class="btn">View</a>
+          <a href="#" class="btn alt">Edit</a>
+        </div>
+      </div>
+      <div class="campaign">
+        <h4>Tango Ad</h4>
+        <p class="meta">Platform: Instagram | CPC: 1.87 | CTR: 0.5% | Conversions: 0</p>
+        <span class="status danger">Underperforming</span>
+        <div class="actions">
+          <a href="#" class="btn">View</a>
+          <a href="#" class="btn alt">Regenerate</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Quick Actions</h2>
+      <ul class="list">
+        <li>Create a new campaign</li>
+        <li>Review credits and usage</li>
+        <li>Check platform monitoring</li>
+        <li>Duplicate a winning campaign</li>
+        <li>Export or import a template</li>
+      </ul>
+      <p class="note">All plans include every tool. Credits simply determine fair usage.</p>
+    </div>
+
+    <div class="footer">Wake up your marketing. More responses. Less software chaos.</div>
+  </div>
+</body>
+</html>

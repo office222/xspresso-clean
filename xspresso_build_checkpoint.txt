@@ -1,0 +1,40 @@
+Xspresso Build Checkpoint
+
+Current direction:
+- Xspresso is a done-for-you marketing system.
+- Core promise: more responses, less software chaos.
+- User stays in command; Xspresso does the heavy lifting.
+- All plans include every tool; credits determine fair usage.
+
+V1 focus:
+- Campaign builder
+- Campaign generation
+- Platform adaptation
+- Lead capture and follow-up
+- Monitoring and alerts
+- Underperforming ad regeneration
+- Credits and usage engine
+- Platform switch flow
+- Campaign library, duplicate, export/import
+- Dashboard and campaign cards
+- Billing, renewals, and upgrade suggestions
+
+Key copy lines:
+- Xspresso isn’t about more software. It’s about done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.
+- We do the work. You enjoy the benefits.
+- Improve before spending more credits monitoring an ad that is not performing.
+- Let Xspresso regenerate this ad with a new title, hook, or angle.
+
+Build principles:
+- Done-for-you first
+- Never copy, only inspired-by strategy
+- Fast, simple, and customer-focused
+- Clear warnings and helpful next actions
+- Keep everything editable and recoverable
+
+Next recommended files:
+- xspresso_admin_settings.txt
+- xspresso_help_center.txt
+- xspresso_faq.txt
+- xspresso_test_plan.txt
+- xspresso_error_handling.txt

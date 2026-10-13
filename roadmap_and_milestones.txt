@@ -1,0 +1,108 @@
+Xspresso Roadmap and Milestones
+
+PHASE 1 - CORE V1
+Goal: Build the simplest usable done-for-you marketing engine.
+
+Core features:
+- Campaign brief intake
+- Campaign generation
+- Headlines, hooks, ad copy, landing page copy
+- Lead capture and follow-up
+- Monitoring dashboard
+- Alerts and notifications
+- Credits and usage tracking
+- Platform switch warnings
+- Template and preset system
+- Save, duplicate, export, import, and restore own work
+
+Milestones:
+1. Finalize product scope
+2. Build campaign input flow
+3. Build generation engine
+4. Build review/edit/approve flow
+5. Build launch flow
+6. Build monitoring and alerts
+7. Build credits and billing rules
+8. Build dashboard and history
+9. QA and test the end-to-end loop
+10. Launch V1
+
+PHASE 2 - V1 REFINEMENT
+Goal: Improve stability, clarity, and usability.
+
+Refinement areas:
+- Better onboarding
+- Better alert logic
+- Better platform switching UX
+- Better credit visibility
+- Better dashboard cards
+- Better recommendation messages
+- Faster generation flow
+- Cleaner UI copy
+- More templates
+- More precise monitoring thresholds
+
+Milestones:
+1. Collect user feedback
+2. Polish UI copy
+3. Improve monitoring thresholds
+4. Improve regeneration suggestions
+5. Reduce friction in onboarding
+6. Fix edge cases
+7. Improve performance
+
+PHASE 3 - V2
+Goal: Expand into deeper selling assets.
+
+V2 features:
+- Sales letters
+- VSL scripts
+- Long-form funnels
+- Advanced bullets
+- Video production support
+- Campaign cloning of user-owned work
+- Deeper automation
+- More advanced template packs
+
+Milestones:
+1. Lock V2 feature list
+2. Build sales letter engine
+3. Build VSL engine
+4. Build long-form funnel outputs
+5. Add advanced template library
+6. Add video workflow support
+7. Add cloning of own campaigns
+8. Beta test V2
+9. Release V2
+
+PHASE 4 - EXPANSION
+Goal: Expand platform reach and revenue flexibility.
+
+Expansion ideas:
+- More social platforms
+- More upload rules
+- More monitoring modes
+- More a la carte usage options
+- More plan options
+- Team/agency controls
+- More integrations
+- Better reporting
+
+Milestones:
+1. Review platform demand
+2. Add requested platforms
+3. Add team roles
+4. Add reporting exports
+5. Expand pricing options
+6. Add higher-volume usage tiers
+
+GUIDING PRINCIPLES
+- Done-for-you first
+- Fast and simple
+- All tools included
+- Credits determine usage
+- You stay in command
+- We do the work
+- Never copy, always original
+- Save time and reduce chaos
+- Recommend the next best action

@@ -1,0 +1,49 @@
+Xspresso Quote3 Board Shell Component Layout
+
+Purpose:
+- Provide a clean front board shell layout for the Quote3 section.
+- Keep the business card component aligned and readable.
+- Make the layout feel polished, simple, and easy to scan.
+
+Layout Goals:
+- Keep the board clean and uncluttered.
+- Use a clear visual hierarchy.
+- Keep the card component anchored inside the shell.
+- Make sure the text remains legible on smaller screens.
+- Use orange as an accent, not the whole background.
+
+Recommended Structure:
+1. Outer board shell container
+2. Header/title area
+3. Main content area
+4. Business card component area
+5. Supporting note or helper line
+6. Action or next-step area
+
+Business Card Component Notes:
+- Should sit comfortably inside the board shell.
+- Should not overlap other elements.
+- Should shrink proportionally on narrow screens.
+- Should remain visually connected to the board content.
+
+Responsive Behavior:
+- On wide screens, place the business card beside or inside the main board area.
+- On smaller screens, stack elements vertically.
+- Keep padding consistent to avoid crowding.
+- Avoid hard widths that break the layout.
+
+Copy Tone:
+- Simple
+- Clean
+- Direct
+- Friendly
+- Professional
+
+Implementation Reminder:
+- Keep the shell easy to edit in FrontPage-style tools.
+- Prefer table-based layout where needed for compatibility.
+- Use fixed image sizes only when necessary.
+- Keep the component names clear for future file organization.
+
+Best Rule:
+- The Quote3 board shell should support the business card component, not compete with it.

@@ -1,0 +1,21 @@
+Xspresso code batch 694-699
+
+Included files:
+- xspresso_694_campaign_builder_v7.js
+- xspresso_695_review_panel_v11.js
+- xspresso_696_launch_flow_v9.js
+- xspresso_697_monitoring_engine_v10.js
+- xspresso_698_notifications_center_v6.js
+- xspresso_699_batch_release_notes.txt
+
+This batch adds:
+- campaign brief builder and smart defaults
+- review / approve / regenerate helpers
+- launch readiness and launch action flow
+- ad health evaluation and alert building
+- notifications center helpers
+- release notes for the batch
+
+Core product reminder:
+Xspresso is done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.
+We do the work. You enjoy the benefits.

@@ -1,0 +1,22 @@
+# xspresso_445_release_bundle_notes.txt
+
+This batch includes the next ready-to-download code files for the Xspresso app.
+
+## Files
+- xspresso_433_monitoring_engine.js
+- xspresso_434_launch_flow.js
+- xspresso_435_activity_feed.js
+- xspresso_436_help_center.js
+- xspresso_437_template_library.js
+- xspresso_438_navigation_menu.js
+- xspresso_439_dashboard_overview.js
+- xspresso_440_lead_followup_screen.js
+- xspresso_441_settings_preferences.js
+- xspresso_442_help_center.js
+- xspresso_443_template_library.js
+- xspresso_444_navigation_menu.js
+
+## Notes
+- Files are numbered to avoid collisions.
+- Files are intended to be reusable app modules.
+- Core app behavior follows the Xspresso principle: done-for-you marketing that gets responses, builds lists, follows up automatically, and keeps the user in command.

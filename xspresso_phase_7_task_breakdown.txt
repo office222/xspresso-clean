@@ -1,0 +1,58 @@
+Xspresso Phase 7 — Task Breakdown
+
+1) Multi-brand management
+- Support multiple brands inside one account.
+- Let users switch between brands quickly.
+- Keep separate campaigns, assets, and reports per brand.
+
+2) Advanced team workspaces
+- Add team workspaces for separate groups.
+- Allow shared access by workspace.
+- Keep campaign ownership and visibility clear.
+
+3) Shared asset libraries
+- Create shared libraries for ads, images, hooks, headlines, and templates.
+- Allow users to reuse approved assets across campaigns.
+- Keep version history and source attribution.
+
+4) Deeper analytics and forecasting
+- Add trend tracking over time.
+- Show forecasted performance where possible.
+- Compare campaign results across brands and workspaces.
+
+5) Workflow automation expansion
+- Expand rule-based automations.
+- Let actions trigger on alerts, performance changes, or lead activity.
+- Support more advanced sequences and branching.
+
+6) Integrations and scheduled summaries
+- Add more third-party integrations.
+- Support scheduled email or dashboard summaries.
+- Allow users to choose what they want to receive and when.
+
+7) Marketplace / template sharing
+- Let users share approved templates.
+- Support a marketplace-style template library.
+- Keep sharing focused on user-owned or approved assets.
+
+8) Guardrails
+- Keep originality rules in place.
+- Preserve user control and approval.
+- Protect credits, permissions, and data access.
+- Keep the "never copy" rule intact.
+
+9) Success criteria
+- Users can manage multiple brands cleanly.
+- Teams can work in shared spaces.
+- Shared assets remain organized.
+- Analytics are more useful.
+- Automations save time.
+- Sharing stays safe and controlled.
+
+10) Phase 7 definition of done
+- Multi-brand support works.
+- Team workspaces work.
+- Shared libraries work.
+- Forecasting/reporting works.
+- Automation and integrations work.
+- Sharing remains safe and approved.

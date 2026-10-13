@@ -1,0 +1,21 @@
+Xspresso Release Bundle Notes v2
+
+This batch continues the clean app build.
+
+Included files:
+- xspresso_471_campaign_builder_v2.js
+- xspresso_472_dashboard_widgets_v2.js
+- xspresso_473_launch_readiness_v2.js
+- xspresso_474_help_search_v2.js
+- xspresso_475_activity_stream_v2.js
+
+Purpose:
+- campaign brief building
+- dashboard summary widgets
+- launch readiness checks
+- help topic search
+- activity stream logging
+
+Core product message:
+Xspresso is done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.
+We do the work. You enjoy the benefits.

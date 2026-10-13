@@ -1,0 +1,16 @@
+Xspresso Meta read-only setup
+=============================
+
+New entry point: node xspresso_meta_metrics_runtime_v1.js
+
+Before using Meta Insights:
+1. Set XSPRESSO_CREDENTIALS_ENCRYPTION_KEY to a base64-encoded, randomly generated 32-byte key.
+2. Set XSPRESSO_META_GRAPH_API_VERSION to a currently supported Meta Graph API version.
+3. Optionally set XSPRESSO_META_CONVERSION_ACTION_TYPES to comma-separated action_type values that represent conversions for your account. If omitted, the runtime disables the no-conversions warning to avoid false alerts.
+4. Set XSPRESSO_META_ACCESS_TOKEN, XSPRESSO_META_AD_ACCOUNT_ID, and XSPRESSO_META_CURRENCY in the operator's environment, then run:
+   node xspresso_meta_credentials_admin_cli_v1.js set <tenantId>
+5. Link an already-live Meta campaign in the dashboard, then run monitoring. The connector only performs GET requests; it does not publish, pause, edit, or change spend.
+
+The token CLI is a manual provisioning path, not OAuth onboarding. Keep the encryption key and Meta token out of source control and browser code. CSV imports remain available if Meta is not configured.
+
+The tests are included but have not been executed in this environment.

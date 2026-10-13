@@ -1,0 +1,83 @@
+XSPRESSO SCREEN FLOW
+
+Purpose:
+A simple map of the main user screens and the order they should appear in V1.
+
+1) Welcome / Login
+- User signs in or creates an account.
+- Show the core promise:
+  "Done-for-you marketing that gets responses."
+- Show the support line:
+  "You stay in command. We do the work."
+
+2) Onboarding
+- Ask what the user wants to create.
+- Ask for offer details.
+- Ask for goal, tone, and platform.
+- Keep it short and friendly.
+
+3) Campaign Builder
+- User enters product photo, URL, or offer details.
+- Xspresso researches the offer.
+- Xspresso generates ads, headlines, hooks, landing pages, carts, lead magnets, and follow-up.
+
+4) Review / Edit / Approve
+- User reviews generated assets.
+- User can edit, approve, or regenerate sections.
+- Keep the user in control.
+
+5) Launch
+- Check readiness.
+- Show missing items if any.
+- User launches campaign.
+- Mark campaign live.
+
+6) Dashboard
+- Show active campaigns.
+- Show credits remaining.
+- Show alerts.
+- Show monitored ads.
+- Show quick actions.
+
+7) Monitoring / Alerts
+- Watch CPC, CTR, conversions, and status.
+- Warn about underperforming ads.
+- Suggest fixes.
+- Offer regeneration.
+
+8) Platform Switch Modal
+- Warn the user when switching platforms.
+- Show all ads or selected ads.
+- Offer keep running, move to library, or keep monitoring for credits.
+
+9) Library / Templates
+- Save campaigns.
+- Duplicate the user's own work.
+- Restore versions.
+- Start from templates.
+
+10) Billing / Credits
+- Show plan.
+- Show credits used.
+- Show credits remaining.
+- Suggest upgrades if usage is high.
+- Keep pricing fair and easy to understand.
+
+11) Settings / Admin
+- Set tone.
+- Set thresholds.
+- Set monitoring defaults.
+- Set platform behavior.
+
+12) Help / Support
+- Quick start
+- FAQ
+- Troubleshooting
+- Support contact
+
+Notes:
+- Keep every screen simple.
+- Keep language customer-friendly.
+- Keep actions obvious.
+- Keep the user in command.
+- Keep the product fast and clear.

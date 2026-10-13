@@ -1,0 +1,63 @@
+Xspresso Phase 8 Acceptance Criteria
+
+Purpose:
+Phase 8 is complete when Xspresso can provide smarter optimization guidance, deeper performance analysis, adaptive campaign recommendations, clearer credit intelligence, and stronger team/workspace controls without breaking the core V1 promise.
+
+Acceptance Criteria:
+
+1. Smarter Optimization Suggestions
+- Xspresso can analyze a campaign or ad set and recommend the next best improvement.
+- Recommendations can include title, hook, CTA, angle, creative, audience, or budget changes.
+- Suggestions are clear, actionable, and easy for the user to apply.
+
+2. Deeper Performance Analysis
+- The dashboard can surface more than basic CPC/CTR data.
+- Xspresso can summarize trends, warning signs, and opportunities.
+- Performance summaries are readable without requiring the user to inspect raw stats manually.
+
+3. Adaptive Campaign Recommendations
+- Xspresso can recommend changes based on current campaign behavior.
+- Recommendations adapt to whether the user wants sales, leads, traffic, or follow-up.
+- Recommendations remain editable and optional.
+
+4. Team/Workspace Controls
+- Multiple users can share access to campaigns and workspaces where enabled.
+- Permission levels are respected.
+- Shared assets, campaigns, and reports remain organized.
+
+5. Scheduled Reporting
+- Users can receive recurring reports or summaries.
+- Reports can be daily, weekly, or monthly.
+- Reports include performance, alerts, and recommendations.
+
+6. Advanced Automation
+- Advanced rule-based automation can trigger actions or suggestions.
+- Automation does not override user control.
+- Automation is transparent and traceable in activity history.
+
+7. Better Account Insights
+- The system can summarize what is working and what is not.
+- The user can see where time and credits are going.
+- The system can suggest the next best step in plain language.
+
+8. Forecasting Ideas
+- Xspresso can provide basic forward-looking estimates or trend-based guidance.
+- Forecasting is clearly labeled as a recommendation, not a guarantee.
+- Forecasting does not replace user approval.
+
+9. Clearer Credit Intelligence
+- The user can see how credits are being used.
+- Xspresso can warn the user when usage is trending toward a higher tier.
+- Credit summaries remain simple and fair.
+
+10. Core Product Alignment
+- All Phase 8 features continue to support the main product promise:
+  - done-for-you
+  - fast
+  - simple
+  - more responses
+  - less software chaos
+  - user stays in command
+
+Definition of Done:
+Phase 8 is done when smarter optimization, deeper analysis, adaptive recommendations, clearer credit intelligence, and stronger workspace controls are working together in a way that is useful, understandable, and consistent with the Xspresso brand.

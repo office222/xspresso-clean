@@ -1,0 +1,36 @@
+Xspresso — Board Shell Final Assembly Notes
+
+Purpose:
+- Keep the cup left of the name/logo at all screen widths.
+- Keep the header white.
+- Keep the layout FrontPage-friendly and simple.
+- Prevent wrapping/stacking surprises.
+
+Header rules:
+- Use a 2-cell inline table for the logo row.
+- Cup image on the left.
+- Text logo on the right.
+- Keep both images display:block.
+- Use max-width and height:auto on the text logo.
+- Keep white-space:nowrap on the logo cells.
+
+Responsive behavior:
+- On smaller screens, the logo should shrink rather than stack.
+- The cup should stay inline with the name.
+- If needed, reduce the logo text image width in the image file itself.
+
+Style guidance:
+- White background for the top bar.
+- Orange only as an accent.
+- No dark header behind the logo.
+- Keep spacing clean and simple.
+
+Acceptance checks:
+- Cup stays left of the name.
+- Logo stays on one line as long as possible.
+- Header remains white.
+- No overlap or wrapping into the page body.
+
+Notes:
+- This file is the final assembly reminder for the board shell header behavior.
+- Use it together with the responsive wrap rules and mobile behavior notes.

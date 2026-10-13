@@ -1,0 +1,38 @@
+Xspresso Phase 17 — Task Breakdown
+
+1) Orchestration across modules
+- Coordinate campaigns, leads, alerts, billing, and templates.
+- Keep campaign state, credits, alerts, and follow-up in sync.
+- Surface one clear next action for the user.
+
+2) Smarter recommendation loops
+- Recommend tweaks for underperforming ads.
+- Suggest new titles, hooks, angles, and CTAs.
+- Recommend when to regenerate instead of continuing to spend credits.
+
+3) Forecasting and trend analysis
+- Track usage trends over time.
+- Highlight rising CPC, weak CTR, and conversion shifts.
+- Show simple forecast notes for campaign health.
+
+4) Multi-team / multi-brand controls
+- Support separate workspaces for brands or clients.
+- Keep permissions and defaults isolated by workspace.
+- Let users switch between brands cleanly.
+
+5) Shared templates and marketplace ideas
+- Let users save, reuse, and share templates.
+- Support internal team libraries.
+- Prepare for future marketplace-style sharing.
+
+6) Guardrails and user control
+- Keep users in command.
+- Require approval before launch.
+- Keep all important actions visible and reversible where practical.
+- Stay aligned with the "done-for-you, never copy" rule.
+
+7) Success criteria
+- Users can manage more than one brand or workflow.
+- Xspresso can coordinate multiple modules without confusion.
+- Recommendations are actionable and easy to understand.
+- Team and marketplace concepts remain controlled and safe.

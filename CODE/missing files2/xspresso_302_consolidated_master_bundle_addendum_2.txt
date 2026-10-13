@@ -1,0 +1,509 @@
+XSPRESSO CONSOLIDATED MASTER BUNDLE — ADDENDUM 2
+Feature: opt-in, in-app notifications derived from the activity feed.
+
+This bundle contains complete source for the files below. Save each section under its stated filename in the project directory. All preferences default to off. This feature is in-app only; it does not send email or perform external actions.
+
+============================================================
+FILE: xspresso_notification_preferences_service_v1.js
+============================================================
+
+const DEFAULT_PREFERENCES = Object.freeze({
+  campaignUpdates: false,
+  monitoringAlerts: false,
+  leadFollowups: false,
+  creativeAssets: false,
+});
+
+const ALLOWED_KEYS = new Set(Object.keys(DEFAULT_PREFERENCES));
+
+function fault(status, code, message) {
+  return Object.assign(new Error(message), { status, code });
+}
+
+function userScope(user) {
+  if (!user?.id || !user?.tenantId) {
+    throw fault(401, 'UNAUTHENTICATED', 'Authentication required.');
+  }
+  return { userId: user.id, tenantId: user.tenantId };
+}
+
+function categoryFor(event) {
+  const value = `${event?.kind || ''} ${event?.action || ''}`.toLowerCase();
+  if (value.includes('alert') || value.includes('monitor')) return 'monitoringAlerts';
+  if (value.includes('followup') || value.includes('lead')) return 'leadFollowups';
+  if (value.includes('asset') || value.includes('image') || value.includes('creative')) return 'creativeAssets';
+  return 'campaignUpdates';
+}
+
+export class NotificationPreferencesService {
+  constructor({ store, activityFeed, clock = () => Date.now() }) {
+    if (!store?.read || !store?.update) throw new TypeError('store must support read and update');
+    if (!activityFeed?.list || !activityFeed?.markRead) throw new TypeError('activityFeed must support list and markRead');
+    this.store = store;
+    this.activityFeed = activityFeed;
+    this.clock = clock;
+  }
+
+  async getPreferences(user) {
+    const scope = userScope(user);
+    const state = await this.store.read();
+    const row = (state.notificationPreferences || []).find(
+      item => item.userId === scope.userId && item.tenantId === scope.tenantId,
+    );
+    return { ...DEFAULT_PREFERENCES, ...(row?.preferences || {}) };
+  }
+
+  async updatePreferences(user, patch) {
+    const scope = userScope(user);
+    if (!patch || typeof patch !== 'object' || Array.isArray(patch)) {
+      throw fault(400, 'INVALID_PREFERENCES', 'Preferences must be an object.');
+    }
+    for (const [key, value] of Object.entries(patch)) {
+      if (!ALLOWED_KEYS.has(key) || typeof value !== 'boolean') {
+        throw fault(400, 'INVALID_PREFERENCES', `Unsupported notification preference: ${key}.`);
+      }
+    }
+    if (Object.keys(patch).length === 0) {
+      throw fault(400, 'EMPTY_PREFERENCES', 'Provide at least one preference to update.');
+    }
+
+    return this.store.update(state => {
+      state.notificationPreferences ||= [];
+      let row = state.notificationPreferences.find(
+        item => item.userId === scope.userId && item.tenantId === scope.tenantId,
+      );
+      if (!row) {
+        row = {
+          ...scope,
+          preferences: { ...DEFAULT_PREFERENCES },
+          createdAt: new Date(this.clock()).toISOString(),
+        };
+        state.notificationPreferences.push(row);
+      }
+      row.preferences = { ...DEFAULT_PREFERENCES, ...row.preferences, ...patch };
+      row.updatedAt = new Date(this.clock()).toISOString();
+      return { ...row.preferences };
+    });
+  }
+
+  async list(user, { limit = 25, before } = {}) {
+    userScope(user);
+    const preferences = await this.getPreferences(user);
+    const page = await this.activityFeed.list(user, { limit, before });
+    const items = (page.items || []).filter(item => preferences[categoryFor(item)] === true);
+    return {
+      preferences,
+      items,
+      unreadCount: items.filter(item => item.unread === true).length,
+      nextBefore: page.nextBefore || null,
+    };
+  }
+
+  async markRead(user) {
+    userScope(user);
+    return this.activityFeed.markRead(user);
+  }
+}
+
+export { DEFAULT_PREFERENCES, categoryFor };
+
+============================================================
+FILE: xspresso_notification_api_v1.js
+============================================================
+
+function send(res, status, payload) {
+  res.writeHead(status, {
+    'Content-Type': 'application/json; charset=utf-8',
+    'Cache-Control': 'no-store',
+    'X-Content-Type-Options': 'nosniff',
+  });
+  res.end(JSON.stringify(payload));
+}
+
+function bearer(req) {
+  const value = req.headers?.authorization || '';
+  const match = /^Bearer ([A-Za-z0-9_-]{20,512})$/.exec(value);
+  return match?.[1] || null;
+}
+
+async function readJson(req, maxBytes = 16 * 1024) {
+  const chunks = [];
+  let size = 0;
+  for await (const chunk of req) {
+    size += chunk.length;
+    if (size > maxBytes) throw Object.assign(new Error('Request is too large.'), { status: 413, code: 'BODY_TOO_LARGE' });
+    chunks.push(chunk);
+  }
+  if (!size) return {};
+  try {
+    return JSON.parse(Buffer.concat(chunks).toString('utf8'));
+  } catch {
+    throw Object.assign(new Error('Invalid JSON body.'), { status: 400, code: 'INVALID_JSON' });
+  }
+}
+
+export function createNotificationApiHandler({ auth, service, fallback }) {
+  if (!auth?.authenticate || !service) throw new TypeError('auth and service are required');
+  return async function notificationApi(req, res) {
+    const url = new URL(req.url || '/', 'http://localhost');
+    const path = url.pathname;
+    const known = path === '/api/notifications' || path === '/api/notifications/preferences' || path === '/api/notifications/read';
+    if (!known) return fallback ? fallback(req, res) : send(res, 404, { error: 'Not found.' });
+
+    try {
+      const token = bearer(req);
+      if (!token) return send(res, 401, { error: 'Authentication required.' });
+      const user = await auth.authenticate(token);
+      if (!user) return send(res, 401, { error: 'Authentication required.' });
+
+      if (path === '/api/notifications' && req.method === 'GET') {
+        const rawLimit = Number(url.searchParams.get('limit') || 25);
+        const limit = Number.isFinite(rawLimit) ? Math.max(1, Math.min(100, Math.floor(rawLimit))) : 25;
+        return send(res, 200, await service.list(user, { limit, before: url.searchParams.get('before') || undefined }));
+      }
+      if (path === '/api/notifications/preferences' && req.method === 'GET') {
+        return send(res, 200, { preferences: await service.getPreferences(user) });
+      }
+      if (path === '/api/notifications/preferences' && req.method === 'PATCH') {
+        const body = await readJson(req);
+        return send(res, 200, { preferences: await service.updatePreferences(user, body.preferences) });
+      }
+      if (path === '/api/notifications/read' && req.method === 'POST') {
+        return send(res, 200, await service.markRead(user));
+      }
+      return send(res, 405, { error: 'Method not allowed.' });
+    } catch (error) {
+      const status = Number.isInteger(error.status) ? error.status : 500;
+      return send(res, status, {
+        error: status >= 500 ? 'Notification request failed.' : error.message,
+        code: error.code || 'NOTIFICATION_ERROR',
+      });
+    }
+  };
+}
+
+============================================================
+FILE: xspresso_notification_panel_v1.js
+============================================================
+
+const TOKEN_KEY = 'xspresso_token';
+const PREFS = [
+  ['campaignUpdates', 'Campaign updates'],
+  ['monitoringAlerts', 'Performance and monitoring alerts'],
+  ['leadFollowups', 'Lead follow-up activity'],
+  ['creativeAssets', 'Creative asset activity'],
+];
+
+function element(tag, text, className) {
+  const node = document.createElement(tag);
+  if (text !== undefined) node.textContent = text;
+  if (className) node.className = className;
+  return node;
+}
+
+function token() {
+  try { return sessionStorage.getItem(TOKEN_KEY); } catch { return null; }
+}
+
+async function api(path, options = {}) {
+  const session = token();
+  if (!session) throw new Error('Sign in to manage notifications.');
+  const response = await fetch(path, {
+    ...options,
+    headers: {
+      Authorization: `Bearer ${session}`,
+      ...(options.body ? { 'Content-Type': 'application/json' } : {}),
+      ...(options.headers || {}),
+    },
+  });
+  let payload = {};
+  try { payload = await response.json(); } catch {}
+  if (!response.ok) throw new Error(payload.error || 'Notification request failed.');
+  return payload;
+}
+
+function mount(root = document.getElementById('app')) {
+  if (!root || document.getElementById('xspresso-notification-panel')) return;
+  const panel = element('section', undefined, 'panel xspresso-notification-panel');
+  panel.id = 'xspresso-notification-panel';
+  panel.append(element('h2', 'Notifications'));
+  panel.append(element('p', 'Choose which in-app activity should appear here. All categories start off.'));
+
+  const status = element('p', 'Loading preferences…', 'muted');
+  panel.append(status);
+  const controls = element('div', undefined, 'stack');
+  const checkboxes = new Map();
+  for (const [key, label] of PREFS) {
+    const row = element('label', undefined, 'row');
+    const input = element('input');
+    input.type = 'checkbox';
+    input.dataset.preference = key;
+    checkboxes.set(key, input);
+    row.append(input, element('span', label));
+    controls.append(row);
+  }
+  panel.append(controls);
+
+  const buttons = element('div', undefined, 'row');
+  const save = element('button', 'Save preferences', 'button');
+  save.type = 'button';
+  const refresh = element('button', 'Refresh', 'button secondary');
+  refresh.type = 'button';
+  buttons.append(save, refresh);
+  panel.append(buttons);
+
+  const list = element('div', undefined, 'stack');
+  panel.append(list);
+
+  async function load() {
+    list.replaceChildren();
+    try {
+      const [{ preferences }, feed] = await Promise.all([
+        api('/api/notifications/preferences'),
+        api('/api/notifications?limit=20'),
+      ]);
+      for (const [key, input] of checkboxes) input.checked = preferences[key] === true;
+      status.textContent = feed.unreadCount ? `${feed.unreadCount} unread notification(s).` : 'No unread notifications.';
+      if (!feed.items.length) {
+        list.append(element('p', 'No matching notifications. Enable a category above to see its activity.'));
+      }
+      for (const item of feed.items) {
+        const card = element('article', undefined, 'panel');
+        card.append(element('strong', item.title || 'Activity update'));
+        card.append(element('p', item.summary || item.action || ''));
+        card.append(element('time', item.createdAt ? new Date(item.createdAt).toLocaleString() : ''));
+        list.append(card);
+      }
+    } catch (error) {
+      status.textContent = error.message;
+    }
+  }
+
+  save.addEventListener('click', async () => {
+    save.disabled = true;
+    try {
+      const preferences = Object.fromEntries([...checkboxes].map(([key, input]) => [key, input.checked]));
+      await api('/api/notifications/preferences', { method: 'PATCH', body: JSON.stringify({ preferences }) });
+      status.textContent = 'Preferences saved.';
+      await load();
+    } catch (error) { status.textContent = error.message; }
+    finally { save.disabled = false; }
+  });
+  refresh.addEventListener('click', load);
+
+  const target = root.querySelector('main') || root;
+  target.prepend(panel);
+  void load();
+}
+
+function boot() {
+  const root = document.getElementById('app');
+  if (!root) return;
+  mount(root);
+  new MutationObserver(() => mount(root)).observe(root, { childList: true, subtree: true });
+  document.addEventListener('submit', () => setTimeout(() => mount(root), 500));
+}
+
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot, { once: true });
+else boot();
+
+============================================================
+FILE: xspresso_notification_runtime_v1.js
+============================================================
+
+import { createServer } from 'node:http';
+import { readFile } from 'node:fs/promises';
+import { dirname, join, resolve } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { createXspressoActivityFeedRuntime } from './xspresso_activity_feed_runtime_v1.js';
+import { ActivityFeedService } from './xspresso_activity_feed_service_v1.js';
+import { NotificationPreferencesService } from './xspresso_notification_preferences_service_v1.js';
+import { createNotificationApiHandler } from './xspresso_notification_api_v1.js';
+import { AuthRateLimiter } from './xspresso_auth_rate_limiter_v1.js';
+
+const ROOT = dirname(fileURLToPath(import.meta.url));
+const ASSETS = new Map([
+  ['/', ['xspresso_dashboard_meta_connection_v2.html', 'text/html; charset=utf-8']],
+  ['/xspresso_dashboard_meta_connection_v2.html', ['xspresso_dashboard_meta_connection_v2.html', 'text/html; charset=utf-8']],
+  ['/xspresso_dashboard_v2.css', ['xspresso_dashboard_v2.css', 'text/css; charset=utf-8']],
+  ['/xspresso_dashboard_app_v3_1.js', ['xspresso_dashboard_app_v3_1.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_dashboard_api_client_v3.js', ['xspresso_dashboard_api_client_v3.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_meta_connection_panel_v2.js', ['xspresso_meta_connection_panel_v2.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_meta_connection_api_v2.js', ['xspresso_meta_connection_api_v2.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_meta_connection_panel_v1.css', ['xspresso_meta_connection_panel_v1.css', 'text/css; charset=utf-8']],
+  ['/xspresso_asset_library_panel_v1.js', ['xspresso_asset_library_panel_v1.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_ai_image_panel_v1.js', ['xspresso_ai_image_panel_v1.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_campaign_kit_download_panel_v1.js', ['xspresso_campaign_kit_download_panel_v1.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_campaign_history_panel_v1.js', ['xspresso_campaign_history_panel_v1.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_campaign_iteration_panel_v1.js', ['xspresso_campaign_iteration_panel_v1.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_activity_feed_panel_v1.js', ['xspresso_activity_feed_panel_v1.js', 'text/javascript; charset=utf-8']],
+  ['/xspresso_activity_feed_panel_v1.css', ['xspresso_activity_feed_panel_v1.css', 'text/css; charset=utf-8']],
+  ['/xspresso_notification_panel_v1.js', ['xspresso_notification_panel_v1.js', 'text/javascript; charset=utf-8']],
+]);
+
+function send(res, status, body, headers = {}) {
+  res.writeHead(status, { 'X-Content-Type-Options': 'nosniff', 'Referrer-Policy': 'strict-origin-when-cross-origin', ...headers });
+  res.end(body);
+}
+
+export function createXspressoNotificationRuntime(options = {}) {
+  const base = createXspressoActivityFeedRuntime(options);
+  const activity = new ActivityFeedService({ store: base.store });
+  const notifications = new NotificationPreferencesService({ store: base.store, activityFeed: activity });
+  const api = createNotificationApiHandler({ auth: base.auth, service: notifications, fallback: base.api });
+  const webRoot = resolve(options.webRoot || ROOT);
+  const handler = async (req, res) => {
+    const url = new URL(req.url || '/', 'http://localhost');
+    if (url.pathname.startsWith('/api/')) return api(req, res);
+    if (!['GET', 'HEAD'].includes(req.method || 'GET')) return send(res, 405, 'Method not allowed.');
+    const asset = ASSETS.get(url.pathname);
+    if (!asset) return send(res, 404, 'Not found.');
+    try {
+      let body = await readFile(join(webRoot, asset[0]));
+      if (url.pathname === '/' || url.pathname.endsWith('.html')) {
+        let html = body.toString('utf8');
+        const addition = '<script type="module" src="/xspresso_notification_panel_v1.js"></script>';
+        if (!html.includes(addition)) html = html.replace('</body>', `${addition}</body>`);
+        body = Buffer.from(html);
+      }
+      return send(res, 200, req.method === 'HEAD' ? '' : body, {
+        'Content-Type': asset[1],
+        'Cache-Control': 'no-store',
+        'Content-Security-Policy': "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' blob: data:; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'",
+      });
+    } catch {
+      return send(res, 500, 'Unable to load application asset.');
+    }
+  };
+
+  const server = createServer(async (req, res) => {
+    const url = new URL(req.url || '/', 'http://localhost');
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+    if (req.method === 'POST' && ['/api/auth/login', '/api/auth/signup', '/api/auth/register'].includes(url.pathname)) {
+      const decision = limiter.consume(req.socket?.remoteAddress || 'unknown');
+      if (!decision.allowed) {
+        res.setHeader('Retry-After', String(decision.retryAfterSeconds));
+        return send(res, 429, JSON.stringify({ error: 'Too many requests.' }), { 'Content-Type': 'application/json; charset=utf-8' });
+      }
+    }
+    try { await handler(req, res); }
+    catch { if (!res.headersSent) send(res, 500, JSON.stringify({ error: 'Internal server error.' }), { 'Content-Type': 'application/json; charset=utf-8' }); }
+  });
+  const limiter = new AuthRateLimiter({ maxAttempts: 10, windowMs: 60_000 });
+  const config = options.config || base.config;
+  let listening = false;
+
+  return {
+    ...base,
+    api,
+    server,
+    notificationService: notifications,
+    async listen() {
+      await base.store.init?.();
+      await new Promise((resolveListen, reject) => {
+        server.once('error', reject);
+        server.listen(config.port, config.host, () => {
+          server.off('error', reject);
+          listening = true;
+          resolveListen();
+        });
+      });
+      base.scheduler?.start?.();
+      return server.address();
+    },
+    async close() {
+      base.scheduler?.stop && await base.scheduler.stop();
+      if (listening) await new Promise((resolveClose, reject) => server.close(error => error ? reject(error) : resolveClose()));
+      await base.close?.();
+      await base.smtpMailer?.close?.();
+    },
+  };
+}
+
+async function main() {
+  const runtime = createXspressoNotificationRuntime();
+  const address = await runtime.listen();
+  console.log(`Xspresso notification dashboard listening on ${address?.address}:${address?.port}`);
+  const stop = async () => { await runtime.close(); process.exit(0); };
+  process.once('SIGINT', stop);
+  process.once('SIGTERM', stop);
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
+  main().catch(error => { console.error('Xspresso failed to start:', error.message); process.exitCode = 1; });
+}
+
+============================================================
+FILE: xspresso_notification_preferences_service_v1.test.js
+============================================================
+
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { NotificationPreferencesService } from './xspresso_notification_preferences_service_v1.js';
+
+function makeStore(state) {
+  let current = structuredClone(state);
+  return {
+    async read() { return structuredClone(current); },
+    async update(fn) {
+      const next = structuredClone(current);
+      const result = await fn(next);
+      current = next;
+      return structuredClone(result);
+    },
+  };
+}
+
+const activityFeed = {
+  async list() {
+    return {
+      unreadCount: 3,
+      nextBefore: null,
+      items: [
+        { id: '1', action: 'campaign.draft_saved', title: 'Draft saved', unread: true },
+        { id: '2', action: 'monitoring.alert_opened', title: 'Alert opened', unread: true },
+        { id: '3', action: 'asset.uploaded', title: 'Asset uploaded', unread: true },
+      ],
+    };
+  },
+  async markRead() { return { markedRead: true }; },
+};
+
+const user = { id: 'user-1', tenantId: 'tenant-1' };
+
+test('notification preferences default off and filter the activity feed', async () => {
+  const store = makeStore({ notificationPreferences: [] });
+  const service = new NotificationPreferencesService({ store, activityFeed, clock: () => Date.parse('2026-10-10T00:00:00Z') });
+  const defaults = await service.getPreferences(user);
+  assert.equal(defaults.campaignUpdates, false);
+  assert.equal(defaults.monitoringAlerts, false);
+
+  await service.updatePreferences(user, { monitoringAlerts: true });
+  const result = await service.list(user);
+  assert.equal(result.items.length, 1);
+  assert.equal(result.items[0].title, 'Alert opened');
+  assert.equal(result.unreadCount, 1);
+});
+
+test('preferences are tenant and user scoped; invalid keys are rejected', async () => {
+  const store = makeStore({ notificationPreferences: [] });
+  const service = new NotificationPreferencesService({ store, activityFeed });
+  await service.updatePreferences(user, { creativeAssets: true });
+  const other = await service.getPreferences({ id: 'user-2', tenantId: 'tenant-1' });
+  assert.equal(other.creativeAssets, false);
+  await assert.rejects(service.updatePreferences(user, { sendEmail: true }), error => error.status === 400);
+});
+
+============================================================
+FILE: xspresso_notification_setup_v1.txt
+============================================================
+
+IN-APP NOTIFICATION ADDENDUM
+
+1. Save each section above as the filename shown in its heading. Place the files in the same project directory as the existing Xspresso runtime and activity-feed modules.
+2. Add xspresso_notification_runtime_v1.js as the app entry point when you want the notification panel enabled.
+3. The notification categories default to off. Users must turn on categories in the panel.
+4. This addendum provides in-app notifications only. It does not send email, publish ads, change budgets, or call external ad APIs.
+5. Run tests with: node --test xspresso_notification_preferences_service_v1.test.js
+6. The test is provided as source and has not been executed here.

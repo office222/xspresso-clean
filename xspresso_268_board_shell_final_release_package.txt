@@ -1,0 +1,40 @@
+Xspresso Board Shell Final Release Package
+
+Purpose:
+- Keep the board shell clean, premium, and readable.
+- Keep the cup left of the name/logo.
+- Keep the top bar white.
+- Keep the logo inline and shrinking without stacking.
+- Keep the business card readable on smaller screens.
+- Keep CTA buttons clear and easy to tap.
+
+Core Rules:
+1. White top bar only.
+2. Cup stays left of the name/logo.
+3. Logo shrinks gracefully on smaller screens.
+4. No wrapping or stacking unless the screen is extremely narrow.
+5. Business card copy stays short and readable.
+6. CTAs stay visible, simple, and action-focused.
+7. Footer stays minimal.
+8. FrontPage-friendly HTML only.
+
+Acceptance Checklist:
+- Cup remains left of the text logo.
+- Header background stays white.
+- Logo scales down without overlap.
+- Business card text remains readable.
+- CTA buttons remain clear and aligned.
+- No duplicate filenames in the release set.
+- The board shell reflects the Xspresso promise.
+
+Core Message:
+Done-for-you marketing.
+You stay in command.
+We do the work.
+
+Recommended Next Steps:
+- Final visual pass.
+- Confirm header/logo behavior on mobile.
+- Confirm business card spacing.
+- Confirm CTA placement.
+- Package the board shell for final download.

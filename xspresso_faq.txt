@@ -1,0 +1,61 @@
+Xspresso FAQ
+
+1. What is Xspresso?
+Xspresso is a done-for-you marketing system that helps users create campaigns faster, build lists, follow up automatically, and stay in command.
+
+2. Is Xspresso just another software tool?
+No. Xspresso is designed to replace software chaos with one simple workflow for campaign creation, monitoring, lead capture, and follow-up.
+
+3. Do all plans include all tools?
+Yes. All plans include every tool. Credits simply determine fair usage.
+
+4. What are credits used for?
+Credits are used for actions such as generating campaigns, adding landing pages, creating ad variations, monitoring ads, uploading to platforms, and other usage-based actions.
+
+5. What happens when credits run low?
+Xspresso should warn the user before credits run out and suggest an upgrade if it could save money.
+
+6. Can I monitor my ads on a platform I already use?
+Yes. If you connect a platform, Xspresso can monitor existing ads on that platform where supported.
+
+7. What happens when I switch platforms?
+Xspresso should warn you that monitoring on the old platform will stop unless you choose to keep it active for a usage cost.
+
+8. Can I keep specific ads running?
+Yes. Users can choose to keep specific ads running, move them to their library, or keep monitoring them for credits.
+
+9. What does move to library mean?
+It means the ad is removed from the platform and saved in your Xspresso library for later review, reuse, or restore.
+
+10. What happens if an ad underperforms?
+Xspresso should warn you that the ad is underperforming and recommend improvements such as a new title, hook, angle, or CTA.
+
+11. Can Xspresso regenerate an ad?
+Yes. Xspresso can regenerate an ad with a new title, hook, angle, or related improvement before more credits are spent.
+
+12. Does Xspresso build landing pages too?
+Yes. Landing pages are part of the core V1 workflow.
+
+13. Does Xspresso build follow-up emails?
+Yes. Xspresso can help build lead capture and follow-up flows so traffic can turn into a list and a list can turn into sales.
+
+14. Can I reuse my own campaigns?
+Yes. Xspresso lets users save, duplicate, export, import, and reuse their own campaigns and templates.
+
+15. Is there a V2?
+Yes. V2 ideas include sales letters, VSLs, video production support, and deeper long-form funnel tools.
+
+16. What is the core promise?
+Xspresso is done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.
+
+17. Why was Xspresso built?
+Xspresso was built to help people avoid the pain of wasted money, wasted time, and too much software juggling.
+
+18. Can I customize the tone?
+Yes. The user should be able to choose tones like simple, friendly, bold, premium, direct, or persuasive.
+
+19. Is Xspresso beginner-friendly?
+Yes. The workflow should allow users to start with very little input and still get a usable draft.
+
+20. What if I need help?
+Xspresso should include a help center, support topics, and simple in-app guidance so users can keep moving.

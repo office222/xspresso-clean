@@ -1,0 +1,50 @@
+Xspresso Phase 20 — Acceptance Criteria
+
+Goal:
+Validate the final Phase 20 scope for deeper orchestration across campaigns, leads, alerts, billing, templates, and reports.
+
+Acceptance Criteria:
+
+1. Campaign Orchestration
+- The system can coordinate campaigns across multiple modules.
+- Campaign updates flow correctly between builder, monitor, alerts, and reporting.
+- Cross-campaign learning is reflected in recommendations.
+
+2. Recommendation Engine
+- Xspresso can suggest next actions based on campaign and ad performance.
+- Recommendations are clear, actionable, and user-friendly.
+- Users can accept, reject, or defer recommendations.
+
+3. Forecasting and Trend Analysis
+- The system can surface trend summaries for campaigns and accounts.
+- Forecasted insights are visible in reporting or dashboard summaries.
+- Trend data updates without breaking existing workflow.
+
+4. Shared Assets and Template Intelligence
+- Templates and reusable assets can be saved, loaded, and reused reliably.
+- Shared assets remain organized and accessible.
+- Template intelligence supports faster campaign creation.
+
+5. Team and Agency Controls
+- Team and agency users can access the correct shared resources.
+- Permissions and access control remain respected.
+- Multi-brand and multi-user workflows operate cleanly.
+
+6. Marketplace / Reusable Component Ideas
+- The system can support shared or reusable asset concepts without breaking core workflows.
+- Marketplace-style objects remain optional and modular.
+
+7. Guardrails and User Control
+- The user remains in control of important actions.
+- Alerts, approvals, and confirmations are clear.
+- Risky or expensive actions should require explicit user confirmation.
+
+8. Stability and Usability
+- Core workflows remain fast and simple.
+- Existing V1 behavior continues to work.
+- The system remains easy to understand and edit.
+
+Definition of Done:
+- Phase 20 features are documented, testable, and aligned with Xspresso's core promise.
+- The system supports deeper orchestration without sacrificing simplicity or user control.
+- New Phase 20 concepts do not break the core V1 workflow.

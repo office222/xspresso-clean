@@ -1,0 +1,18 @@
+Xspresso Phase 25 Scope
+
+Focus:
+- deeper autonomous orchestration across campaigns, leads, alerts, billing, templates, and reports
+- smarter cross-campaign learning and trend detection
+- stronger recommendation loops
+- broader forecasting and usage intelligence
+- improved multi-brand / multi-team coordination
+- more refined workflow automation
+- richer template / asset marketplace ideas
+- tighter guardrails and user control
+- clearer credit intelligence and usage guidance
+
+Success criteria:
+- the system coordinates more of the workflow with less manual work
+- recommendations become more accurate and more timely
+- users still stay in command and can approve, tweak, or override anything
+- all tools remain available with fair, transparent usage rules

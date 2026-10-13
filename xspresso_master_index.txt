@@ -1,0 +1,88 @@
+XSPRESSO MASTER INDEX
+
+Purpose:
+Xspresso is a done-for-you marketing system that helps users create campaigns faster, build lists, follow up automatically, and stay in command.
+
+Core positioning:
+- Done-for-you marketing, fast
+- More responses. Less software chaos.
+- You stay in command. We do the work.
+- All plans include every tool. Credits simply determine fair usage.
+
+Recommended project structure:
+
+xspresso/
+  README.txt
+  product/
+    v1_features.txt
+    v2_features.txt
+    credits_and_usage.txt
+    monitoring_rules.txt
+    platform_rules.js
+  copy/
+    hero_copy.txt
+    founder_story.txt
+    bullets.txt
+    pricing_copy.txt
+    alerts_copy.txt
+    calls_to_action.txt
+  ui/
+    hero_block.html
+    pricing_table.html
+    dashboard.html
+    alert_modal.html
+    switch_platform_modal.html
+  logic/
+    campaign_generation.js
+    ad_monitoring.js
+    lead_followup.js
+    billing.js
+    alerts_notifications.js
+  library/
+    headline_bank.txt
+    bullet_bank.txt
+    story_bank.txt
+    swipe_notes.txt
+  assets/
+    logo_notes.txt
+    image_list.txt
+    upload_list.txt
+
+Current files created:
+- README.txt
+- xspresso_v1_features.txt
+- credits_and_usage.txt
+- campaign_generation.js
+- ad_monitoring.js
+- lead_followup.js
+- billing.js
+- switch_platform_modal.html
+- dashboard.html
+- alerts_notifications.js
+- platform_rules.js
+- hero_copy.txt
+- founder_story.txt
+
+Recommended next files:
+- bullets.txt
+- pricing_copy.txt
+- headline_bank.txt
+- bullet_bank.txt
+- story_bank.txt
+- monitoring_rules.txt
+- v2_features.txt
+
+Build principles:
+1. Keep it simple.
+2. Keep it fast.
+3. Keep it customer-focused.
+4. Show all tools on all plans.
+5. Use credits for fair usage.
+6. Warn the user before spending credits on underperforming work.
+7. Let users approve, edit, or regenerate without starting over.
+8. Keep users in command while Xspresso does the work.
+
+Notes:
+- V1 stays focused on campaign creation, monitoring, lead capture, follow-up, and credits.
+- V2 can later add sales letters, VSLs, cloning of user-owned work, and video production.
+- Platform switching should always warn users clearly and let them choose what happens to ads.

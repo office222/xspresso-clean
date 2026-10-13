@@ -1,0 +1,73 @@
+XSPRESSO KEEP / IGNORE INSTALL CHECKLIST
+=======================================
+
+Summary
+-------
+The repo appears to have the core app/runtime/platform files already present.
+I did not find any obvious critical missing files. The main job now is cleanup,
+canonical selection, and install order.
+
+KEEP
+----
+[ ] Keep the newest canonical version of each real feature family.
+[ ] Keep the core project files:
+    - .gitignore
+    - README.txt
+    - package.json
+    - billing.js
+    - campaign_generation.js
+    - lead_followup.js
+    - platform_rules.js
+    - dashboard.html
+    - switch_platform_modal.html
+[ ] Keep the active app shell / UI layers.
+[ ] Keep the active platform/runtime/auth/API/service files.
+[ ] Keep the test files that support kept runtime files.
+[ ] Keep the active build/launch/install docs.
+[ ] Keep the master bundle files and the canonical addendum only.
+
+IGNORE / ARCHIVE
+----------------
+[ ] Ignore release-note batches.
+[ ] Ignore code-batch notes and batch wrappers.
+[ ] Ignore duplicate generations of the same feature.
+[ ] Ignore older v1/v2/v3 files when a newer canonical version exists.
+[ ] Ignore x1 / x2 duplicate variants.
+[ ] Ignore old planning phase clutter unless you still use it.
+[ ] Ignore repeated notes, handoff docs, and bundle addenda beyond the canonical one.
+
+CONVERT TO CANONICAL SET
+------------------------
+[ ] For repeated families, keep only the newest correct file.
+[ ] Prefer the latest app/router/shell/monitoring/billing/review/help/template files.
+[ ] Prefer the latest auth/service/runtime/web handler files.
+[ ] Archive older duplicates instead of deleting them if you want history.
+
+INSTALL ORDER
+-------------
+1. Keep one canonical version of each feature family.
+2. Archive duplicate generations.
+3. Verify main runtime/auth/API/service files.
+4. Verify tests for the kept runtime files.
+5. Verify config and environment files.
+6. Install the cleaned set.
+7. Run the launch checklist.
+8. Test the main routes and flows.
+
+WHAT TO TEST FIRST
+------------------
+[ ] App boots cleanly.
+[ ] Login/logout works.
+[ ] Dashboard loads.
+[ ] Campaign builder works.
+[ ] Monitoring/alerts load.
+[ ] Billing/credits panel loads.
+[ ] Template library loads.
+[ ] Lead follow-up flows load.
+[ ] Settings and help pages load.
+
+BOTTOM LINE
+-----------
+Xspresso looks installable after cleanup.
+The repo appears overbuilt, not underbuilt.
+Use the newest canonical files and ignore the duplicate noise.

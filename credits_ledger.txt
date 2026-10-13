@@ -1,0 +1,75 @@
+Xspresso Credits Ledger
+
+Purpose:
+Track every credit movement so users can see what was spent, why it was spent, and what remains.
+
+Core rule:
+All plans include every tool. Credits determine fair usage.
+
+Ledger entry fields:
+- id
+- userId
+- subscriptionId
+- campaignId (optional)
+- adId (optional)
+- type
+- description
+- creditsDelta
+- balanceAfter
+- createdAt
+- metadata
+
+Ledger entry types:
+- plan_grant
+- generate_campaign
+- generate_landing_page
+- generate_ad_copy
+- generate_follow_up
+- upload_social
+- monitor_ad_daily
+- monitor_ad_weekly
+- monitor_ad_monthly
+- switch_platform
+- rush_switch
+- regenerate_ad
+- duplicate_campaign
+- export_campaign
+- import_campaign
+- manual_adjustment
+- bonus_grant
+- refund
+
+Example credit flow:
+1. User signs up.
+2. Plan grants included credits.
+3. User generates a campaign.
+4. Xspresso records the credit charge.
+5. User starts monitoring an ad.
+6. Xspresso records daily usage charges until monitoring stops.
+7. User switches platform.
+8. Xspresso logs the switch charge and any ongoing monitoring cost.
+
+Suggested UI sections:
+- Current credit balance
+- Credits used this cycle
+- Credits added this cycle
+- Recent credit activity
+- Charges by campaign
+- Monitoring charges
+- A la carte charges
+
+Friendly UI copy:
+- See where your credits went.
+- Track every action.
+- Know what is using credits.
+- Stop paying for things that are not working.
+- Upgrade only if it saves you money.
+
+Monitoring note:
+If an ad is underperforming, Xspresso should recommend improving the ad before more credits are spent monitoring it.
+
+Platform switch note:
+If the user switches platforms, Xspresso should clearly show whether the old platform will keep being monitored and what that costs.
+
+Good summary line:
+Xspresso should keep a transparent credit ledger so users always know what was spent, why it was spent, and what to do next.

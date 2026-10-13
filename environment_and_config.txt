@@ -1,0 +1,75 @@
+XSPRESSO ENVIRONMENT AND CONFIG
+
+Purpose:
+Store app settings, API keys, feature flags, and platform-specific options in one place so the app is easy to configure, deploy, and update.
+
+1) Core settings
+- APP_NAME=Xspresso
+- APP_ENV=development|staging|production
+- APP_URL=https://yourdomain.com
+- APP_SUPPORT_EMAIL=support@yourdomain.com
+- APP_DEFAULT_TONE=simple
+- APP_DEFAULT_GOAL=sales
+- APP_DEFAULT_PLATFORM=general
+
+2) Plan and credit settings
+- STARTER_CREDITS_INCLUDED=500
+- PRO_CREDITS_INCLUDED=1500
+- BUSINESS_CREDITS_INCLUDED=4000
+- AGENCY_CREDITS_INCLUDED=10000
+- CREDIT_LOW_THRESHOLD=0.20
+- EXTRA_LANDING_PAGE_COST=125
+- EXTRA_SOCIAL_UPLOAD_COST=100
+- MONITORING_DAILY_RATE=5
+- MONITORING_WEEKLY_RATE=30
+- MONITORING_MONTHLY_RATE=100
+
+3) Monitoring thresholds
+- CPC_WARNING_THRESHOLD=1.50
+- CPC_CRITICAL_THRESHOLD=2.00
+- CTR_WARNING_THRESHOLD=0.80
+- CTR_CRITICAL_THRESHOLD=0.50
+- CONVERSION_WARNING_DAYS=3
+
+4) Platform rules
+- PLATFORM_SWITCH_COOLDOWN_HOURS=72
+- RUSH_SWITCH_COST=20
+- KEEP_MONITORING_ON_SWITCH_DEFAULT=false
+- ALLOWED_PLATFORMS=Facebook,Instagram,TikTok,YouTube,Reddit,Google
+
+5) Feature flags
+- ENABLE_DIRECT_UPLOAD=true
+- ENABLE_LEAD_CAPTURE=true
+- ENABLE_AUTOFOLLOWUP=true
+- ENABLE_SPLIT_TESTING=true
+- ENABLE_CAMPAIGN_LIBRARY=true
+- ENABLE_VERSION_HISTORY=true
+- ENABLE_PLATFORM_SWITCH_WARNINGS=true
+- ENABLE_AD_REGENERATION=true
+
+6) External integrations
+- STRIPE_SECRET_KEY=
+- STRIPE_PUBLISHABLE_KEY=
+- EMAIL_API_KEY=
+- STORAGE_BUCKET=
+- ANALYTICS_KEY=
+- PLATFORM_API_TOKEN=
+
+7) Security and permissions
+- REQUIRE_EMAIL_VERIFICATION=true
+- REQUIRE_ID_VERIFICATION_FOR_VOICE=false
+- REQUIRE_ADMIN_APPROVAL_FOR_HIGH_RISK_ACTIONS=true
+- AUDIT_LOG_ENABLED=true
+
+8) Suggested config files
+- .env
+- config/default.json
+- config/staging.json
+- config/production.json
+- config/platforms.json
+
+9) Notes
+- Keep secrets out of source control.
+- Use feature flags so V1 stays simple.
+- Separate platform rules from pricing rules.
+- Allow credit values and thresholds to be changed without code changes.

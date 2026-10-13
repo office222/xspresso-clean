@@ -1,0 +1,31 @@
+Xspresso Core Principles
+
+1. Done-for-you first
+Xspresso should reduce work, reduce confusion, and help the user move faster.
+
+2. The user stays in command
+The AI does the heavy lifting, but the user can always approve, tweak, regenerate, or stop.
+
+3. All tools included
+No bait-and-switch. Every plan includes every tool. Credits determine fair usage.
+
+4. Fast and simple
+The product should be easy to understand, quick to use, and light on unnecessary steps.
+
+5. More responses, less software chaos
+Xspresso should help users get better marketing results without stitching together a pile of tools.
+
+6. Original, never copy
+Xspresso can analyze, learn patterns, and generate inspired-by marketing, but it should never copy someone else’s work.
+
+7. Monitor and improve
+If a campaign or ad is underperforming, Xspresso should warn the user and recommend the next best action.
+
+8. Save time and money
+The product should help users avoid waste, avoid busywork, and avoid buying another job.
+
+9. Built for real people
+Xspresso should feel practical, affordable, and helpful for people who want to build something better.
+
+10. Keep it editable
+Everything should be easy to review, edit, approve, duplicate, export, or regenerate.

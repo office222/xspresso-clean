@@ -1,0 +1,25 @@
+Xspresso code batch notes
+
+Included files:
+- xspresso_793_billing_credits_panel.js
+- xspresso_794_template_library.js
+- xspresso_795_lead_followup_screen.js
+- xspresso_796_review_panel.js
+- xspresso_797_help_center_panel.js
+- xspresso_798_app_state.js
+
+Purpose of this batch:
+- billing / credits summaries
+- template save / restore / duplicate helpers
+- lead capture and follow-up utilities
+- review / approve / regenerate flow
+- help center search and topic data
+- shared app state store
+
+Next recommended batch:
+- dashboard cards and overview helpers
+- monitoring widgets and alerts
+- launch readiness panel
+- platform switch modal
+- app shell components
+- router / wiring updates

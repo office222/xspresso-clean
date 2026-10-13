@@ -1,0 +1,22 @@
+Xspresso Batch Release Notes
+============================
+
+Files included in this batch:
+- xspresso_627_settings_store_v3.js
+- xspresso_628_dashboard_overview_v5.js
+- xspresso_629_alerts_center_v8.js
+- xspresso_630_campaign_builder_v4.js
+- xspresso_631_review_panel_v7.js
+- xspresso_632_launch_flow_v5.js
+
+Summary:
+- settings store with defaults, update, and reset
+- dashboard overview builder with campaign summaries
+- alerts center with campaign alert evaluation
+- campaign builder brief creation and validation
+- review panel section approval/regeneration helpers
+- launch flow readiness checks and launch execution
+
+Notes:
+- filenames use the Xspresso numbering convention
+- these files are intended to stay consistent with the current app structure

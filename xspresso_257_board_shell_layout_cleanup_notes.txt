@@ -1,0 +1,36 @@
+Xspresso Board Shell Layout Cleanup Notes
+
+Purpose:
+Keep the front board shell clean, premium, and responsive while preserving the core Xspresso message.
+
+Layout rules:
+- Keep the cup icon left of the Xspresso name logo.
+- Use a white background behind the logo area.
+- Prevent the cup and name from stacking on smaller screens.
+- Shrink the logo set gracefully instead of letting it wrap.
+- Keep the top header simple and readable.
+
+Visual priorities:
+- White header background.
+- Orange as an accent only.
+- Clean spacing around the logo and business card.
+- Strong hierarchy: logo first, hero second, CTA third.
+
+Business card block:
+- Keep the card short and readable.
+- Emphasize done-for-you marketing.
+- Reinforce: You stay in command. We do the work.
+- Keep the CTA buttons visible and uncluttered.
+
+Responsive checks:
+- Logo remains inline on tablet and desktop.
+- Logo scales down on mobile.
+- No overlap, no stacking, no wrap surprises.
+- CTA buttons remain easy to tap.
+
+Acceptance checklist:
+- Header is white.
+- Cup stays left of the name.
+- Name/logo stays inline.
+- Page feels clean and premium.
+- The board shell matches the Xspresso brand tone.

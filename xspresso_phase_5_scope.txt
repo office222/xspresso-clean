@@ -1,0 +1,28 @@
+Xspresso Phase 5 Scope
+
+Phase 5 is about expansion, ecosystem, and scale.
+
+Goals:
+- Add collaboration features for teams
+- Add permissions and roles for larger organizations
+- Add webhooks and integrations for automation tools
+- Add reporting exports and scheduled reports
+- Add workflow automation between campaigns, alerts, leads, and billing
+- Add more advanced template management
+- Add marketplace-style sharing for user-created templates and presets
+- Add enterprise-level controls for high-volume users
+
+Phase 5 guardrails:
+- Keep the core promise simple: done-for-you marketing, fast
+- Do not lose the user-in-command model
+- Do not lock core tools behind confusing feature walls
+- Keep credits, usage, and fair billing visible
+- Keep originality rules in place: strategy-inspired, never copy
+- Keep monitoring, alerts, and recommendations useful, not noisy
+
+Success criteria:
+- Teams can collaborate cleanly
+- Users can automate more of their workflow
+- Reporting becomes easier to export and share
+- The platform scales without losing clarity
+- Xspresso still feels fast, simple, and customer-focused

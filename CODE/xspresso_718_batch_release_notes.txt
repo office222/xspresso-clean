@@ -1,0 +1,14 @@
+Xspresso code batch 712-717
+
+Included:
+- dashboard overview
+- notifications center
+- app shell components
+- alerts center
+- settings store
+- help center
+
+Notes:
+- continued batching to avoid tiny fragments
+- filenames remain Xspresso-only
+- this batch focuses on the app shell and support systems

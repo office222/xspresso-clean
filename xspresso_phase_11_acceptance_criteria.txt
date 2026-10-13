@@ -1,0 +1,12 @@
+Xspresso Phase 11 — Acceptance Criteria
+
+- Autonomous optimization loops are functional and safe.
+- Multi-brand intelligence works across separate brand profiles.
+- Cross-campaign learning improves recommendations over time.
+- Scheduled summaries are generated on time and are readable.
+- Recommendation engines produce useful next-step guidance.
+- Forecasting and trend detection are available and understandable.
+- Workflow intelligence improves user actions without removing control.
+- Guardrails and safety checks prevent unsafe or unwanted actions.
+- The system remains aligned with the core Xspresso promise: done-for-you marketing, fast, with the user still in command.
+- Phase 11 is complete when the above items work reliably and can be reviewed without confusion.

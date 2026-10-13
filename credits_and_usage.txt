@@ -1,0 +1,76 @@
+Xspresso V1 - Credits and Usage
+
+Core rule:
+All plans include every tool. Credits simply determine fair usage.
+No feature bait-and-switch.
+
+Purpose of credits:
+Credits are the usage currency inside Xspresso. They are spent on actions, not on access to core tools.
+
+Credit-based actions:
+- Generate a landing page
+- Generate ad copy
+- Generate hooks and headlines
+- Generate follow-up email sequences
+- Generate shopping cart / lead capture copy
+- Generate extra platform variations
+- Export or duplicate campaigns
+- Monitor ads over time
+- Regenerate underperforming ads
+- Upload / adapt content for platforms
+
+Suggested a la carte items:
+- Extra landing page
+- Extra ad batch
+- Extra monitored ad
+- Extra social upload
+- Extra follow-up sequence
+- Extra split-test variation
+- Rush switch / rush processing
+- Ongoing platform monitoring
+
+Monitoring usage:
+If a user wants Xspresso to keep watching ads on a platform, that monitoring should consume credits per day, week, or month.
+Examples:
+- 5 credits per day
+- 30 credits per week
+- 100 credits per month
+
+Platform switch rule:
+If a user switches active platforms, monitoring on the old platform stops unless the user chooses to keep it active.
+The user should be warned clearly before switching.
+
+Switch choices:
+- Keep running all ads and track them myself
+- Delete ads from the platform and move them to library
+- Keep Xspresso monitoring them for a usage cost
+- I will monitor them myself
+
+Underperforming ad rule:
+If an ad is not producing results, Xspresso should warn the user before more credits are spent.
+Xspresso should recommend a fix such as:
+- new title
+- new hook
+- new angle
+- new CTA
+- new image / creative
+
+Example alert copy:
+This ad is underperforming.
+Improve it before spending more credits monitoring an ad that is not performing.
+Xspresso can regenerate this ad with a new title, hook, or angle.
+
+Upgrade suggestion rule:
+If a user is using enough credits that the next tier may save money, Xspresso should suggest upgrading.
+Helpful copy:
+Based on your usage, the next tier may save you money.
+
+Pricing philosophy:
+- Every plan includes every tool
+- Credits determine usage
+- No locked features
+- More usage = more credits
+- Less usage = fewer credits
+
+Best product summary:
+Xspresso gives the full system, and credits decide how much the user can do.

@@ -1,0 +1,17 @@
+Xspresso Batch 873-879 Release Notes
+
+Included modules:
+- xspresso_873_campaign_builder.js
+- xspresso_874_monitoring_engine.js
+- xspresso_875_review_panel.js
+- xspresso_876_dashboard_renderer.js
+- xspresso_877_billing_panel.js
+- xspresso_878_help_center.js
+
+Notes:
+- Campaign builder now creates a normalized brief and initial draft.
+- Monitoring returns warnings and a concise summary.
+- Review panel supports approve / unapprove / regenerate flows.
+- Dashboard renderer outputs summary cards and campaign data.
+- Billing helpers calculate remaining credits and upgrade suggestions.
+- Help center supports topic lookup and simple search.

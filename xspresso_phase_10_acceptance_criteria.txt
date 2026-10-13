@@ -1,0 +1,55 @@
+Xspresso Phase 10 Acceptance Criteria
+
+Purpose:
+Define the minimum conditions for Xspresso Phase 10 to be considered complete.
+
+Phase 10 goals:
+- Deeper autonomous optimization
+- Stronger multi-brand intelligence
+- Cross-campaign learning
+- Smarter scheduled summaries
+- Better recommendation engines
+- Forecasting and trends
+- Workflow intelligence
+- Guardrails and safety
+
+Acceptance criteria:
+1. Cross-campaign learning works.
+   - The system can identify useful patterns across multiple campaigns.
+   - It can suggest improvements based on prior campaign behavior.
+
+2. Deeper autonomous optimization works.
+   - The system can propose optimization actions without manual analysis.
+   - The user can review, approve, or reject suggestions.
+
+3. Multi-brand intelligence works.
+   - The system can separate insights by brand/account.
+   - Brand-specific recommendations do not mix across accounts.
+
+4. Scheduled summaries work.
+   - The system can generate recurring summaries.
+   - Summaries include performance, alerts, trends, and suggested next actions.
+
+5. Recommendation engines work.
+   - The system can suggest practical next steps for weak or improving campaigns.
+   - Recommendations are understandable and actionable.
+
+6. Forecasting and trend views work.
+   - The system can show directional performance trends.
+   - Forecasts are clearly marked as estimates, not promises.
+
+7. Workflow intelligence works.
+   - The system can help prioritize actions.
+   - Suggested tasks are organized by importance.
+
+8. Guardrails remain intact.
+   - The user stays in command.
+   - The system never changes critical items without confirmation.
+   - The system continues to follow originality and safety rules.
+
+9. Reporting remains readable.
+   - Insights are concise, useful, and easy to scan.
+   - The dashboard continues to show the next best action.
+
+Definition of done:
+Xspresso Phase 10 is complete when autonomous optimization, learning, summaries, recommendations, forecasting, and workflow intelligence all function safely and clearly inside the product while keeping the user in control.

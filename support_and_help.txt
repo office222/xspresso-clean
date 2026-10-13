@@ -1,0 +1,81 @@
+Xspresso Support and Help
+
+Purpose:
+This file defines the user-facing help, tooltips, quick-start guidance, and support categories for Xspresso.
+
+1. Quick Start
+- Step 1: Add a product photo, URL, or a few details about your offer.
+- Step 2: Choose your goal.
+- Step 3: Let Xspresso build the draft.
+- Step 4: Approve what you like and tweak what you want.
+- Step 5: Launch and let Xspresso monitor performance.
+
+2. Help Center Categories
+- Getting Started
+- Campaign Creation
+- Monitoring and Alerts
+- Credits and Usage
+- Platform Switching
+- Templates and Library
+- Billing and Subscription
+- Export / Import
+- FAQ
+- Troubleshooting
+
+3. Suggested Tooltips
+- "Done-for-you marketing, fast."
+- "You stay in command."
+- "Xspresso does the heavy lifting."
+- "Improve before spending more credits."
+- "All plans include every tool. Credits simply determine fair usage."
+- "Move to library means delete from platform and store in Xspresso."
+
+4. FAQ Draft
+Q: What is Xspresso?
+A: Xspresso is a done-for-you marketing system that helps users create, monitor, and improve campaigns faster.
+
+Q: Do I need to be a marketing expert?
+A: No. Xspresso is designed to help you move faster without stitching together many tools.
+
+Q: Are all features locked by plan?
+A: No. All plans include every tool. Credits simply determine fair usage.
+
+Q: What happens if an ad is underperforming?
+A: Xspresso warns you and recommends a new title, hook, angle, or regeneration before more credits are spent.
+
+Q: What happens when I switch platforms?
+A: Xspresso warns you that monitoring on the old platform will stop unless you choose a monitoring option.
+
+Q: Can I reuse my own campaigns?
+A: Yes. You can save, duplicate, export, and import your own work.
+
+5. Troubleshooting Topics
+- Campaign won't launch
+- Missing offer data
+- Credits not updating
+- Platform connection failed
+- Ad monitoring paused
+- Underperforming ad warnings
+- Export/import issues
+- Template restore issues
+
+6. Support Tone
+- Friendly
+- Clear
+- Short
+- Helpful
+- No blame
+- Action-oriented
+
+7. Standard Support Copy
+- "Let’s fix that."
+- "Here’s what to do next."
+- "Xspresso recommends a tweak."
+- "You can keep going, or regenerate this section."
+- "If something looks off, we’ll tell you."
+
+8. Best Help Philosophy
+Xspresso should answer the user's question quickly, explain the issue clearly, and suggest the next best action without forcing the user to hunt for answers.
+
+9. One-line summary
+Xspresso help should make the product feel easier, safer, and more supportive without adding confusion.

@@ -1,0 +1,43 @@
+Xspresso Phase 49 — Task Breakdown
+
+1) Final stabilization
+- Review all core V1 flows for consistency.
+- Confirm campaign creation, launch, monitoring, and alerts all behave predictably.
+- Tighten edge cases and fallback behavior.
+
+2) Campaign flow polish
+- Validate offer input, brief creation, generation, review, and launch steps.
+- Ensure edit / approve / regenerate actions are clear and fast.
+- Confirm saved drafts and version history work correctly.
+
+3) Monitoring and alerts
+- Tune ad health checks.
+- Verify underperforming ad warnings are easy to understand.
+- Confirm the regenerate recommendation flow is visible and helpful.
+- Check rising CPC and low CTR alert thresholds.
+
+4) Billing and credit clarity
+- Confirm plan limits, credit usage, and a la carte charges are shown clearly.
+- Verify upgrade suggestions appear only when usage makes sense.
+- Make sure the credits remaining display is accurate.
+
+5) Template and library workflow
+- Test save, reuse, duplicate, export, and import flows.
+- Verify campaign versions and templates are easy to restore.
+- Make sure users can start from proven work without confusion.
+
+6) Dashboard clarity
+- Tighten campaign cards, status badges, and quick actions.
+- Confirm alerts, credits, and monitored ads are visible at a glance.
+- Make sure the dashboard always points to a next action.
+
+7) Support and help content
+- Review empty states, tooltips, and error messages.
+- Make help text shorter, friendlier, and more action-oriented.
+- Keep the tone aligned with done-for-you, in-command messaging.
+
+8) Success criteria
+- Users can build, review, launch, and monitor campaigns without confusion.
+- Credits and usage are understood clearly.
+- Alerts recommend the next best action.
+- The app feels stable, fast, and easy to control.

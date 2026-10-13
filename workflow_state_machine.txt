@@ -1,0 +1,53 @@
+Xspresso Workflow State Machine
+
+Purpose:
+Define the main app states and how a campaign moves through Xspresso from start to finish.
+
+Core states:
+1. Welcome
+2. Onboarding
+3. Brief Building
+4. Campaign Drafting
+5. Review / Approve
+6. Launch Ready
+7. Live Monitoring
+8. Alert / Warning
+9. Regeneration
+10. Pause / Archive
+11. Export / Import
+12. Library / Reuse
+13. Billing / Credits
+14. Settings
+15. Help / Support
+
+State transitions:
+- Welcome -> Onboarding when user signs in or starts a new project.
+- Onboarding -> Brief Building when the user selects what they want to create.
+- Brief Building -> Campaign Drafting when enough input has been collected.
+- Campaign Drafting -> Review / Approve when the draft is ready.
+- Review / Approve -> Launch Ready when the user approves the campaign.
+- Launch Ready -> Live Monitoring after launch confirmation.
+- Live Monitoring -> Alert / Warning when performance thresholds are crossed.
+- Alert / Warning -> Regeneration when the user chooses to improve the ad.
+- Live Monitoring -> Pause / Archive when the user pauses or stops the campaign.
+- Any campaign state -> Export / Import when the user saves or loads work.
+- Any campaign state -> Library / Reuse when the user duplicates or restores work.
+- Any state -> Billing / Credits when the user checks plan or usage.
+- Any state -> Settings when the user changes defaults or preferences.
+- Any state -> Help / Support when the user opens assistance.
+
+Rules:
+- Users should always know what state they are in.
+- Users should always have a clear next action.
+- If something is missing, the state should remain in draft.
+- If an ad is underperforming, the state should allow regeneration before more credits are used.
+- If the platform changes, monitoring rules must update immediately.
+
+UI notes:
+- Each state should have a clear title.
+- Each state should have a short helper line.
+- Each state should show the next action button.
+- Important warnings should be visually highlighted.
+
+Summary:
+Xspresso should behave like a clear step-by-step system, not a confusing pile of disconnected tools.

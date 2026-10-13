@@ -1,0 +1,26 @@
+Xspresso Board Shell Responsive Wrap Rules
+
+Purpose:
+Keep the cup icon left of the name logo, shrink cleanly on smaller screens, and prevent the header from wrapping into a stacked layout.
+
+Rules:
+- Keep the logo area on a single line whenever possible.
+- Use a two-cell inline table for the cup and text logo.
+- Apply white-space: nowrap; to the header logo cells.
+- Use display: block; on the image elements.
+- Keep the top bar background white.
+- Let the text logo scale with max-width: 100% and height: auto.
+- If the viewport becomes too narrow, reduce the displayed width of the text logo before allowing wrap.
+- Avoid letting the cup drop above the name logo.
+- Avoid dark header backgrounds that make the graphics look pixelated or heavy.
+
+Recommended layout behavior:
+- Desktop: cup left, name right, both inline.
+- Tablet: keep inline, shrink the text logo.
+- Mobile: keep inline if possible; if needed, shrink both images rather than stacking.
+
+Acceptance check:
+- The cup remains left of the name.
+- The header stays clean on smaller windows.
+- No accidental overlap.
+- No stacked logo unless there is absolutely no space left.

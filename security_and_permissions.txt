@@ -1,0 +1,68 @@
+Xspresso — Security and Permissions
+
+1) Core principles
+- Keep user data private.
+- Require confirmation for high-impact actions.
+- Log important changes for audit/history.
+- Use role-based access for sensitive admin tools.
+
+2) User roles
+- Owner: full access to billing, settings, billing plans, thresholds, platform connections, and team management.
+- Admin: campaign, monitoring, credits, templates, alerts, and most settings.
+- Editor: create and edit campaigns, but cannot change billing or security settings.
+- Viewer: read-only access to dashboards and reports.
+
+3) Sensitive actions requiring confirmation
+- Switch platform monitoring
+- Delete ads from a platform
+- Move ads to library
+- Pause or cancel subscription
+- Increase usage or buy credits
+- Restore archived campaigns
+- Change monitoring thresholds
+
+4) Sensitive action flow
+- Show a warning.
+- Explain the result.
+- Require explicit confirmation.
+- Log who approved the change.
+- Save timestamp and before/after state.
+
+5) Authentication
+- Email/password sign-in.
+- Optional two-factor authentication.
+- Password reset via email.
+- Session timeout after inactivity.
+
+6) Audit logging
+Log the following:
+- login / logout
+- campaign creation
+- campaign edits
+- ad regeneration
+- platform switch actions
+- credit purchases
+- subscription changes
+- alert dismissal
+- settings changes
+
+7) Permissions model
+- Keep billing separate from campaign editing.
+- Keep admin settings separate from content editing.
+- Keep platform switch and monitoring control gated by role.
+- Keep export/import limited to owner/admin unless otherwise allowed.
+
+8) Data protection notes
+- Minimize stored personal data.
+- Protect tokens and platform credentials.
+- Restrict API access by user and role.
+- Never expose private keys in client-side code.
+
+9) Friendly product copy
+- You stay in command.
+- Xspresso does the heavy lifting.
+- Important changes require confirmation.
+- Your account stays under your control.
+
+10) Best summary
+Xspresso should protect user accounts, gate sensitive actions, and keep a clear audit trail for important changes.

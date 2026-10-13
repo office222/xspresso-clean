@@ -1,0 +1,68 @@
+Xspresso User Journey
+
+1. Welcome
+- User sees Xspresso: Done-for-you marketing.
+- Core promise: more responses, less software chaos.
+- Supporting line: you stay in command, we do the work.
+
+2. Start a Campaign
+- User chooses what to create:
+  - landing page
+  - ad campaign
+  - lead magnet
+  - follow-up emails
+  - full campaign
+  - improve an existing campaign
+
+3. Add Offer Details
+- User enters product name, URL, image, short description, audience, goal, tone, and platform.
+- If details are missing, Xspresso still creates a fallback draft.
+
+4. Generate Draft
+- Xspresso researches matching products and competing offers where available.
+- Xspresso generates:
+  - headlines
+  - hooks
+  - ad copy
+  - landing page copy
+  - shopping cart or lead capture copy
+  - follow-up emails
+  - platform-specific variations
+
+5. Review and Tweak
+- User reviews each section.
+- User can approve, edit, regenerate, or save a version.
+- Xspresso keeps the user in control while doing the heavy lifting.
+
+6. Launch
+- Xspresso checks readiness before launch.
+- User launches only when key items are present.
+- User can save draft, export, or schedule later.
+
+7. Monitor
+- Xspresso watches ads, CPC, stats, and platform changes.
+- Xspresso alerts the user when something is off.
+- Xspresso recommends next steps.
+
+8. Improve
+- If an ad underperforms, Xspresso recommends a new title, hook, angle, or CTA.
+- User can regenerate the ad before spending more credits.
+
+9. Lead Capture and Follow-Up
+- Leads are captured and tagged.
+- Follow-up sequences help turn traffic into a list.
+- Xspresso helps the user keep the conversation going automatically.
+
+10. Reuse
+- User can save campaigns, duplicate their own work, export, import, and restore versions.
+- Templates and presets let the user start faster next time.
+
+11. Credits and Usage
+- All plans include all tools.
+- Credits determine fair usage.
+- Monitoring, uploads, regeneration, and extra assets can consume credits.
+- Usage remains visible and transparent.
+
+12. Core Message
+- Xspresso is done-for-you marketing that gets responses, builds your list, follows up automatically, and lets you stay in command.
+- We do the work. You enjoy the benefits.

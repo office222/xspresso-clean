@@ -1,0 +1,14 @@
+XSPRESSO CAMPAIGN REVISION HISTORY
+
+New runtime entry point:
+  node xspresso_campaign_history_runtime_v1.js
+
+The history API is tenant-scoped:
+  GET  /api/campaigns/:campaignId/revisions
+  GET  /api/campaigns/:campaignId/revisions/:revisionId
+  POST /api/campaigns/:campaignId/revisions/:revisionId/restore
+
+Restore request body:
+  {"expectedVersion": 4}
+
+Restoring creates a new draft version, clears approval, and requires human review again. It never publishes or activates an ad. Include the new runtime and panel/test files with the existing Xspresso source files; no additional package is required. Tests are included but have not been run.

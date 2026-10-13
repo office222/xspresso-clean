@@ -1,0 +1,64 @@
+Xspresso Architecture Overview
+
+Purpose:
+Xspresso is a done-for-you marketing system that helps users create campaigns faster, monitor performance, capture leads, follow up automatically, and stay in command.
+
+Core Modules:
+1) Campaign Builder
+- Accepts product photo, URL, offer details, audience, goal, tone, and platform.
+- Generates headlines, hooks, ads, landing page copy, cart copy, lead magnet copy, and follow-up emails.
+
+2) Research Layer
+- Finds matching products and competing offers.
+- Feeds campaign angles and copy suggestions.
+
+3) Platform Adaptation
+- Reformats campaign assets for each supported platform.
+- Applies platform-specific output rules and sizes.
+
+4) Monitoring Engine
+- Watches ads, CPC, CTR, and basic performance.
+- Flags underperforming campaigns.
+- Suggests next actions and regeneration.
+
+5) Regeneration Engine
+- Rewrites a title, hook, angle, CTA, or full ad.
+- Helps the user improve before spending more credits.
+
+6) Lead Capture and Follow-Up
+- Captures leads from campaigns.
+- Tags and scores leads.
+- Sends automated follow-up messages.
+
+7) Credits and Billing
+- All plans include every tool.
+- Credits determine fair usage.
+- Ongoing monitoring and optional actions consume credits.
+- Upgrade suggestions appear when usage makes a higher tier more efficient.
+
+8) Platform Switch Flow
+- Warns the user when switching platforms.
+- Lets them keep monitoring, stop tracking, move ads to library, or handle ads themselves.
+- Applies daily, weekly, or monthly usage costs when monitoring continues.
+
+9) Library / Templates / Duplicate Flow
+- Saves user-owned campaigns as templates.
+- Allows duplication of the user's own work.
+- Supports export, import, restore, and version history.
+
+10) Dashboard and Alerts
+- Shows active campaigns, drafts, alerts, credits, monitored ads, and platform connections.
+- Alerts always suggest the next best action.
+
+Core Product Rules:
+- Done-for-you first.
+- User stays in command.
+- All tools included.
+- Credits control fair usage.
+- Never copy other people's work.
+- Improve before wasting more credits.
+- Keep the system simple, fast, and useful.
+
+Suggested Build Flow:
+Input -> Research -> Draft -> Review -> Launch -> Monitor -> Improve -> Reuse
+

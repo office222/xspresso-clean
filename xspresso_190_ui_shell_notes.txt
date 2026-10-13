@@ -1,0 +1,42 @@
+Xspresso UI Shell Notes
+
+Purpose:
+- Keep the app shell clean, simple, and fast.
+- Make the dashboard easy to scan.
+- Support the core promise: done-for-you marketing, with the user still in command.
+
+Layout goals:
+- Top bar with logo at left and simple account controls at right.
+- Main dashboard area with campaign cards, alerts, credits, and quick actions.
+- Clear spacing between sections.
+- White or light background with burnt orange accents.
+- Avoid clutter, nested text blocks, and repeated headline lines.
+
+Core shell sections:
+1. Header / top bar
+2. Main hero or welcome area
+3. Campaign overview cards
+4. Alerts and monitoring panel
+5. Credits and usage panel
+6. Quick actions / create new campaign
+7. Settings and support links
+
+UI principles:
+- Keep labels short.
+- Make primary actions obvious.
+- Show status at a glance.
+- Use color only as a cue, not as noise.
+- Preserve a premium, calm look.
+
+Useful helper copy:
+- You stay in command.
+- Xspresso does the heavy lifting.
+- Approve what you like.
+- Tweak what you want.
+- More responses. Less software chaos.
+
+Implementation reminders:
+- Keep logos inline and responsive.
+- Do not let images stack on narrow windows.
+- Use table-based layout if FrontPage compatibility matters.
+- Keep file names numbered and unique to avoid collisions.

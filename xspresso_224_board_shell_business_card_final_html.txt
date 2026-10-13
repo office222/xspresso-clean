@@ -1,0 +1,27 @@
+Xspresso Board Shell Business Card Final HTML Notes
+
+Purpose:
+- Clean, responsive business card block for the front board shell.
+- Keep the cup logo left of the name.
+- Keep the header white.
+- Prevent wrapping/stacking on smaller screens as much as possible.
+
+Key requirements:
+- Use a table-based layout for maximum compatibility.
+- Put the cup image and the text logo in the same inline row.
+- Use display:block on images.
+- Use width/max-width rules so the logo shrinks gracefully.
+- Keep the header background white.
+- Keep the card readable and simple.
+
+Suggested copy:
+- Xspresso — Done for you marketing
+- Done-for-you marketing that gets responses.
+- More responses. Less software chaos.
+- You stay in command. We do the work.
+
+Notes:
+- Keep the call-to-action buttons simple.
+- Keep the accent color orange, but use it sparingly.
+- Avoid nested text clutter in the header.
+- Preserve FrontPage-friendly markup.

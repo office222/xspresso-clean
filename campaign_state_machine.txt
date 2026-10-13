@@ -1,0 +1,80 @@
+Xspresso V1 - Campaign State Machine
+
+Purpose:
+Define the core lifecycle of a campaign so the app behaves consistently from draft to launch to monitoring.
+
+States:
+1. draft
+   - Campaign is being created.
+   - User can edit all sections.
+   - Nothing is live yet.
+
+2. ready_to_launch
+   - Campaign has required fields completed.
+   - User has approved or saved the draft.
+   - Waiting for final launch action.
+
+3. live
+   - Campaign is active.
+   - Monitoring is on.
+   - Alerts can be triggered.
+
+4. needs_attention
+   - Campaign is live but has a warning condition.
+   - Example: CPC rising, CTR low, or engagement dropping.
+   - Xspresso should recommend a fix.
+
+5. underperforming
+   - Campaign is producing weak results.
+   - Xspresso should suggest regeneration before more credits are spent.
+
+6. paused
+   - Campaign is temporarily paused by the user or system.
+   - Monitoring can remain active or stop depending on settings.
+
+7. archived
+   - Campaign is no longer active.
+   - Kept for reference, reuse, or duplication.
+
+8. deleted
+   - Campaign removed by user action.
+   - Should require confirmation.
+
+Core transitions:
+- draft -> ready_to_launch
+- ready_to_launch -> live
+- live -> needs_attention
+- live -> underperforming
+- needs_attention -> live
+- underperforming -> draft (after regeneration)
+- live -> paused
+- paused -> live
+- live -> archived
+- archived -> duplicated as draft
+
+Suggested rules:
+- Every major edit should save a new version.
+- Every launch should create a monitoring record.
+- Every alert should point to a recommended next action.
+- Underperforming campaigns should offer regenerate options first.
+- Platform switches should preserve campaign history.
+
+Friendly UI labels:
+- Draft
+- Ready to launch
+- Live
+- Needs attention
+- Underperforming
+- Paused
+- Archived
+
+Helpful messages:
+- "Your campaign is ready to launch."
+- "This campaign is live and being watched."
+- "This campaign may need a tweak."
+- "This campaign is underperforming. Regenerate before spending more credits."
+- "This campaign is paused. Resume when ready."
+- "This campaign is archived and can be reused later."
+
+Best product rule:
+A campaign should always have a clear state, a clear next action, and a clear path back to improvement.
