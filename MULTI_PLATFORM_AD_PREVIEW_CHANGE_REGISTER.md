@@ -42,3 +42,21 @@ These are illustrative layouts, not exact network-rendered previews or guarantee
 4. Persist per-platform approval/draft state with tenant scoping and optimistic version checks.
 5. Add platform-specific publishing adapters only after OAuth scopes, credentials, permissions, review requirements and user authorization are confirmed.
 6. Update this register with test output and commit SHA.
+
+
+## Validation and integration review — 2026-11-15
+
+### Test execution
+
+- Retrieved the preview engine and its five Node test cases from this branch and ran them in an isolated temporary Node ESM environment.
+- Result: **5 passed, 0 failed**.
+- Coverage: four platform models, connected-account status without enabling publishing, missing media/destination warnings, text-length warning, and unknown-platform filtering.
+- Validation boundary: this was an isolated source-based run, not a full checkout or full-repository test run. A repository-native CI run remains outstanding.
+
+### Integration findings
+
+- The dashboard review surface is in `CODE/xspresso_dashboard_app_v1.js`; it currently edits a campaign draft and supports one campaign-level approval action.
+- The existing `CampaignReviewService` is tenant-scoped and uses optimistic draft versions, but its approval record is campaign-level. It does not yet store separate approval/draft state per advertising platform.
+- Therefore, do not wire the preview panel's per-platform buttons to the existing campaign-level approval endpoint. That would incorrectly imply independent platform approval while approving the whole campaign draft.
+- Next safe step: design tenant-scoped per-platform state and version checks in the existing review service/API, then integrate the preview panel as a read-only preview until those actions are persisted correctly.
+- No dashboard, API, server, CSS, or live-host files were changed during this review.
