@@ -8,6 +8,21 @@ It is separate from the existing Xspresso application and does not run on the li
 
 The private preview remains at https://xspresso-product-studio-preview-2026.leanfawn1.chatgpt.site. It has a separate deployment repository; this branch is the copy in `office222/xspresso-clean` for future integration work.
 
-## Planned next milestone
+## Hosted-page API on this branch
 
-Keep the existing app and live host unchanged while designing account-owned landing pages and server-side drafts. The proposed public URL format is `xspresso.com/p/page-name`. Publishing, editing, and unpublishing require authenticated ownership checks, a persistent database, safe page rendering, reserved slugs, and explicit publishing controls. HTML download remains optional. Inspect the current Xspresso runtime and hosting environment before implementation. Do not assume this standalone page is integrated with the application's existing campaign or approval modules.
+`CODE/xspresso_landing_pages_v1.js` is connected to `CODE/xspresso_runtime_server_v2.js` on this branch. It adds tenant-owned drafts and public rendering at `/p/:slug` without changing the live host or the standalone preview UI. The API uses the runtime's existing bearer authentication and JSON store. The JSON store is suitable only for the existing single-process MVP; use a transactional database before multi-process production or substantial customer traffic.
+
+- `GET /api/landing-pages` lists only the signed-in tenant's pages.
+- `POST /api/landing-pages` saves a draft.
+- `GET /api/landing-pages/:id` retrieves a tenant-owned page.
+- `PATCH /api/landing-pages/:id` edits and returns the page to draft; a published URL stops serving until republished.
+- `POST /api/landing-pages/:id/publish` with `{"slug":"craigs-book"}` publishes at `/p/craigs-book`. Slugs are globally unique among published pages.
+- `POST /api/landing-pages/:id/unpublish` with `{}` unpublishes it.
+
+Create and edit require the full offer shape: `name`, `seller`, `headline`, `description`, `cta`, `price` (optional empty string), `checkoutUrl`, `refundUrl` (optional empty string), and boolean `disclose`. Checkout is seller-directed. The handler escapes content, validates links, sets a restrictive Content Security Policy, and does not expose tenant IDs in responses.
+
+Run the focused tests from `CODE/`: `node --test xspresso_landing_pages_v1.test.mjs`. The tests cover tenant separation, drafts, publishing, unpublishing, slug conflicts, and unsafe input.
+
+## Remaining work
+
+The standalone preview still uses browser-local storage and HTML download; it is not wired to the hosted-page API. Add an authenticated page management UI and preview/publish controls, then test the full existing runtime and reconcile with the actual Namecheap deployment before considering a live install. HTML download stays optional. This branch does not integrate with the existing campaign or ad approval modules.
