@@ -8,19 +8,22 @@ import { JsonStore } from './xspresso_json_store_v1.js';
 import { CampaignReviewService } from './xspresso_campaign_review_service_v1.js';
 import { composeXspressoApiV2 } from './xspresso_app_composition_v2.js';
 import { AuthRateLimiter } from './xspresso_auth_rate_limiter_v1.js';
+import { createLandingPageHandler } from './xspresso_landing_pages_v1.js';
 
 /** Runnable single-process API; external AI, email, and ad providers are explicitly injected. */
 export function createXspressoRuntimeV2({ config = loadConfig(), store = new JsonStore({ filePath: config.dataFile }), auth, integrations = {}, rateLimiter = new AuthRateLimiter() } = {}) {
   const authService = auth || new AuthService({ store, sessionTtlMs: config.sessionTtlMs });
   const reviewService = integrations.reviewService || new CampaignReviewService({ store });
   const baseApi = createCoreApiHandler({ store, auth: authService, config });
-  const api = composeXspressoApiV2({
+  const composedApi = composeXspressoApiV2({
     baseApi, auth: authService, reviewService,
     generation: integrations.generation, monitoringWorker: integrations.monitoringWorker,
     alertRepository: integrations.alertRepository, followups: integrations.followups,
     unsubscribeService: integrations.unsubscribeService, tokenService: integrations.tokenService,
     bodyLimitBytes: config.bodyLimitBytes
   });
+
+  const api = createLandingPageHandler({ store, auth: authService, fallback: composedApi });
 
   const server = createServer((req, res) => {
     res.setHeader('x-content-type-options', 'nosniff');
