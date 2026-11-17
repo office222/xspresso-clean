@@ -47,7 +47,8 @@ export function createLandingPageHandler({ store, auth, fallback = () => false }
         const page = await store.update(s => {
           const p = (s.landingPages || []).find(p => p.id === id && p.tenantId === user.tenantId);
           if (!p) return null;
-          Object.assign(p, input, { updatedAt: new Date().toISOString() });
+          // An edit must be explicitly published again; it cannot silently change a live page.
+          Object.assign(p, input, { slug: null, status: 'draft', updatedAt: new Date().toISOString() });
           return publicRecord(p);
         });
         return page ? json(res, 200, { page }) : json(res, 404, { error: 'NOT_FOUND' });
