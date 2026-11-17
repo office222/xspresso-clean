@@ -55,5 +55,8 @@ test('slug is unique across tenants; updates and dangerous URLs are rejected', a
     assert.equal((await req('/api/landing-pages', 'owner-a', 'POST', { ...offer, checkoutUrl: 'javascript:alert(1)' })).status, 400);
     assert.equal((await req('/api/landing-pages/' + a, 'owner-a', 'PATCH', { ...offer, checkoutUrl: 'javascript:alert(1)' })).status, 400);
     assert.equal((await req('/p/my-book')).status, 200);
+    assert.equal((await req('/api/landing-pages/' + a, 'owner-a', 'PATCH', { ...offer, headline: 'Updated draft' })).status, 200);
+    assert.equal((await req('/p/my-book')).status, 404);
+    assert.equal((await req('/api/landing-pages/' + a + '/publish', 'owner-a', 'POST', { slug: 'my-book' })).status, 200);
   });
 });
