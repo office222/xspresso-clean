@@ -10,6 +10,8 @@
   "scripts": {
     "start": "node xspresso_runtime_server_v2.js",
     "dev": "node --watch xspresso_runtime_server_v2.js",
-    "test": "node --test ./*.test.js"
+    "test": "npm run test:accounts",
+    "test:accounts": "node --test xspresso_runtime_server_v2.test.js xspresso_auth.test.js xspresso_auth_rate_limiter_v1.test.js xspresso_core_api_v2.test.js",
+    "test:all": "node --test ./*.test.js"
   }
 }
