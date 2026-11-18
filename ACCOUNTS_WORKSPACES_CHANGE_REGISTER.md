@@ -23,7 +23,8 @@
    - Added an HTTP integration test that creates two accounts, verifies distinct tenant IDs, proves one account cannot list or fetch the other's campaign, and verifies logout invalidates the session.
 
 ## Validation
-- Focused account/runtime tests: **11 passed, 0 failed** using Node.js 22.16.0.
+- `npm test` runs the focused account/runtime suite: **11 passed, 0 failed** using Node.js 22.16.0.
+- `npm run test:all` runs all top-level tests; the available inspection snapshot reported **96 passed, 9 failed**.
 - A broader top-level test run on the available inspection snapshot reported **96 passed, 9 failed**. Failures include absent optional dependencies/modules and unrelated pre-existing test expectation/provider-fixture issues. Do not treat the full suite as green.
 - The account isolation test passed in the focused run.
 - No real hosted database, email verification, password reset, billing identity, or production deployment was tested.
