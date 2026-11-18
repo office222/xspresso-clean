@@ -57,3 +57,50 @@ test('runtime applies auth rate limiting and returns Retry-After when blocked', 
     await runtime.close();
   }
 });
+
+
+test('registered accounts receive isolated private campaign workspaces', async () => {
+  const runtime = createXspressoRuntimeV2({
+    store: memoryStore(),
+    config: { port: 0, host: '127.0.0.1', dataFile: './unused.json', bodyLimitBytes: 100_000, sessionTtlMs: 3_600_000, signupEnabled: true },
+    rateLimiter: { consume: () => ({ allowed: true }) }
+  });
+  try {
+    const address = await runtime.listen();
+    const base = `http://127.0.0.1:${address.port}`;
+    async function signup(email) {
+      const response = await fetch(`${base}/api/auth/signup`, {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ email, password: 'long-test-password-2026', name: email.split('@')[0] })
+      });
+      assert.equal(response.status, 201);
+      return response.json();
+    }
+    const ownerA = await signup('owner-a@example.test');
+    const ownerB = await signup('owner-b@example.test');
+    assert.notEqual(ownerA.user.tenantId, ownerB.user.tenantId);
+
+    const created = await fetch(`${base}/api/campaigns`, {
+      method: 'POST', headers: { 'content-type': 'application/json', authorization: `Bearer ${ownerA.token}` },
+      body: JSON.stringify({ name: 'Private campaign A' })
+    });
+    assert.equal(created.status, 201);
+    const campaign = (await created.json()).campaign;
+
+    const listB = await fetch(`${base}/api/campaigns`, { headers: { authorization: `Bearer ${ownerB.token}` } });
+    assert.equal(listB.status, 200);
+    assert.deepEqual((await listB.json()).campaigns, []);
+
+    const readB = await fetch(`${base}/api/campaigns/${campaign.id}`, { headers: { authorization: `Bearer ${ownerB.token}` } });
+    assert.equal(readB.status, 404);
+
+    const logout = await fetch(`${base}/api/auth/logout`, {
+      method: 'POST', headers: { authorization: `Bearer ${ownerA.token}` }
+    });
+    assert.equal(logout.status, 200);
+    const afterLogout = await fetch(`${base}/api/campaigns`, { headers: { authorization: `Bearer ${ownerA.token}` } });
+    assert.equal(afterLogout.status, 401);
+  } finally {
+    await runtime.close();
+  }
+});
